@@ -60,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChatRoomWindow.xaml.cs">
+      <DependentUpon>ChatRoomWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="communication\Communication.cs" />
     <Compile Include="DAL\IHandler.cs" />
     <Compile Include="communication\IMessage.cs" />
@@ -71,6 +74,10 @@
     <Compile Include="logics\ToUserException.cs" />
     <Compile Include="logics\User.cs" />
     <Compile Include="DAL\UserHandler.cs" />
+    <Page Include="ChatRoomWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

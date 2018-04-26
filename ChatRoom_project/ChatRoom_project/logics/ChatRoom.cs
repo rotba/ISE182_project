@@ -28,6 +28,7 @@ namespace ConsoleApp1.BuissnessLayer
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
+      
         public User LoggedInUser {
             get
             {

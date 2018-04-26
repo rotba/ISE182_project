@@ -19,16 +19,16 @@ using System.Windows.Shapes;
 namespace ChatRoom_project
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ChatRoomWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ChatRoomWindow : Window
     {
         int i = 0;
         private ObservableCollection<Message> messages;
         private ICollectionView view_names;
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private static ChatRoom chtrm;
+        private ChatRoom chtrm;
 
         Dictionary<int, string> names = new Dictionary<int, string>()
         {
@@ -36,22 +36,22 @@ namespace ChatRoom_project
             { 1, "Dima"},
             { 2, "Rotem"}
         };
-        public MainWindow()
+        public ChatRoomWindow(ChatRoom chtrm)
         {
-            chtrm = new ChatRoom();
-            InitializeComponent();           
+            this.chtrm = chtrm;
+            InitializeComponent();
             messages = new ObservableCollection<Message>();
-            //lbMessages.ItemsSource = messages;
+            lbMessages.ItemsSource = messages;
             view_names = CollectionViewSource.GetDefaultView(messages);
-           // chtrm.register(15, "Tomer");
+            // chtrm.register(15, "Tomer");
             chtrm.login(15, "Tomer");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm);
-            chtrmWindow.Show();
-            this.Close();
+            chtrm.retrieveMessages(10);
+            SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
+            toDisplay.ToList().ForEach(messages.Add);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
