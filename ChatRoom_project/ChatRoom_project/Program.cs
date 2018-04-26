@@ -14,7 +14,7 @@ namespace ConsoleApp1.BuissnessLayer
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         private static MainMenu menu;
-        static void Main(string[] args)
+       /* static void Main(string[] args)
         {
             Console.WriteLine("Hello! Please press:" + Environment.NewLine + "'a'- Register" + Environment.NewLine + "'b'- Login" + Environment.NewLine + "'c'- Logout" + Environment.NewLine + "'d'- Retrieve last 10 messages" + Environment.NewLine + "'e'- Display last 20 messages" + Environment.NewLine + "'f'- Display all retrieved messages by a specidic user" + Environment.NewLine + "'g'- To send a message" + Environment.NewLine + "'h'- Exit" + Environment.NewLine + "'i'- Show menu");
             try
@@ -47,6 +47,6 @@ namespace ConsoleApp1.BuissnessLayer
                 }
             }
             
-        }
+        }*/
     }
 }
