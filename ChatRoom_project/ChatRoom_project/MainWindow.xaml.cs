@@ -43,5 +43,10 @@ namespace ChatRoom_project
             i = i % 3;
             messages.Insert(messages.Count, new Message(new Guid(), names[i], DateTime.Now, "my name is " + names[i++], "15"));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button Content="Add Message" HorizontalAlignment="Left" Height="47" Margin="362,262,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <Button Content="Sort" HorizontalAlignment="Left" Margin="217,262,0,0" VerticalAlignment="Top" Width="140" Height="47" Click="Button_Click_1"/>
+        <ListBox Name="lbMessages" Margin="10,10,10,62">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding UserName}" FontWeight="Bold" />
+                        <TextBlock Text=": " FontWeight="Bold" />
+                        <TextBlock Text="{Binding MessageContent}" Width="225" TextWrapping="Wrap" HorizontalAlignment="Stretch" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
