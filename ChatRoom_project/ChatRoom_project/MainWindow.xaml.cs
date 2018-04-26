@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,10 @@ namespace ChatRoom_project
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Message> items = new List<Message>();
         int i = 0;
         private ObservableCollection<Message> messages;
+        private ICollectionView view_names;
+        private ICollectionView view_msg;
         Dictionary<int, string> names = new Dictionary<int, string>()
         {
             { 0, "Tomer"},
@@ -36,6 +38,9 @@ namespace ChatRoom_project
             InitializeComponent();
             messages = new ObservableCollection<Message>();
             lbMessages.ItemsSource = messages;
+            view_names = CollectionViewSource.GetDefaultView(messages);
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -46,7 +51,32 @@ namespace ChatRoom_project
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            view_names.Filter = delegate (object item)
+            {
+                if (item is Message)
+                {
+                    if (((Message)item).UserName.Equals("Dima"))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            };
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            view_names.Filter = delegate (object item)
+            {
+                if (item is Message)
+                {
+                    if (((Message)item).UserName.Equals("Rotem"))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            };
         }
     }
 }
