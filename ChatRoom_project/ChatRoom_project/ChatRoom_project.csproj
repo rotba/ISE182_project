@@ -54,6 +54,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Communication.cs" />
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHandler.cs" />
+    <Compile Include="IMessage.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="ToUserException.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserHandler.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ChatRoom.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
