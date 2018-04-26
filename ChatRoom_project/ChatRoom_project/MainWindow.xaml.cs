@@ -22,6 +22,7 @@ namespace ChatRoom_project
     {
         public MainWindow()
         {
+            Console.WriteLine("Hello World");
             InitializeComponent();
         }
     }
