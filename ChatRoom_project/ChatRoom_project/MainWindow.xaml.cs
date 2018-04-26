@@ -22,7 +22,7 @@ namespace ChatRoom_project
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Message> items = new List<Message>();
+       // List<Message> items = new List<Message>();
         int i = 0;
         private ObservableCollection<Message> messages;
         Dictionary<int, string> names = new Dictionary<int, string>()
