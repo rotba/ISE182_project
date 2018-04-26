@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -54,23 +60,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Communication.cs" />
-    <Compile Include="Component1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Component1.designer.cs">
-      <DependentUpon>Component1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IHandler.cs" />
-    <Compile Include="IMessage.cs" />
+    <Compile Include="communication\Communication.cs" />
+    <Compile Include="DAL\IHandler.cs" />
+    <Compile Include="communication\IMessage.cs" />
     <Compile Include="MainMenu.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="MessageHandler.cs" />
+    <Compile Include="logics\Message.cs" />
+    <Compile Include="DAL\MessageHandler.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Request.cs" />
-    <Compile Include="ToUserException.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserHandler.cs" />
+    <Compile Include="logics\Request.cs" />
+    <Compile Include="logics\ToUserException.cs" />
+    <Compile Include="logics\User.cs" />
+    <Compile Include="DAL\UserHandler.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,7 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ChatRoom.cs" />
+    <Compile Include="logics\ChatRoom.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -103,6 +103,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
