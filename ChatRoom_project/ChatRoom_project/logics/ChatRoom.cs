@@ -24,7 +24,7 @@ namespace ConsoleApp1.BuissnessLayer
         private List<User> users;
         private Request request;
         //private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        private static readonly string DEFAULT_URL = "localhost";
+        private static readonly string DEFAULT_URL = "http://localhost";
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
