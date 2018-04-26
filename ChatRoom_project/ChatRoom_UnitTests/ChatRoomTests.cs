@@ -1,12 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApp1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using MileStoneClient.CommunicationLayer;
 using ConsoleApp1.BuissnessLayer;
 
 namespace ConsoleApp1.Tests
