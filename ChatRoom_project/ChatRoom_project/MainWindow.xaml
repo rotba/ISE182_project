@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatRoom_project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button Content="Add Message" HorizontalAlignment="Left" Height="47" Margin="362,262,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Margin="-4,0,3.333,-0.333">
+        <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="132,373,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <TextBox x:Name="nicknameBoxLogin" HorizontalAlignment="Left" Height="24" Margin="140,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="g_IDBoxLogin" HorizontalAlignment="Left" Height="29" Margin="140,257,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,169,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="79,44,0,0" TextWrapping="Wrap" Text="Sign-in" VerticalAlignment="Top" Width="227"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="498,44,0,0" TextWrapping="Wrap" Text="Sign-Up" VerticalAlignment="Top" Width="227"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,244,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86"/>
+        <Line X1="400" Y1="0" X2="400" Y2="600" Stroke="Black" StrokeThickness="10" />
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="443,169,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="443,244,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86"/>
+        <TextBox x:Name="nicknameBoxRegister" HorizontalAlignment="Left" Height="24" Margin="588,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="g_IDBoxRegister" HorizontalAlignment="Left" Height="24" Margin="588,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="535,373,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click"/>
+
+
     </Grid>
+
 </Window>

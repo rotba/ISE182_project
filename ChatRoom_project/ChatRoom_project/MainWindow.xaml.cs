@@ -51,39 +51,61 @@ namespace ChatRoom_project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            verifyNickName(nicknameBoxLogin.Text);
+            chtrm.login(g_IDToIntAndVerify(g_IDBoxLogin.Text), nicknameBoxLogin.Text);
+            nicknameBoxLogin.Text = String.Empty;
+            g_IDBoxLogin.Text = String.Empty;
             ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
             chtrmWindow.Show();
             this.Hide();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Register_Click(object sender, RoutedEventArgs e)
         {
-            view_names.Filter = delegate (object item)
-            {
-                if (item is Message)
-                {
-                    if (((Message)item).UserName.Equals("Dima"))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            };
+            verifyNickName(nicknameBoxRegister.Text);
+            chtrm.register(g_IDToIntAndVerify(g_IDBoxRegister.Text), nicknameBoxRegister.Text);
+            MessageBox.Show("Register completed successfully");
+            nicknameBoxRegister.Text = String.Empty;
+            g_IDBoxRegister.Text = String.Empty;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+
+        /// <summary>
+        /// checks that a string is not emptry
+        /// </summary>
+        private bool verifyNickName(String nickName)
         {
-            view_names.Filter = delegate (object item)
+            if (nickName == "")
             {
-                if (item is Message)
-                {
-                    if (((Message)item).UserName.Equals("Rotem"))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            };
+                log.Error("Attempted to enter empty nickname");
+                throw new ToUserException("NickName cannot be empty");
+            }
+            else
+                return true;
+        }
+
+        ///<summary>
+        ///checks if a string contains only the charcters '0'-'9' and converts it from string to int
+        ///<summary>
+        private int g_IDToIntAndVerify(String g_ID)
+        {
+            int result;
+            try
+            {
+                result = Convert.ToInt32(g_ID);
+                return result;
+            }
+            catch (OverflowException)
+            {
+                log.Error("Attempted to login with g_ID: " + g_ID + " that is outside the range of the Int32 type.");
+                throw new ToUserException("group id " + g_ID + " is invalid must be inside the range of -2,147,483,648 to 2,147,483,647.");
+            }
+            catch (FormatException)
+            {
+                log.Error("Attempted to enter g_ID: " + g_ID + " that is not only number.");
+                throw new ToUserException("The group id " + g_ID + " is not a valid group ID, must contain only numbers");
+
+            }
         }
     }
 }
