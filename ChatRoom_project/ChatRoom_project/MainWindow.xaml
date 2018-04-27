@@ -5,21 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatRoom_project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
-    <Grid Margin="-4,0,3.333,-0.333">
-        <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="132,373,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
-        <TextBox x:Name="nicknameBoxLogin" HorizontalAlignment="Left" Height="24" Margin="140,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
-        <TextBox x:Name="g_IDBoxLogin" HorizontalAlignment="Left" Height="29" Margin="140,257,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,169,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86"/>
-        <TextBlock HorizontalAlignment="Left" Height="35" Margin="79,44,0,0" TextWrapping="Wrap" Text="Sign-in" VerticalAlignment="Top" Width="227"/>
-        <TextBlock HorizontalAlignment="Left" Height="35" Margin="498,44,0,0" TextWrapping="Wrap" Text="Sign-Up" VerticalAlignment="Top" Width="227"/>
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,244,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86"/>
-        <Line X1="400" Y1="0" X2="400" Y2="600" Stroke="Black" StrokeThickness="10" />
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="443,169,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86"/>
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="443,244,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86"/>
-        <TextBox x:Name="nicknameBoxRegister" HorizontalAlignment="Left" Height="24" Margin="588,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
-        <TextBox x:Name="g_IDBoxRegister" HorizontalAlignment="Left" Height="24" Margin="588,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
-        <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="535,373,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click"/>
+        Title="MainWindow" Height="642.667" Width="800">
+    <Grid Margin="-4,112,3.333,-0.333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="398*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="255*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="132,429,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <TextBox x:Name="nicknameBoxLogin" HorizontalAlignment="Left" Height="24" Margin="140,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="g_IDBoxLogin" HorizontalAlignment="Left" Height="24" Margin="140,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,241,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="144,44,0,0" TextWrapping="Wrap" Text="Sign-in" VerticalAlignment="Top" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="28.333,44,0,0" TextWrapping="Wrap" Text="Sign-Up" VerticalAlignment="Top" Width="96" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,322,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86"/>
+        <Line X1="400" Y1="0" X2="400" Y2="600" Stroke="Black" StrokeThickness="10" Grid.ColumnSpan="3" Margin="0,0,0,0.666" />
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="45,241,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="45,322,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86" Grid.Column="1"/>
+        <TextBox x:Name="nicknameBoxRegister" HorizontalAlignment="Left" Height="24" Margin="48.333,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Grid.Column="2"/>
+        <TextBox x:Name="g_IDBoxRegister" HorizontalAlignment="Left" Height="24" Margin="48.333,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Grid.Column="2"/>
+        <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="120,429,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Grid x:Name="mainTitle" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="110" Margin="0,-115,0,0" VerticalAlignment="Top" Width="794">
+            <TextBlock HorizontalAlignment="Left" Height="90" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tomer and The Design Patterns' Chat Room" VerticalAlignment="Center" Width="774" FontSize="40"/>
+        </Grid>
 
 
     </Grid>
