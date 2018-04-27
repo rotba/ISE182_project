@@ -29,6 +29,7 @@ namespace ChatRoom_project
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
+        
 
         Dictionary<int, string> names = new Dictionary<int, string>()
         {
@@ -45,13 +46,14 @@ namespace ChatRoom_project
             view_names = CollectionViewSource.GetDefaultView(messages);
            // chtrm.register(15, "Tomer");
             chtrm.login(15, "Tomer");
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm);
+            ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
             chtrmWindow.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

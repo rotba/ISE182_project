@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ChatRoom_project
 {
@@ -29,6 +31,8 @@ namespace ChatRoom_project
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
+        DispatcherTimer dispatcherTimer;
+        private MainWindow mainWindow;
 
         Dictionary<int, string> names = new Dictionary<int, string>()
         {
@@ -36,9 +40,14 @@ namespace ChatRoom_project
             { 1, "Dima"},
             { 2, "Rotem"}
         };
-        public ChatRoomWindow(ChatRoom chtrm)
+        public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
             this.chtrm = chtrm;
+            this.mainWindow = mainWindow;
+            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
+            dispatcherTimer.Start();
             InitializeComponent();
             messages = new ObservableCollection<Message>();
             lbMessages.ItemsSource = messages;
@@ -47,11 +56,37 @@ namespace ChatRoom_project
             chtrm.login(15, "Tomer");
         }
 
+      
+
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+
+        {
+            if (chtrm.LoggedInUser == null)
+            {
+                
+            }
+           
+            else
+            {
+                refreshMessages();
+            }
+        }
+
+
+        private void refreshMessages()
+        {
+           
+                chtrm.retrieveMessages(10);
+                SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
+                toDisplay.ToList().ForEach(messages.Add);
+            
+        }
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            chtrm.retrieveMessages(10);
-            SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
-            toDisplay.ToList().ForEach(messages.Add);
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -82,6 +117,15 @@ namespace ChatRoom_project
                 }
                 return false;
             };
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            chtrm.logout();
+            
+            mainWindow.Show();
+            
+            this.Close();
         }
     }
 }

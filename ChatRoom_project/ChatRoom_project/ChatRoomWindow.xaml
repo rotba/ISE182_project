@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="ChatRoomWindow" Height="350" Width="525">
     <Grid>
-        <Button Content="Add Message" HorizontalAlignment="Left" Height="47" Margin="362,262,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
-        <Button Content="Sort1" HorizontalAlignment="Left" Margin="217,262,0,0" VerticalAlignment="Top" Width="140" Height="47" Click="Button_Click_1"/>
-        <ListBox Name="lbMessages" Margin="10,10,10,62">
+        <Button Content="Add Message" HorizontalAlignment="Left" Height="47" Margin="363,62,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <Button Content="Sort1" HorizontalAlignment="Left" Margin="368,137,0,0" VerticalAlignment="Top" Width="140" Height="47" Click="Button_Click_1"/>
+        <ListBox Name="lbMessages" Margin="10,10,161.4,63.8">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -20,6 +20,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Sort2" HorizontalAlignment="Left" Margin="94,262,0,0" VerticalAlignment="Top" Width="118" Height="47" Click="Button_Click_2"/>
+        <Button Content="Sort2" HorizontalAlignment="Left" Margin="375,10,0,0" VerticalAlignment="Top" Width="118" Height="47" Click="Button_Click_2"/>
+        <Button x:Name="logout" Content="logout" HorizontalAlignment="Left" Margin="426,235,0,0" VerticalAlignment="Top" Width="75" Click="logout_Click"/>
     </Grid>
 </Window>
