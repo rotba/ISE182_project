@@ -28,8 +28,8 @@ namespace ChatRoom_project
         int i = 0;
         private ObservableCollection<Message> messages;
         private static Message lastMessage;
-        private ICollectionView view_names;
-        private ICollectionView view_msg;
+        //private ICollectionView view_names;
+        private ListCollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
@@ -48,7 +48,8 @@ namespace ChatRoom_project
             InitializeComponent();
             messages = new ObservableCollection<Message>();
             lbMessages.ItemsSource = messages;
-            view_names = CollectionViewSource.GetDefaultView(messages);
+            view_msg = CollectionViewSource.GetDefaultView(messages) as ListCollectionView;
+            
         }
 
       
@@ -82,14 +83,11 @@ namespace ChatRoom_project
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            view_names.Filter = delegate (object item)
+            /*view_names.Filter = delegate (object item)
             {
                 if (item is Message)
                 {
@@ -99,12 +97,12 @@ namespace ChatRoom_project
                     }
                 }
                 return false;
-            };
+            };*/
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            view_names.Filter = delegate (object item)
+           /* view_names.Filter = delegate (object item)
             {
                 if (item is Message)
                 {
@@ -114,7 +112,7 @@ namespace ChatRoom_project
                     }
                 }
                 return false;
-            };
+            };*/
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
@@ -131,12 +129,32 @@ namespace ChatRoom_project
             return comp.Compare(message, lastMessage)<=0;
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void CheckBox_Sort_Name(object sender, RoutedEventArgs e)
         {
-            
+            view_msg.CustomSort = new MessageUserComp();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Send_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Sort_Time(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Sort_All(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cb_filter_name_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cb_filter_group_Checked(object sender, RoutedEventArgs e)
         {
 
         }
