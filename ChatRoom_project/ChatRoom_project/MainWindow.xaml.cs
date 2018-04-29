@@ -45,7 +45,7 @@ namespace ChatRoom_project
             //lbMessages.ItemsSource = messages;
             view_names = CollectionViewSource.GetDefaultView(messages);
            // chtrm.register(15, "Tomer");
-            chtrm.login(15, "Tomer");
+            //chtrm.login(15, "Tomer");
             
         }
 

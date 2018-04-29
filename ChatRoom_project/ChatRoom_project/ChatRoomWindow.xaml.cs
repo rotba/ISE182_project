@@ -27,23 +27,20 @@ namespace ChatRoom_project
     {
         int i = 0;
         private ObservableCollection<Message> messages;
+        private static Message lastMessage;
         private ICollectionView view_names;
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
         private MainWindow mainWindow;
+        private Predicate<Message> timeFilter = isOlder;
 
-        Dictionary<int, string> names = new Dictionary<int, string>()
-        {
-            { 0, "Tomer"},
-            { 1, "Dima"},
-            { 2, "Rotem"}
-        };
         public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
             this.chtrm = chtrm;
             this.mainWindow = mainWindow;
+            lastMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
@@ -52,8 +49,6 @@ namespace ChatRoom_project
             messages = new ObservableCollection<Message>();
             lbMessages.ItemsSource = messages;
             view_names = CollectionViewSource.GetDefaultView(messages);
-            // chtrm.register(15, "Tomer");
-            chtrm.login(15, "Tomer");
         }
 
       
@@ -76,10 +71,13 @@ namespace ChatRoom_project
 
         private void refreshMessages()
         {
-           
-                chtrm.retrieveMessages(10);
-                SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
-                toDisplay.ToList().ForEach(messages.Add);
+            Message temp;
+            chtrm.retrieveMessages(10);
+            SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
+            temp = toDisplay.Max;
+            toDisplay.RemoveWhere(timeFilter);
+            toDisplay.ToList().ForEach(messages.Add);
+            lastMessage = temp;
             
         }
 
@@ -126,6 +124,21 @@ namespace ChatRoom_project
             mainWindow.Show();
             
             this.Close();
+        }
+        private static bool isOlder(Message message)
+        {
+            MessageDateComp comp = new MessageDateComp();
+            return comp.Compare(message, lastMessage)<=0;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
