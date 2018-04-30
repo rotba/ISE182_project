@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="ChatRoomWindow" Height="350" Width="525">
     <Grid>
-        <Button Content="Filter" HorizontalAlignment="Left" Height="47" Margin="362,195,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
         <ListBox Name="lbMessages" Margin="10,10,161.4,63.8">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -19,12 +18,24 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Sort" HorizontalAlignment="Left" Margin="362,143,0,0" VerticalAlignment="Top" Width="145" Height="47" Click="Button_Click_2"/>
         <Button x:Name="logout" Content="logout" HorizontalAlignment="Left" Margin="445,260,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="49"/>
-        <Button Content="Send" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_3" Height="49"/>
+        <Button x:Name ="Send" Content="Send" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="49" />
         <TextBox HorizontalAlignment="Left" Height="49" Margin="91,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
-        <GroupBox Header="Sort by:" HorizontalAlignment="Left" Height="99" Margin="362,10,0,0" VerticalAlignment="Top" Width="145">
-            <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="40,33,0,0" VerticalAlignment="Top"/>
-        </GroupBox>
+        <ListBox HorizontalAlignment="Left" Height="94" Margin="362,10,0,0" VerticalAlignment="Top" Width="156">
+            <Label Content="Sort by:"/>
+            <CheckBox Content="Nickname" Checked="CheckBox_Sort_Name"/>
+            <CheckBox Content="Time" Checked="CheckBox_Sort_Time"/>
+            <CheckBox Content="G ID, Nickname, Time" Checked="CheckBox_Sort_All"/>
+
+        </ListBox>
+        <ListBox HorizontalAlignment="Left" Height="133" Margin="362,109,0,0" VerticalAlignment="Top" Width="156">
+            <Label Content="Filter by:"/>
+            <CheckBox Name="cb_filter_name" Content="Nickname" Checked="cb_filter_name_Checked"/>
+            <TextBox Name="tb_filter_name" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            <CheckBox Name="cb_filter_group" Content="Group" Checked="cb_filter_group_Checked"/>
+            <TextBox Name="tb_filter_group" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+
+
+        </ListBox>
     </Grid>
 </Window>
