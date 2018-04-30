@@ -140,5 +140,10 @@ namespace ChatRoom_project
         {
 
         }
+
+        private void ListView_SelectionChanged()
+        {
+
+        }
     }
 }
