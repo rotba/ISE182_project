@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ChatRoom_project
 {
     /// <summary>
@@ -29,7 +30,8 @@ namespace ChatRoom_project
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
-        
+        ObservableModelMainWindow _main = new ObservableModelMainWindow();
+        this.DataContext = _main;
 
         Dictionary<int, string> names = new Dictionary<int, string>()
         {
@@ -62,11 +64,12 @@ namespace ChatRoom_project
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            verifyNickName(nicknameBox.Text);
-            chtrm.register(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
-            MessageBox.Show("Register completed successfully");
-            nicknameBox.Text = String.Empty;
-            g_IDBox.Text = String.Empty;
+
+          // verifyNickName(nicknameBox.Text);
+          //  chtrm.register(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
+          //  MessageBox.Show("Register completed successfully");
+          // nicknameBox.Text = String.Empty;
+          //  g_IDBox.Text = String.Empty;
         }
 
 
