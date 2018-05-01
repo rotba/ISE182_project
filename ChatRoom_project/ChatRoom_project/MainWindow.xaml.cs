@@ -51,10 +51,10 @@ namespace ChatRoom_project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            verifyNickName(nicknameBoxLogin.Text);
-            chtrm.login(g_IDToIntAndVerify(g_IDBoxLogin.Text), nicknameBoxLogin.Text);
-            nicknameBoxLogin.Text = String.Empty;
-            g_IDBoxLogin.Text = String.Empty;
+            verifyNickName(nicknameBox.Text);
+            chtrm.login(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
+            nicknameBox.Text = String.Empty;
+            g_IDBox.Text = String.Empty;
             ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
             chtrmWindow.Show();
             this.Hide();
@@ -62,11 +62,11 @@ namespace ChatRoom_project
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            verifyNickName(nicknameBoxRegister.Text);
-            chtrm.register(g_IDToIntAndVerify(g_IDBoxRegister.Text), nicknameBoxRegister.Text);
+            verifyNickName(nicknameBox.Text);
+            chtrm.register(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
             MessageBox.Show("Register completed successfully");
-            nicknameBoxRegister.Text = String.Empty;
-            g_IDBoxRegister.Text = String.Empty;
+            nicknameBox.Text = String.Empty;
+            g_IDBox.Text = String.Empty;
         }
 
 
