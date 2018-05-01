@@ -139,17 +139,24 @@ namespace ChatRoom_project
 
         private void RadioButton_Checked_Filter_Group(object sender, RoutedEventArgs e)
         {
-            view_msg.Filter = delegate (object item)
+            if (rb_sort_name.IsChecked.Value)
             {
-                if (item is Message)
+                //rb_sort_name.Checked = false;
+            }
+            else
+            {
+                view_msg.Filter = delegate (object item)
                 {
-                    if (((Message)item).UserName.Equals(tb_filter_group.Text))
+                    if (item is Message)
                     {
-                        return true;
+                        if (((Message)item).UserName.Equals(tb_filter_group.Text))
+                        {
+                            return true;
+                        }
                     }
-                }
-                return false;
-            };
+                    return false;
+                };
+            }
         }
         /*
          * Returns true when is older than lastMessage
@@ -158,6 +165,11 @@ namespace ChatRoom_project
         {
             MessageDateComp comp = new MessageDateComp();
             return comp.Compare(message, lastMessage) <= 0;
+        }
+
+        private void Send_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
