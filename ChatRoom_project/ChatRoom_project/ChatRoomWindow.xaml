@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatRoom_project"
         mc:Ignorable="d"
-        Title="ChatRoomWindow" Height="350" Width="525">
+        Title="ChatRoomWindow" Height="388" Width="656">
     <Grid>
-        <ListBox Name="lbMessages" Margin="10,10,161.4,63.8">
+        <ListBox Name="lbMessages" Margin="10,10,171,81">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -18,23 +18,26 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="logout" Content="logout" HorizontalAlignment="Left" Margin="445,260,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="49"/>
-        <Button x:Name ="Send" Content="Send" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="49" />
-        <TextBox HorizontalAlignment="Left" Height="49" Margin="91,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
-        <ListBox HorizontalAlignment="Left" Height="94" Margin="362,10,0,0" VerticalAlignment="Top" Width="156">
+        <Button x:Name="logout" Content="logout" HorizontalAlignment="Left" Margin="576,281,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="25"/>
+        <Button x:Name ="Send" Content="Send" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="22" />
+        <TextBox HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
+        <ListBox HorizontalAlignment="Left" Height="133" Margin="482,10,0,0" VerticalAlignment="Top" Width="156" SelectionChanged="ListBox_SelectionChanged">
             <Label Content="Sort by:"/>
-            <CheckBox Content="Nickname" Checked="CheckBox_Sort_Name"/>
-            <CheckBox Content="Time" Checked="CheckBox_Sort_Time"/>
-            <CheckBox Content="G ID, Nickname, Time" Checked="CheckBox_Sort_All"/>
+            <RadioButton Content="Name" Checked="RadioButton_Checked_Name"/>
+            <RadioButton Content="Time" Checked="RadioButton_Checked_Time"/>
+            <RadioButton Content="G ID, Nickname, Time" Checked="RadioButton_Checked_Multy"/>
+            <Grid Height="33" Width="136">
+                <Button Content="Asc" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Height="33" Click="Button_Click_Asc"/>
+                <Button Content="Desc" HorizontalAlignment="Left" Margin="66,0,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click_Desc" Height="33"/>
+            </Grid>
 
         </ListBox>
-        <ListBox HorizontalAlignment="Left" Height="133" Margin="362,109,0,0" VerticalAlignment="Top" Width="156">
+        <ListBox HorizontalAlignment="Left" Height="128" Margin="482,148,0,0" VerticalAlignment="Top" Width="156">
             <Label Content="Filter by:"/>
-            <CheckBox Name="cb_filter_name" Content="Nickname" Checked="cb_filter_name_Checked"/>
+            <RadioButton Content="Name" Checked="RadioButton_Checked_Filter_Name"/>
             <TextBox Name="tb_filter_name" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
-            <CheckBox Name="cb_filter_group" Content="Group" Checked="cb_filter_group_Checked"/>
+            <RadioButton Content="Group" Checked="RadioButton_Checked_Filter_Group"/>
             <TextBox Name="tb_filter_group" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
-
 
         </ListBox>
     </Grid>

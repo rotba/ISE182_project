@@ -108,4 +108,31 @@ namespace ConsoleApp1.BuissnessLayer
             }
         }
     }
+    public class MessageMultyComp : Comparer<Message>
+    {
+        /*
+         * Returns:
+         * 1 if y is older than x
+         * 0 if their dat is equal
+         * -1 if y is younger
+         */
+        public override int Compare(Message x, Message y)
+        {
+            MessageGUIDComp gid_comp = new MessageGUIDComp();
+            MessageUserComp user_comp = new MessageUserComp();
+            MessageDateComp dateComp = new MessageDateComp();
+            if (gid_comp.Compare(x,y) != 0)
+            {
+                return gid_comp.Compare(x, y);
+            }
+            else if(user_comp.Compare(x, y) != 0)
+            {
+                return user_comp.Compare(x, y);
+            }
+            else
+            {
+                return dateComp.Compare(x,y); ;
+            }
+        }
+    }
 }

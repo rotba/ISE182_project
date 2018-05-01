@@ -28,13 +28,13 @@ namespace ChatRoom_project
         int i = 0;
         private ObservableCollection<Message> messages;
         private static Message lastMessage;
-        //private ICollectionView view_names;
         private ListCollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
         private MainWindow mainWindow;
         private Predicate<Message> timeFilter = isOlder;
+        private ListSortDirection direction = ListSortDirection.Ascending;
 
         public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
@@ -85,34 +85,16 @@ namespace ChatRoom_project
 
         
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_Asc(object sender, RoutedEventArgs e)
         {
-            /*view_names.Filter = delegate (object item)
-            {
-                if (item is Message)
-                {
-                    if (((Message)item).UserName.Equals("Dima"))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            };*/
+            direction = ListSortDirection.Ascending;
+            view_msg.Refresh();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Button_Click_Desc(object sender, RoutedEventArgs e)
         {
-           /* view_names.Filter = delegate (object item)
-            {
-                if (item is Message)
-                {
-                    if (((Message)item).UserName.Equals("Rotem"))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            };*/
+            direction = ListSortDirection.Descending;
+            view_msg.Refresh();
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
@@ -123,45 +105,59 @@ namespace ChatRoom_project
             
             this.Close();
         }
+        
+
+        private void RadioButton_Checked_Name(object sender, RoutedEventArgs e)
+        {
+            view_msg.SortDescriptions.Add(new SortDescription("Nickname", direction));
+        }
+
+        private void RadioButton_Checked_Time(object sender, RoutedEventArgs e)
+        {
+            view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+        }
+
+        private void RadioButton_Checked_Multy(object sender, RoutedEventArgs e)
+        {
+            view_msg.CustomSort = new MessageMultyComp();
+        }
+
+        private void RadioButton_Checked_Filter_Name(object sender, RoutedEventArgs e)
+        {
+            view_msg.Filter = delegate (object item)
+            {
+                if (item is Message)
+                {
+                    if (((Message)item).UserName.Equals(tb_filter_name.Text))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            };
+        }
+
+        private void RadioButton_Checked_Filter_Group(object sender, RoutedEventArgs e)
+        {
+            view_msg.Filter = delegate (object item)
+            {
+                if (item is Message)
+                {
+                    if (((Message)item).UserName.Equals(tb_filter_group.Text))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            };
+        }
+        /*
+         * Returns true when is older than lastMessage
+         */
         private static bool isOlder(Message message)
         {
             MessageDateComp comp = new MessageDateComp();
-            return comp.Compare(message, lastMessage)<=0;
-        }
-
-        private void CheckBox_Sort_Name(object sender, RoutedEventArgs e)
-        {
-            view_msg.CustomSort = new MessageUserComp();
-        }
-
-        private void Send_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Sort_Time(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Sort_All(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_filter_name_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cb_filter_group_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ListView_SelectionChanged()
-        {
-
+            return comp.Compare(message, lastMessage) <= 0;
         }
     }
 }
