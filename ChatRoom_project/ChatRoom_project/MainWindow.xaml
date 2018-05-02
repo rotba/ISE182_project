@@ -13,8 +13,8 @@
             <ColumnDefinition Width="255*"/>
         </Grid.ColumnDefinitions>
         <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="132,429,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
-        <TextBox x:Name="nicknameBox" Value="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="140,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
-        <TextBox x:Name="g_IDBox" HorizontalAlignment="Left" Height="24" Margin="140,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="nicknameBox" Text ="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="140,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="g_IDBox" Text="{Binding G_IDBox}" HorizontalAlignment="Left" Height="24" Margin="140,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
         <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,241,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86"/>
         <TextBlock HorizontalAlignment="Left" Height="24" Margin="10,322,0,0" TextWrapping="Wrap" Text="Group ID:" VerticalAlignment="Top" Width="86"/>
         <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="120,429,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click" Grid.ColumnSpan="2" Grid.Column="1"/>

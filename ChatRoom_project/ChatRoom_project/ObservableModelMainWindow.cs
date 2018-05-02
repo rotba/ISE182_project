@@ -18,13 +18,13 @@ namespace ChatRoom_project
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-    //    public ObservableModelMainWindow()
-    //    {
-  //
-   //             Messages.CollectionChanged += Messages_CollectionChanged;
-    //        
-    //    }
-     //   public ObservableCollection<string> Messages { get; } = new ObservableCollection<string>();
+        public ObservableModelMainWindow()
+        {
+  
+              //  Messages.CollectionChanged += Messages_CollectionChanged;
+            
+        }
+        public ObservableCollection<string> Messages { get; } = new ObservableCollection<string>();
 
         private ChatRoom chtrm = new ChatRoom();
         private string nicknameBox = "";
@@ -40,7 +40,23 @@ namespace ChatRoom_project
             }
         }
 
-        private string 
+        private string g_IDBox = "";
+        public string G_IDBox
+        {
+            get
+            {
+                return g_IDBox;
+            }
+            set
+            {
+                g_IDBox = value;
+            }
+        }
+
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
     }
 }
