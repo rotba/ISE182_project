@@ -12,6 +12,10 @@
                 <DataTemplate>
                     <WrapPanel>
                         <TextBlock Text="{Binding UserName}" FontWeight="Bold" />
+                        <TextBlock Text=" " FontWeight="Bold" />
+                        <TextBlock Text= "{Binding GroupID}" FontWeight="Bold" />
+                        <TextBlock Text=" " FontWeight="Bold" />
+                        <TextBlock Text= "{Binding Date}" FontWeight="Bold" />
                         <TextBlock Text=": " FontWeight="Bold" />
                         <TextBlock Text="{Binding MessageContent}" Width="225" TextWrapping="Wrap" HorizontalAlignment="Stretch" />
                     </WrapPanel>
@@ -23,7 +27,7 @@
         <TextBox HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
         <ListBox HorizontalAlignment="Left" Height="133" Margin="482,10,0,0" VerticalAlignment="Top" Width="156" >
             <Label Content="Sort by:"/>
-            <RadioButton Content="Name" Checked="RadioButton_Checked_Name"/>
+            <RadioButton Name ="rb_sort_name" Content="Name" Checked="RadioButton_Checked_Name"/>
             <RadioButton Content="Time" Checked="RadioButton_Checked_Time"/>
             <RadioButton Content="G ID, Nickname, Time" Checked="RadioButton_Checked_Multy"/>
             <Grid Height="33" Width="136">

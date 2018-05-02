@@ -50,9 +50,15 @@ namespace ChatRoom_project
             lbMessages.ItemsSource = messages;
             view_msg = CollectionViewSource.GetDefaultView(messages) as ListCollectionView;
             
+            
         }
 
-      
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            mainWindow.Close();
+            base.OnClosing(e);
+        }
+
 
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -88,13 +94,31 @@ namespace ChatRoom_project
         private void Button_Click_Asc(object sender, RoutedEventArgs e)
         {
             direction = ListSortDirection.Ascending;
-            view_msg.Refresh();
+            SortDescriptionCollection sds = new SortDescriptionCollection();
+            foreach (var sd in view_msg.SortDescriptions)
+            {
+                sds.Add(new SortDescription(sd.PropertyName, direction));
+            }
+            view_msg.SortDescriptions.Clear();
+            foreach (var sd in sds)
+            {
+                view_msg.SortDescriptions.Add(sd);
+            }
         }
 
         private void Button_Click_Desc(object sender, RoutedEventArgs e)
         {
             direction = ListSortDirection.Descending;
-            view_msg.Refresh();
+            SortDescriptionCollection sds = new SortDescriptionCollection();
+            foreach (var sd in view_msg.SortDescriptions)
+            {
+                sds.Add(new SortDescription(sd.PropertyName, direction));
+            }
+            view_msg.SortDescriptions.Clear();
+            foreach (var sd in sds)
+            {
+                view_msg.SortDescriptions.Add(sd);
+            }
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
@@ -109,17 +133,22 @@ namespace ChatRoom_project
 
         private void RadioButton_Checked_Name(object sender, RoutedEventArgs e)
         {
-            view_msg.SortDescriptions.Add(new SortDescription("Nickname", direction));
+            view_msg.SortDescriptions.Clear();
+            view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
         }
 
         private void RadioButton_Checked_Time(object sender, RoutedEventArgs e)
         {
+            view_msg.SortDescriptions.Clear();
             view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
         }
 
         private void RadioButton_Checked_Multy(object sender, RoutedEventArgs e)
         {
-            view_msg.CustomSort = new MessageMultyComp();
+            view_msg.SortDescriptions.Clear();
+            view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
+            view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+            view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
         }
 
         private void RadioButton_Checked_Filter_Name(object sender, RoutedEventArgs e)
@@ -171,5 +200,7 @@ namespace ChatRoom_project
         {
 
         }
+        
     }
+
 }

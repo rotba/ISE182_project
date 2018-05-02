@@ -66,6 +66,7 @@
     <Compile Include="communication\Communication.cs" />
     <Compile Include="DAL\IHandler.cs" />
     <Compile Include="communication\IMessage.cs" />
+    <Compile Include="IDecorator.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="logics\Message.cs" />
     <Compile Include="DAL\MessageHandler.cs" />
