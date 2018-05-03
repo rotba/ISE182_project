@@ -26,9 +26,10 @@ namespace ChatRoom_project
     public partial class ChatRoomWindow : Window
     {
         int i = 0;
-        private ObservableCollection<Message> messages;
+        private ObservableObject _main = new ObservableObject();
+        //private ObservableCollection<Message> messages;
         private static Message lastMessage;
-        private ListCollectionView view_msg;
+        //private ListCollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
@@ -46,9 +47,11 @@ namespace ChatRoom_project
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
             InitializeComponent();
+            /*
             messages = new ObservableCollection<Message>();
             lbMessages.ItemsSource = messages;
             view_msg = CollectionViewSource.GetDefaultView(messages) as ListCollectionView;
+            */
             
             
         }
@@ -83,7 +86,7 @@ namespace ChatRoom_project
             SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
             temp = toDisplay.Max;
             toDisplay.RemoveWhere(timeFilter);
-            toDisplay.ToList().ForEach(messages.Add);
+            toDisplay.ToList().ForEach(_main.Messages.Add);
             lastMessage = temp;
             
         }
@@ -95,14 +98,14 @@ namespace ChatRoom_project
         {
             direction = ListSortDirection.Ascending;
             SortDescriptionCollection sds = new SortDescriptionCollection();
-            foreach (var sd in view_msg.SortDescriptions)
+            foreach (var sd in _main.view_msg.SortDescriptions)
             {
                 sds.Add(new SortDescription(sd.PropertyName, direction));
             }
-            view_msg.SortDescriptions.Clear();
+            _main.view_msg.SortDescriptions.Clear();
             foreach (var sd in sds)
             {
-                view_msg.SortDescriptions.Add(sd);
+                _main.view_msg.SortDescriptions.Add(sd);
             }
         }
 
@@ -110,14 +113,14 @@ namespace ChatRoom_project
         {
             direction = ListSortDirection.Descending;
             SortDescriptionCollection sds = new SortDescriptionCollection();
-            foreach (var sd in view_msg.SortDescriptions)
+            foreach (var sd in _main.view_msg.SortDescriptions)
             {
                 sds.Add(new SortDescription(sd.PropertyName, direction));
             }
-            view_msg.SortDescriptions.Clear();
+            _main.view_msg.SortDescriptions.Clear();
             foreach (var sd in sds)
             {
-                view_msg.SortDescriptions.Add(sd);
+                _main.view_msg.SortDescriptions.Add(sd);
             }
         }
 
@@ -133,31 +136,31 @@ namespace ChatRoom_project
 
         private void RadioButton_Checked_Name(object sender, RoutedEventArgs e)
         {
-            view_msg.SortDescriptions.Clear();
-            view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+            _main.view_msg.SortDescriptions.Clear();
+            _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
         }
 
         private void RadioButton_Checked_Time(object sender, RoutedEventArgs e)
         {
-            view_msg.SortDescriptions.Clear();
-            view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+            _main.view_msg.SortDescriptions.Clear();
+            _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
         }
 
         private void RadioButton_Checked_Multy(object sender, RoutedEventArgs e)
         {
-            view_msg.SortDescriptions.Clear();
-            view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
-            view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
-            view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+            _main.view_msg.SortDescriptions.Clear();
+            _main.view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
+            _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+            _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
         }
 
         private void RadioButton_Checked_Filter_Name(object sender, RoutedEventArgs e)
         {
-            view_msg.Filter = delegate (object item)
+            _main.view_msg.Filter = delegate (object item)
             {
                 if (item is Message)
                 {
-                    if (((Message)item).UserName.Equals(tb_filter_name.Text))
+                    if (((Message)item).UserName.Equals(_main.NameFilter))
                     {
                         return true;
                     }
@@ -168,17 +171,17 @@ namespace ChatRoom_project
 
         private void RadioButton_Checked_Filter_Group(object sender, RoutedEventArgs e)
         {
-            if (rb_sort_name.IsChecked.Value)
+            if (_main.SortGroup)
             {
                 //rb_sort_name.Checked = false;
             }
             else
             {
-                view_msg.Filter = delegate (object item)
+                _main.view_msg.Filter = delegate (object item)
                 {
                     if (item is Message)
                     {
-                        if (((Message)item).UserName.Equals(tb_filter_group.Text))
+                        if (((Message)item).UserName.Equals(_main.GroupFilter))
                         {
                             return true;
                         }
