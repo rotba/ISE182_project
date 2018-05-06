@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ChatRoom_project
 {
     /// <summary>
@@ -29,6 +30,7 @@ namespace ChatRoom_project
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
+        ObservableModelMainWindow _main = new ObservableModelMainWindow();
         
 
         Dictionary<int, string> names = new Dictionary<int, string>()
@@ -46,15 +48,16 @@ namespace ChatRoom_project
             view_names = CollectionViewSource.GetDefaultView(messages);
            // chtrm.register(15, "Tomer");
             //chtrm.login(15, "Tomer");
+            this.DataContext = _main;
             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            verifyNickName(nicknameBoxLogin.Text);
-            chtrm.login(g_IDToIntAndVerify(g_IDBoxLogin.Text), nicknameBoxLogin.Text);
-            nicknameBoxLogin.Text = String.Empty;
-            g_IDBoxLogin.Text = String.Empty;
+            verifyNickName(nicknameBox.Text);
+            chtrm.login(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
+            nicknameBox.Text = String.Empty;
+            g_IDBox.Text = String.Empty;
             ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
             chtrmWindow.Show();
             this.Hide();
@@ -62,11 +65,12 @@ namespace ChatRoom_project
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            verifyNickName(nicknameBoxRegister.Text);
-            chtrm.register(g_IDToIntAndVerify(g_IDBoxRegister.Text), nicknameBoxRegister.Text);
-            MessageBox.Show("Register completed successfully");
-            nicknameBoxRegister.Text = String.Empty;
-            g_IDBoxRegister.Text = String.Empty;
+
+          // verifyNickName(nicknameBox.Text);
+          //  chtrm.register(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
+          //  MessageBox.Show("Register completed successfully");
+          // nicknameBox.Text = String.Empty;
+          //  g_IDBox.Text = String.Empty;
         }
 
 

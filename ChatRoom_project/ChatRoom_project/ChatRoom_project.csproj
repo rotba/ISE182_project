@@ -63,6 +63,7 @@
     <Compile Include="ChatRoomWindow.xaml.cs">
       <DependentUpon>ChatRoomWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ObservableModelMainWindow.cs" />
     <Compile Include="communication\Communication.cs" />
     <Compile Include="DAL\IHandler.cs" />
     <Compile Include="communication\IMessage.cs" />
