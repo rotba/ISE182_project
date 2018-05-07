@@ -30,7 +30,7 @@ namespace ChatRoom_project
         private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
-        ObservableModelMainWindow _main = new ObservableModelMainWindow();
+        ObservableModelMainWindow _main;
         
 
         Dictionary<int, string> names = new Dictionary<int, string>()
@@ -42,6 +42,7 @@ namespace ChatRoom_project
         public MainWindow()
         {
             chtrm = new ChatRoom();
+            _main = new ObservableModelMainWindow(chtrm);
             InitializeComponent();           
             messages = new ObservableCollection<Message>();
             //lbMessages.ItemsSource = messages;
@@ -63,6 +64,9 @@ namespace ChatRoom_project
             chtrmWindow.Show();
             this.Hide();*/
             _main.login(_main.G_IDBox, _main.NicknameBox);
+            ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
+            chtrmWindow.Show();
+            this.Hide();
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)

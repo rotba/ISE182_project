@@ -19,15 +19,15 @@ namespace ChatRoom_project
         public event PropertyChangedEventHandler PropertyChanged;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public ObservableModelMainWindow()
+        public ObservableModelMainWindow(ChatRoom chtrm)
         {
-
+            this.chtrm = chtrm;
             //   Messages.CollectionChanged += Messages_CollectionChanged;
 
         }
         public ObservableCollection<string> Messages { get; } = new ObservableCollection<string>();
 
-        private ChatRoom chtrm = new ChatRoom();
+        private ChatRoom chtrm;
         private string nicknameBox = "";
         public string NicknameBox
         {
