@@ -26,7 +26,7 @@ namespace ChatRoom_project
     public partial class ChatRoomWindow : Window
     {
         int i = 0;
-        private ObservableObject _main = new ObservableObject();
+        ObservableObject _main = new ObservableObject();
         //private ObservableCollection<Message> messages;
         private static Message lastMessage;
         //private ListCollectionView view_msg;
@@ -47,6 +47,7 @@ namespace ChatRoom_project
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
             InitializeComponent();
+            DataContext = _main;
             /*
             messages = new ObservableCollection<Message>();
             lbMessages.ItemsSource = messages;
@@ -139,6 +140,11 @@ namespace ChatRoom_project
             _main.view_msg.SortDescriptions.Clear();
             _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
         }
+        private void RadioButton_Unhecked_Name(object sender, RoutedEventArgs e)
+        {
+            _main.view_msg.SortDescriptions.Clear();
+            _main.SortName = false;
+        }
 
         private void RadioButton_Checked_Time(object sender, RoutedEventArgs e)
         {
@@ -203,7 +209,11 @@ namespace ChatRoom_project
         {
 
         }
-        
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }
