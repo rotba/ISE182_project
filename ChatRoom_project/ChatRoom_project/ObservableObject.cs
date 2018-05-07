@@ -29,6 +29,9 @@ namespace ChatRoom_project
             OnPropertyChanged("Messages");
         }
 
+        /*
+         *Filter properties 
+         */
         private string nameFilter = "";
         public string NameFilter
         {
@@ -55,6 +58,10 @@ namespace ChatRoom_project
                 OnPropertyChanged("GroupFilter");
             }
         }
+
+        /*
+         *Sort properties 
+         */
         private bool sortName = false;
         public bool SortName
         {
@@ -92,6 +99,23 @@ namespace ChatRoom_project
             {
                 sortMulty = value;
                 OnPropertyChanged("SortMulty");
+            }
+        }
+
+        /*
+         *Send properties 
+         */
+        private string messageContent;
+        public string MessageContent
+        {
+            get
+            {
+                return messageContent;
+            }
+            set
+            {
+                messageContent = value;
+                OnPropertyChanged("MessageContent");
             }
         }
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
