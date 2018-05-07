@@ -12,10 +12,6 @@
                 <DataTemplate>
                     <WrapPanel>
                         <TextBlock Text="{Binding UserName}" FontWeight="Bold" />
-                        <TextBlock Text=" " FontWeight="Bold" />
-                        <TextBlock Text= "{Binding GroupID}" FontWeight="Bold" />
-                        <TextBlock Text=" " FontWeight="Bold" />
-                        <TextBlock Text= "{Binding Date}" FontWeight="Bold" />
                         <TextBlock Text=": " FontWeight="Bold" />
                         <TextBlock Text="{Binding MessageContent}" Width="225" TextWrapping="Wrap" HorizontalAlignment="Stretch" />
                     </WrapPanel>
@@ -24,7 +20,7 @@
         </ListBox>
         <Button Content="logout" HorizontalAlignment="Left" Margin="576,281,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="25"/>
         <Button Content="Send" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="22" />
-        <TextBox HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
+        <TextBox Text="{Binding MessageContent}" HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
         <ListBox HorizontalAlignment="Left" Height="133" Margin="482,10,0,0" VerticalAlignment="Top" Width="156" >
             <Label Content="Sort by:"/>
             <RadioButton IsChecked = "{Binding SortName}" Content="Name" Checked="RadioButton_Checked_Name" Unchecked="RadioButton_Unhecked_Name" />

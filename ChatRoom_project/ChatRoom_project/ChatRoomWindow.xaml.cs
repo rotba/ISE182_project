@@ -207,7 +207,8 @@ namespace ChatRoom_project
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-
+            chtrm.send(_main.MessageContent);
+            _main.MessageContent = "";
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
