@@ -48,13 +48,8 @@ namespace ChatRoom_project
             dispatcherTimer.Start();
             InitializeComponent();
             DataContext = _main;
-            /*
-            messages = new ObservableCollection<Message>();
-            lbMessages.ItemsSource = messages;
-            view_msg = CollectionViewSource.GetDefaultView(messages) as ListCollectionView;
-            */
-            
-            
+            refreshMessages();
+           
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -87,6 +82,27 @@ namespace ChatRoom_project
             SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
             temp = toDisplay.Max;
             toDisplay.RemoveWhere(timeFilter);
+            foreach (Message msg in toDisplay)
+            {
+                try
+                {
+                    int tGroupID = g_IDToIntAndVerify(msg.GroupID);
+                    User tUser = new User(tGroupID, msg.UserName);
+                    if (!_main.Users.Contains(tUser))
+                    {
+                        _main.Users.Add(tUser);
+                    }
+                    if (!_main.GroupIDs.Contains(tGroupID))
+                    {
+                        _main.GroupIDs.Add(tGroupID);
+                    }
+                }
+                catch (Exception e)
+                {
+                    log.Error("unexpected error while adding users and GroupIDs to chatroom viewModel error= "
+                        +e);
+                }
+            }
             toDisplay.ToList().ForEach(_main.Messages.Add);
             lastMessage = temp;
             
@@ -160,42 +176,7 @@ namespace ChatRoom_project
             _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
         }
 
-        private void RadioButton_Checked_Filter_Name(object sender, RoutedEventArgs e)
-        {
-            _main.view_msg.Filter = delegate (object item)
-            {
-                if (item is Message)
-                {
-                    if (((Message)item).UserName.Equals(_main.NameFilter))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            };
-        }
-
-        private void RadioButton_Checked_Filter_Group(object sender, RoutedEventArgs e)
-        {
-            if (_main.SortGroup)
-            {
-                //rb_sort_name.Checked = false;
-            }
-            else
-            {
-                _main.view_msg.Filter = delegate (object item)
-                {
-                    if (item is Message)
-                    {
-                        if (((Message)item).UserName.Equals(_main.GroupFilter))
-                        {
-                            return true;
-                        }
-                    }
-                    return false;
-                };
-            }
-        }
+        
         /*
          * Returns true when is older than lastMessage
          */
@@ -214,6 +195,75 @@ namespace ChatRoom_project
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        
+        
+        private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            var selectedUser = _main.ComboNickNameSelectedItem;
+            if (selectedUser is User)
+            {
+                _main.view_msg.Filter = delegate (object item)
+                {
+                    if (item is Message)
+                    {
+                        if (((Message)item).UserName.Equals(((User)selectedUser).Nickname) && ((Message)item).GroupID.Equals(((User)selectedUser).G_id.ToString()))
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+            }
+            else
+                _main.view_msg.Filter = null;
+
+        }
+        private void cmbGroupID_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            var selectedID = _main.ComboGroupIDSelectedItem;
+            if (selectedID is int)
+            {
+                _main.view_msg.Filter = delegate (object item)
+                {
+                    if (item is Message)
+                    {
+                        if (((Message)item).GroupID.Equals(((int)selectedID).ToString()))
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+            }
+            else
+                _main.view_msg.Filter = null;
+        }
+
+        private int g_IDToIntAndVerify(String g_ID)
+        {
+            int result;
+            try
+            {
+                result = Convert.ToInt32(g_ID);
+                return result;
+            }
+            catch (OverflowException)
+            {
+                log.Error("Attempted to login with g_ID: " + g_ID + " that is outside the range of the Int32 type.");
+                throw new ToUserException("group id " + g_ID + " is invalid must be inside the range of -2,147,483,648 to 2,147,483,647.");
+            }
+            catch (FormatException)
+            {
+                log.Error("Attempted to enter g_ID: " + g_ID + " that is not only number.");
+                throw new ToUserException("The group id " + g_ID + " is not a valid group ID, must contain only numbers");
+
+            }
         }
     }
 

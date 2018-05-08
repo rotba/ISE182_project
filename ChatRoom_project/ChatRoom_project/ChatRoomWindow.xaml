@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:ChatRoom_project"
         mc:Ignorable="d"
         Title="ChatRoomWindow" Height="388" Width="656">
+    <Window.Resources>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding Users}"/>
+        <CollectionViewSource x:Key="groupIDViewSource" Source="{Binding GroupIDs}"/>
+    </Window.Resources>
     <Grid>
         <ListBox ItemsSource="{Binding Messages}" Margin="10,10,171,81">
             <ListBox.ItemTemplate>
@@ -32,12 +36,38 @@
             </Grid>
 
         </ListBox>
-        <ListBox  HorizontalAlignment="Left" Height="128" Margin="482,148,0,0" VerticalAlignment="Top" Width="156">
+
+        <ListBox  HorizontalAlignment="Left" Height="90" Margin="482,148,0,0" VerticalAlignment="Top" Width="158">
             <Label Content="Filter by:"/>
-            <RadioButton Content="Name" Checked="RadioButton_Checked_Filter_Name"/>
-            <TextBox Text="{Binding NameFilter}" Height="23" TextWrapping="Wrap"  Width="120"/>
-            <RadioButton Content="Group" Checked="RadioButton_Checked_Filter_Group"/>
-            <TextBox Text="{Binding GroupFilter}" Height="23" TextWrapping="Wrap"  Width="120"/>
+            <ComboBox SelectedItem="{Binding ComboNickNameSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbNickName_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="0">
+                <ComboBox.ItemsSource>
+                    <CompositeCollection>
+                        <ComboBoxItem>Choose Nickname</ComboBoxItem>
+                        <ComboBoxItem>No Filter</ComboBoxItem>
+                        <CollectionContainer Collection="{Binding Source={StaticResource usersViewSource}}" />
+                    </CompositeCollection>
+                </ComboBox.ItemsSource>
+                <ComboBox.ItemTemplate >
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding G_id}"/>
+                            <TextBlock Text=" : " />
+                            <TextBlock Text="{Binding Nickname}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+
+            </ComboBox>
+            <ComboBox SelectedItem="{Binding ComboGroupIDSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbGroupID_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="0">
+                <ComboBox.ItemsSource>
+                    <CompositeCollection>
+                        <ComboBoxItem>Choose Group ID</ComboBoxItem>
+                        <ComboBoxItem>No Filter</ComboBoxItem>
+                        <CollectionContainer Collection="{Binding Source={StaticResource groupIDViewSource}}" />
+                    </CompositeCollection>
+                </ComboBox.ItemsSource>
+            </ComboBox>
+
         </ListBox>
     </Grid>
 </Window>

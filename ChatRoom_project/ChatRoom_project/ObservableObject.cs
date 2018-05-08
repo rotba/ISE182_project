@@ -17,48 +17,57 @@ namespace ChatRoom_project
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Message> Messages { get; } = new ObservableCollection<Message>();
         public ListCollectionView view_msg;
+        
+        public ObservableCollection<User> Users { get; } = new ObservableCollection<User>();
+        public ObservableCollection<int> GroupIDs { get; } = new ObservableCollection<int>();
 
         public ObservableObject()
         {
             Messages.CollectionChanged += Messages_CollectionChanged;
             view_msg = CollectionViewSource.GetDefaultView(Messages) as ListCollectionView;
+            
         }
 
         private void Messages_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
+           
             OnPropertyChanged("Messages");
         }
 
         /*
          *Filter properties 
          */
-        private string nameFilter = "";
-        public string NameFilter
+        private Object comboNickNameSelectedItem;
+        public Object ComboNickNameSelectedItem
         {
             get
             {
-                return nameFilter;
+                return comboNickNameSelectedItem;
             }
             set
             {
-                nameFilter = value;
-                OnPropertyChanged("NameFilter");
-            }
-        }
-        private string groupFilter = "";
-        public string GroupFilter
-        {
-            get
-            {
-                return groupFilter;
-            }
-            set
-            {
-                groupFilter = value;
-                OnPropertyChanged("GroupFilter");
-            }
-        }
 
+                comboNickNameSelectedItem = value;
+                
+                OnPropertyChanged("ComboNickNameSelectedItem");
+            }
+        }
+        private Object comboGroupIDSelectedItem;
+        public Object ComboGroupIDSelectedItem
+        {
+            get
+            {
+                return comboGroupIDSelectedItem;
+            }
+            set
+            {
+
+                comboGroupIDSelectedItem = value;
+
+                OnPropertyChanged("ComboGroupIDSelectedItem");
+            }
+        }
+        
         /*
          *Sort properties 
          */

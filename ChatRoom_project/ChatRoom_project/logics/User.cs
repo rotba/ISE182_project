@@ -11,7 +11,9 @@ namespace ConsoleApp1.BuissnessLayer
     {
 
         private int g_id;
+        
         private string nickname;
+   
 
         public int G_id { get => g_id; private set => g_id = value; }
         public string Nickname { get => nickname; private set => nickname = value; }
