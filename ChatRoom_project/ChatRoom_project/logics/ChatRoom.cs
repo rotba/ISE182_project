@@ -23,7 +23,7 @@ namespace ConsoleApp1.BuissnessLayer
         private SortedSet<Message> messages;
         private List<User> users;
         private Request request;
-        //private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+       // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         private static readonly string DEFAULT_URL = "http://localhost";
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;

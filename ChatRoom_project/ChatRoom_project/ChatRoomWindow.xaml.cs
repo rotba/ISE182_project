@@ -36,6 +36,7 @@ namespace ChatRoom_project
         private MainWindow mainWindow;
         private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;
+        private bool indexChangedByCode = false;
 
         public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
@@ -205,44 +206,67 @@ namespace ChatRoom_project
         
         private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            var selectedUser = _main.ComboNickNameSelectedItem;
-            if (selectedUser is User)
+            if (!indexChangedByCode)
             {
-                _main.view_msg.Filter = delegate (object item)
+                indexChangedByCode = true;
+                _main.CmbGroupIDSelectedIndex = 0;
+                indexChangedByCode = false;
+                var selectedUser = _main.ComboNickNameSelectedItem;
+                if (selectedUser is User)
                 {
-                    if (item is Message)
+                    _main.view_msg.Filter = delegate (object item)
                     {
-                        if (((Message)item).UserName.Equals(((User)selectedUser).Nickname) && ((Message)item).GroupID.Equals(((User)selectedUser).G_id.ToString()))
+                        if (item is Message)
                         {
-                            return true;
+                            if (((Message)item).UserName.Equals(((User)selectedUser).Nickname) && ((Message)item).GroupID.Equals(((User)selectedUser).G_id.ToString()))
+                            {
+                                return true;
+                            }
                         }
-                    }
-                    return false;
-                };
+                        return false;
+                    };
+                   
+                }
+                else
+                    _main.view_msg.Filter = null;
             }
             else
-                _main.view_msg.Filter = null;
+            {
+
+            }
 
         }
         private void cmbGroupID_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            var selectedID = _main.ComboGroupIDSelectedItem;
-            if (selectedID is int)
+            if (!indexChangedByCode)
             {
-                _main.view_msg.Filter = delegate (object item)
+                indexChangedByCode = true;
+                _main.CmbNickNameSelectedIndex = 0;
+                indexChangedByCode = false;
+            
+            var selectedID = _main.ComboGroupIDSelectedItem;
+                if (selectedID is int)
                 {
-                    if (item is Message)
+                    _main.view_msg.Filter = delegate (object item)
                     {
-                        if (((Message)item).GroupID.Equals(((int)selectedID).ToString()))
+                        if (item is Message)
                         {
-                            return true;
+                            if (((Message)item).GroupID.Equals(((int)selectedID).ToString()))
+                            {
+                                return true;
+                            }
                         }
-                    }
-                    return false;
-                };
+                        return false;
+                    };
+                }
+
+                else
+                    _main.view_msg.Filter = null;
             }
             else
-                _main.view_msg.Filter = null;
+            {
+
+            }
         }
 
         private int g_IDToIntAndVerify(String g_ID)

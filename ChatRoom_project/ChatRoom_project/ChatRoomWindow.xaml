@@ -39,7 +39,7 @@
 
         <ListBox  HorizontalAlignment="Left" Height="90" Margin="482,148,0,0" VerticalAlignment="Top" Width="158">
             <Label Content="Filter by:"/>
-            <ComboBox SelectedItem="{Binding ComboNickNameSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbNickName_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="0">
+            <ComboBox  SelectedItem="{Binding ComboNickNameSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbNickName_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="{Binding CmbNickNameSelectedIndex, Mode=TwoWay}">
                 <ComboBox.ItemsSource>
                     <CompositeCollection>
                         <ComboBoxItem>Choose Nickname</ComboBoxItem>
@@ -58,7 +58,7 @@
                 </ComboBox.ItemTemplate>
 
             </ComboBox>
-            <ComboBox SelectedItem="{Binding ComboGroupIDSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbGroupID_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="0">
+            <ComboBox SelectedItem="{Binding ComboGroupIDSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbGroupID_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="{Binding CmbGroupIDSelectedIndex, Mode=TwoWay}">
                 <ComboBox.ItemsSource>
                     <CompositeCollection>
                         <ComboBoxItem>Choose Group ID</ComboBoxItem>
