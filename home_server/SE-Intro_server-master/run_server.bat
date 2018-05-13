@@ -1,1 +1,1 @@
-C:\Users\Administrator\Anaconda3\envs\untitled\python.exe server.py >> serverLog.txt
+C:\Users\rotem barak\AppData\Local\Programs\Python\Python36-32\python.exe server.py >> serverLog.txt
