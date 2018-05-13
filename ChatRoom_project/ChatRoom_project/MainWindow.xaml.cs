@@ -32,53 +32,67 @@ namespace ChatRoom_project
         private static ChatRoom chtrm;
         ObservableModelMainWindow _main;
         
-
-        Dictionary<int, string> names = new Dictionary<int, string>()
-        {
-            { 0, "Tomer"},
-            { 1, "Dima"},
-            { 2, "Rotem"}
-        };
         public MainWindow()
         {
-            chtrm = new ChatRoom();
-            _main = new ObservableModelMainWindow(chtrm);
+            try
+            {
+                chtrm = new ChatRoom();
+                _main = new ObservableModelMainWindow(chtrm);
+            }
+            catch(Exception e)
+            {
+                log.Debug("unexpected error found: " + e);
+            }
             InitializeComponent();           
             messages = new ObservableCollection<Message>();
-            //lbMessages.ItemsSource = messages;
             view_names = CollectionViewSource.GetDefaultView(messages);
-           // chtrm.register(15, "Tomer");
-            //chtrm.login(15, "Tomer");
             this.DataContext = _main;
             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {/*
-            verifyNickName(nicknameBox.Text);
-            chtrm.login(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
-            nicknameBox.Text = String.Empty;
+        {
+            try
+            {
+                _main.login(_main.G_IDBox, _main.NicknameBox);
+                this.Visibility = Visibility.Collapsed;
+                ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
+                chtrmWindow.Show();
+                
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
 
-            g_IDBox.Text = String.Empty;
-            ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
-            chtrmWindow.Show();
-            this.Hide();*/
-            _main.login(_main.G_IDBox, _main.NicknameBox);
-            ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
-            chtrmWindow.Show();
-            this.Hide();
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-
-            // verifyNickName(nicknameBox.Text);
-            //  chtrm.register(g_IDToIntAndVerify(g_IDBox.Text), nicknameBox.Text);
-            //  MessageBox.Show("Register completed successfully");
-            // nicknameBox.Text = String.Empty;
-            //  g_IDBox.Text = String.Empty;
-            _main.register(_main.G_IDBox,_main.NicknameBox);
-
+            try
+            {
+                _main.register(_main.G_IDBox, _main.NicknameBox);
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
 
 

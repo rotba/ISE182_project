@@ -59,7 +59,6 @@ namespace ChatRoom_project
         public void register(String g_ID, String nickname) {
              verifyNickName(nickname);
              chtrm.register(g_IDToIntAndVerify(g_ID), nickname);
-        //   MessageBox.Show("Register completed successfully");
              this.G_IDBox = "";
              this.nicknameBox="";
 
@@ -69,9 +68,9 @@ namespace ChatRoom_project
         {
             verifyNickName(nickname);
             chtrm.login(g_IDToIntAndVerify(g_ID), nickname);
-            //   MessageBox.Show("Register completed successfully");
             this.G_IDBox = "";
             this.nicknameBox = "";
+            
 
         }
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
