@@ -24,7 +24,7 @@ namespace ConsoleApp1.BuissnessLayer
         private List<User> users;
         private Request request;
        // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        //private static readonly string DEFAULT_URL = "http://localhost";
+        private static readonly string DEFAULT_URL = "http://localhost";
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
@@ -155,10 +155,15 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted send without initially logging in");
                 throw new ToUserException("Cannot send a message without initially logging in");
             }
-             Message msg = new Message(request.send(message, LoggedInUser));
-             messages.Add(msg);
-             messageHandler.save(msg);
-             log.Info("Message"+msg +" was sent successfully");
+            if (message != "")
+            {
+                Message msg = new Message(request.send(message, LoggedInUser));
+                messages.Add(msg);
+                messageHandler.save(msg);
+                log.Info("Message" + msg + " was sent successfully");
+            }
+            else
+                log.Info("Attempted to send empty message");
             
         }
 

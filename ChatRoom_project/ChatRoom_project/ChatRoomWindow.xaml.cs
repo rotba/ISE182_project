@@ -341,7 +341,7 @@ namespace ChatRoom_project
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-            try
+            try  
             {
                 chtrm.send(_main.MessageContent);
                 refreshMessages();
@@ -349,14 +349,9 @@ namespace ChatRoom_project
             catch (ToUserException er) {
                 UserErrorWindow uew = new UserErrorWindow(er.Message);
                 uew.Show();
-            }
                 _main.MessageContent = "";
-
             }
-            catch (ToUserException e_1)
-            {
-                MessageBox.Show(e_1.Message);
-            }
+               
             catch (ArgumentException e_2)
             {
                 log.Debug("Argument Exception found: " + e_2);
@@ -368,16 +363,6 @@ namespace ChatRoom_project
             }
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-        
         
         private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
