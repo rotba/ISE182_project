@@ -8,9 +8,8 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
-
-
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace ChatRoom_project
 {
@@ -22,12 +21,11 @@ namespace ChatRoom_project
         public ObservableModelMainWindow(ChatRoom chtrm)
         {
             this.chtrm = chtrm;
-            //   Messages.CollectionChanged += Messages_CollectionChanged;
-
         }
         public ObservableCollection<string> Messages { get; } = new ObservableCollection<string>();
-
         private ChatRoom chtrm;
+
+        //Binding for nickname box 
         private string nicknameBox = "";
         public string NicknameBox
         {
@@ -42,6 +40,7 @@ namespace ChatRoom_project
             }
         }
 
+        //Binding for group ID box
         private string g_IDBox = "";
         public string G_IDBox
         {
@@ -55,6 +54,10 @@ namespace ChatRoom_project
                 OnPropertyChanged("G_IDBox");
             }
         }
+
+        //Binding for the window's image background
+        private static ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\RickNMorty.jpg"));
+        public static ImageSource BkImageLocation { get { return bkImageLocation; } }
 
         public void register(String g_ID, String nickname) {
              verifyNickName(nickname);

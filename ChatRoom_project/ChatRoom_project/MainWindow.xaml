@@ -25,7 +25,8 @@
         <Grid x:Name="mainTitle" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="110" Margin="0,-115,0,0" VerticalAlignment="Top" Width="629">
             <TextBlock HorizontalAlignment="Left" Height="90" Margin="10,10,0,10" TextWrapping="Wrap" Text="Tomer and The Design Patterns' Chat Room" VerticalAlignment="Center" Width="601" FontSize="30"/>
         </Grid>
-
-
     </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="{Binding BkImageLocation}" Stretch="UniformToFill"/>
+    </Window.Background>
 </Window>

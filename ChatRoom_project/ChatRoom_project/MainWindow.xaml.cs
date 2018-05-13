@@ -38,6 +38,7 @@ namespace ChatRoom_project
             {
                 chtrm = new ChatRoom();
                 _main = new ObservableModelMainWindow(chtrm);
+             
             }
             catch(Exception e)
             {
