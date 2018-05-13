@@ -11,7 +11,7 @@
         <CollectionViewSource x:Key="groupIDViewSource" Source="{Binding GroupIDs}"/>
     </Window.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding Messages}" Margin="10,10,171,81">
+        <ListBox ItemsSource="{Binding Messages}" Margin="10,10,171,81" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -23,7 +23,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Button Content="logout" HorizontalAlignment="Left" Margin="576,281,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="25"/>
-        <Button Content="Send" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="22" />
+        <Button Content="Send" IsDefault="True" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="22" />
         <TextBox Text="{Binding MessageContent}" HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
         <ListBox HorizontalAlignment="Left" Height="133" Margin="482,10,0,0" VerticalAlignment="Top" Width="156" >
             <Label Content="Sort by:"/>
@@ -34,7 +34,6 @@
                 <Button Content="Asc" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Height="33" Click="Button_Click_Asc"/>
                 <Button Content="Desc" HorizontalAlignment="Left" Margin="66,0,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click_Desc" Height="33"/>
             </Grid>
-
         </ListBox>
 
         <ListBox  HorizontalAlignment="Left" Height="90" Margin="482,148,0,0" VerticalAlignment="Top" Width="158">

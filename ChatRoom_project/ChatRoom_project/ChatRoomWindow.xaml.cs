@@ -47,6 +47,7 @@ namespace ChatRoom_project
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
             InitializeComponent();
+            _main.MessageContent = "";
             DataContext = _main;
             refreshMessages();
            
@@ -188,8 +189,16 @@ namespace ChatRoom_project
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-            chtrm.send(_main.MessageContent);
+            try {
+                chtrm.send(_main.MessageContent);
+                refreshMessages();
+            }
+            catch (ToUserException er) {
+                UserErrorWindow uew = new UserErrorWindow(er.Message);
+                uew.Show();
+            }
             _main.MessageContent = "";
+
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
