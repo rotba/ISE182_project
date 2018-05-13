@@ -95,7 +95,12 @@ namespace ChatRoom_project
         private void refreshMessages()
         {
             Message temp;
-            chtrm.retrieveMessages(10);
+            try { chtrm.retrieveMessages(10); }
+            catch(Exception e)
+            {
+                log.Debug(e);
+            }
+           
             SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
             temp = toDisplay.Max;
             toDisplay.RemoveWhere(timeFilter);
