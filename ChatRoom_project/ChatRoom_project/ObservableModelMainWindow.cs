@@ -56,7 +56,7 @@ namespace ChatRoom_project
         }
 
         //Binding for the window's image background
-        private static ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\RickNMorty.jpg"));
+        private static ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
         public static ImageSource BkImageLocation { get { return bkImageLocation; } }
 
         public void register(String g_ID, String nickname) {
