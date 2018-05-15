@@ -31,24 +31,52 @@ namespace ChatRoom_project
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         ObservableModelMainWindow _main;
-        
+
         public MainWindow()
         {
             try
             {
                 chtrm = new ChatRoom();
                 _main = new ObservableModelMainWindow(chtrm);
-             
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 log.Debug("unexpected error found: " + e);
             }
-            InitializeComponent();           
+            InitializeComponent();
             messages = new ObservableCollection<Message>();
             view_names = CollectionViewSource.GetDefaultView(messages);
             this.DataContext = _main;
-            
+
+            // Manually alter window height and width
+            this.SizeToContent = SizeToContent.Manual;
+
+            // Automatically resize width relative to content
+            this.SizeToContent = SizeToContent.Width;
+
+            // Automatically resize height relative to content
+            this.SizeToContent = SizeToContent.Height;
+
+            // Automatically resize height and width relative to content
+            this.SizeToContent = SizeToContent.WidthAndHeight;
+        }
+
+        private void main_grid_loaded(object sender, RoutedEventArgs e)
+        {
+            Grid g = sender as Grid;
+            ImageBrush ib = null;
+            try
+            {
+                ib = new ImageBrush(_main.BkImageLocation);
+            }
+            catch (Exception e_1)
+            {
+                log.Debug("Unexpected error while loading background image: " + e_1);
+
+            }
+            if (ib == null || ib.ImageSource == null)
+                g.Background = new SolidColorBrush(Colors.White);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -59,7 +87,7 @@ namespace ChatRoom_project
                 this.Visibility = Visibility.Collapsed;
                 ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
                 chtrmWindow.Show();
-                
+
             }
             catch (ToUserException e_1)
             {
@@ -97,6 +125,6 @@ namespace ChatRoom_project
         }
 
 
-      
+
     }
 }

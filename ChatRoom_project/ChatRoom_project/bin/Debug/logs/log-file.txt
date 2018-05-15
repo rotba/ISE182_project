@@ -3416,3 +3416,43 @@ GroupId:15
    at ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 58
 2018-05-13 16:47:07,486 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
    at ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 58
+2018-05-13 23:28:54,233 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
+2018-05-15 11:04:25,879 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.FileNotFoundException: Could not find file 'C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\bin\Debug\Images\Beach.jpg'.
+File name: 'C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\bin\Debug\Images\Beach.jpg'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   at System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   at System.Windows.Media.Imaging.BitmapImage.FinalizeCreation()
+   at System.Windows.Media.Imaging.BitmapImage.EndInit()
+   at System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource, RequestCachePolicy uriCachePolicy)
+   at System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource)
+   at ChatRoom_project.ObservableModelMainWindow..ctor(ChatRoom chtrm) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\ObservableModelMainWindow.cs:line 59
+   at ChatRoom_project.MainWindow..ctor() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 40
+2018-05-15 11:07:26,220 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.FileNotFoundException: Could not find file 'C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\bin\Debug\Images\Beach.jpg'.
+File name: 'C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\bin\Debug\Images\Beach.jpg'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   at System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   at System.Windows.Media.Imaging.BitmapImage.FinalizeCreation()
+   at System.Windows.Media.Imaging.BitmapImage.EndInit()
+   at System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource, RequestCachePolicy uriCachePolicy)
+   at System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource)
+   at ChatRoom_project.ObservableModelMainWindow..ctor(ChatRoom chtrm) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\ObservableModelMainWindow.cs:line 59
+   at ChatRoom_project.MainWindow..ctor() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 40
+2018-05-15 11:08:37,550 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.FileNotFoundException: Could not find file 'C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\bin\Debug\Images\Beach.jpg'.
+File name: 'C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\bin\Debug\Images\Beach.jpg'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   at System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   at System.Windows.Media.Imaging.BitmapImage.FinalizeCreation()
+   at System.Windows.Media.Imaging.BitmapImage.EndInit()
+   at System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource, RequestCachePolicy uriCachePolicy)
+   at System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource)
+   at ChatRoom_project.ObservableModelMainWindow..ctor(ChatRoom chtrm) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\ObservableModelMainWindow.cs:line 59
+   at ChatRoom_project.MainWindow..ctor() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 40
