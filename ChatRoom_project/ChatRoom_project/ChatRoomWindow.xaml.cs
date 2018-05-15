@@ -341,8 +341,9 @@ namespace ChatRoom_project
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-            try  
             {
+            {
+                chtrm.send(_main.MessageContent);
                 chtrm.send(_main.MessageContent);
                 refreshMessages();
             }
@@ -350,6 +351,8 @@ namespace ChatRoom_project
                 UserErrorWindow uew = new UserErrorWindow(er.Message);
                 uew.Show();
                 _main.MessageContent = "";
+            _main.MessageContent = "";
+
             }
                
             catch (ArgumentException e_2)
