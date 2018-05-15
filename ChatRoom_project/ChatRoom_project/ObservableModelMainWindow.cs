@@ -68,7 +68,7 @@ namespace ChatRoom_project
              verifyNickName(nickname);
              chtrm.register(g_IDToIntAndVerify(g_ID), nickname);
              this.G_IDBox = "";
-             this.nicknameBox="";
+             this.NicknameBox = "";
 
         }
 
