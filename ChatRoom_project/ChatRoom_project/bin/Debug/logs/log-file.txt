@@ -4127,3 +4127,6 @@ GroupId:15
 2018-05-15 18:17:33,569 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
 2018-05-15 18:17:33,569 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
 2018-05-15 18:17:34,069 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem
+2018-05-15 20:51:36,911 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem
+2018-05-15 20:51:53,126 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem
+2018-05-15 20:53:02,174 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem

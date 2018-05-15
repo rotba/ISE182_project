@@ -160,5 +160,13 @@ namespace ChatRoom_project
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public ChatRoomWindow Observes
+        {
+            get => default(ChatRoomWindow);
+            set
+            {
+            }
+        }
     }
 }

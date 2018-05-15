@@ -250,5 +250,13 @@ namespace ConsoleApp1.BuissnessLayer
             }
             return ans;
         }
+
+        public ChatRoom_project.ChatRoomWindow ChatRoomWindow
+        {
+            get => default(ChatRoom_project.ChatRoomWindow);
+            set
+            {
+            }
+        }
     }
 }
