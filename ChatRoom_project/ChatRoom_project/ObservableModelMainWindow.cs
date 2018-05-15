@@ -56,14 +56,19 @@ namespace ChatRoom_project
         }
 
         //Binding for the window's image background
-        private static ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
-        public static ImageSource BkImageLocation { get { return bkImageLocation; } }
+        private ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
+        public ImageSource BkImageLocation { get {
+             //   if(bkImageLocation==null) {
+              //      bkImageLocation = new SolidColorBrush(Colors.White) as 
+                    return bkImageLocation;
+            }
+        }
 
         public void register(String g_ID, String nickname) {
              verifyNickName(nickname);
              chtrm.register(g_IDToIntAndVerify(g_ID), nickname);
              this.G_IDBox = "";
-             this.nicknameBox="";
+             this.NicknameBox = "";
 
         }
 

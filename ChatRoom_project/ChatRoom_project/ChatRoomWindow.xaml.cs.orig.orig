@@ -341,15 +341,27 @@ namespace ChatRoom_project
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
 
             try
+=======
+            {
+>>>>>>> origin/tomer
             {
                 chtrm.send(_main.MessageContent);
                 refreshMessages();
             }catch (ToUserException er) {
                 UserErrorWindow uew = new UserErrorWindow(er.Message);
                 uew.Show();
+<<<<<<< HEAD
             }   
+=======
+                _main.MessageContent = "";
+            _main.MessageContent = "";
+
+            }
+               
+>>>>>>> origin/tomer
             catch (ArgumentException e_2)
             {
                 log.Debug("Argument Exception found: " + e_2);

@@ -24,12 +24,12 @@ namespace ConsoleApp1.BuissnessLayer
         private List<User> users;
         private Request request;
 <<<<<<< HEAD
-        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        //private static readonly string DEFAULT_URL = "http://localhost";
-=======
        // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         private static readonly string DEFAULT_URL = "http://localhost";
->>>>>>> origin/Ariel
+=======
+        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+        //private static readonly string DEFAULT_URL = "http://localhost";
+>>>>>>> origin/rotem
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
