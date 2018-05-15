@@ -34,6 +34,7 @@ namespace ChatRoom_project
 
         public MainWindow()
         {
+            
             try
             {
                 chtrm = new ChatRoom();
@@ -60,6 +61,7 @@ namespace ChatRoom_project
 
             // Automatically resize height and width relative to content
             this.SizeToContent = SizeToContent.WidthAndHeight;
+
         }
 
         private void main_grid_loaded(object sender, RoutedEventArgs e)
@@ -109,7 +111,7 @@ namespace ChatRoom_project
             try
             {
                 _main.register(_main.G_IDBox, _main.NicknameBox);
-                MessageBox.Show("Register successful");
+                MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)
             {
