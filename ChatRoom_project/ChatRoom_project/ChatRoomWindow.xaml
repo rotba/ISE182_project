@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatRoom_project"
+        xmlns:Extenders="clr-namespace:ChatRoom_project.PresnetationExtednders"
         mc:Ignorable="d"
         Title="ChatRoomWindow" Height="388" Width="656">
     <Window.Resources>
@@ -11,7 +12,7 @@
         <CollectionViewSource x:Key="groupIDViewSource" Source="{Binding GroupIDs}"/>
     </Window.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding Messages}" Margin="10,10,171,81" >
+        <ListBox ItemsSource="{Binding Messages}" Margin="10,10,171,81" Extenders:ListBoxExtenders.AutoScrollToEnd="True" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
