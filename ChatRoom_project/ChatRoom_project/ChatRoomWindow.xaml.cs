@@ -36,6 +36,7 @@ namespace ChatRoom_project
         private MainWindow mainWindow;
         private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;
+        private bool indexChangedByCode = false;
 
         public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
@@ -55,7 +56,7 @@ namespace ChatRoom_project
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            mainWindow.Close();
+           mainWindow.Close();
             base.OnClosing(e);
         }
 
@@ -71,7 +72,23 @@ namespace ChatRoom_project
            
             else
             {
-                refreshMessages();
+                try
+                {
+                    refreshMessages();
+                }
+                catch (ToUserException e_1)
+                {
+                    MessageBox.Show(e_1.Message);
+                }
+                catch (ArgumentException e_2)
+                {
+                    log.Debug("Argument Exception found: " + e_2);
+                }
+
+                catch (Exception e_3)
+                {
+                    log.Debug("unexpected error found: " + e_3);
+                }
             }
         }
 
@@ -114,67 +131,179 @@ namespace ChatRoom_project
 
         private void Button_Click_Asc(object sender, RoutedEventArgs e)
         {
-            direction = ListSortDirection.Ascending;
-            SortDescriptionCollection sds = new SortDescriptionCollection();
-            foreach (var sd in _main.view_msg.SortDescriptions)
+            try
             {
-                sds.Add(new SortDescription(sd.PropertyName, direction));
+                direction = ListSortDirection.Ascending;
+                SortDescriptionCollection sds = new SortDescriptionCollection();
+                foreach (var sd in _main.view_msg.SortDescriptions)
+                {
+                    sds.Add(new SortDescription(sd.PropertyName, direction));
+                }
+                _main.view_msg.SortDescriptions.Clear();
+                foreach (var sd in sds)
+                {
+                    _main.view_msg.SortDescriptions.Add(sd);
+                }
             }
-            _main.view_msg.SortDescriptions.Clear();
-            foreach (var sd in sds)
+            catch (ToUserException e_1)
             {
-                _main.view_msg.SortDescriptions.Add(sd);
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
             }
         }
 
         private void Button_Click_Desc(object sender, RoutedEventArgs e)
         {
-            direction = ListSortDirection.Descending;
-            SortDescriptionCollection sds = new SortDescriptionCollection();
-            foreach (var sd in _main.view_msg.SortDescriptions)
+            try
             {
-                sds.Add(new SortDescription(sd.PropertyName, direction));
+                direction = ListSortDirection.Descending;
+                SortDescriptionCollection sds = new SortDescriptionCollection();
+                foreach (var sd in _main.view_msg.SortDescriptions)
+                {
+                    sds.Add(new SortDescription(sd.PropertyName, direction));
+                }
+                _main.view_msg.SortDescriptions.Clear();
+                foreach (var sd in sds)
+                {
+                    _main.view_msg.SortDescriptions.Add(sd);
+                }
             }
-            _main.view_msg.SortDescriptions.Clear();
-            foreach (var sd in sds)
+            catch (ToUserException e_1)
             {
-                _main.view_msg.SortDescriptions.Add(sd);
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
             }
         }
+
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            chtrm.logout();
-            
-            mainWindow.Show();
-            
-            this.Close();
+            try
+            {
+                mainWindow.Visibility = Visibility.Visible;
+                chtrm.logout();
+                this.Close();
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
-        
+
 
         private void RadioButton_Checked_Name(object sender, RoutedEventArgs e)
         {
-            _main.view_msg.SortDescriptions.Clear();
-            _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+            try
+            {
+                _main.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
         private void RadioButton_Unhecked_Name(object sender, RoutedEventArgs e)
         {
-            _main.view_msg.SortDescriptions.Clear();
-            _main.SortName = false;
+            try
+            {
+                _main.view_msg.SortDescriptions.Clear();
+                _main.SortName = false;
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
 
         private void RadioButton_Checked_Time(object sender, RoutedEventArgs e)
         {
-            _main.view_msg.SortDescriptions.Clear();
-            _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+            try
+            {
+                _main.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
+
 
         private void RadioButton_Checked_Multy(object sender, RoutedEventArgs e)
         {
-            _main.view_msg.SortDescriptions.Clear();
-            _main.view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
-            _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
-            _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+            try
+            {
+                _main.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
+                _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+                _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
 
         
@@ -183,13 +312,33 @@ namespace ChatRoom_project
          */
         private static bool isOlder(Message message)
         {
-            MessageDateComp comp = new MessageDateComp();
-            return comp.Compare(message, lastMessage) <= 0;
+            bool isEqual=false;
+            try
+            {
+                MessageDateComp comp = new MessageDateComp();
+                isEqual = comp.Compare(message, lastMessage) <= 0;
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
+            return isEqual;
         }
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
             try {
+            {
+                chtrm.send(_main.MessageContent);
                 chtrm.send(_main.MessageContent);
                 refreshMessages();
             }
@@ -197,8 +346,23 @@ namespace ChatRoom_project
                 UserErrorWindow uew = new UserErrorWindow(er.Message);
                 uew.Show();
             }
+                _main.MessageContent = "";
             _main.MessageContent = "";
 
+            }
+            catch (ToUserException e_1)
+            {
+                MessageBox.Show(e_1.Message);
+            }
+            catch (ArgumentException e_2)
+            {
+                log.Debug("Argument Exception found: " + e_2);
+            }
+
+            catch (Exception e_3)
+            {
+                log.Debug("unexpected error found: " + e_3);
+            }
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -214,44 +378,67 @@ namespace ChatRoom_project
         
         private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            var selectedUser = _main.ComboNickNameSelectedItem;
-            if (selectedUser is User)
+            if (!indexChangedByCode)
             {
-                _main.view_msg.Filter = delegate (object item)
+                indexChangedByCode = true;
+                _main.CmbGroupIDSelectedIndex = 0;
+                indexChangedByCode = false;
+                var selectedUser = _main.ComboNickNameSelectedItem;
+                if (selectedUser is User)
                 {
-                    if (item is Message)
+                    _main.view_msg.Filter = delegate (object item)
                     {
-                        if (((Message)item).UserName.Equals(((User)selectedUser).Nickname) && ((Message)item).GroupID.Equals(((User)selectedUser).G_id.ToString()))
+                        if (item is Message)
                         {
-                            return true;
+                            if (((Message)item).UserName.Equals(((User)selectedUser).Nickname) && ((Message)item).GroupID.Equals(((User)selectedUser).G_id.ToString()))
+                            {
+                                return true;
+                            }
                         }
-                    }
-                    return false;
-                };
+                        return false;
+                    };
+                   
+                }
+                else
+                    _main.view_msg.Filter = null;
             }
             else
-                _main.view_msg.Filter = null;
+            {
+
+            }
 
         }
         private void cmbGroupID_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            var selectedID = _main.ComboGroupIDSelectedItem;
-            if (selectedID is int)
+            if (!indexChangedByCode)
             {
-                _main.view_msg.Filter = delegate (object item)
+                indexChangedByCode = true;
+                _main.CmbNickNameSelectedIndex = 0;
+                indexChangedByCode = false;
+            
+            var selectedID = _main.ComboGroupIDSelectedItem;
+                if (selectedID is int)
                 {
-                    if (item is Message)
+                    _main.view_msg.Filter = delegate (object item)
                     {
-                        if (((Message)item).GroupID.Equals(((int)selectedID).ToString()))
+                        if (item is Message)
                         {
-                            return true;
+                            if (((Message)item).GroupID.Equals(((int)selectedID).ToString()))
+                            {
+                                return true;
+                            }
                         }
-                    }
-                    return false;
-                };
+                        return false;
+                    };
+                }
+
+                else
+                    _main.view_msg.Filter = null;
             }
             else
-                _main.view_msg.Filter = null;
+            {
+
+            }
         }
 
         private int g_IDToIntAndVerify(String g_ID)

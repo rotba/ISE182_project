@@ -37,6 +37,20 @@ namespace ChatRoom_project
         /*
          *Filter properties 
          */
+        private int cmbNickNameSelectedIndex = 0;
+        public int CmbNickNameSelectedIndex
+        {
+            get
+            {
+                return cmbNickNameSelectedIndex;
+            }
+            set
+            {
+                cmbNickNameSelectedIndex = value;
+                OnPropertyChanged("CmbNickNameSelectedIndex");
+            }
+        }
+
         private Object comboNickNameSelectedItem;
         public Object ComboNickNameSelectedItem
         {
@@ -52,6 +66,21 @@ namespace ChatRoom_project
                 OnPropertyChanged("ComboNickNameSelectedItem");
             }
         }
+
+        private int cmbGroupIDSelectedIndex = 0;
+        public int CmbGroupIDSelectedIndex
+        {
+            get
+            {
+                return cmbGroupIDSelectedIndex;
+            }
+            set
+            {
+                cmbGroupIDSelectedIndex = value;
+                OnPropertyChanged("CmbGroupIDSelectedIndex");
+            }
+        }
+
         private Object comboGroupIDSelectedItem;
         public Object ComboGroupIDSelectedItem
         {
