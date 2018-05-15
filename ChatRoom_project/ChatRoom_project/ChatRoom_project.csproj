@@ -72,7 +72,7 @@
     <Compile Include="MainMenu.cs" />
     <Compile Include="logics\Message.cs" />
     <Compile Include="DAL\MessageHandler.cs" />
-    <Compile Include="ObservableObject.cs" />
+    <Compile Include="ObservableModelChatRoom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="logics\Request.cs" />
     <Compile Include="logics\ToUserException.cs" />

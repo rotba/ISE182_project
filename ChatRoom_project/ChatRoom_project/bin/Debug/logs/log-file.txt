@@ -4056,3 +4056,74 @@ GroupId:15
 2018-05-15 15:53:48,891 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-05-15 15:53:48,892 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
 2018-05-15 15:53:48,892 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 17:44:45,783 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.IOException: אין אפשרות לתהליך לגשת לקובץ 'C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\bin\Debug\local_files\users.bin' כיוון שתהליך אחר משתמש בקובץ.
+   ב-  System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   ב-  System.IO.File.InternalDelete(String path, Boolean checkHost)
+   ב-  System.IO.File.Delete(String path)
+   ב-  ConsoleApp1.PersistentLayer.UserHandler..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:שורה 37
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 50
+   ב-  ChatRoom_project.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 41
+2018-05-15 17:44:46,530 [1] DEBUG ChatRoom_project.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 78
+2018-05-15 17:44:53,795 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 93
+2018-05-15 17:45:22,989 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 15 Nickname: Rotem
+2018-05-15 17:45:25,164 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Rotem
+2018-05-15 17:45:30,792 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem
+2018-05-15 17:45:31,135 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 17:45:31,161 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 17:45:31,164 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 10 messages
+2018-05-15 17:45:32,890 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 17:45:32,890 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 17:45:32,890 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 10 messages
+2018-05-15 17:45:34,937 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 17:45:34,938 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 17:45:34,938 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 10 messages
+2018-05-15 17:49:19,252 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem
+2018-05-15 17:49:19,600 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 17:49:19,602 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 17:49:19,603 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 10 messages
+2018-05-15 17:49:21,288 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 17:49:21,288 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 17:49:21,288 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 10 messages
+2018-05-15 17:49:23,486 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 17:49:23,486 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 17:49:23,486 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 10 messages
+2018-05-15 17:49:23,710 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem
+2018-05-15 18:17:00,581 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem
+2018-05-15 18:17:00,921 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:00,925 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:00,927 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:02,640 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:02,640 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:02,641 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:04,719 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:04,720 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:04,720 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:06,717 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:06,717 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:06,717 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:08,749 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:08,749 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:08,749 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:10,752 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:10,752 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:10,752 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:12,768 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:12,768 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:12,768 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:14,955 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:14,956 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:14,956 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:17,046 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:17,046 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:17,046 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:17,960 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem
+2018-05-15 18:17:31,540 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Rotem
+2018-05-15 18:17:31,870 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:31,871 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:31,873 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:33,569 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 18:17:33,569 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 18:17:33,569 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 11 messages
+2018-05-15 18:17:34,069 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem

@@ -26,10 +26,8 @@ namespace ChatRoom_project
     public partial class ChatRoomWindow : Window
     {
         int i = 0;
-        ObservableObject _main = new ObservableObject();
-        //private ObservableCollection<Message> messages;
+        ObservableModelChatRoom _main = new ObservableModelChatRoom();
         private static Message lastMessage;
-        //private ListCollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
@@ -58,18 +56,17 @@ namespace ChatRoom_project
         {
            mainWindow.Close();
             base.OnClosing(e);
+            if (chtrm.LoggedInUser!=null) {
+                chtrm.logout();
+            }
         }
-
-
-
+        
         private void dispatcherTimer_Tick(object sender, EventArgs e)
-
         {
             if (chtrm.LoggedInUser == null)
             {
                 
             }
-           
             else
             {
                 try
@@ -92,7 +89,9 @@ namespace ChatRoom_project
             }
         }
 
-
+        /*
+         *Updates the messages if new ones exist
+         */
         private void refreshMessages()
         {
             Message temp;
@@ -127,13 +126,12 @@ namespace ChatRoom_project
                 }
             }
             toDisplay.ToList().ForEach(_main.Messages.Add);
-            lastMessage = temp;
-            
+            lastMessage = temp;// updates the last message to be the current newest message
         }
 
-
-        
-
+        /*
+         * Sets the direction of the sorting to be ascending
+         */
         private void Button_Click_Asc(object sender, RoutedEventArgs e)
         {
             try
@@ -164,7 +162,9 @@ namespace ChatRoom_project
                 log.Debug("unexpected error found: " + e_3);
             }
         }
-
+        /*
+         * Sets the direction of the sorting to be descending
+         */
         private void Button_Click_Desc(object sender, RoutedEventArgs e)
         {
             try
@@ -196,7 +196,9 @@ namespace ChatRoom_project
             }
         }
 
-
+        /*
+         * logout from the chatroom and closes the window
+         */
         private void logout_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -219,8 +221,7 @@ namespace ChatRoom_project
                 log.Debug("unexpected error found: " + e_3);
             }
         }
-
-
+        
         private void RadioButton_Checked_Name(object sender, RoutedEventArgs e)
         {
             try
@@ -338,7 +339,9 @@ namespace ChatRoom_project
             }
             return isEqual;
         }
-
+        /*
+         * Sends message
+         */
         private void Send_Click(object sender, RoutedEventArgs e)
         {
 
