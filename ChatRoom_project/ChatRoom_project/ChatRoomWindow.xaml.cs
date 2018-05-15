@@ -358,8 +358,7 @@ namespace ChatRoom_project
                 chtrm.send(observer.MessageContent);
                 refreshMessages();
             }catch (ToUserException er) {
-                UserErrorWindow uew = new UserErrorWindow(er.Message);
-                uew.Show();
+                MessageBox.Show(er.Message);
             }   
             catch (ArgumentException e_2)
             {
