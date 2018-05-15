@@ -109,7 +109,7 @@ namespace ChatRoom_project
             try
             {
                 _main.register(_main.G_IDBox, _main.NicknameBox);
-                MessageBox.Show("Register successful");
+                MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)
             {
