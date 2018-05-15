@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace ChatRoom_project
     /// </summary>
     public partial class ChatRoomWindow : Window
     {
+        private bool logoutClose = false;
         int i = 0;
         ObservableObject _main = new ObservableObject();
         //private ObservableCollection<Message> messages;
@@ -56,7 +58,10 @@ namespace ChatRoom_project
 
         protected override void OnClosing(CancelEventArgs e)
         {
-           mainWindow.Close();
+
+            if (!logoutClose) 
+                 mainWindow.Close();
+            logoutClose = false;
             base.OnClosing(e);
         }
 
@@ -201,8 +206,9 @@ namespace ChatRoom_project
         {
             try
             {
-                mainWindow.Visibility = Visibility.Visible;
                 chtrm.logout();
+                mainWindow.Show();
+                logoutClose = true;
                 this.Close();
             }
             catch (ToUserException e_1)

@@ -51,7 +51,7 @@ namespace ConsoleApp1.BuissnessLayer
                 {
                     //return IMessage iMsg=null;
                     log.Error("Attempted to send more than 20 requests to server in past 10 secs");
-                    throw new ToUserException("Illegal attempt to send more than 20 requests to server in past 10 secs");
+                    throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
                 }
             }
             else
@@ -80,7 +80,7 @@ namespace ConsoleApp1.BuissnessLayer
                 else
                 {
                     log.Error("Attempted to send more than 20 requests to server in past 10 secs");
-                    throw new ToUserException("Illegal attempt to send more than 20 requests to server in past 10 secs");
+                    throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
                 }
             }
             else

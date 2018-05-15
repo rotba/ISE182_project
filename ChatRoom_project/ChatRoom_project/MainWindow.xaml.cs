@@ -85,9 +85,9 @@ namespace ChatRoom_project
         {
             try
             {
-                _main.login(_main.G_IDBox, _main.NicknameBox);
-                this.Visibility = Visibility.Collapsed;
+                _main.login(_main.G_IDBox, _main.NicknameBox);     
                 ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
+                this.Hide();
                 chtrmWindow.Show();
 
             }

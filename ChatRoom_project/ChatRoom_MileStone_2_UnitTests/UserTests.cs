@@ -37,25 +37,25 @@ namespace ConsoleApp1.Tests
         }
 
         [TestMethod()]
-        public void EqualsTest_equal_user_test()
+        public void EqualsTest_equal_user_test_succsess()
         {
             Assert.IsTrue(tempUser1.Equals(tempUser2), "Should be the same user");
         }
 
         [TestMethod()]
-        public void EqualsTest_different_username()
+        public void EqualsTest_different_username_returns_false()
         {
             Assert.IsFalse(tempUser1.Equals(tempUser3), "Should be different username");
         }
 
         [TestMethod()]
-        public void EqualsTest_different_groupID()
+        public void EqualsTest_different_groupID_returns_false()
         {
             Assert.IsFalse(tempUser1.Equals(tempUser4), "Should be different group ID");
             Assert.IsFalse(tempUser1.Equals(tempUser5), "Should be different username and group ID");
         }
         [TestMethod()]
-        public void EqualsTest_different_IDandNick()
+        public void EqualsTest_different_IDandNick_returns_false()
         {
             Assert.IsFalse(tempUser1.Equals(tempUser5), "Should be different username and group ID");
         }

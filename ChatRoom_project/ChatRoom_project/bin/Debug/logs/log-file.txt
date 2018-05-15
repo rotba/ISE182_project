@@ -5682,3 +5682,770 @@ GroupId:15
 2018-05-15 14:24:21,473 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-05-15 14:24:21,473 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
 2018-05-15 14:24:21,473 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:04:57,130 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:04:59,081 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:04:59,081 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:04:59,145 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:04:59,151 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:04:59,438 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:04:59,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:04:59,462 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:04:59,463 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:01,481 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:01,481 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:01,493 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:01,493 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:03,579 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:03,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:03,589 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:03,589 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:05,588 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:05,588 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:05,599 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:05,599 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:07,604 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:07,604 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:07,614 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:07,614 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:09,603 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:09,603 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:09,616 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:09,616 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:11,620 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:11,620 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:11,633 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:11,633 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:13,634 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:13,634 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:13,645 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:13,645 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:15,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:15,667 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:15,678 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:15,678 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:16,333 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to send empty message
+2018-05-15 21:05:16,335 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:16,335 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-15 21:05:16,351 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 99
+2018-05-15 21:05:16,351 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:17,470 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdffor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:05:17,473 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:57c39fea-c5d5-4eed-991c-d0b8b0ba9bf1
+UserName:Tomer
+DateTime:15/05/2018 21:05:17
+MessageContect:sdf
+GroupId:15
+ was sent successfully
+2018-05-15 21:05:17,477 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:17,477 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 1Messages were retrieved
+2018-05-15 21:05:17,478 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:17,697 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:17,698 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 1Messages were retrieved
+2018-05-15 21:05:17,698 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:18,449 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdffor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:05:18,454 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:67025091-69f7-4f68-b0e7-618ce1ced300
+UserName:Tomer
+DateTime:15/05/2018 21:05:18
+MessageContect:sdf
+GroupId:15
+ was sent successfully
+2018-05-15 21:05:18,478 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:18,478 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 2Messages were retrieved
+2018-05-15 21:05:18,478 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:19,708 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:19,708 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 2Messages were retrieved
+2018-05-15 21:05:19,708 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:20,023 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdfsdffor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:05:20,025 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:51778223-da49-4098-8391-e68966349370
+UserName:Tomer
+DateTime:15/05/2018 21:05:20
+MessageContect:sdfsdf
+GroupId:15
+ was sent successfully
+2018-05-15 21:05:20,027 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:20,027 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 3Messages were retrieved
+2018-05-15 21:05:20,027 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:20,883 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdffor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:05:20,885 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:caa7cbd4-c810-4c77-8f37-da805a2079a1
+UserName:Tomer
+DateTime:15/05/2018 21:05:20
+MessageContect:sdf
+GroupId:15
+ was sent successfully
+2018-05-15 21:05:20,889 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:20,889 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 4Messages were retrieved
+2018-05-15 21:05:20,890 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:21,721 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:21,721 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 4Messages were retrieved
+2018-05-15 21:05:21,721 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:22,173 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageferfedvdvfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:05:22,176 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:1dcb3605-cafd-45ba-9eba-73d32be7c513
+UserName:Tomer
+DateTime:15/05/2018 21:05:22
+MessageContect:ferfedvdv
+GroupId:15
+ was sent successfully
+2018-05-15 21:05:22,178 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:22,178 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 5Messages were retrieved
+2018-05-15 21:05:22,178 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:23,723 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:23,723 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 5Messages were retrieved
+2018-05-15 21:05:23,724 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:25,713 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:25,713 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 5Messages were retrieved
+2018-05-15 21:05:25,713 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:25,788 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdfcsdffor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:05:25,791 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:b62bc74c-2656-4d60-97c8-dd3f99d04118
+UserName:Tomer
+DateTime:15/05/2018 21:05:25
+MessageContect:sdfcsdf
+GroupId:15
+ was sent successfully
+2018-05-15 21:05:25,794 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:25,794 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:25,794 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:27,713 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:27,713 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:27,713 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:29,744 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:29,744 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:29,744 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:31,750 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:31,750 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:31,750 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:33,746 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:33,746 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:33,746 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:35,775 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:35,775 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:35,776 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:37,774 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:37,774 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:37,775 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:39,777 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:39,778 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:39,778 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:41,839 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:41,839 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:41,840 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:43,299 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send invalid message
+2018-05-15 21:05:43,996 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:43,996 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:43,996 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:46,028 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:46,029 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:46,029 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:48,024 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:48,024 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:48,024 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:50,041 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:50,041 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:50,041 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:52,196 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:52,196 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:52,196 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:54,228 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:54,228 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:54,228 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:56,244 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:56,245 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:56,245 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:05:58,293 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:05:58,293 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:05:58,293 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:00,307 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:00,308 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:00,308 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:02,512 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:02,512 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:02,512 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:04,511 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:04,511 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:04,511 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:06,526 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:06,526 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:06,526 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:08,543 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:08,544 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:08,544 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:10,713 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:10,713 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:10,713 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:12,745 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:12,745 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:12,745 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:14,767 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:14,767 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:14,767 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:16,806 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:16,807 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:16,807 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:18,868 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:18,868 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:18,869 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:20,868 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:20,868 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:20,868 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:22,873 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:22,873 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:22,873 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:24,903 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:24,903 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:24,903 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:27,089 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:27,089 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:27,089 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:29,088 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:29,088 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:29,088 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:31,140 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:31,140 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:31,140 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:33,166 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:33,166 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:33,166 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:35,180 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:35,181 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:35,181 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:37,192 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:37,192 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:37,192 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:39,337 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:39,338 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:39,338 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:41,341 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:41,341 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:41,341 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:43,339 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:43,339 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:43,339 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:45,386 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:45,386 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:45,386 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:47,390 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:47,390 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:47,390 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:49,417 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:49,418 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:49,418 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:51,450 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:51,450 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:51,451 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:53,448 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:53,448 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:53,448 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:55,621 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:55,621 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:55,621 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:06:58,622 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:06:58,622 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:06:58,622 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:00,636 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:00,636 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:00,637 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:02,637 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:02,637 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:02,637 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:04,655 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:04,655 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:04,655 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:06,671 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:06,671 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:06,671 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:08,672 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:08,672 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:08,672 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:10,900 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:10,900 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:10,900 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:12,917 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:12,917 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:12,917 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:14,917 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:14,918 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:14,918 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:16,969 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:16,969 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:16,969 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:18,985 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:18,986 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:18,986 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:20,980 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:20,980 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:20,980 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:23,088 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:23,088 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:23,088 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:25,150 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:25,150 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:25,150 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:27,149 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:27,149 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:27,149 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:29,183 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:29,183 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:29,183 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:31,187 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:31,187 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:31,188 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:33,202 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:33,202 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:33,202 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:35,247 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:35,247 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:35,247 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:37,369 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:37,369 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:37,370 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:39,372 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:39,372 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:39,372 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:41,370 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:41,370 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:41,370 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:43,374 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:43,375 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:43,375 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:45,401 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:07:45,401 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:07:45,402 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:07:47,220 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-15 21:09:31,072 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
+2018-05-15 21:09:37,852 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter g_ID:  that is not only number.
+2018-05-15 21:10:07,044 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter g_ID: 12d that is not only number.
+2018-05-15 21:10:13,038 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter g_ID:  that is not only number.
+2018-05-15 21:10:20,891 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter g_ID:  that is not only number.
+2018-05-15 21:10:31,449 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 12 Nickname: sdfsdfassfsdddשדגשדגשד
+2018-05-15 21:10:38,982 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:10:40,970 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:10:40,971 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:10:40,972 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:10:41,245 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:10:41,245 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:10:41,245 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:10:43,339 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:10:43,339 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:10:43,339 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:10:44,484 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-15 21:12:16,806 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:12:18,802 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:18,803 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:12:18,804 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:19,088 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:19,088 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:12:19,088 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:21,151 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:21,151 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:12:21,151 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:21,194 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to send empty message
+2018-05-15 21:12:21,197 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:21,197 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:12:21,197 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:23,169 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:23,169 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-15 21:12:23,170 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:25,096 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdasdfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:12:25,099 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:3c724bb2-dad9-4b94-8bd1-9451e8c0c214
+UserName:Tomer
+DateTime:15/05/2018 21:12:25
+MessageContect:asdasd
+GroupId:15
+ was sent successfully
+2018-05-15 21:12:25,123 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:25,123 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 7Messages were retrieved
+2018-05-15 21:12:25,123 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:25,182 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:25,182 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 7Messages were retrieved
+2018-05-15 21:12:25,182 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:25,799 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdfsfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:12:25,801 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:b9762881-6222-4bd1-a05f-c6e8ada58319
+UserName:Tomer
+DateTime:15/05/2018 21:12:25
+MessageContect:sdfs
+GroupId:15
+ was sent successfully
+2018-05-15 21:12:25,805 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:25,805 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 8Messages were retrieved
+2018-05-15 21:12:25,805 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:26,438 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagetrefor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:12:26,441 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:bb9b7278-9143-4cd2-b518-21b8b7bcd9a5
+UserName:Tomer
+DateTime:15/05/2018 21:12:26
+MessageContect:tre
+GroupId:15
+ was sent successfully
+2018-05-15 21:12:26,446 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:26,446 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:12:26,446 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:27,216 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:12:27,216 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:12:27,216 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:12:27,868 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-15 21:15:13,694 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:15:15,614 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:15:15,616 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:15:15,617 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:15:15,900 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:15:15,901 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:15:15,901 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:15:17,926 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:15:17,926 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:15:17,927 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:15:19,949 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:15:19,949 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:15:19,949 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:15:21,878 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-15 21:20:02,054 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:20:05,008 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:05,009 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:05,010 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:05,328 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:05,329 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:05,329 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:07,371 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:07,371 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:07,372 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:09,513 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:09,513 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:09,513 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:11,549 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:11,549 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:11,550 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:13,557 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:13,557 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:13,557 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:15,557 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:15,557 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:15,557 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:17,578 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:17,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:17,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:19,576 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:19,577 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:19,577 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:21,574 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:21,574 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:21,574 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:23,590 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:23,590 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:23,590 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:25,604 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:25,605 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:25,605 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:27,619 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:27,619 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:27,619 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:29,619 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:29,619 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:29,620 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:31,620 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:31,620 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:31,620 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:33,085 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-15 21:20:47,130 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:20:48,318 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:48,319 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:48,321 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:20:49,171 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:20:49,171 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:20:49,172 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:23:58,406 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:24:00,320 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:24:00,321 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:24:00,322 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:24:00,608 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:24:00,608 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:24:00,608 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:24:02,576 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-15 21:24:07,865 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
+2018-05-15 21:25:13,982 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
+2018-05-15 21:25:21,201 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:21,240 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:21,240 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:25:21,240 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:22,001 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:22,001 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:25:22,002 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:23,203 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:23,204 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:25:23,204 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:24,009 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:24,009 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:25:24,010 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:25,222 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:25,223 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-15 21:25:25,223 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:25,314 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdasasfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:25,317 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:3b7c4849-738b-4494-acc1-87b1f4c224dd
+UserName:Tomer
+DateTime:15/05/2018 21:25:25
+MessageContect:sdasas
+GroupId:15
+ was sent successfully
+2018-05-15 21:25:25,320 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:25,320 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:25,320 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:25,647 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:25,650 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:355aea4a-5de1-4b43-b7ac-f75e811bab58
+UserName:Tomer
+DateTime:15/05/2018 21:25:25
+MessageContect:asd
+GroupId:15
+ was sent successfully
+2018-05-15 21:25:25,654 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:25,655 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:25,655 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:25,905 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:25,908 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:5fc7764b-4b4d-440e-86de-42fb5c9edefe
+UserName:Tomer
+DateTime:15/05/2018 21:25:25
+MessageContect:asd
+GroupId:15
+ was sent successfully
+2018-05-15 21:25:25,911 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:25,911 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:25,911 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:26,011 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:26,011 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:26,011 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:26,186 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:26,191 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:21c7ea03-ac80-4664-89ab-1d506591f82d
+UserName:Tomer
+DateTime:15/05/2018 21:25:26
+MessageContect:asd
+GroupId:15
+ was sent successfully
+2018-05-15 21:25:26,193 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:26,194 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:26,194 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:26,450 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:26,453 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:1f49eecb-8263-493d-a42e-81c89a057ff8
+UserName:Tomer
+DateTime:15/05/2018 21:25:26
+MessageContect:asd
+GroupId:15
+ was sent successfully
+2018-05-15 21:25:26,455 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:26,456 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:26,456 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:27,076 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagedwerwfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:25:27,079 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:fc711a4e-3685-45e8-8e64-72cf0f02a51b
+UserName:Tomer
+DateTime:15/05/2018 21:25:27
+MessageContect:dwerw
+GroupId:15
+ was sent successfully
+2018-05-15 21:25:27,081 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:27,082 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:27,082 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:27,213 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:27,214 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:27,214 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:28,010 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:29,312 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:29,313 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:29,318 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-15 21:25:29,465 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-15 21:25:29,480 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: Illegal attempt to send more than 20 requests to server in past 10 secs
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 83
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 104
+2018-05-15 21:25:29,484 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:31,407 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:31,407 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:31,408 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:31,497 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-15 21:25:31,507 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: Illegal attempt to send more than 20 requests to server in past 10 secs
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 83
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 104
+2018-05-15 21:25:31,507 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:33,402 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:33,402 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:33,402 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:33,509 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:33,509 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:33,509 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:35,494 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:35,494 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:35,494 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:35,545 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:35,545 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:35,545 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:37,512 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:37,512 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:37,513 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:37,558 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:37,558 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:37,559 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:39,514 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:39,514 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:39,514 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:39,573 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:39,573 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:39,573 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:41,531 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:41,531 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:41,531 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:41,592 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:41,593 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:41,593 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:43,545 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:43,546 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:43,546 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:25:43,605 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:25:43,606 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:25:43,606 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:26:58,018 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:07,227 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:07,228 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:07,229 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:07,547 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:07,548 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:07,548 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:09,563 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:09,563 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:09,563 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:09,841 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdfsdfsdffor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:09,844 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:5a89f742-94d4-4277-ba6e-6ccb72e3d453
+UserName:Tomer
+DateTime:15/05/2018 21:27:09
+MessageContect:sdfsdfsdf
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:09,847 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:09,847 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:09,847 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:10,548 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagedfsfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:10,551 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:f36fd165-346e-43a3-ad4f-1cb5b4b47aa5
+UserName:Tomer
+DateTime:15/05/2018 21:27:10
+MessageContect:dfs
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:10,555 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:10,555 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:10,556 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:11,213 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagetyrtfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:11,217 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:a282313a-ee87-4f0c-8b48-deaf5ddb89a2
+UserName:Tomer
+DateTime:15/05/2018 21:27:11
+MessageContect:tyrt
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:11,219 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:11,219 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:11,219 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:11,579 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:11,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:11,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:11,860 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageryyofor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:11,863 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:538bdd5e-bfed-4e9f-9fe2-c923ba83c09a
+UserName:Tomer
+DateTime:15/05/2018 21:27:11
+MessageContect:ryyo
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:11,866 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:11,866 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:11,866 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:12,504 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagennghjfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:12,507 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:8ea1891c-5971-41f6-b4a0-3303afdf9719
+UserName:Tomer
+DateTime:15/05/2018 21:27:12
+MessageContect:nnghj
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:12,510 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:12,510 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:12,510 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:13,026 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageghjfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:13,028 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:0b0423df-add1-43d8-a05d-2ac330823d6b
+UserName:Tomer
+DateTime:15/05/2018 21:27:13
+MessageContect:ghj
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:13,031 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:13,032 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:13,032 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:13,428 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageuiyfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:13,430 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:7cc5cec7-f84b-4fea-8658-833f23095d0c
+UserName:Tomer
+DateTime:15/05/2018 21:27:13
+MessageContect:uiy
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:13,434 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:13,434 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:13,434 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:13,594 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:13,594 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:13,594 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:13,805 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagejgjfor userUser: G_id = 15 Nickname: Tomer
+2018-05-15 21:27:13,808 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:7c7ac26c-4b47-474a-adac-e0fc8a4940d3
+UserName:Tomer
+DateTime:15/05/2018 21:27:13
+MessageContect:jgj
+GroupId:15
+ was sent successfully
+2018-05-15 21:27:13,811 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:13,811 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:13,811 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:14,199 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-15 21:27:15,618 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-15 21:27:15,635 [1] DEBUG ChatRoom_project.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: Illegal attempt to send too many requests to server in past 10 secs
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 83
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\ChatRoomWindow.xaml.cs:line 104
+2018-05-15 21:27:15,639 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:17,759 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:17,759 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:17,759 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:19,786 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:19,786 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:19,786 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:21,790 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:21,790 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:21,790 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:23,822 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:23,823 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:23,823 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:25,827 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:25,827 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:25,827 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:27,839 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:27,839 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:27,839 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:29,863 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:29,864 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:29,864 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:27:31,932 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-15 21:27:31,932 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-15 21:27:31,933 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 21:28:02,682 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
+2018-05-15 21:28:10,151 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter g_ID:  that is not only number.
+2018-05-15 21:28:16,967 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 1 Nickname: BLA
+2018-05-15 21:28:21,276 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 1 Nickname: BLA
+2018-05-15 21:28:26,320 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: BLA

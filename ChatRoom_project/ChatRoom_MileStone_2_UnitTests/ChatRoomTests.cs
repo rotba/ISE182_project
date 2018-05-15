@@ -24,6 +24,7 @@ namespace ConsoleApp1.Tests
             user2 = new User(15, "Ariel");
             dirPath=
                 System.IO.Directory.GetCurrentDirectory() + "\\local_files";
+            Cleanup();
         }
 
         
@@ -102,7 +103,7 @@ namespace ConsoleApp1.Tests
         }
 
         [TestMethod()]
-        public void logoutTest_after_logout_loggedinuser_is_null()
+        public void logoutTest_successful_logout_after_logout_loggedinuser_is_null()
         {
             
             Assert.IsTrue(cr.LoggedInUser == null,
@@ -116,7 +117,7 @@ namespace ConsoleApp1.Tests
                 "User should be loggedout in successfully");
         }
         [TestMethod()]
-        public void logoutTest_logout_without_login_first_throws_exception()
+        public void logoutTest_failed_logout_logout_without_login_first_throws_exception()
         {
 
             try
@@ -150,6 +151,31 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
             
+        }
+
+        [TestMethod()]
+        public void registerTest_register_already_registered_user_should_fail()
+        {
+            try
+            {
+                cr.login(user.G_id, user.Nickname);
+                Assert.Fail("shoudlnt be allowed to login prior to register");
+            }
+            catch (ToUserException e)
+            {
+
+            }
+            cr.register(user.G_id, user.Nickname);
+            try
+            {
+                cr.register(user.G_id, user.Nickname);
+                Assert.Fail("registering already registered user should throw an exception");
+            }
+            catch(ToUserException e_1)
+            {
+                
+            }
+
         }
 
         [TestMethod()]
@@ -213,6 +239,53 @@ namespace ConsoleApp1.Tests
             }
         }
 
+        [TestMethod()]
+        public void sendTest_send_null_should_throw_exception()
+        {
+            cr.register(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname);
+            try
+            {
+                cr.send(null);
+                Assert.Fail("sending null message should throw null argument exception");
+            }
+            catch(ArgumentNullException e)
+            {
+                StringAssert.Contains(e.Message, "message cannot be null", "send must throw null argument exception when reicving null argument");
+            }
+        }
+
+        [TestMethod()]
+        public void sendTest_message_with_over_150_chars_should_throw_exception()
+        {
+            cr.register(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname);
+            String msg = "";
+            for(int i = 0; i < 151; i++)
+            {
+                msg = msg + 1;
+            }
+            try
+            {
+                cr.send(msg);
+                Assert.Fail("150 chars in msg should throw exception");
+            }
+            catch(ToUserException e)
+            {
+                StringAssert.Contains(e.Message, "invalid message","sending message with over 150 chars should fail");
+            }
+        }
+
+        [TestMethod()]
+        public void sendTest_empty_msg_send_should_do_nothing()
+        {
+            cr.register(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname);
+            cr.send("");
+            List<Message> tmp = cr.getMessages();
+            Assert.IsTrue(tmp.Count == 0, "sending empty message should do nothing");
+
+            }
 
         [TestMethod()]
         public void sendTest_multypul_messages_should_all_be_persistant()
@@ -242,6 +315,22 @@ namespace ConsoleApp1.Tests
                 i--;
             }
 
+        }
+
+        [TestMethod()]
+        public void displayNMessagesTest_with_invalid_input_should_throw_exception()
+        {
+            cr.register(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname);
+            try
+            {
+                cr.displayNMessages(-1);
+                Assert.Fail("display message must recieve non negative integer");
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                StringAssert.Contains(e.Message, "display message must recieve non negative integer", "display messages with negative integer should throw exception");
+            }
         }
 
         [TestMethod()]
@@ -319,6 +408,22 @@ namespace ConsoleApp1.Tests
                 Assert.Fail("retrieveUserMessages shouldnt work before login");
             }
             catch (ToUserException e) { }
+        }
+
+        [TestMethod()]
+        public void retrieveUserMessagesTest_for_null_nickname_should_throw_exception()
+        {
+            cr.register(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname);
+            try
+            {
+                cr.retrieveUserMessages(user.G_id, null);
+                Assert.Fail("retirive use messages should throw exception for null argument");
+            }
+            catch (ArgumentNullException e)
+            {
+                StringAssert.Contains(e.Message, "nickname cannot be null", "null nickname should throw exception");
+            }
         }
 
         [TestMethod()]
