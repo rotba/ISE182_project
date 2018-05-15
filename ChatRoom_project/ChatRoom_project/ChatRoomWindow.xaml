@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatRoom_project"
         mc:Ignorable="d"
-        Title="ChatRoomWindow" Height="388" Width="656">
+        Title="ChatRoomWindow" Height="388" Width="656"
+        ResizeMode="NoResize">
     <Window.Resources>
         <CollectionViewSource x:Key="usersViewSource" Source="{Binding Users}"/>
         <CollectionViewSource x:Key="groupIDViewSource" Source="{Binding GroupIDs}"/>

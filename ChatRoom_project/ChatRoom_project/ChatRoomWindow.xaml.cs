@@ -336,24 +336,15 @@ namespace ChatRoom_project
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-            try {
+
+            try
             {
-                chtrm.send(_main.MessageContent);
                 chtrm.send(_main.MessageContent);
                 refreshMessages();
-            }
-            catch (ToUserException er) {
+            }catch (ToUserException er) {
                 UserErrorWindow uew = new UserErrorWindow(er.Message);
                 uew.Show();
-            }
-                _main.MessageContent = "";
-            _main.MessageContent = "";
-
-            }
-            catch (ToUserException e_1)
-            {
-                MessageBox.Show(e_1.Message);
-            }
+            }   
             catch (ArgumentException e_2)
             {
                 log.Debug("Argument Exception found: " + e_2);
@@ -363,6 +354,7 @@ namespace ChatRoom_project
             {
                 log.Debug("unexpected error found: " + e_3);
             }
+            _main.MessageContent = "";
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)

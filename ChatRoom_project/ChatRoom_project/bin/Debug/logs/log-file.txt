@@ -3416,3 +3416,7 @@ GroupId:15
    at ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 58
 2018-05-13 16:47:07,486 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
    at ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:line 58
+2018-05-15 14:35:53,097 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 15 Nickname: Rotem
+2018-05-15 14:35:59,704 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Rotem
+2018-05-15 14:36:02,789 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
+2018-05-15 14:36:09,788 [1] ERROR ChatRoom_project.ObservableModelMainWindow - Attempted to enter empty nickname
