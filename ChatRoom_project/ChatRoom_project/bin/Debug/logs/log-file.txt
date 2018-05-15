@@ -5682,3 +5682,69 @@ GroupId:15
 2018-05-15 14:24:21,473 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-05-15 14:24:21,473 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
 2018-05-15 14:24:21,473 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-15 14:43:10,843 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.IOException: אין אפשרות לתהליך לגשת לקובץ 'C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\bin\Debug\local_files\users.bin' כיוון שתהליך אחר משתמש בקובץ.
+   ב-  System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   ב-  System.IO.File.InternalDelete(String path, Boolean checkHost)
+   ב-  System.IO.File.Delete(String path)
+   ב-  ConsoleApp1.PersistentLayer.UserHandler..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:שורה 37
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 50
+   ב-  ChatRoom_project.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 39
+2018-05-15 14:43:11,495 [1] DEBUG ChatRoom_project.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 71
+2018-05-15 14:43:21,072 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Register_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 111
+2018-05-15 14:43:23,397 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Register_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 111
+2018-05-15 14:43:25,979 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:43:31,900 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:43:37,046 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.IOException: אין אפשרות לתהליך לגשת לקובץ 'C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\bin\Debug\local_files\users.bin' כיוון שתהליך אחר משתמש בקובץ.
+   ב-  System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   ב-  System.IO.File.InternalDelete(String path, Boolean checkHost)
+   ב-  System.IO.File.Delete(String path)
+   ב-  ConsoleApp1.PersistentLayer.UserHandler..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:שורה 37
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 50
+   ב-  ChatRoom_project.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 39
+2018-05-15 14:43:37,547 [1] DEBUG ChatRoom_project.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 71
+2018-05-15 14:43:46,353 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:50:14,459 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.IOException: אין אפשרות לתהליך לגשת לקובץ 'C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\bin\Debug\local_files\users.bin' כיוון שתהליך אחר משתמש בקובץ.
+   ב-  System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   ב-  System.IO.File.InternalDelete(String path, Boolean checkHost)
+   ב-  System.IO.File.Delete(String path)
+   ב-  ConsoleApp1.PersistentLayer.UserHandler..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:שורה 37
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 50
+   ב-  ChatRoom_project.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 39
+2018-05-15 14:50:15,207 [1] DEBUG ChatRoom_project.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 71
+2018-05-15 14:50:21,741 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:50:22,505 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:50:23,237 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Register_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 111
+2018-05-15 14:52:21,439 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.IO.IOException: אין אפשרות לתהליך לגשת לקובץ 'C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\bin\Debug\local_files\users.bin' כיוון שתהליך אחר משתמש בקובץ.
+   ב-  System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   ב-  System.IO.File.InternalDelete(String path, Boolean checkHost)
+   ב-  System.IO.File.Delete(String path)
+   ב-  ConsoleApp1.PersistentLayer.UserHandler..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:שורה 37
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 50
+   ב-  ChatRoom_project.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 39
+2018-05-15 14:52:22,060 [1] DEBUG ChatRoom_project.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 71
+2018-05-15 14:52:29,604 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Register_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 111
+2018-05-15 14:52:30,652 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:52:32,033 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:52:33,135 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:52:38,392 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:52:44,185 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Button_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 86
+2018-05-15 14:52:45,020 [1] DEBUG ChatRoom_project.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.MainWindow.Register_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\MainWindow.xaml.cs:שורה 111
