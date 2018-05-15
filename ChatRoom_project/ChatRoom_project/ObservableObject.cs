@@ -33,7 +33,7 @@ namespace ChatRoom_project
            
             OnPropertyChanged("Messages");
         }
-
+       
         /*
          *Filter properties 
          */

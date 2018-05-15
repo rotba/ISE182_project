@@ -16,9 +16,15 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
+                        <TextBlock Text="{Binding GroupID}" FontWeight="Bold" />
+                        <TextBlock Text=" " FontWeight="Bold" />
                         <TextBlock Text="{Binding UserName}" FontWeight="Bold" />
                         <TextBlock Text=": " FontWeight="Bold" />
                         <TextBlock Text="{Binding MessageContent}" Width="225" TextWrapping="Wrap" HorizontalAlignment="Stretch" />
+                     
+                        <TextBlock Text="{Binding Date}"  TextWrapping="Wrap" HorizontalAlignment="Stretch" />
+                        <TextBlock Text=", " FontWeight="Bold" />
+                        <TextBlock Text="{Binding Id}"  TextWrapping="Wrap" HorizontalAlignment="Stretch" />
                     </WrapPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

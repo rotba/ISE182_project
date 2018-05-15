@@ -23,6 +23,7 @@ namespace ConsoleApp1.BuissnessLayer
             this.Date = other.Date;
             this.MessageContent = other.MessageContent;
             this.GroupID = other.GroupID;
+            Date = Date.ToLocalTime();
         }
         // constuctor used only for comparision puproses.
         public Message(Guid id, string UserName, DateTime Date, string MessageContent, string GroupID)

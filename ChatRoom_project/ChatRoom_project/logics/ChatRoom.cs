@@ -77,7 +77,7 @@ namespace ConsoleApp1.BuissnessLayer
                 }
             }
             log.Info("Attempted login to invalid user" + userToLogin);
-            throw new ToUserException("cannot login to user: " + userToLogin + " invalid user");
+            throw new ToUserException("cannot login to " + userToLogin + " invalid user");
 
         }
 
