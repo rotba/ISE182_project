@@ -1,0 +1,95 @@
+﻿<Window x:Class="ChatRoom_project.ChatRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatRoom_project"
+        xmlns:Extenders="clr-namespace:ChatRoom_project.PresnetationExtednders"
+        mc:Ignorable="d"
+        Title="ChatRoomWindow" Height="388" Width="656"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding Users}"/>
+        <CollectionViewSource x:Key="groupIDViewSource" Source="{Binding GroupIDs}"/>
+    </Window.Resources>
+    <Grid>
+        <ListBox ItemsSource="{Binding Messages}" Margin="10,10,171,81" Extenders:ListBoxExtenders.AutoScrollToEnd="True" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <WrapPanel>
+                                <TextBlock Text="{Binding GroupID}" FontWeight="Bold" />
+                                <TextBlock Text=" " FontWeight="Bold" />
+                                <TextBlock Text="{Binding UserName}" FontWeight="Bold" />
+                                <TextBlock Text=": " FontWeight="Bold" />
+                                <TextBlock Text="{Binding MessageContent}"/>
+                            </WrapPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <WrapPanel>
+                                <TextBlock Text="{Binding Date}" FontSize="9" FontWeight="Light"/>
+                                <TextBlock Text=", "  FontSize="9" FontWeight="Light"/>
+                                <TextBlock Text="{Binding Id}"  FontSize="9" FontWeight="Light" />
+                            </WrapPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+<<<<<<< HEAD
+        <Button Content="logout" HorizontalAlignment="Left" Margin="578,321,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="25"/>
+        <Button Style="{DynamicResource IconButtonStyle}" IsDefault="True" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="65" >
+            <Image Source="/bin/Debug/Images/send_icon.png" />
+        </Button>
+        <TextBox Text="{Binding MessageContent}" HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
+=======
+        <Button Content="logout" HorizontalAlignment="Left" Margin="576,281,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="25"/>
+        <Button Content="Send" IsDefault="True" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="22" />
+        <TextBox Text="{Binding MessageContent, Mode=TwoWay}"  Focusable = "true" HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
+>>>>>>> origin/tomer
+        <ListBox HorizontalAlignment="Left" Height="133" Margin="482,10,0,0" VerticalAlignment="Top" Width="156" >
+            <Label Content="Sort by:"/>
+            <RadioButton IsChecked = "{Binding SortName}" Content="Name" Checked="RadioButton_Checked_Name" Unchecked="RadioButton_Unhecked_Name" />
+            <RadioButton IsChecked = "{Binding SortTime}" Content="Time" Checked="RadioButton_Checked_Time"/>
+            <RadioButton IsChecked = "{Binding SortMulty}" Content="G ID, Nickname, Time" Checked="RadioButton_Checked_Multy"/>
+            <Grid Height="33" Width="136">
+                <Button Content="Asc" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Height="33" Click="Button_Click_Asc"/>
+                <Button Content="Desc" HorizontalAlignment="Left" Margin="66,0,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click_Desc" Height="33"/>
+            </Grid>
+        </ListBox>
+
+        <ListBox  HorizontalAlignment="Left" Height="90" Margin="482,148,0,0" VerticalAlignment="Top" Width="158">
+            <Label Content="Filter by:"/>
+            <ComboBox  SelectedItem="{Binding ComboNickNameSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbNickName_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="{Binding CmbNickNameSelectedIndex, Mode=TwoWay}">
+                <ComboBox.ItemsSource>
+                    <CompositeCollection>
+                        <ComboBoxItem>Choose Nickname</ComboBoxItem>
+                        <ComboBoxItem>No Filter</ComboBoxItem>
+                        <CollectionContainer Collection="{Binding Source={StaticResource usersViewSource}}" />
+                    </CompositeCollection>
+                </ComboBox.ItemsSource>
+                <ComboBox.ItemTemplate >
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding G_id}"/>
+                            <TextBlock Text=" : " />
+                            <TextBlock Text="{Binding Nickname}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+
+            </ComboBox>
+            <ComboBox SelectedItem="{Binding ComboGroupIDSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbGroupID_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="{Binding CmbGroupIDSelectedIndex, Mode=TwoWay}">
+                <ComboBox.ItemsSource>
+                    <CompositeCollection>
+                        <ComboBoxItem>Choose Group ID</ComboBoxItem>
+                        <ComboBoxItem>No Filter</ComboBoxItem>
+                        <CollectionContainer Collection="{Binding Source={StaticResource groupIDViewSource}}" />
+                    </CompositeCollection>
+                </ComboBox.ItemsSource>
+            </ComboBox>
+
+        </ListBox>
+    </Grid>
+</Window>

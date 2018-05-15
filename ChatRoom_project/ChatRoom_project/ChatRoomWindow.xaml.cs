@@ -344,8 +344,10 @@ namespace ChatRoom_project
          */
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-
-            try
+            IInputElement ii = FocusManager.GetFocusedElement(this);
+            DependencyObject b = sender as DependencyObject;
+            FocusManager.SetFocusedElement(this, (IInputElement)b);
+            try  
             {
                 chtrm.send(_main.MessageContent);
                 refreshMessages();
@@ -363,6 +365,7 @@ namespace ChatRoom_project
                 log.Debug("unexpected error found: " + e_3);
             }
             _main.MessageContent = "";
+            FocusManager.SetFocusedElement(this, ii);
         }
 
         
