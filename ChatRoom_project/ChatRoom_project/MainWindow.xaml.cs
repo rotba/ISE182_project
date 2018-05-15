@@ -31,6 +31,7 @@ namespace ChatRoom_project
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         ObservableModelMainWindow _main;
+        
 
         public MainWindow()
         {
@@ -63,6 +64,7 @@ namespace ChatRoom_project
             this.SizeToContent = SizeToContent.WidthAndHeight;
 
         }
+        
 
         private void main_grid_loaded(object sender, RoutedEventArgs e)
         {

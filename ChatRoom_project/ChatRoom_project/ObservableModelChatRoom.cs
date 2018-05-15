@@ -12,7 +12,7 @@ using System.Windows.Data;
 
 namespace ChatRoom_project
 {
-    public class ObservableObject: INotifyPropertyChanged
+    public class ObservableModelChatRoom: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Message> Messages { get; } = new ObservableCollection<Message>();
@@ -21,7 +21,7 @@ namespace ChatRoom_project
         public ObservableCollection<User> Users { get; } = new ObservableCollection<User>();
         public ObservableCollection<int> GroupIDs { get; } = new ObservableCollection<int>();
 
-        public ObservableObject()
+        public ObservableModelChatRoom()
         {
             Messages.CollectionChanged += Messages_CollectionChanged;
             view_msg = CollectionViewSource.GetDefaultView(Messages) as ListCollectionView;
@@ -159,6 +159,14 @@ namespace ChatRoom_project
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public ChatRoomWindow Observes
+        {
+            get => default(ChatRoomWindow);
+            set
+            {
+            }
         }
     }
 }

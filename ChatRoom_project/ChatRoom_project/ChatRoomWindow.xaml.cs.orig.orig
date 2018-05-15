@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +25,11 @@ namespace ChatRoom_project
     /// </summary>
     public partial class ChatRoomWindow : Window
     {
-        private bool logoutClose = false;
         int i = 0;
-        ObservableModelChatRoom observer= new ObservableModelChatRoom();
+        ObservableObject _main = new ObservableObject();
+        //private ObservableCollection<Message> messages;
         private static Message lastMessage;
+        //private ListCollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
@@ -48,30 +48,28 @@ namespace ChatRoom_project
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
             InitializeComponent();
-            observer.MessageContent = "";
-            DataContext = observer;
+            _main.MessageContent = "";
+            DataContext = _main;
             refreshMessages();
            
         }
 
         protected override void OnClosing(CancelEventArgs e)
         {
-
-            if (!logoutClose) 
-                 mainWindow.Close();
-            logoutClose = false;
+           mainWindow.Close();
             base.OnClosing(e);
-            if (chtrm.LoggedInUser!=null) {
-                chtrm.logout();
-            }
         }
-        
+
+
+
         private void dispatcherTimer_Tick(object sender, EventArgs e)
+
         {
             if (chtrm.LoggedInUser == null)
             {
                 
             }
+           
             else
             {
                 try
@@ -94,9 +92,7 @@ namespace ChatRoom_project
             }
         }
 
-        /*
-         *Updates the messages if new ones exist
-         */
+
         private void refreshMessages()
         {
             Message temp;
@@ -115,13 +111,13 @@ namespace ChatRoom_project
                 {
                     int tGroupID = g_IDToIntAndVerify(msg.GroupID);
                     User tUser = new User(tGroupID, msg.UserName);
-                    if (!observer.Users.Contains(tUser))
+                    if (!_main.Users.Contains(tUser))
                     {
-                        observer.Users.Add(tUser);
+                        _main.Users.Add(tUser);
                     }
-                    if (!observer.GroupIDs.Contains(tGroupID))
+                    if (!_main.GroupIDs.Contains(tGroupID))
                     {
-                        observer.GroupIDs.Add(tGroupID);
+                        _main.GroupIDs.Add(tGroupID);
                     }
                 }
                 catch (Exception e)
@@ -130,27 +126,28 @@ namespace ChatRoom_project
                         +e);
                 }
             }
-            toDisplay.ToList().ForEach(observer.Messages.Add);
-            lastMessage = temp;// updates the last message to be the current newest message
+            toDisplay.ToList().ForEach(_main.Messages.Add);
+            lastMessage = temp;
+            
         }
 
-        /*
-         * Sets the direction of the sorting to be ascending
-         */
+
+        
+
         private void Button_Click_Asc(object sender, RoutedEventArgs e)
         {
             try
             {
                 direction = ListSortDirection.Ascending;
                 SortDescriptionCollection sds = new SortDescriptionCollection();
-                foreach (var sd in observer.view_msg.SortDescriptions)
+                foreach (var sd in _main.view_msg.SortDescriptions)
                 {
                     sds.Add(new SortDescription(sd.PropertyName, direction));
                 }
-                observer.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Clear();
                 foreach (var sd in sds)
                 {
-                    observer.view_msg.SortDescriptions.Add(sd);
+                    _main.view_msg.SortDescriptions.Add(sd);
                 }
             }
             catch (ToUserException e_1)
@@ -167,23 +164,21 @@ namespace ChatRoom_project
                 log.Debug("unexpected error found: " + e_3);
             }
         }
-        /*
-         * Sets the direction of the sorting to be descending
-         */
+
         private void Button_Click_Desc(object sender, RoutedEventArgs e)
         {
             try
             {
                 direction = ListSortDirection.Descending;
                 SortDescriptionCollection sds = new SortDescriptionCollection();
-                foreach (var sd in observer.view_msg.SortDescriptions)
+                foreach (var sd in _main.view_msg.SortDescriptions)
                 {
                     sds.Add(new SortDescription(sd.PropertyName, direction));
                 }
-                observer.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Clear();
                 foreach (var sd in sds)
                 {
-                    observer.view_msg.SortDescriptions.Add(sd);
+                    _main.view_msg.SortDescriptions.Add(sd);
                 }
             }
             catch (ToUserException e_1)
@@ -201,16 +196,13 @@ namespace ChatRoom_project
             }
         }
 
-        /*
-         * logout from the chatroom and closes the window
-         */
+
         private void logout_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                mainWindow.Visibility = Visibility.Visible;
                 chtrm.logout();
-                mainWindow.Show();
-                logoutClose = true;
                 this.Close();
             }
             catch (ToUserException e_1)
@@ -227,13 +219,14 @@ namespace ChatRoom_project
                 log.Debug("unexpected error found: " + e_3);
             }
         }
-        
+
+
         private void RadioButton_Checked_Name(object sender, RoutedEventArgs e)
         {
             try
             {
-                observer.view_msg.SortDescriptions.Clear();
-                observer.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+                _main.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
             }
             catch (ToUserException e_1)
             {
@@ -253,8 +246,8 @@ namespace ChatRoom_project
         {
             try
             {
-                observer.view_msg.SortDescriptions.Clear();
-                observer.SortName = false;
+                _main.view_msg.SortDescriptions.Clear();
+                _main.SortName = false;
             }
             catch (ToUserException e_1)
             {
@@ -275,8 +268,8 @@ namespace ChatRoom_project
         {
             try
             {
-                observer.view_msg.SortDescriptions.Clear();
-                observer.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+                _main.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
             }
             catch (ToUserException e_1)
             {
@@ -298,10 +291,10 @@ namespace ChatRoom_project
         {
             try
             {
-                observer.view_msg.SortDescriptions.Clear();
-                observer.view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
-                observer.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
-                observer.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
+                _main.view_msg.SortDescriptions.Clear();
+                _main.view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
+                _main.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
+                _main.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
             }
             catch (ToUserException e_1)
             {
@@ -345,22 +338,30 @@ namespace ChatRoom_project
             }
             return isEqual;
         }
-        /*
-         * Sends message
-         */
+
         private void Send_Click(object sender, RoutedEventArgs e)
         {
-            IInputElement ii = FocusManager.GetFocusedElement(this);
-            DependencyObject b = sender as DependencyObject;
-            FocusManager.SetFocusedElement(this, (IInputElement)b);
-            try  
+<<<<<<< HEAD
+
+            try
+=======
             {
-                chtrm.send(observer.MessageContent);
+>>>>>>> origin/tomer
+            {
+                chtrm.send(_main.MessageContent);
                 refreshMessages();
             }catch (ToUserException er) {
                 UserErrorWindow uew = new UserErrorWindow(er.Message);
                 uew.Show();
+<<<<<<< HEAD
             }   
+=======
+                _main.MessageContent = "";
+            _main.MessageContent = "";
+
+            }
+               
+>>>>>>> origin/tomer
             catch (ArgumentException e_2)
             {
                 log.Debug("Argument Exception found: " + e_2);
@@ -370,8 +371,7 @@ namespace ChatRoom_project
             {
                 log.Debug("unexpected error found: " + e_3);
             }
-            observer.MessageContent = "";
-            FocusManager.SetFocusedElement(this, ii);
+            _main.MessageContent = "";
         }
 
         
@@ -380,12 +380,12 @@ namespace ChatRoom_project
             if (!indexChangedByCode)
             {
                 indexChangedByCode = true;
-                observer.CmbGroupIDSelectedIndex = 0;
+                _main.CmbGroupIDSelectedIndex = 0;
                 indexChangedByCode = false;
-                var selectedUser = observer.ComboNickNameSelectedItem;
+                var selectedUser = _main.ComboNickNameSelectedItem;
                 if (selectedUser is User)
                 {
-                    observer.view_msg.Filter = delegate (object item)
+                    _main.view_msg.Filter = delegate (object item)
                     {
                         if (item is Message)
                         {
@@ -399,7 +399,7 @@ namespace ChatRoom_project
                    
                 }
                 else
-                    observer.view_msg.Filter = null;
+                    _main.view_msg.Filter = null;
             }
             else
             {
@@ -412,13 +412,13 @@ namespace ChatRoom_project
             if (!indexChangedByCode)
             {
                 indexChangedByCode = true;
-                observer.CmbNickNameSelectedIndex = 0;
+                _main.CmbNickNameSelectedIndex = 0;
                 indexChangedByCode = false;
             
-            var selectedID = observer.ComboGroupIDSelectedItem;
+            var selectedID = _main.ComboGroupIDSelectedItem;
                 if (selectedID is int)
                 {
-                    observer.view_msg.Filter = delegate (object item)
+                    _main.view_msg.Filter = delegate (object item)
                     {
                         if (item is Message)
                         {
@@ -432,7 +432,7 @@ namespace ChatRoom_project
                 }
 
                 else
-                    observer.view_msg.Filter = null;
+                    _main.view_msg.Filter = null;
             }
             else
             {

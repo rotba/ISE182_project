@@ -23,8 +23,22 @@ namespace ConsoleApp1.BuissnessLayer
         private SortedSet<Message> messages;
         private List<User> users;
         private Request request;
-        //private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+<<<<<<< HEAD
+<<<<<<< HEAD
+        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+        //private static readonly string DEFAULT_URL = "http://localhost";
+=======
+       // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         private static readonly string DEFAULT_URL = "http://localhost";
+>>>>>>> origin/Ariel
+=======
+       // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+        private static readonly string DEFAULT_URL = "http://localhost";
+=======
+        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+        //private static readonly string DEFAULT_URL = "http://localhost";
+>>>>>>> origin/rotem
+>>>>>>> origin/tomer
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
@@ -77,7 +91,7 @@ namespace ConsoleApp1.BuissnessLayer
                 }
             }
             log.Info("Attempted login to invalid user" + userToLogin);
-            throw new ToUserException("cannot login to " + userToLogin + " invalid user");
+            throw new ToUserException("cannot login to user: " + userToLogin + " invalid user");
 
         }
 
@@ -150,35 +164,20 @@ namespace ConsoleApp1.BuissnessLayer
 
         public void send(string message)
         {
-            if (message == null)
-            {
-                log.Debug("invalid attempt to send null message");
-                throw new ArgumentNullException("message cannot be null");
-            }
             if (LoggedInUser == null)
             {
                 log.Info("Attempted send without initially logging in");
                 throw new ToUserException("Cannot send a message without initially logging in");
             }
-            if (message != "")
-            {
-                Message msg = new Message(request.send(message, LoggedInUser));
-                messages.Add(msg);
-                messageHandler.save(msg);
-                log.Info("Message" + msg + " was sent successfully");
-            }
-            else
-                log.Info("Attempted to send empty message");
+             Message msg = new Message(request.send(message, LoggedInUser));
+             messages.Add(msg);
+             messageHandler.save(msg);
+             log.Info("Message"+msg +" was sent successfully");
             
         }
 
         public SortedSet<Message> displayNMessages(int num)
         {
-            if (num < 0)
-            {
-                log.Debug("invalid attempt to displayNMessages with negative input as num");
-                throw new ArgumentOutOfRangeException("display message must recieve non negative integer");
-            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to display " + num + " messages without initially logging in");
@@ -212,11 +211,6 @@ namespace ConsoleApp1.BuissnessLayer
         
         public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
         {
-            if(nickname == null)
-            {
-                log.Debug("invalid attempt to retrieveUserMessages with null nickname");
-                throw new ArgumentNullException("nickname cannot be null");
-            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to Display User: group id :" + g_ID +" Nickname: " +nickname + " messages without initially logging in");
@@ -264,14 +258,6 @@ namespace ConsoleApp1.BuissnessLayer
                 ans.Add(new Message(m));
             }
             return ans;
-        }
-
-        public ChatRoom_project.ChatRoomWindow ChatRoomWindow
-        {
-            get => default(ChatRoom_project.ChatRoomWindow);
-            set
-            {
-            }
         }
     }
 }
