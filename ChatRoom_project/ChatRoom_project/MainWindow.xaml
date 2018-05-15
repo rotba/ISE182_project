@@ -17,13 +17,13 @@
             <ColumnDefinition Width="255*"/>
         </Grid.ColumnDefinitions>
         <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="92,113.667,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click" Grid.Row="1"/>
-        <TextBox x:Name="nicknameBox" Text ="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="316,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.ColumnSpan="3" Grid.Row="1"/>
-        <TextBox x:Name="g_IDBox" Text="{Binding G_IDBox}" HorizontalAlignment="Left" Height="24" Margin="316,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.Row="1" Grid.ColumnSpan="3"/>
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="154,5,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86" Grid.Row="1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="154,55,0,153" TextWrapping="Wrap" Text="Group ID:" Width="86" Grid.Row="1"/>
+        <TextBox x:Name="nicknameBox" Text ="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="308,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="g_IDBox" Text="{Binding G_IDBox}" HorizontalAlignment="Left" Height="24" Margin="308,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="162,91,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86" FontWeight="ExtraBold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="162,23,0,185" TextWrapping="Wrap" Text="Group ID:" Width="86" Grid.Row="1" FontWeight="ExtraBold"/>
         <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="80,117.667,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
         <Grid x:Name="mainTitle" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="110" Margin="0,-115,0,0" VerticalAlignment="Top" Width="629">
-            <TextBlock HorizontalAlignment="Left" Height="90" Margin="10,10,0,10" TextWrapping="Wrap" Text="Tomer and The Design Patterns' Chat Room" VerticalAlignment="Center" Width="601" FontSize="30"/>
+            <TextBlock HorizontalAlignment="Left" Height="90" Margin="13,16,0,4" TextWrapping="Wrap" Text="Tomer and The Design Patterns' Chat Room" VerticalAlignment="Center" Width="601" FontSize="30"/>
         </Grid>
     </Grid>
     <Window.Background>
