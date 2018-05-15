@@ -34,6 +34,7 @@ namespace ChatRoom_project
 
         public MainWindow()
         {
+            
             try
             {
                 chtrm = new ChatRoom();
@@ -60,6 +61,7 @@ namespace ChatRoom_project
 
             // Automatically resize height and width relative to content
             this.SizeToContent = SizeToContent.WidthAndHeight;
+
         }
 
         private void main_grid_loaded(object sender, RoutedEventArgs e)
