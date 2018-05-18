@@ -6756,3 +6756,840 @@ GroupId:15
 2018-05-18 11:36:45,017 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
 2018-05-18 11:36:45,017 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
 2018-05-18 11:36:45,561 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-18 12:42:49,050 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:42:51,810 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:42:51,954 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:42:51,959 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:42:52,135 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,204 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,274 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,344 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,411 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,479 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,546 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,614 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,685 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:52,754 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:42:53,737 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:42:53,738 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:42:53,739 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:42:55,797 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:42:55,798 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:42:55,799 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:42:57,859 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:42:57,860 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:42:57,860 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:42:59,877 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:42:59,878 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:42:59,878 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:01,915 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:01,916 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:01,916 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:03,925 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:03,925 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:03,926 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:05,959 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:05,959 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:05,960 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:08,017 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:08,017 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:08,018 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:10,023 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:10,023 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:10,024 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:12,054 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:12,055 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:12,055 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:14,144 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:14,144 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:14,145 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:16,141 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:16,141 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:16,142 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:18,178 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:18,178 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:18,179 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:20,176 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:20,177 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:20,177 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:21,633 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-18 12:43:46,885 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:43:49,258 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:49,263 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:49,267 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:49,437 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,505 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,575 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,643 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,711 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,780 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,847 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,916 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:49,984 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:50,053 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:43:51,052 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:51,053 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:51,054 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:53,252 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:53,253 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:53,254 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:55,268 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:43:55,268 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:43:55,269 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:43:56,889 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-18 12:46:34,591 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:46:37,302 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:37,307 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:37,311 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:37,483 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,551 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,621 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,689 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,758 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,829 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,899 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:37,968 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:38,036 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:38,104 [1] ERROR ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error while adding users and GroupIDs to chatroom viewModel error= System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: Type of argument is not compatible with the generic comparer.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Comparer`1.System.Collections.IComparer.Compare(Object x, Object y)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Int32 index, Int32 count, Object value, IComparer comparer)
+   at MS.Internal.Data.DataExtensionMethods.Search(IList list, Int32 index, Int32 count, Object value, IComparer comparer)
+   at System.Windows.Data.ListCollectionView.AdjustBefore(NotifyCollectionChangedAction action, Object item, Int32 index)
+   at System.Windows.Data.ListCollectionView.ProcessCollectionChanged(NotifyCollectionChangedEventArgs args)
+   at System.Windows.Data.CollectionView.OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs args)
+   at System.Collections.ObjectModel.ObservableCollection`1.OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+   at System.Collections.ObjectModel.ObservableCollection`1.InsertItem(Int32 index, T item)
+   at System.Collections.ObjectModel.Collection`1.Add(T item)
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 121
+2018-05-18 12:46:39,070 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:39,071 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:39,072 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:41,105 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:41,106 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:41,107 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:43,267 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:43,268 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:43,268 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:45,301 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:45,301 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:45,302 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:47,322 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:47,323 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:47,324 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:49,501 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:49,502 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:49,502 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:51,534 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:51,534 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:51,535 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:53,582 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:53,583 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:53,583 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:55,578 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:55,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:55,580 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:57,616 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:57,617 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:57,617 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:46:59,784 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:46:59,785 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:46:59,786 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:01,783 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:01,783 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:01,784 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:03,801 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:03,802 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:03,803 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:05,831 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:05,831 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:05,832 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:08,033 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:08,033 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:08,034 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:10,037 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:10,037 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:10,038 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:12,050 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:12,051 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:12,052 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:14,083 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:14,084 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:14,085 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:16,080 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:16,080 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:16,081 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:18,095 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:18,096 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:18,097 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:20,118 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:20,118 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:20,119 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:22,142 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:22,143 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:22,144 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:24,282 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:24,282 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:24,282 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:26,298 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:26,299 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:26,299 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:28,313 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:28,313 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:28,314 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:30,345 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:30,345 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:30,346 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:32,349 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:32,350 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:32,351 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:34,392 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:34,393 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:34,394 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:36,392 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:36,392 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:36,393 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:38,409 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:38,409 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:38,410 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:40,426 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:40,427 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:40,427 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:42,440 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:42,440 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:42,441 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:44,455 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:44,455 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:44,456 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:46,471 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:46,471 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:46,472 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:48,471 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:48,471 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:48,472 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:50,551 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:50,553 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:50,554 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:52,660 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:52,660 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:52,661 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:54,676 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:54,676 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:54,677 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:56,672 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:56,673 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:56,673 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:47:58,706 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:47:58,707 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:47:58,707 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:00,703 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:00,703 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:00,704 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:02,723 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:02,723 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:02,724 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:04,751 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:04,752 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:04,753 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:06,892 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:06,893 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:06,894 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:08,908 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:08,909 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:08,909 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:10,922 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:10,923 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:10,923 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:12,955 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:12,956 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:12,957 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:14,957 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:14,958 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:14,958 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:17,174 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:17,175 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:17,175 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:19,191 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:19,191 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:19,192 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:21,253 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:21,254 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:21,254 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:23,409 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:23,409 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:23,410 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:25,423 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:25,423 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:25,424 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:27,439 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:27,440 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:27,440 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:29,690 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:29,691 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:29,691 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:31,737 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:31,738 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:31,738 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:33,892 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:33,892 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:33,892 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:36,929 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:36,929 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:36,930 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:38,957 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:38,958 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:38,959 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:40,971 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:40,972 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:40,972 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:42,991 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:42,991 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:42,993 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:45,017 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:45,018 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:45,018 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:47,115 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:47,115 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:47,116 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:49,143 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:49,143 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:49,144 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:51,207 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:51,207 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:51,208 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:53,203 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:53,204 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:53,204 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:55,224 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:55,225 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:55,225 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:57,244 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:57,244 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:57,245 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:48:59,251 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:48:59,253 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:48:59,253 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:01,424 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:01,424 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:01,425 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:03,441 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:03,442 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:03,442 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:05,455 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:05,456 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:05,456 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:07,470 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:07,471 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:07,471 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:09,470 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:09,470 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:09,471 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:11,489 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:11,490 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:11,490 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:13,506 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:13,507 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:13,507 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:15,675 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:15,676 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:15,676 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:17,674 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:17,674 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:17,675 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:49:19,706 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:49:19,706 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:49:19,707 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:28,802 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:50:31,411 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:31,416 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:31,420 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:32,425 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:32,426 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:32,427 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:34,440 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:34,440 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:34,441 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:36,456 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:36,457 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:36,458 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:38,496 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:38,497 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:38,497 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:40,521 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:40,521 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:40,522 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:42,596 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:42,597 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:42,597 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:44,703 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:44,704 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:44,705 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:50:46,720 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:50:46,721 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:50:46,721 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:18,753 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:51:21,201 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:21,205 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:21,211 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:22,207 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:22,208 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:22,209 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:24,313 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:24,314 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:24,315 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:26,353 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:26,354 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:26,355 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:27,700 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-18 12:51:54,308 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:51:56,533 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:56,540 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:56,544 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:57,428 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:57,429 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:57,430 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:51:59,440 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:51:59,440 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:51:59,441 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:01,502 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:52:01,503 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:52:01,503 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:03,502 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:52:03,503 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:52:03,504 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:05,524 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:52:05,524 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:52:05,526 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:07,557 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:52:07,557 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:52:07,558 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:09,600 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:52:09,601 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:52:09,602 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:11,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:52:11,668 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:52:11,669 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:52:12,809 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-18 12:53:12,949 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 12:53:15,444 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:53:15,449 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:53:15,453 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:53:16,496 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:53:16,497 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:53:16,498 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:53:18,544 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:53:18,545 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:53:18,546 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:53:20,673 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 12:53:20,673 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
+2018-05-18 12:53:20,674 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 12:53:22,780 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer

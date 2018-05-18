@@ -266,12 +266,12 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
 
-        public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
-        {
-            get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);
-            set
-            {
-            }
-        }
+ //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
+ //       {
+ //           get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);
+ //           set
+ //           {
+ //           }
+ //       }
     }
 }
