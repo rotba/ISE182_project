@@ -6449,3 +6449,310 @@ GroupId:15
 2018-05-15 21:28:16,967 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 1 Nickname: BLA
 2018-05-15 21:28:21,276 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 1 Nickname: BLA
 2018-05-15 21:28:26,320 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: BLA
+2018-05-18 11:28:01,777 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:28:05,371 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:05,382 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:28:07,800 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:07,802 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:28:11,883 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:11,885 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:28:15,712 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.SendPostRequest(String url, Request item) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 80
+   at MileStoneClient.CommunicationLayer.Communication.Send(String url, String gourpID, String nickName, String messageContent) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 54
+   at ConsoleApp1.BuissnessLayer.Request.send(String content, User user) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 46
+   at ConsoleApp1.BuissnessLayer.ChatRoom.send(String message) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 165
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 359
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:17,791 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:17,793 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:28:21,853 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:21,854 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:28:25,955 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:80
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-05-18 11:28:25,957 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:28:27,858 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:30,666 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:31,930 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:31,930 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-18 11:36:31,962 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-18 11:36:31,968 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:32,684 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:32,684 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-18 11:36:32,698 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-18 11:36:32,698 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:34,831 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagefgdfgdhfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:34,834 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:eccd5b55-481c-45bc-8967-e72ee63bca68
+UserName:Tomer
+DateTime:18/05/2018 11:36:34
+MessageContect:fgdfgdh
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:34,838 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:34,838 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 1Messages were retrieved
+2018-05-18 11:36:34,838 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:34,891 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:34,891 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 1Messages were retrieved
+2018-05-18 11:36:34,892 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:36,238 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagefghrtyrtfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:36,241 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:e7974bcf-fec4-4972-8f4c-825f1a38bfae
+UserName:Tomer
+DateTime:18/05/2018 11:36:36
+MessageContect:fghrtyrt
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:36,243 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:36,243 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 2Messages were retrieved
+2018-05-18 11:36:36,243 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:36,898 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:36,898 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 2Messages were retrieved
+2018-05-18 11:36:36,898 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:37,220 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageeweffor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:37,223 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:03d71941-b542-4688-b3e1-d45b89010662
+UserName:Tomer
+DateTime:18/05/2018 11:36:37
+MessageContect:ewef
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:37,226 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:37,226 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 3Messages were retrieved
+2018-05-18 11:36:37,226 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:38,139 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagecvntrfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:38,141 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:95229a3a-5b04-4f35-8b33-32d974f1b365
+UserName:Tomer
+DateTime:18/05/2018 11:36:38
+MessageContect:cvntr
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:38,143 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:38,143 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 4Messages were retrieved
+2018-05-18 11:36:38,143 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:38,802 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagehghfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:38,805 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:89cd3ec1-b188-4e60-8e7b-907aa1235c84
+UserName:Tomer
+DateTime:18/05/2018 11:36:38
+MessageContect:hgh
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:38,807 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:38,807 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 5Messages were retrieved
+2018-05-18 11:36:38,807 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:38,968 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:38,969 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 5Messages were retrieved
+2018-05-18 11:36:38,969 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:39,193 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagefbfgfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:39,197 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:c2037927-d963-4c7c-8e2d-4cc8ef65b5b5
+UserName:Tomer
+DateTime:18/05/2018 11:36:39
+MessageContect:fbfg
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:39,199 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:39,199 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 6Messages were retrieved
+2018-05-18 11:36:39,200 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:39,504 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagehfgfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:39,510 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:bb3e9bf4-6e96-4b66-b7f1-1e74ff271a72
+UserName:Tomer
+DateTime:18/05/2018 11:36:39
+MessageContect:hfg
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:39,532 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:39,532 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 7Messages were retrieved
+2018-05-18 11:36:39,532 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:39,807 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagehfghfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:39,810 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:b4fd4660-0a47-47b0-bd23-602b00794f55
+UserName:Tomer
+DateTime:18/05/2018 11:36:39
+MessageContect:hfgh
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:39,810 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-18 11:36:39,829 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: Illegal attempt to send too many requests to server in past 10 secs
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 83
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-18 11:36:39,829 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:40,829 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagefghfor userUser: G_id = 15 Nickname: Tomer
+2018-05-18 11:36:40,831 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:ffcbcf8c-ed42-479c-8a89-c00d41f9da8a
+UserName:Tomer
+DateTime:18/05/2018 11:36:40
+MessageContect:fgh
+GroupId:15
+ was sent successfully
+2018-05-18 11:36:40,831 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-18 11:36:40,842 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: Illegal attempt to send too many requests to server in past 10 secs
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 83
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-18 11:36:40,843 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:40,978 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-05-18 11:36:41,013 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: Illegal attempt to send too many requests to server in past 10 secs
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 83
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 135
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-18 11:36:41,013 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:43,014 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:43,015 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-18 11:36:43,015 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:45,016 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-18 11:36:45,017 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 9Messages were retrieved
+2018-05-18 11:36:45,017 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-18 11:36:45,561 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer

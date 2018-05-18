@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     public class ObservableModelChatRoom: INotifyPropertyChanged
     {

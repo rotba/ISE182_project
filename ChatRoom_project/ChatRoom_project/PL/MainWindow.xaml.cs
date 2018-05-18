@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

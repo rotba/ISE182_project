@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     public class ObservableModelMainWindow : INotifyPropertyChanged
     {

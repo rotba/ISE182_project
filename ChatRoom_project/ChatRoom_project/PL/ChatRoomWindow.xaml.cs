@@ -1,4 +1,5 @@
-﻿using ConsoleApp1.BuissnessLayer;
+﻿using ChatRoom_project.PresentationLayer;
+using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,7 +20,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     /// <summary>
     /// Interaction logic for ChatRoomWindow.xaml
