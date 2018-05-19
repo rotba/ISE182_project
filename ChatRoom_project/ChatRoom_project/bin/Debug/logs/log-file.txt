@@ -7593,3 +7593,4 @@ GroupId:15
 2018-05-18 12:53:20,673 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - 10Messages were retrieved
 2018-05-18 12:53:20,674 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
 2018-05-18 12:53:22,780 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-05-19 14:53:20,397 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register already registered user

@@ -24,15 +24,10 @@ namespace ChatRoom_project.PresentationLayer
     /// </summary>
     public partial class MainWindow : Window
     {
-        int i = 0;
-        private ObservableCollection<Message> messages;
-        private ICollectionView view_names;
-        private ICollectionView view_msg;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         ObservableModelMainWindow _main;
         
-
         public MainWindow()
         {
             
@@ -47,21 +42,8 @@ namespace ChatRoom_project.PresentationLayer
                 log.Debug("unexpected error found: " + e);
             }
             InitializeComponent();
-            messages = new ObservableCollection<Message>();
-            view_names = CollectionViewSource.GetDefaultView(messages);
             this.DataContext = _main;
 
-            // Manually alter window height and width
-            this.SizeToContent = SizeToContent.Manual;
-
-            // Automatically resize width relative to content
-            this.SizeToContent = SizeToContent.Width;
-
-            // Automatically resize height relative to content
-            this.SizeToContent = SizeToContent.Height;
-
-            // Automatically resize height and width relative to content
-            this.SizeToContent = SizeToContent.WidthAndHeight;
 
         }
         
