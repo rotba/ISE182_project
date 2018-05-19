@@ -26,7 +26,7 @@ namespace ChatRoom_project.PresentationLayer
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
-        ObservableModelMainWindow _main;
+        private ObservableModelMainWindow _main;
         
         public MainWindow()
         {
