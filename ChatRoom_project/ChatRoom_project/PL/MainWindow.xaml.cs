@@ -65,7 +65,7 @@ namespace ChatRoom_project.PresentationLayer
                 g.Background = new SolidColorBrush(Colors.White);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
             try
             {

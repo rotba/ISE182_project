@@ -18,7 +18,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="800"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="488,413,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
+        <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="488,413,0,0" VerticalAlignment="Top" Width="145" Click="Login_Click"/>
         <TextBox x:Name="nicknameBox" Text ="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="384,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
         <TextBox x:Name="g_IDBox" Text="{Binding G_IDBox}" HorizontalAlignment="Left" Height="24" Margin="384,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
         <TextBlock HorizontalAlignment="Left" Height="86" Margin="33,28,0,0" TextWrapping="Wrap" Text="Welcome to Tomer and The Design Patterns' Chat Room" VerticalAlignment="Top" Width="757" FontWeight="ExtraBold" FontSize="26" RenderTransformOrigin="1.287,0.472"/>
