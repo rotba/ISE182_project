@@ -1,8 +1,10 @@
-﻿using ConsoleApp1.BuissnessLayer;
+﻿using ChatRoom_project.PresentationLayer;
+using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,13 +20,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     /// <summary>
     /// Interaction logic for ChatRoomWindow.xaml
     /// </summary>
     public partial class ChatRoomWindow : Window
     {
+        private bool logoutClose = false;
         int i = 0;
         ObservableModelChatRoom observer= new ObservableModelChatRoom();
         private static Message lastMessage;
@@ -54,7 +57,10 @@ namespace ChatRoom_project
 
         protected override void OnClosing(CancelEventArgs e)
         {
-           mainWindow.Close();
+
+            if (!logoutClose) 
+                 mainWindow.Close();
+            logoutClose = false;
             base.OnClosing(e);
             if (chtrm.LoggedInUser!=null) {
                 chtrm.logout();
@@ -203,8 +209,9 @@ namespace ChatRoom_project
         {
             try
             {
-                mainWindow.Visibility = Visibility.Visible;
                 chtrm.logout();
+                mainWindow.Show();
+                logoutClose = true;
                 this.Close();
             }
             catch (ToUserException e_1)

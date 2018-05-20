@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     public class ObservableModelMainWindow : INotifyPropertyChanged
     {
@@ -58,8 +58,6 @@ namespace ChatRoom_project
         //Binding for the window's image background
         private ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
         public ImageSource BkImageLocation { get {
-             //   if(bkImageLocation==null) {
-              //      bkImageLocation = new SolidColorBrush(Colors.White) as 
                     return bkImageLocation;
             }
         }
@@ -77,7 +75,7 @@ namespace ChatRoom_project
             verifyNickName(nickname);
             chtrm.login(g_IDToIntAndVerify(g_ID), nickname);
             this.G_IDBox = "";
-            this.nicknameBox = "";
+            this.NicknameBox = "";
             
 
         }

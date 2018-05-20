@@ -10,14 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace ChatRoom_project
+namespace ChatRoom_project.PresentationLayer
 {
     public class ObservableModelChatRoom: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Message> Messages { get; } = new ObservableCollection<Message>();
         public ListCollectionView view_msg;
-        
         public ObservableCollection<User> Users { get; } = new ObservableCollection<User>();
         public ObservableCollection<int> GroupIDs { get; } = new ObservableCollection<int>();
 
@@ -25,7 +24,6 @@ namespace ChatRoom_project
         {
             Messages.CollectionChanged += Messages_CollectionChanged;
             view_msg = CollectionViewSource.GetDefaultView(Messages) as ListCollectionView;
-            
         }
 
         private void Messages_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ChatRoom_project.PresnetationExtednders
+namespace ChatRoom_project.PresentationLayer.PresnetationExtednders
 {
     /// <summary>
     /// This class contains a few useful extenders for the ListBox

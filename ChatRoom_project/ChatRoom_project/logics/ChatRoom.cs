@@ -23,8 +23,8 @@ namespace ConsoleApp1.BuissnessLayer
         private SortedSet<Message> messages;
         private List<User> users;
         private Request request;
-        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        //private static readonly string DEFAULT_URL = "http://localhost";
+        //private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+        private static readonly string DEFAULT_URL = "http://localhost";
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
@@ -150,6 +150,11 @@ namespace ConsoleApp1.BuissnessLayer
 
         public void send(string message)
         {
+            if (message == null)
+            {
+                log.Debug("invalid attempt to send null message");
+                throw new ArgumentNullException("message cannot be null");
+            }
             if (LoggedInUser == null)
             {
                 log.Info("Attempted send without initially logging in");
@@ -169,6 +174,11 @@ namespace ConsoleApp1.BuissnessLayer
 
         public SortedSet<Message> displayNMessages(int num)
         {
+            if (num < 0)
+            {
+                log.Debug("invalid attempt to displayNMessages with negative input as num");
+                throw new ArgumentOutOfRangeException("display message must recieve non negative integer");
+            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to display " + num + " messages without initially logging in");
@@ -202,6 +212,11 @@ namespace ConsoleApp1.BuissnessLayer
         
         public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
         {
+            if(nickname == null)
+            {
+                log.Debug("invalid attempt to retrieveUserMessages with null nickname");
+                throw new ArgumentNullException("nickname cannot be null");
+            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to Display User: group id :" + g_ID +" Nickname: " +nickname + " messages without initially logging in");
@@ -251,12 +266,12 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
 
-        public ChatRoom_project.ChatRoomWindow ChatRoomWindow
-        {
-            get => default(ChatRoom_project.ChatRoomWindow);
-            set
-            {
-            }
-        }
+ //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
+ //       {
+ //           get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);
+ //           set
+ //           {
+ //           }
+ //       }
     }
 }
