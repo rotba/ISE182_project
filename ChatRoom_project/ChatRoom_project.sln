@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom_project", "ChatRoom_project\ChatRoom_project.csproj", "{610D09E2-BAEB-4621-A613-84ADF464C500}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom_UnitTests", "ChatRoom_UnitTests\ChatRoom_UnitTests.csproj", "{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom_MileStone_2_UnitTests", "ChatRoom_MileStone_2_UnitTests\ChatRoom_MileStone_2_UnitTests.csproj", "{FBDD41A7-BA4C-49B4-91D1-4AAFC8B7566D}"
 EndProject
 Global
@@ -37,22 +35,6 @@ Global
 		{610D09E2-BAEB-4621-A613-84ADF464C500}.Release|x64.Build.0 = Release|Any CPU
 		{610D09E2-BAEB-4621-A613-84ADF464C500}.Release|x86.ActiveCfg = Release|Any CPU
 		{610D09E2-BAEB-4621-A613-84ADF464C500}.Release|x86.Build.0 = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|ARM.Build.0 = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|x64.Build.0 = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Debug|x86.Build.0 = Debug|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|ARM.ActiveCfg = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|ARM.Build.0 = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|x64.ActiveCfg = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|x64.Build.0 = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|x86.ActiveCfg = Release|Any CPU
-		{7CD7F0B1-93CA-4BC6-AB5A-1A5CA5B7E811}.Release|x86.Build.0 = Release|Any CPU
 		{FBDD41A7-BA4C-49B4-91D1-4AAFC8B7566D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBDD41A7-BA4C-49B4-91D1-4AAFC8B7566D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBDD41A7-BA4C-49B4-91D1-4AAFC8B7566D}.Debug|ARM.ActiveCfg = Debug|Any CPU

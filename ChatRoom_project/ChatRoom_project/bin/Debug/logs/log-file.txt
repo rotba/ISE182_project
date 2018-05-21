@@ -7594,3 +7594,1205 @@ GroupId:15
 2018-05-18 12:53:20,674 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
 2018-05-18 12:53:22,780 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
 2018-05-19 14:53:20,397 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register already registered user
+2018-05-21 19:28:41,556 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully logged inUser: G_id = 15 Nickname: Tomer
+2018-05-21 19:28:44,052 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:44,052 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:44,172 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:44,192 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:45,292 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:45,292 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:45,338 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:45,340 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:47,517 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:47,518 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:47,560 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:47,561 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:49,766 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:49,767 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:49,809 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:49,810 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:51,828 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:51,829 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:51,871 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:51,872 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:53,879 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:53,879 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:53,919 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:53,920 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:56,029 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:56,029 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:56,071 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:56,072 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:28:58,097 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:28:58,097 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:28:58,137 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:28:58,138 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:00,247 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:00,247 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:00,289 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:00,289 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:02,327 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:02,327 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:02,367 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:02,368 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:04,379 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:04,379 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:04,420 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:04,421 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:06,455 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:06,455 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:06,495 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:06,496 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:08,516 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:08,516 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:08,557 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:08,558 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:10,560 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:10,560 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:10,601 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:10,602 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:12,624 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:12,624 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:12,665 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:12,666 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:14,702 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:14,702 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:14,743 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:14,744 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:16,844 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:16,844 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:16,885 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:16,886 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:18,905 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:18,905 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:18,944 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:18,945 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:21,061 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:21,061 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:21,100 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:21,101 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:23,124 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:23,124 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:23,168 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:23,169 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:25,183 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:25,184 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:25,225 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:25,226 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:27,312 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:27,312 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:27,353 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:27,353 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:29,395 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:29,395 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:29,437 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:29,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:31,438 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:31,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:31,479 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:31,479 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:33,489 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:33,489 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:33,529 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:33,530 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:35,608 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:35,608 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:35,648 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:35,649 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:37,670 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:37,670 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:37,711 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:37,712 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:39,858 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:39,858 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:39,901 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:39,902 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:41,910 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:41,910 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:41,950 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:41,951 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:43,952 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:43,953 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:43,993 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:43,994 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:46,107 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:46,107 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:46,148 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:46,149 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:48,167 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:48,167 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:48,205 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:48,206 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:50,405 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:50,405 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:50,446 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:50,447 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:52,578 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:52,578 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:52,618 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:52,619 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:54,639 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:54,639 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:54,679 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:54,680 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:56,686 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:56,686 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:56,726 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:56,727 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:29:58,891 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:29:58,891 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:29:58,931 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:29:58,932 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:00,967 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:00,967 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:01,009 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:01,010 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:03,098 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:03,099 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:03,138 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:03,139 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:05,141 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:05,141 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:05,182 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:05,183 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:07,189 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:07,189 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:07,229 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:07,230 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:09,312 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:09,312 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:09,352 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:09,353 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:11,374 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:11,375 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:11,416 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:11,417 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:13,423 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:13,424 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:13,465 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:13,466 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:15,499 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:15,499 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:15,538 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:15,541 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:17,640 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:17,640 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:17,704 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:17,705 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:19,701 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:19,701 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:19,742 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:19,743 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:21,895 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:21,895 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:21,933 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:21,935 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:23,935 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:23,936 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:23,976 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:23,977 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:26,132 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:26,132 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:26,174 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:26,175 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:28,186 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:28,186 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:28,228 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:28,229 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:30,363 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:30,364 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:30,404 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:30,405 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:32,404 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:32,404 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:32,445 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:32,446 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:34,516 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:34,516 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:34,559 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:34,560 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:36,595 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:36,595 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:36,637 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:36,637 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:38,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:38,638 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:38,678 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:38,680 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:40,811 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:40,811 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:40,850 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:40,852 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:43,888 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:43,888 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:43,930 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:43,932 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:46,063 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:46,063 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:46,107 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:46,109 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:48,111 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:48,111 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:48,151 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:48,152 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:50,187 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:50,187 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:50,228 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:50,229 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:52,328 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:52,328 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:52,369 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:52,370 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:54,389 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:54,389 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:54,430 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:54,431 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:56,562 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:56,562 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:56,607 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:56,609 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:30:58,626 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:30:58,627 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:30:58,670 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:30:58,672 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:00,686 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:00,686 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:00,729 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:00,730 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:02,814 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:02,814 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:02,858 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:02,860 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:04,858 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:04,859 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:04,902 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:04,903 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:06,921 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:06,921 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:06,960 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:06,960 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:09,076 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:09,076 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:09,122 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:09,124 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:11,144 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:11,144 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:11,184 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:11,185 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:13,249 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:13,249 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:13,291 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:13,292 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:15,359 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:15,359 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:15,403 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:15,404 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:17,405 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:17,405 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:17,446 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:17,448 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:19,468 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:19,468 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:19,511 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:19,512 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:21,576 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:21,577 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:21,622 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:21,623 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:23,644 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:23,644 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:23,688 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:23,689 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:25,739 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:25,739 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:25,780 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:25,781 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:27,827 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:27,827 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:27,871 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:27,872 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:29,873 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:29,874 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:29,913 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:29,914 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:31,952 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:31,952 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:31,993 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:31,994 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:34,016 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:34,016 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:34,056 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:34,057 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:36,061 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:36,061 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:36,102 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:36,103 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:38,122 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:38,122 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:38,166 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:38,168 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:40,252 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:40,252 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:40,294 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:40,295 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:42,294 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:42,294 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:42,335 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:42,336 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:44,373 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:44,373 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:44,416 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:44,417 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:46,515 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:46,516 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:46,556 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:46,558 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:48,578 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:48,578 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:48,618 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:48,619 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:50,624 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:50,624 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:50,666 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:50,668 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:52,738 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:52,738 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:52,780 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:52,781 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:54,859 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:54,859 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:54,902 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:54,903 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:57,125 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:57,125 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:57,167 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:57,168 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:31:59,186 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:31:59,187 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:31:59,225 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:31:59,226 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:01,326 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:01,326 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:01,367 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:01,368 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:03,405 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:03,405 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:03,454 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:03,456 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:05,454 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:05,454 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:05,496 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:05,498 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:07,594 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:07,594 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:07,638 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:07,639 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:09,639 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:09,639 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:09,680 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:09,681 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:11,795 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:11,796 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:11,840 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:11,841 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:13,859 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:13,859 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:13,899 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:13,900 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:15,921 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:15,921 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:15,963 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:15,964 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:18,098 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:18,099 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:18,140 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:18,141 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:20,189 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:20,190 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:20,231 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:20,232 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:22,289 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:22,289 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:22,326 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:22,328 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:24,343 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:24,343 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:24,384 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:24,385 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:26,515 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:26,515 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:26,557 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:26,558 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:28,562 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:28,562 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:28,604 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:28,605 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:30,641 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:30,641 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:30,684 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:30,685 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:32,702 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:32,702 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:32,744 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:32,745 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:34,843 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:34,844 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:34,885 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:34,886 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:36,904 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:36,904 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:36,947 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:36,948 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:39,113 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:39,113 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:39,153 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:39,154 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:41,296 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:41,296 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:41,361 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:41,362 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:44,582 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:44,582 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:44,623 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:44,624 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:46,645 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:46,645 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:46,688 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:46,689 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:48,686 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:48,686 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:48,727 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:48,728 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:50,843 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:50,844 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:50,886 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:50,887 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:52,897 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:52,897 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:52,939 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:52,941 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:54,998 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:54,999 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:55,040 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:55,042 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:57,076 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:57,076 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:57,119 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:57,120 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:32:59,139 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:32:59,139 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:32:59,181 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:32:59,182 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:01,194 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:01,196 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:01,237 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:01,238 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:03,361 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:03,361 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:03,403 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:03,404 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:05,424 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:05,424 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:05,466 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:05,467 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:07,599 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:07,599 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:07,641 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:07,642 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:09,672 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:09,672 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:09,714 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:09,715 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:11,828 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:11,829 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:11,870 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:11,871 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:13,880 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:13,880 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:13,922 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:13,923 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:15,990 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:15,990 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:16,033 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:16,034 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:18,060 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:18,061 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:18,103 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:18,104 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:20,140 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:20,140 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:20,183 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:20,184 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:22,203 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:22,203 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:22,247 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:22,249 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:24,358 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:24,359 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:24,404 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:24,405 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:26,413 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:26,413 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:26,456 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:26,458 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:28,504 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:28,504 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:28,552 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:28,553 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:30,627 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:30,628 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:30,669 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:30,670 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:32,690 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:32,690 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:32,729 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:32,730 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:34,735 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:34,735 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:34,776 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:34,777 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:36,857 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:36,857 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:36,899 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:36,900 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:38,923 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:38,923 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:38,965 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:38,965 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:40,972 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:40,972 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:41,014 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:41,015 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:43,078 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:43,078 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:43,120 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:43,121 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:45,158 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:45,158 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:45,200 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:45,201 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:47,249 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:47,250 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:47,290 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:47,291 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:49,326 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:49,327 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:49,369 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:49,371 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:51,407 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:51,407 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:51,450 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:51,450 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:53,632 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:53,632 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:53,673 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:53,674 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:55,670 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:55,670 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:55,711 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:55,712 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:33:57,858 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:33:57,858 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:33:57,900 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:33:57,901 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:00,037 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:00,037 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:00,082 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:00,083 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:02,087 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:02,087 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:02,129 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:02,131 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:04,144 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:04,144 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:04,191 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:04,192 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:06,313 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:06,313 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:06,355 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:06,356 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:08,378 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:08,378 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:08,422 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:08,423 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:10,437 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:10,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:10,478 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:10,479 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:12,499 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:12,500 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:12,540 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:12,541 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:14,608 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:14,608 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:14,650 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:14,651 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:16,797 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:16,797 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:16,840 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:16,841 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:18,887 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:18,887 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:18,929 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:18,930 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:20,937 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:20,938 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:20,982 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:20,983 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:23,002 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:23,002 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:23,043 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:23,044 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:25,108 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:25,109 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:25,148 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:25,149 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:27,342 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:27,343 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:27,383 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:27,384 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:29,406 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:29,406 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:29,446 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:29,447 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:31,468 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:31,468 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:31,510 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:31,511 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:33,535 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:33,536 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:33,578 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:33,579 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:35,610 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:35,610 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:35,653 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:35,654 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:37,673 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:37,673 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:37,713 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:37,714 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:39,826 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:39,827 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:39,864 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:39,865 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:41,881 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:41,881 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:41,926 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:41,927 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:45,107 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:45,107 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:45,148 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:45,149 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:47,381 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:47,381 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:47,424 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:47,426 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:49,577 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:49,577 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:49,618 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:49,620 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:51,624 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:51,624 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:51,667 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:51,668 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:53,848 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:53,848 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:53,911 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:53,912 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:55,918 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:55,918 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:55,971 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:55,972 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:34:58,093 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:34:58,093 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:34:58,147 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:34:58,148 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:00,349 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:00,349 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:00,394 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:00,396 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:02,420 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:02,420 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:02,463 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:02,465 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:04,605 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:04,605 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:04,649 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:04,651 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:06,735 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:06,735 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:06,777 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:06,778 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:08,876 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:08,876 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:08,913 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:08,914 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:10,938 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:10,939 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:10,980 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:10,980 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:13,162 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:13,163 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:13,204 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:13,205 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:15,218 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:15,218 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:15,261 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:15,262 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:17,273 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:17,274 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:17,313 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:17,314 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:19,345 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:19,345 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:19,386 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:19,387 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:21,454 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:21,454 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:21,496 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:21,497 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:23,547 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:23,548 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:23,589 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:23,591 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:26,081 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:26,082 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:26,123 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:26,124 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:28,203 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:28,204 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:28,246 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:28,247 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:30,275 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:30,275 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:30,316 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:30,317 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:32,330 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:32,331 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:32,371 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:32,372 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:34,425 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:34,425 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:34,467 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:34,468 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:36,468 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:36,468 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:36,509 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:36,510 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:38,549 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:38,549 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:38,590 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:38,591 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:40,720 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:40,720 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:40,761 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:40,762 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:42,781 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:42,781 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:42,822 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:42,823 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:44,828 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-05-21 19:35:44,828 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to retrieve messages while there are no messages to retrieve
+2018-05-21 19:35:44,869 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - ConsoleApp1.BuissnessLayer.ToUserException: ERROR: No messages to retrieve
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+2018-05-21 19:35:44,871 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-05-21 19:35:45,202 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
