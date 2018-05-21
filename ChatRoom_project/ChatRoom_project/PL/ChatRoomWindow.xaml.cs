@@ -300,7 +300,7 @@ namespace ChatRoom_project.PresentationLayer
             try
             {
                 observer.view_msg.SortDescriptions.Clear();
-                observer.view_msg.SortDescriptions.Add(new SortDescription("GroupID", direction));
+                observer.view_msg.SortDescriptions.Add(new SortDescription("IntGroupID", direction));
                 observer.view_msg.SortDescriptions.Add(new SortDescription("UserName", direction));
                 observer.view_msg.SortDescriptions.Add(new SortDescription("Date", direction));
             }
