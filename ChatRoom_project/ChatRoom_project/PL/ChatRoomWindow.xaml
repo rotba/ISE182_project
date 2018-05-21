@@ -38,15 +38,13 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Button Content="logout" HorizontalAlignment="Left" Margin="578,321,0,0" VerticalAlignment="Top" Width="62" Click="logout_Click" Height="25"/>
-        <Button Style="{DynamicResource IconButtonStyle}" IsDefault="True" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="65" >
-            <Image Source="/bin/Debug/Images/send_icon.png" />
-        </Button>
+        <Button Content="Send" IsDefault="True" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Width="76" Click="Send_Click" Height="65" />
         <TextBox Text="{Binding MessageContent}" HorizontalAlignment="Left" Height="65" Margin="91,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386"/>
         <ListBox HorizontalAlignment="Left" Height="133" Margin="482,10,0,0" VerticalAlignment="Top" Width="156" >
             <Label Content="Sort by:"/>
             <RadioButton IsChecked = "{Binding SortName}" Content="Name" Checked="RadioButton_Checked_Name" Unchecked="RadioButton_Unhecked_Name" />
             <RadioButton IsChecked = "{Binding SortTime}" Content="Time" Checked="RadioButton_Checked_Time"/>
-            <RadioButton IsChecked = "{Binding SortMulty}" Content="G ID, Nickname, Time" Checked="RadioButton_Checked_Multy"/>
+            <RadioButton IsChecked = "{Binding SortGroup}" Content="G ID, Nickname, Time" Checked="RadioButton_Checked_Multy"/>
             <Grid Height="33" Width="136">
                 <Button Content="Asc" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Height="33" Click="Button_Click_Asc"/>
                 <Button Content="Desc" HorizontalAlignment="Left" Margin="66,0,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click_Desc" Height="33"/>
