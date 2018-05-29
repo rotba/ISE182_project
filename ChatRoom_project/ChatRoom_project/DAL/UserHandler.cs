@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,6 +13,26 @@ namespace ConsoleApp1.PersistentLayer
 {
     public class UserHandler : IHandler<User>
     {
+        /// 
+        /*
+         *local
+         */
+        string connetion_string = null;
+        string sql_query = null;
+        string server_address = "localhost\\sqlexpress";
+        string database_name = "MS3";
+        string user_name = "";
+        string password = "";
+        /*
+         *default
+        string connetion_string = null;
+        string sql_query = null;
+        string server_address = "ise172.ise.bgu.ac.il,1433\\DB_LAB";
+        string database_name = "db_lab";
+        string user_name = "db_lab_user";
+        string password = "hackMePlease";
+         */
+        /// 
         private List<User> users = new List<User>();
         private static readonly string filesPath=
             System.IO.Directory.GetCurrentDirectory() + "\\local_files\\users.bin";
@@ -43,6 +64,39 @@ namespace ConsoleApp1.PersistentLayer
             {
                 createFile();
             }
+        }
+        public bool checkIfExists(int g_id, string nickname) {
+            bool ans = false;
+            SqlConnection connection;
+            SqlCommand command;
+
+            //defualt
+            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
+
+            //local
+            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
+
+            connection = new SqlConnection(connetion_string);
+            SqlDataReader data_reader;
+
+            try
+            {
+                connection.Open();
+                Console.WriteLine("connected to: " + server_address);
+                sql_query = $"SELECT * FROM USERS WHERE Group_Id={g_id} AND Nickname='{nickname}'" ;
+                command = new SqlCommand(sql_query, connection);
+                data_reader = command.ExecuteReader();
+                ans = data_reader.Read();
+                data_reader.Close();
+                command.Dispose();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error");
+                Console.WriteLine(ex.ToString());
+            }
+            return ans;
         }
         private void createFile()
         {
