@@ -12,6 +12,7 @@ namespace ConsoleApp1.PersistentLayer
 {
     public class UserHandler : IHandler<User>
     {
+        
         private List<User> users = new List<User>();
         private static readonly string filesPath=
             System.IO.Directory.GetCurrentDirectory() + "\\local_files\\users.bin";
@@ -94,6 +95,19 @@ namespace ConsoleApp1.PersistentLayer
             BinaryFormatter serializes = new BinaryFormatter();
             serializes.Serialize(myFileStream, users);
             myFileStream.Close();
+        }
+
+
+        //to be implemented
+        public void insertUser(int g_ID, string nickname, string hashedPW)
+        {
+            
+        }
+
+        //to be implemented 
+        public string getUserHashedPW(int g_ID, string nickname)
+        {
+
         }
     }
 }
