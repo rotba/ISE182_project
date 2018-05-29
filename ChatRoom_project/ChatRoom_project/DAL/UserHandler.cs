@@ -13,6 +13,8 @@ namespace ConsoleApp1.PersistentLayer
 {
     public class UserHandler : IHandler<User>
     {
+        private SqlConnection connection;
+        private SqlCommand command;
         /// 
         /*
          *local
@@ -21,8 +23,6 @@ namespace ConsoleApp1.PersistentLayer
         string sql_query = null;
         string server_address = "localhost\\sqlexpress";
         string database_name = "MS3";
-        string user_name = "";
-        string password = "";
         /*
          *default
         string connetion_string = null;
@@ -67,8 +67,6 @@ namespace ConsoleApp1.PersistentLayer
         }
         public bool checkIfExists(int g_id, string nickname) {
             bool ans = false;
-            SqlConnection connection;
-            SqlCommand command;
 
             //defualt
             //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
