@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,8 @@ namespace ConsoleApp1.PersistentLayer
 {
     public class UserHandler : IHandler<User>
     {
+
+
         /// 
         /*
          *local
@@ -65,11 +68,53 @@ namespace ConsoleApp1.PersistentLayer
                 createFile();
             }
         }
+
+
+        public string getUserHashedPW(int g_ID,string nickname)
+        {
+            SqlConnection connection;
+            SqlCommand command;
+            string hashedPW = "";
+            //defualt
+            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
+
+            //local
+            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
+
+            connection = new SqlConnection(connetion_string);
+            SqlDataReader data_reader;
+            try
+            {
+                connection.Open();
+                sql_query = $"SELECT * FROM USERS WHERE Group_Id={g_ID} AND Nickname='{nickname}'";
+                command = new SqlCommand(sql_query, connection);
+                data_reader = command.ExecuteReader();
+                if (!data_reader.Read())
+                    throw new Exception("Couln't find user");
+                hashedPW = data_reader["Password"].ToString(); //the 4th col is the pswrd
+                data_reader.Close();
+                command.Dispose();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error");
+                Console.WriteLine(ex.ToString());
+            }
+
+            return hashedPW;
+        }
+        
+
+        public void insertUser(int g_ID,string nickname)
+        {
+
+        }
+
         public bool checkIfExists(int g_id, string nickname) {
             bool ans = false;
             SqlConnection connection;
             SqlCommand command;
-
             //defualt
             //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
 
