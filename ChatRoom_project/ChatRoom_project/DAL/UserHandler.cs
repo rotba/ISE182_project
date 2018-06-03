@@ -91,7 +91,7 @@ namespace ConsoleApp1.PersistentLayer
                 data_reader = command.ExecuteReader();
                 if (!data_reader.Read())
                     throw new Exception("Couln't find user");
-                hashedPW = data_reader["Password"].ToString(); //the 4th col is the pswrd
+                hashedPW = (data_reader.GetValue(3)).ToString(); //the 4th col is the pswrd
                 data_reader.Close();
                 command.Dispose();
                 connection.Close();
