@@ -8796,3 +8796,42 @@ GroupId:15
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
 2018-05-21 19:35:44,871 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
 2018-05-21 19:35:45,202 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer
+2018-06-04 13:59:12,984 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.Data.SqlClient.SqlException (0x80131904): Operand type clash: text is incompatible with int
+Statement(s) could not be prepared.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ConsoleApp1.PersistentLayer.UserHandler.insertUser(Int32 g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:line 148
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 124
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 81
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+ClientConnectionId:b6ecf945-94dc-46e3-abc7-d38f80939550
+Error Number:206,State:2,Class:16
+2018-06-04 13:59:17,959 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register already registered user
+2018-06-04 14:20:53,159 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.Data.SqlClient.SqlException (0x80131904): Operand type clash: text is incompatible with int
+Statement(s) could not be prepared.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ConsoleApp1.PersistentLayer.UserHandler.insertUser(Int32 g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:line 144
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 124
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 81
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+ClientConnectionId:b39d24e8-c9a4-40a8-9008-c7b296ceefce
+Error Number:206,State:2,Class:16
+2018-06-04 14:20:59,302 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register already registered user
+2018-06-04 14:27:28,863 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Yoloo
+2018-06-04 14:45:14,372 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Dima
+2018-06-04 14:59:59,746 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: SixF

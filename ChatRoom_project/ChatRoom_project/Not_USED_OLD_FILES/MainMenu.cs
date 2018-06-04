@@ -46,7 +46,7 @@ namespace ConsoleApp1.PresintationLayer
                     Console.WriteLine("Type nickname");
                     nickname = Console.ReadLine();
                     verifyNickName(nickname);
-                    chtrm.register(tRegG_ID, nickname);
+                    chtrm.register(tRegG_ID, nickname,"1234");
                     Console.WriteLine("Register completed!");
                     break;
 

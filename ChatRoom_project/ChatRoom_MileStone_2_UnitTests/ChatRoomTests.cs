@@ -58,7 +58,7 @@ namespace ConsoleApp1.Tests
         public void loginTest_registered_user_login_succeeds()
         {
 
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
@@ -67,7 +67,7 @@ namespace ConsoleApp1.Tests
         public void loginTest_Multiple_failed_logins_shouldnt_affect_current_user()
         {
 
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname,user.Pw);
             cr.login(user.G_id, user.Nickname);
             int i;
             i = 20;
@@ -108,7 +108,7 @@ namespace ConsoleApp1.Tests
             
             Assert.IsTrue(cr.LoggedInUser == null,
                 "User should not be initialized before logged in");
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname,user.Pw);
             cr.login(user.G_id, user.Nickname);
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
@@ -146,7 +146,7 @@ namespace ConsoleApp1.Tests
             {
 
             }
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname,user.Pw);
             cr.login(user.G_id, user.Nickname);
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
@@ -165,10 +165,10 @@ namespace ConsoleApp1.Tests
             {
 
             }
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             try
             {
-                cr.register(user.G_id, user.Nickname);
+                cr.register(user.G_id, user.Nickname, user.Pw);
                 Assert.Fail("registering already registered user should throw an exception");
             }
             catch(ToUserException e_1)
@@ -181,18 +181,18 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void registerTest_registeredUser_should_be_persistant()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             Assert.IsTrue(cr.getUsers().Contains(user), "User should be saved in DB");
         }
 
         [TestMethod()]
         public void registerTest_null_nickname_should_fail()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             int sizeOfUsersBeforeFaultRegister = cr.getUsers().Count;
             try
             {
-                cr.register(0, null);
+                cr.register(0, null,"1234");
                 Assert.Fail("Should not allow register with null group id");
             }
             catch (ArgumentNullException e)
@@ -205,7 +205,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_sentMessage_should_be_persistant()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             cr.send("Hello world");
             Message hello = null;
@@ -242,7 +242,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_send_null_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             try
             {
@@ -258,7 +258,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_message_with_over_150_chars_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             String msg = "";
             for(int i = 0; i < 151; i++)
@@ -279,7 +279,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_empty_msg_send_should_do_nothing()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             cr.send("");
             List<Message> tmp = cr.getMessages();
@@ -290,7 +290,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_multypul_messages_should_all_be_persistant()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             int i = 19;
             while (i != 0)
@@ -320,7 +320,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void displayNMessagesTest_with_invalid_input_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             try
             {
@@ -346,7 +346,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void displayNMessagesTest_should_throw_exception_if_there_are_no_messages()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             try
             {
@@ -364,9 +364,9 @@ namespace ConsoleApp1.Tests
             int i = 0;
             int magicNum = 20;
             int halfMagicNum = 10;
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
-            cr2.register(user2.G_id, user2.Nickname);
+            cr2.register(user2.G_id, user2.Nickname,user2.Pw);
             cr2.login(user2.G_id, user2.Nickname);
             
             while (i < magicNum)
@@ -413,7 +413,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void retrieveUserMessagesTest_for_null_nickname_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             try
             {
@@ -429,7 +429,7 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void retrieveUserMessagesTest_for_user_that_didnt_send_yet_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
             try
             {
@@ -447,9 +447,9 @@ namespace ConsoleApp1.Tests
             int i = 0;
             int magicNum = 20;
             int halfMagicNum = 10;
-            cr.register(user.G_id, user.Nickname);
+            cr.register(user.G_id, user.Nickname, user.Pw);
             cr.login(user.G_id, user.Nickname);
-            cr2.register(user2.G_id, user2.Nickname);
+            cr2.register(user2.G_id, user2.Nickname,user2.Pw);
             cr2.login(user2.G_id, user2.Nickname);
            
             while (i < magicNum)

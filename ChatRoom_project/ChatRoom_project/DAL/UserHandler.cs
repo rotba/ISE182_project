@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -89,9 +90,11 @@ namespace ConsoleApp1.PersistentLayer
                 sql_query = $"SELECT * FROM USERS WHERE Group_Id={g_ID} AND Nickname='{nickname}'";
                 command = new SqlCommand(sql_query, connection);
                 data_reader = command.ExecuteReader();
-                if (!data_reader.Read())
-                    throw new Exception("Couln't find user");
-                hashedPW = (data_reader.GetValue(3)).ToString(); //the 4th col is the pswrd
+                while (data_reader.Read())
+                {
+                    if (!data_reader.IsDBNull(3))
+                        hashedPW = data_reader.GetString(3); //2 is the coloumn index of the date. There are such               
+                }
                 data_reader.Close();
                 command.Dispose();
                 connection.Close();
@@ -105,10 +108,45 @@ namespace ConsoleApp1.PersistentLayer
             return hashedPW;
         }
         
-
-        public void insertUser(int g_ID,string nickname)
+        
+        public void insertUser(int g_ID,string nickname, string pw)
         {
+            SqlConnection connection;
+            SqlCommand command;
+            //defualt
+            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
 
+            //local
+            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
+
+            connection = new SqlConnection(connetion_string);
+            connection.Open();
+            command = new SqlCommand(null, connection);
+
+            // Create and prepare an SQL statement.
+            // Use should never use something like: query = "insert into table values(" + value + ");" 
+            // Especially when selecting. More about it on the lab about security.
+            command.CommandText =
+                "INSERT INTO Users ([Group_Id],[Nickname],[Password]) " +
+                "VALUES (@toBeInsertedG_ID, @toBeInsertedNickname,@toBeInsertedHashedPW)";
+            SqlParameter toBeInsertedG_ID = new SqlParameter(@"toBeInsertedG_ID", SqlDbType.Int, 4);
+            SqlParameter toBeInsertedNickname = new SqlParameter(@"toBeInsertedNickname", SqlDbType.Text, 8);
+            SqlParameter toBeInsertedHashedPW = new SqlParameter(@"toBeInsertedHashedPW", SqlDbType.Text,64);
+
+            toBeInsertedG_ID.Value = g_ID;
+            toBeInsertedNickname.Value = nickname;
+            toBeInsertedHashedPW.Value = pw;
+            
+            command.Parameters.Add(toBeInsertedG_ID);
+            command.Parameters.Add(toBeInsertedNickname);
+            command.Parameters.Add(toBeInsertedHashedPW);
+
+
+            // Call Prepare after setting the Commandtext and Parameters.
+            command.Prepare();
+            int num_rows_changed = command.ExecuteNonQuery();
+            command.Dispose();
+            connection.Close();
         }
 
         public bool checkIfExists(int g_id, string nickname) {

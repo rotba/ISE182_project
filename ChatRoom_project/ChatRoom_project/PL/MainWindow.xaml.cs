@@ -94,7 +94,7 @@ namespace ChatRoom_project.PresentationLayer
         {
             try
             {
-                _main.register(_main.G_IDBox, _main.NicknameBox);
+                _main.register(_main.G_IDBox, _main.NicknameBox, _main.PwBox);
                 MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)
@@ -110,8 +110,6 @@ namespace ChatRoom_project.PresentationLayer
                 log.Debug("unexpected error found: " + e_3);
             }
         }
-
-
 
     }
 }

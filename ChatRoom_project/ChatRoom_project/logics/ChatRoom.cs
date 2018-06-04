@@ -105,7 +105,7 @@ namespace ConsoleApp1.BuissnessLayer
 
         }
 
-        public void register(int g_id, string nickname)
+        public void register(int g_id, string nickname, string pw)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
@@ -121,7 +121,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             //add user to the user list, and save data.
             users.Add(newUser);
-            userHandler.save(newUser);
+            userHandler.insertUser(g_id, nickname, pw);
             log.Info("Succeccfully registered" +newUser);
         }
         //retrieves number amount of messages from server.

@@ -13,10 +13,12 @@ namespace ConsoleApp1.BuissnessLayer
         private int g_id;
         
         private string nickname;
-   
+
+        private string pw;
 
         public int G_id { get => g_id; private set => g_id = value; }
         public string Nickname { get => nickname; private set => nickname = value; }
+        public string Pw { get => pw; private set => pw = value; }
 
         public User(int g_id,string nickname)
         {

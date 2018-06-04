@@ -55,6 +55,20 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
+        private string pwBox = "";
+        public string PwBox
+        {
+            get
+            {
+                return pwBox;
+            }
+            set
+            {
+                pwBox = value;
+                OnPropertyChanged("PwBox");
+            }
+        }
+
         //Binding for the window's image background
         private ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
         public ImageSource BkImageLocation { get {
@@ -62,15 +76,15 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
-        public void register(String g_ID, String nickname) {
+        public void register(string g_ID, string nickname, string pw) {
              verifyNickName(nickname);
-             chtrm.register(g_IDToIntAndVerify(g_ID), nickname);
+             chtrm.register(g_IDToIntAndVerify(g_ID), nickname, pw);
              this.G_IDBox = "";
              this.NicknameBox = "";
 
         }
 
-        public void login(String g_ID, String nickname)
+        public void login(string g_ID, string nickname)
         {
             verifyNickName(nickname);
             chtrm.login(g_IDToIntAndVerify(g_ID), nickname);
