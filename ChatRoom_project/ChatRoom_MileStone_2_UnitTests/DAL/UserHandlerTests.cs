@@ -17,5 +17,14 @@ namespace ConsoleApp1.PersistentLayer.Tests
             UserHandler uh = new UserHandler();
             Assert.IsTrue(uh.checkIfExists(15, "Ariel"));
         }
+
+        [TestMethod()]
+        public void getUserHashedPWTest()
+        {
+            UserHandler uh = new UserHandler();
+            string s = uh.getUserHashedPW(15, "Ariel");
+            Console.WriteLine(s);
+            Assert.IsTrue(s.Equals("4B780M8U1Q3W2G4J5C"));
+        }
     }
 }
