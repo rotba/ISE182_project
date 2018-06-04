@@ -1,4 +1,7 @@
-﻿using MileStoneClient.CommunicationLayer;
+﻿using ChatRoom_project.DAL;
+using ChatRoom_project.logics;
+using ConsoleApp1.PersistentLayer;
+using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +23,9 @@ namespace ConsoleApp1.BuissnessLayer
         private readonly int N_ALLOWED = 20;
         private readonly int N_SECS = 10;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private new_MessageHandler messageHandler = new new_MessageHandler();
+        private new_UserHandler userHandler = new new_UserHandler();
+        private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
         public Request(string url)
         {
@@ -61,10 +67,16 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ToUserException("illegal attempt to send invalid message, must contain at most 150 characters");
             }
         }
+
+        public List<User> retrieveUsers(int n, int g_id, string nickname)
+        {
+            return userHandler.retrieve(n, nickname, g_id);
+        }
+
         //check for server overloading, make sure num=10 as in server policy.
         public List<IMessage> retrieveMessages(int num)
         {
-            if (num == 10)
+            if (num == 200)
             {
                 if (isNotOverloading())
                 {
@@ -89,6 +101,48 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
             }
         }
+
+        internal void insertUser(User newUser)
+        {
+            userHandler.insert(newUser);
+        }
+
+        /***************************************************************/
+        //check for server overloading, make sure num=10 as in server policy.
+        public List<IMessage> new_retrieveMessages(int num, string nickname, int g_id)
+        {
+            if (num == 200)
+            {
+                if (isNotOverloading())
+                {
+                    lastNRequests.Enqueue(DateTime.Now);
+                    if (lastNRequests.Count == N_ALLOWED + 1)
+                    {
+                        lastNRequests.Dequeue();
+                    }
+                    
+                    List<IMessage> msgList = messageHandler.retrieve(
+                        lastRetrievedMessageTime,
+                        num,
+                        nickname,
+                        g_id
+                        );
+                    log.Info("sent a GetTenMessages request to server");
+                    return msgList;
+                }
+                else
+                {
+                    log.Error("Attempted to send more than 20 requests to server in past 10 secs");
+                    throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
+                }
+            }
+            else
+            {
+                log.Error("Illegal attempt to retrieve different amount than 10 last messages");
+                throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
+            }
+        }
+        /***************************************************************/
         //return true if not overloading server
         private bool isNotOverloading()
         {

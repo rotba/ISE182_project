@@ -1,4 +1,5 @@
-﻿using ConsoleApp1.PersistentLayer;
+﻿using ChatRoom_project.logics;
+using ConsoleApp1.PersistentLayer;
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
@@ -50,7 +51,7 @@ namespace ConsoleApp1.BuissnessLayer
             this.userHandler = new UserHandler();
             this.messageHandler = new MessageHandler();
             this.url = DEFAULT_URL;
-            this.users = userHandler.retriveAll();
+            this.users = request.retrieveUsers(200,0, null);
             this.messages = new SortedSet<Message>(new MessageDateComp());
             messages.UnionWith(messageHandler.retriveAll());
             this.request = new Request(url);
@@ -66,7 +67,7 @@ namespace ConsoleApp1.BuissnessLayer
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
-            User userToLogin = new User(g_id, nickname);
+            User userToLogin = request.retrieveUsers(1, g_id, nickname)[0];
             foreach (User u in users)
             {
                 if (u.Equals(userToLogin))
@@ -79,6 +80,19 @@ namespace ConsoleApp1.BuissnessLayer
             log.Info("Attempted login to invalid user" + userToLogin);
             throw new ToUserException("cannot login to " + userToLogin + " invalid user");
 
+        }
+        /*
+         * Returns the next available userId
+         */
+        private int getNextUserId()
+        {
+            int lastId = 0;
+            foreach (User user in users) {
+                if (user.Id>lastId) {
+                    lastId = user.Id;
+                }
+            }
+            return lastId;
         }
 
         public void logout()
@@ -112,7 +126,7 @@ namespace ConsoleApp1.BuissnessLayer
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
 
-            User newUser = new User(g_id, nickname);
+            User newUser = new User(getNextUserId(),g_id, nickname);
             //check if user already exists, if so throw error
             if (users.Contains(newUser))
             {
@@ -121,7 +135,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             //add user to the user list, and save data.
             users.Add(newUser);
-            userHandler.save(newUser);
+            request.insertUser(newUser);
             log.Info("Succeccfully registered" +newUser);
         }
         //retrieves number amount of messages from server.
@@ -147,6 +161,30 @@ namespace ConsoleApp1.BuissnessLayer
             }
             log.Info(imsg.Count + "Messages were retrieved");
         }
+        /****************************************************/
+        //retrieves number amount of messages from server.
+        public void new_retrieveMessages(int number, string nickname, int g_id)
+        {
+            if (loggedInUser == null)
+            {
+                log.Info("Attempted to retireve " + number + " messages without initially logging in");
+                throw new ToUserException("Cannot retrieve " + number + " messages without initially logging in");
+            }
+            List<IMessage> imsg = request.new_retrieveMessages(number, nickname, g_id);
+            if (imsg.Count == 0)
+            {
+                log.Info("Attempted to retrieve messages while there are no messages to retrieve");
+                throw new ToUserException("No messages to retrieve");
+            }
+            //converts each element in imsg to Message and adds it to messages list
+            foreach (var IMessage in imsg)
+            {
+                Message addMsgToList = new Message(IMessage);
+                messages.Add(addMsgToList);
+            }
+            log.Info(imsg.Count + "Messages were retrieved");
+        }
+        /****************************************************/
 
         public void send(string message)
         {
@@ -239,17 +277,17 @@ namespace ConsoleApp1.BuissnessLayer
             //if the lists is empty, the requested user has not yet sent a message
             if (ans.Count == 0)
             {
-                log.Info("Attempted to display a user" +(new User(g_ID,nickname)) +" messages. The user hasn't yet sent a message");
+                log.Info("Attempted to display a user"+g_ID+" "+nickname +" messages. The user hasn't yet sent a message");
                 throw new ToUserException("There are no current messages by the requested user.");
             }
-            log.Info("Display a user" + (new User(g_ID, nickname)) + " messages.Total amount: " +ans.Count);
+            log.Info("Display a user" + g_ID + " " + nickname + " messages.Total amount: " +ans.Count);
             return ans;
         }
         //used only for test purposes.
         public List<User> getUsers()
         {
             List<User> ans = new List<User>();
-            foreach (User u in userHandler.retriveAll())
+            foreach (User u in request.retrieveUsers(-1,0, null ))
             {
                 ans.Add(new User(u));
             }
