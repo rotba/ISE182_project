@@ -1,4 +1,5 @@
-﻿using ChatRoom_project.PresentationLayer;
+﻿using ChatRoom_project.logics;
+using ChatRoom_project.PresentationLayer;
 using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
@@ -115,7 +116,7 @@ namespace ChatRoom_project.PresentationLayer
                 try
                 {
                     int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(tGroupID, msg.UserName);
+                    User tUser = new User(-123345,tGroupID, msg.UserName);
                     if (!observer.Users.Contains(tUser))
                     {
                         observer.Users.Add(tUser);

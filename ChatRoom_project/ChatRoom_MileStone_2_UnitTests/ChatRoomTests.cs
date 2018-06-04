@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using ConsoleApp1.BuissnessLayer;
+using ChatRoom_project.logics;
 
 namespace ConsoleApp1.Tests
 {
@@ -20,8 +21,8 @@ namespace ConsoleApp1.Tests
         {
             cr = new ChatRoom();
             cr2 = new ChatRoom();
-            user = new User(15,"Rotem");
-            user2 = new User(15, "Ariel");
+            user = new User(1,15,"Rotem");
+            user2 = new User(1,15, "Ariel");
             dirPath=
                 System.IO.Directory.GetCurrentDirectory() + "\\local_files";
             Cleanup();
@@ -73,7 +74,7 @@ namespace ConsoleApp1.Tests
             i = 20;
             while (i-- != 0)
             {
-                User newUser = new User(i, "hi " + i);
+                User newUser = new User(1,i, "hi " + i);
                 try
                 {
                     cr.login(newUser.G_id, newUser.Nickname);
@@ -483,8 +484,19 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(cr2List.Count == 0, "cr2List should be empty after comparing");
         }
 
+        [TestMethod()]
+        public void new_retrieveMessagesTest()
+        {
+            SortedSet<Message> msgs;
+            cr.register(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname);
+            cr.retrieveMessages(10);
+            cr.new_retrieveMessages(10, null, 0);
+            msgs = cr.displayNMessages(10);
+            Assert.IsTrue(msgs.Min.MessageContent.Equals("heyyyy brother"));
+        }
 
-        
+
         [TestCleanup]
         public void Cleanup()
         {

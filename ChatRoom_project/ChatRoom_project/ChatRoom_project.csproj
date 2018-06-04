@@ -60,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAL\new_MessageHandler.cs" />
+    <Compile Include="DAL\new_UserHandler.cs" />
+    <Compile Include="logics\User.cs" />
     <Compile Include="PL\ChatRoomWindow.xaml.cs">
       <DependentUpon>ChatRoomWindow.xaml</DependentUpon>
     </Compile>
@@ -75,7 +78,6 @@
     <Compile Include="Not_USED_OLD_FILES\Program.cs" />
     <Compile Include="logics\Request.cs" />
     <Compile Include="logics\ToUserException.cs" />
-    <Compile Include="logics\User.cs" />
     <Compile Include="DAL\UserHandler.cs" />
     <Page Include="PL\ChatRoomWindow.xaml">
       <SubType>Designer</SubType>
