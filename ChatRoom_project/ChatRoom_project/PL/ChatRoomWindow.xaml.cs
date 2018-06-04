@@ -115,7 +115,7 @@ namespace ChatRoom_project.PresentationLayer
                 try
                 {
                     int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(tGroupID, msg.UserName);
+                    User tUser = new User(tGroupID, msg.UserName,"1234"); //needs to create a function: retrieveUser in chatroom
                     if (!observer.Users.Contains(tUser))
                     {
                         observer.Users.Add(tUser);
@@ -134,7 +134,7 @@ namespace ChatRoom_project.PresentationLayer
             toDisplay.ToList().ForEach(observer.Messages.Add);
             lastMessage = temp;// updates the last message to be the current newest message
         }
-
+        
         /*
          * Sets the direction of the sorting to be ascending
          */

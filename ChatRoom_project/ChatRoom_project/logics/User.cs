@@ -20,14 +20,19 @@ namespace ConsoleApp1.BuissnessLayer
         public string Nickname { get => nickname; private set => nickname = value; }
         public string Pw { get => pw; private set => pw = value; }
 
-        public User(int g_id,string nickname)
+        public User(int g_id,string nickname,string pw)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
             if (nickname == "")
                 throw new ArgumentException("nickname cannot be empty");
+            if (pw == null)
+                throw new ArgumentNullException("password cannot be null");
+            if (pw == "")
+                throw new ArgumentException("password cannot be empty");
             G_id = g_id;
             Nickname = nickname;
+            Pw = pw;
         }
         //copy constructor
         public User(User user)

@@ -84,10 +84,10 @@ namespace ChatRoom_project.PresentationLayer
 
         }
 
-        public void login(string g_ID, string nickname)
+        public void login(string g_ID, string nickname, string pw)
         {
             verifyNickName(nickname);
-            chtrm.login(g_IDToIntAndVerify(g_ID), nickname);
+            chtrm.login(g_IDToIntAndVerify(g_ID), nickname, pw);
             this.G_IDBox = "";
             this.NicknameBox = "";
             
@@ -104,11 +104,31 @@ namespace ChatRoom_project.PresentationLayer
         {
             if (nickName == "")
             {
-                log.Error("Attempted to enter empty nickname");
+                log.Error("Attempted to enter an empty nickname");
                 throw new ToUserException("NickName cannot be empty");
             }
             else
                 return true;
+        }
+
+        private void verifyPW(string pw)
+        {
+            if(pw == "")
+            {
+                log.Error("Attempted to enter an empty password");
+                throw new ToUserException("Password cannot be empty");
+            }
+
+            foreach(char c in pw)
+            {
+                if (!Char.IsLetter(c)&!Char.IsDigit(c))
+                {
+                    log.Error("Attempted to enter a not valid password");
+                    throw new ToUserException("Password is invalid");
+                }
+                   
+            }
+
         }
 
         ///<summary>

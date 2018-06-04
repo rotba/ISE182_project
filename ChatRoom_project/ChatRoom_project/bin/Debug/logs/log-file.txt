@@ -8835,3 +8835,8 @@ Error Number:206,State:2,Class:16
 2018-06-04 14:27:28,863 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Yoloo
 2018-06-04 14:45:14,372 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Dima
 2018-06-04 14:59:59,746 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: SixF
+2018-06-04 22:22:17,278 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 12 Nickname: Yotem
+2018-06-04 22:23:26,853 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 6 Nickname: Tomerr
+2018-06-04 22:26:06,220 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: A
+2018-06-04 22:26:17,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: s
+2018-06-04 22:26:32,125 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 44 Nickname: 3

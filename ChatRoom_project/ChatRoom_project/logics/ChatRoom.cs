@@ -27,6 +27,7 @@ namespace ConsoleApp1.BuissnessLayer
         //private static readonly string DEFAULT_URL = "http://localhost";
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
+        private readonly int BYTESIZE = 8; 
         public string Url { get => url; private set => url = value; }
       
         public User LoggedInUser {
@@ -62,11 +63,11 @@ namespace ConsoleApp1.BuissnessLayer
         /// <summary>
         /// login
         /// </summary>
-        public bool login(int g_id, string nickname)
+        public bool login(int g_id, string nickname, string pw)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
-            User userToLogin = new User(g_id, nickname);
+            User userToLogin = new User(g_id, nickname, pw);
             foreach (User u in users)
             {
                 if (u.Equals(userToLogin))
@@ -112,7 +113,7 @@ namespace ConsoleApp1.BuissnessLayer
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
 
-            User newUser = new User(g_id, nickname);
+            User newUser = new User(g_id, nickname, pw);
             //check if user already exists, if so throw error
             if (users.Contains(newUser))
             {
@@ -210,7 +211,7 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
         
-        public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
+        public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname, string pw)
         {
             if(nickname == null)
             {
@@ -239,10 +240,10 @@ namespace ConsoleApp1.BuissnessLayer
             //if the lists is empty, the requested user has not yet sent a message
             if (ans.Count == 0)
             {
-                log.Info("Attempted to display a user" +(new User(g_ID,nickname)) +" messages. The user hasn't yet sent a message");
+                log.Info("Attempted to display a user" +(new User(g_ID,nickname,pw)) +" messages. The user hasn't yet sent a message");
                 throw new ToUserException("There are no current messages by the requested user.");
             }
-            log.Info("Display a user" + (new User(g_ID, nickname)) + " messages.Total amount: " +ans.Count);
+            log.Info("Display a user" + (new User(g_ID, nickname, pw)) + " messages.Total amount: " +ans.Count);
             return ans;
         }
         //used only for test purposes.
@@ -266,6 +267,34 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
 
+        //create salt added to hased pw
+        private string createSalt(int size)
+        {
+            var rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
+            byte[] buff = new byte[size];
+            rng.GetBytes(buff);
+            return Convert.ToBase64String(buff);
+        }
+
+        private string generateSHA256Hash(string input, string salt)
+        {
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + salt);
+            System.Security.Cryptography.SHA256Managed sha256HashString =
+                new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = sha256HashString.ComputeHash(bytes);
+            return byteArrayToHexString(hash);
+        }
+
+        private string byteArrayToHexString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach(byte b in ba)
+            {
+                hex.AppendFormat("{0:x2}", b);
+            }
+
+            return hex.ToString();
+        }
  //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
  //       {
  //           get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);

@@ -58,7 +58,7 @@ namespace ConsoleApp1.PresintationLayer
                     Console.WriteLine("Type nickname");
                     nickname = Console.ReadLine();
                     verifyNickName(nickname);
-                    chtrm.login(tLogG_ID, nickname);
+                    chtrm.login(tLogG_ID, nickname, "1234");
                     Console.WriteLine("Logged in! Welcome to Tomer and the Design Patterns' chat room!");
                     //Play an intro during a succeful login
                     //System.Media.SoundPlayer player = new System.Media.SoundPlayer(System.IO.Directory.GetCurrentDirectory() + "\\Rick And Morty Intro.wav");
@@ -95,7 +95,7 @@ namespace ConsoleApp1.PresintationLayer
                     Console.WriteLine("Type nickname");
                     nickname = Console.ReadLine();
                     verifyNickName(nickname);
-                    SortedSet<Message> messagesToDisplayByUser = chtrm.retrieveUserMessages(tDispG_ID, nickname);
+                    SortedSet<Message> messagesToDisplayByUser = chtrm.retrieveUserMessages(tDispG_ID, nickname,"1234");
                     displayMessageList(messagesToDisplayByUser);
                     break;
 
