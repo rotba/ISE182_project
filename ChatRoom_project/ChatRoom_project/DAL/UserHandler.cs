@@ -113,6 +113,8 @@ namespace ConsoleApp1.PersistentLayer
         }
 
         public bool checkIfExists(int g_id, string nickname) {
+            SqlConnection connection;
+            SqlCommand command;
             bool ans = false;
             //defualt
             //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
