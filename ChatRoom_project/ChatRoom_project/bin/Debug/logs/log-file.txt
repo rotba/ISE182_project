@@ -8840,3 +8840,4 @@ Error Number:206,State:2,Class:16
 2018-06-04 22:26:06,220 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: A
 2018-06-04 22:26:17,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: s
 2018-06-04 22:26:32,125 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 44 Nickname: 3
+2018-06-05 11:36:58,039 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 88 Nickname: Ariel

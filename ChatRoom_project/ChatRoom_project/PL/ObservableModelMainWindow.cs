@@ -113,21 +113,19 @@ namespace ChatRoom_project.PresentationLayer
 
         private void verifyPW(string pw)
         {
-            if(pw == "")
+            if (pw == "" | pw.Length < 4 | pw.Length>16)
             {
-                log.Error("Attempted to enter an empty password");
-                throw new ToUserException("Password cannot be empty");
+                log.Error("Attempted to enter an empty/short/long password");
+                throw new ToUserException("Password cannot be empty/must be between 4-16 chars");
             }
 
-            foreach(char c in pw)
+            var containsDigitsNChars = new System.Text.RegularExpressions.Regex(@"^[a-zA-Z0-9]*$]");
+            if(!containsDigitsNChars.IsMatch(pw)==false)
             {
-                if (!Char.IsLetter(c)&!Char.IsDigit(c))
-                {
-                    log.Error("Attempted to enter a not valid password");
-                    throw new ToUserException("Password is invalid");
-                }
-                   
+                log.Error("Attempted to enter a not valid password");
+                throw new ToUserException("Password is invalid");
             }
+         
 
         }
 
