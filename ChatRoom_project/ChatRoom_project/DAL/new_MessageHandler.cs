@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.DAL
 {
-    class new_MessageHandler
+    public class new_MessageHandler
     {
         /// 
         /*
@@ -65,8 +65,8 @@ namespace ChatRoom_project.DAL
                         new Guid(),
                         data_reader.GetValue(0).ToString(),
                         dateFacturation,
-                        data_reader.GetValue(3).ToString(),
-                        data_reader.GetValue(4).ToString()
+                        data_reader.GetValue(2).ToString(),
+                        data_reader.GetValue(3).ToString()
                         ));
                     
                 }
@@ -85,7 +85,7 @@ namespace ChatRoom_project.DAL
         private string createQuery(DateTime lastRecieved, int number, string nickname, int g_ID)
         {
             string ans =
-                "SELECT U.Nickname M.SendTime M.Body, U.Group_Id" +
+                "SELECT U.Nickname, M.SendTime, M.Body, U.Group_Id" +
                 " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
             ans+=" WHERE 1=1";
             if (lastRecieved>DateTime.MinValue) {
@@ -100,7 +100,7 @@ namespace ChatRoom_project.DAL
                 ans += $" AND U.Group_Id = {g_ID}";
             }
             ans+= " ORDER BY SendTime";
-            if (number>=0) {
+            if (number>0) {
                 ans += $" LIMIT {number}";
             }
             return ans;

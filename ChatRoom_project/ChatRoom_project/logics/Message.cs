@@ -9,6 +9,8 @@ namespace ConsoleApp1.BuissnessLayer
     [Serializable]
     public class Message : IMessage
     {
+        private List<IMessage> list;
+
         public Guid Id { get; }
         public string UserName { get; }
         public DateTime Date { get; }
@@ -43,7 +45,6 @@ namespace ConsoleApp1.BuissnessLayer
             this.MessageContent = MessageContent;
             this.GroupID = GroupID;
         }
-
         public override string ToString()
         {
             return String.Format("Message ID:{0}\n" +
