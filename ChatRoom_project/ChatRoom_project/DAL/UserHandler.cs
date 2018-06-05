@@ -27,6 +27,7 @@ namespace ConsoleApp1.PersistentLayer
         string database_name = "MS3";
         string user_name = "";
         string password = "";
+
         /*
          *default
         string connetion_string = null;

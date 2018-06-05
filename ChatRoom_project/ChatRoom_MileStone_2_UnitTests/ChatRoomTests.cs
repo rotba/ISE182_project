@@ -20,8 +20,8 @@ namespace ConsoleApp1.Tests
         {
             cr = new ChatRoom();
             cr2 = new ChatRoom();
-            user = new User(15,"Rotem");
-            user2 = new User(15, "Ariel");
+            user = new User(15,"Rotem","notAPW");
+            user2 = new User(15, "Ariel","notAPW");
             dirPath=
                 System.IO.Directory.GetCurrentDirectory() + "\\local_files";
             Cleanup();
@@ -41,7 +41,7 @@ namespace ConsoleApp1.Tests
            
             try
             {
-                cr.login(user.G_id, user.Nickname);
+                cr.login(user.G_id, user.Nickname, user.Pw);
                 Assert.Fail(
                     "Should throw exception when try to login unregistered user");
             }
@@ -59,7 +59,7 @@ namespace ConsoleApp1.Tests
         {
 
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
         }
@@ -68,15 +68,15 @@ namespace ConsoleApp1.Tests
         {
 
             cr.register(user.G_id, user.Nickname,user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             int i;
             i = 20;
             while (i-- != 0)
             {
-                User newUser = new User(i, "hi " + i);
+                User newUser = new User(i, "hi " + i,"1234");
                 try
                 {
-                    cr.login(newUser.G_id, newUser.Nickname);
+                    cr.login(user.G_id, user.Nickname, newUser.Pw);
                     Assert.Fail("Should throw ToUserException");
                 }
                 catch (ToUserException e)
@@ -92,7 +92,7 @@ namespace ConsoleApp1.Tests
         public void loginTest_null_nickname_login_fails() { 
             try
             {
-                cr.login(0, null);
+                cr.login(0, null,"notaPW");
                 Assert.Fail("Should not allow login with null group id");
             }
             catch (ArgumentException e)
@@ -109,7 +109,7 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(cr.LoggedInUser == null,
                 "User should not be initialized before logged in");
             cr.register(user.G_id, user.Nickname,user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
             cr.logout();
@@ -139,7 +139,7 @@ namespace ConsoleApp1.Tests
         {
             try
             {
-                cr.login(user.G_id, user.Nickname);
+                cr.login(user.G_id, user.Nickname, user.Pw);
                 Assert.Fail("shoudlnt be allowed to login prior to register");
             }
             catch(ToUserException e)
@@ -147,7 +147,7 @@ namespace ConsoleApp1.Tests
 
             }
             cr.register(user.G_id, user.Nickname,user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
             
@@ -158,7 +158,7 @@ namespace ConsoleApp1.Tests
         {
             try
             {
-                cr.login(user.G_id, user.Nickname);
+                cr.login(user.G_id, user.Nickname, user.Pw);
                 Assert.Fail("shoudlnt be allowed to login prior to register");
             }
             catch (ToUserException e)
@@ -206,7 +206,7 @@ namespace ConsoleApp1.Tests
         public void sendTest_sentMessage_should_be_persistant()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             cr.send("Hello world");
             Message hello = null;
             foreach (Message m in cr.getMessages())
@@ -243,7 +243,7 @@ namespace ConsoleApp1.Tests
         public void sendTest_send_null_should_throw_exception()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             try
             {
                 cr.send(null);
@@ -259,7 +259,7 @@ namespace ConsoleApp1.Tests
         public void sendTest_message_with_over_150_chars_should_throw_exception()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             String msg = "";
             for(int i = 0; i < 151; i++)
             {
@@ -280,7 +280,7 @@ namespace ConsoleApp1.Tests
         public void sendTest_empty_msg_send_should_do_nothing()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             cr.send("");
             List<Message> tmp = cr.getMessages();
             Assert.IsTrue(tmp.Count == 0, "sending empty message should do nothing");
@@ -291,7 +291,7 @@ namespace ConsoleApp1.Tests
         public void sendTest_multypul_messages_should_all_be_persistant()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             int i = 19;
             while (i != 0)
             {
@@ -321,7 +321,7 @@ namespace ConsoleApp1.Tests
         public void displayNMessagesTest_with_invalid_input_should_throw_exception()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             try
             {
                 cr.displayNMessages(-1);
@@ -347,7 +347,7 @@ namespace ConsoleApp1.Tests
         public void displayNMessagesTest_should_throw_exception_if_there_are_no_messages()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             try
             {
                 cr.displayNMessages(20);
@@ -365,9 +365,9 @@ namespace ConsoleApp1.Tests
             int magicNum = 20;
             int halfMagicNum = 10;
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             cr2.register(user2.G_id, user2.Nickname,user2.Pw);
-            cr2.login(user2.G_id, user2.Nickname);
+            cr2.login(user2.G_id, user2.Nickname,user2.Pw);
             
             while (i < magicNum)
             {
@@ -404,7 +404,7 @@ namespace ConsoleApp1.Tests
 
             try
             {
-                cr.retrieveUserMessages(user.G_id,user.Nickname);
+                cr.retrieveUserMessages(user.G_id,user.Nickname,"notAPW");
                 Assert.Fail("retrieveUserMessages shouldnt work before login");
             }
             catch (ToUserException e) { }
@@ -414,10 +414,10 @@ namespace ConsoleApp1.Tests
         public void retrieveUserMessagesTest_for_null_nickname_should_throw_exception()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             try
             {
-                cr.retrieveUserMessages(user.G_id, null);
+                cr.retrieveUserMessages(user.G_id, null,"notAPW");
                 Assert.Fail("retirive use messages should throw exception for null argument");
             }
             catch (ArgumentNullException e)
@@ -430,10 +430,10 @@ namespace ConsoleApp1.Tests
         public void retrieveUserMessagesTest_for_user_that_didnt_send_yet_should_throw_exception()
         {
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             try
             {
-                cr.retrieveUserMessages(user.G_id, user.Nickname);
+                cr.retrieveUserMessages(user.G_id, user.Nickname, user.Pw);
                 Assert.Fail("retrieve user mesages for user that didnt yet send message should throw exception");
             }
             catch (ToUserException e) { }
@@ -448,9 +448,9 @@ namespace ConsoleApp1.Tests
             int magicNum = 20;
             int halfMagicNum = 10;
             cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname);
+            cr.login(user.G_id, user.Nickname, user.Pw);
             cr2.register(user2.G_id, user2.Nickname,user2.Pw);
-            cr2.login(user2.G_id, user2.Nickname);
+            cr2.login(user2.G_id, user2.Nickname,"notAPW");
            
             while (i < magicNum)
             {
@@ -465,8 +465,8 @@ namespace ConsoleApp1.Tests
                 System.Threading.Thread.Sleep(2000);
 
             }
-            SortedSet<Message> cr2List = cr2.retrieveUserMessages(user.G_id, user.Nickname);
-            SortedSet<Message> crList = cr.retrieveUserMessages(user.G_id, user.Nickname);
+            SortedSet<Message> cr2List = cr2.retrieveUserMessages(user.G_id, user.Nickname, user.Pw);
+            SortedSet<Message> crList = cr.retrieveUserMessages(user.G_id, user.Nickname, user.Pw);
             int crLenght = crList.Count;
             int cr2Lenght = cr2List.Count;
             Assert.IsTrue(cr2Lenght == crLenght, "both user lists should be the same lenght");

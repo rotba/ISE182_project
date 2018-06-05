@@ -27,7 +27,7 @@ namespace ConsoleApp1.BuissnessLayer
         //private static readonly string DEFAULT_URL = "http://localhost";
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
-        private readonly int BYTESIZE = 8; 
+        private readonly string saltValue = "1337";
         public string Url { get => url; private set => url = value; }
       
         public User LoggedInUser {
@@ -65,8 +65,35 @@ namespace ConsoleApp1.BuissnessLayer
         /// </summary>
         public bool login(int g_id, string nickname, string pw)
         {
+            //MS3
+            if (nickname == null)
+            {
+                log.Info("Nickname is null");
+                throw new ArgumentNullException("nickname cannot be null");
+            }
+            if(!userHandler.checkIfExists(g_id, nickname))
+            {
+                log.Info("Attempted to login with an user which does not exists");
+                throw new ArgumentNullException("Group Id or Nickname is incorrect");
+            }
+
+            string pwToCompare = generateSHA256Hash(pw);
+            string pwFromDB = userHandler.getUserHashedPW(g_id, nickname);
+
+            if (!pwFromDB.Equals(pwToCompare))
+            {
+                log.Info("Attempted to login with an incorrect password");
+                throw new ArgumentNullException("Password is incorrect");
+            }
+
+            User u = new User(g_id, nickname);
+            loggedInUser = u;
+            return true;
+            //MS2
+            /*
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
+
             User userToLogin = new User(g_id, nickname, pw);
             foreach (User u in users)
             {
@@ -79,7 +106,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             log.Info("Attempted login to invalid user" + userToLogin);
             throw new ToUserException("cannot login to " + userToLogin + " invalid user");
-
+            */
         }
 
         public void logout()
@@ -102,8 +129,6 @@ namespace ConsoleApp1.BuissnessLayer
                 logout();
             Environment.Exit(0);
 
-
-
         }
 
         public void register(int g_id, string nickname, string pw)
@@ -113,7 +138,16 @@ namespace ConsoleApp1.BuissnessLayer
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
 
-            User newUser = new User(g_id, nickname, pw);
+            if(userHandler.checkIfExists(g_id,nickname))
+            {
+                log.Info("Attempted to register, user already exists ");
+                throw new ToUserException("Group Id and Nickname are already used, please change either one");
+            }
+
+            string hashedPw = generateSHA256Hash(pw);
+            userHandler.insertUser(g_id, nickname, hashedPw);            
+            /*
+            User newUser = new User(g_id, nickname);
             //check if user already exists, if so throw error
             if (users.Contains(newUser))
             {
@@ -122,9 +156,10 @@ namespace ConsoleApp1.BuissnessLayer
             }
             //add user to the user list, and save data.
             users.Add(newUser);
-            userHandler.insertUser(g_id, nickname, pw);
             log.Info("Succeccfully registered" +newUser);
+        */
         }
+        
         //retrieves number amount of messages from server.
         public void retrieveMessages(int number)
         {
@@ -240,10 +275,10 @@ namespace ConsoleApp1.BuissnessLayer
             //if the lists is empty, the requested user has not yet sent a message
             if (ans.Count == 0)
             {
-                log.Info("Attempted to display a user" +(new User(g_ID,nickname,pw)) +" messages. The user hasn't yet sent a message");
+                log.Info("Attempted to display a user" +(new User(g_ID,nickname)) +" messages. The user hasn't yet sent a message");
                 throw new ToUserException("There are no current messages by the requested user.");
             }
-            log.Info("Display a user" + (new User(g_ID, nickname, pw)) + " messages.Total amount: " +ans.Count);
+            log.Info("Display a user" + (new User(g_ID, nickname)) + " messages.Total amount: " +ans.Count);
             return ans;
         }
         //used only for test purposes.
@@ -268,17 +303,10 @@ namespace ConsoleApp1.BuissnessLayer
         }
 
         //create salt added to hased pw
-        private string createSalt(int size)
-        {
-            var rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
-            byte[] buff = new byte[size];
-            rng.GetBytes(buff);
-            return Convert.ToBase64String(buff);
-        }
 
-        private string generateSHA256Hash(string input, string salt)
+        private string generateSHA256Hash(string input)
         {
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + salt);
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
             System.Security.Cryptography.SHA256Managed sha256HashString =
                 new System.Security.Cryptography.SHA256Managed();
             byte[] hash = sha256HashString.ComputeHash(bytes);

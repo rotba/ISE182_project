@@ -8841,3 +8841,165 @@ Error Number:206,State:2,Class:16
 2018-06-04 22:26:17,438 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 1 Nickname: s
 2018-06-04 22:26:32,125 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 44 Nickname: 3
 2018-06-05 11:36:58,039 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 88 Nickname: Ariel
+2018-06-05 12:18:53,124 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 8 Nickname: Yoni
+2018-06-05 12:19:54,278 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 8 Nickname: Toni
+2018-06-05 16:15:50,865 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 44 Nickname: Dani
+2018-06-05 16:16:12,622 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 33 Nickname: Dani
+2018-06-05 16:16:33,473 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 22 Nickname: hhh
+2018-06-05 16:17:12,852 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 882 Nickname: Ariel
+2018-06-05 16:17:49,363 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 123 Nickname: fffff
+2018-06-05 16:18:17,887 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 321 Nickname: Tomer
+2018-06-05 16:20:11,061 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 11 Nickname: Hi
+2018-06-05 16:20:20,840 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 333 Nickname: RRR
+2018-06-05 16:20:46,716 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 647 Nickname: Shlomi
+2018-06-05 19:27:42,779 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Ariel
+2018-06-05 19:31:06,048 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 15 Nickname: Ariel
+2018-06-05 21:07:23,097 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty/short/long password
+2018-06-05 21:07:33,668 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 20 Nickname: Ariel
+2018-06-05 21:12:54,070 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty/short/long password
+2018-06-05 21:12:58,346 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 22 Nickname: Ariel
+2018-06-05 21:13:13,281 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:13,309 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:13:14,869 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:14,887 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:13:15,415 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:15,435 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:13:15,587 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:15,615 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:13:15,749 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:15,768 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:13:15,902 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:15,922 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:13:16,113 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:13:16,133 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 82
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:16:48,558 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:17:17,746 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:17:24,320 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:17:42,548 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:17:48,040 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:18:10,241 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:21:26,502 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty/short/long password
+2018-06-05 21:21:34,231 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 871 Nickname: Ariel
+2018-06-05 21:21:47,397 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succeccfully registeredUser: G_id = 222 Nickname: Ariel
+2018-06-05 21:21:56,311 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:21:56,337 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 83
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:21:57,621 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:21:57,643 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 147
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 83
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:22:19,039 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty nickname
+2018-06-05 21:22:48,238 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 132.72.65.150:80
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 173
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 132.72.65.150:80
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-06-05 21:22:48,266 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-06-05 21:23:09,704 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 132.72.65.150:80
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MileStoneClient.CommunicationLayer.Communication.SimpleHTTPClient.GetListRequest(String url, String messageType) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 95
+   at MileStoneClient.CommunicationLayer.Communication.GetTenMessages(String url) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\communication\Communication.cs:line 64
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Int32 num) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 76
+   at ConsoleApp1.BuissnessLayer.ChatRoom.retrieveMessages(Int32 number) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 173
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 104
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 132.72.65.150:80
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+2018-06-05 21:23:09,706 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Display last 20 messages
+2018-06-05 21:23:11,852 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 222 Nickname: Ariel
+2018-06-05 21:23:31,926 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter a not valid password
+2018-06-05 21:33:28,516 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:33:28,599 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 146
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 83
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:33:30,868 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:33:30,889 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 146
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 83
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:33:31,278 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:33:31,297 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 146
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 83
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:33:31,490 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 
+2018-06-05 21:33:31,511 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Argument Exception found: System.ArgumentNullException: Value cannot be null.
+Parameter name: Group Id and Nickname are already used, please change either one
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 146
+   at ChatRoom_project.PresentationLayer.ObservableModelMainWindow.register(String g_ID, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:line 83
+   at ChatRoom_project.PresentationLayer.MainWindow.Register_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 97
+2018-06-05 21:34:45,392 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register, user already exists 

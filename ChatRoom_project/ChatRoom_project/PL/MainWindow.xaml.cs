@@ -69,11 +69,13 @@ namespace ChatRoom_project.PresentationLayer
         {
             try
             {
+                //MessageBox.Show(TestBox.Password);
+                
                 _main.login(_main.G_IDBox, _main.NicknameBox, _main.PwBox);     
                 ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
                 this.Hide();
                 chtrmWindow.Show();
-
+                
             }
             catch (ToUserException e_1)
             {
@@ -93,12 +95,9 @@ namespace ChatRoom_project.PresentationLayer
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
+            {   
                 _main.register(_main.G_IDBox, _main.NicknameBox, _main.PwBox);
-                string salt1 = createSalt(8);
-                string hasedPW = generateSHA256Hash(_main.PwBox, salt1);
-                MessageBox.Show(hasedPW + " size: " + hasedPW.Length);
-             //   MessageBox.Show("Register Successful");
+                MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)
             {
@@ -114,34 +113,6 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
-        //create salt added to hased pw
-        private string createSalt(int size)
-        {
-            var rng = new System.Security.Cryptography.RNGCryptoServiceProvider();
-            byte[] buff = new byte[size];
-            rng.GetBytes(buff);
-            return Convert.ToBase64String(buff);
-        }
-
-        private string generateSHA256Hash(string input, string salt)
-        {
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + salt);
-            System.Security.Cryptography.SHA256Managed sha256HashString =
-                new System.Security.Cryptography.SHA256Managed();
-            byte[] hash = sha256HashString.ComputeHash(bytes);
-            return byteArrayToHexString(hash);
-        }
-
-        private string byteArrayToHexString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            foreach (byte b in ba)
-            {
-                hex.AppendFormat("{0:x2}", b);
-            }
-
-            return hex.ToString();
-        }
 
     }
 }

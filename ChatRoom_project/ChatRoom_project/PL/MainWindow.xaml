@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800"
         ResizeMode = "NoResize">
-        
+
     <Grid Margin="0,-3,-3.667,-0.667" Loaded="main_grid_loaded">
         <Grid.Background>
             <ImageBrush ImageSource="{Binding BkImageLocation}" Stretch="UniformToFill"/>
@@ -19,15 +19,14 @@
             <ColumnDefinition Width="800"/>
         </Grid.ColumnDefinitions>
         <Button Content="Login" HorizontalAlignment="Left" Height="47" Margin="488,413,0,0" VerticalAlignment="Top" Width="145" Click="Login_Click"/>
-        <TextBox x:Name="nicknameBox" Text ="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="384,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
-        <TextBox x:Name="g_IDBox" Text="{Binding G_IDBox}" HorizontalAlignment="Left" Height="24" Margin="384,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
-        <TextBlock HorizontalAlignment="Left" Height="86" Margin="33,28,0,0" TextWrapping="Wrap" Text="Welcome to Tomer and The Design Patterns' Chat Room" VerticalAlignment="Top" Width="757" FontWeight="ExtraBold" FontSize="26" RenderTransformOrigin="1.287,0.472"/>
-        <TextBlock HorizontalAlignment="Left" Height="24" Margin="201,239,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86" FontWeight="ExtraBold" RenderTransformOrigin="1.287,0.472"/>
-        <TextBlock HorizontalAlignment="Left" Margin="201,325,0,251" TextWrapping="Wrap" Text="Group ID:" Width="86" FontWeight="ExtraBold"/>
+        <TextBox x:Name="nicknameBox" Text ="{Binding NicknameBox}"  HorizontalAlignment="Left" Height="24" Margin="384,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="g_IDBox" Text="{Binding G_IDBox}" HorizontalAlignment="Left" Height="24" Margin="384,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
+        <TextBlock HorizontalAlignment="Left" Height="42" Margin="33,28,0,0" TextWrapping="Wrap" Text="Welcome to Tomer and The Design Patterns' Chat Room" VerticalAlignment="Top" Width="757" FontWeight="ExtraBold" FontSize="26" RenderTransformOrigin="1.287,0.472"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="201,93,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" Width="86" FontWeight="ExtraBold" RenderTransformOrigin="1.287,0.472"/>
+        <TextBlock HorizontalAlignment="Left" Margin="201,179,0,397" TextWrapping="Wrap" Text="Group ID:" Width="86" FontWeight="ExtraBold"/>
         <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="142,413,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click"/>
-        <TextBox x:Name="passwordBox" Text="{Binding PwBox}" HorizontalAlignment="Left" Height="27" Margin="384,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
-
-
+        <TextBlock HorizontalAlignment="Left" Margin="201,263,0,313" TextWrapping="Wrap" Text="Password:" Width="86" FontWeight="ExtraBold"/>
+ 
     </Grid>
 
 </Window>

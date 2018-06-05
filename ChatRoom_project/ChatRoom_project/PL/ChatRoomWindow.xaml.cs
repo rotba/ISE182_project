@@ -115,7 +115,7 @@ namespace ChatRoom_project.PresentationLayer
                 try
                 {
                     int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(tGroupID, msg.UserName,"1234"); //needs to create a function: retrieveUser in chatroom
+                    User tUser = new User(tGroupID, msg.UserName); //needs to create a function: retrieveUser in chatroom
                     if (!observer.Users.Contains(tUser))
                     {
                         observer.Users.Add(tUser);
