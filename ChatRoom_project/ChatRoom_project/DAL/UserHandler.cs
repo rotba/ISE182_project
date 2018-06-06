@@ -3,20 +3,14 @@ using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.PersistentLayer
+namespace ChatRoom_project.DAL
 {
-    public class UserHandler : IHandler<User>
+    public class UserHandler
     {
-
-
         /// 
         /*
          *local
@@ -37,85 +31,15 @@ namespace ConsoleApp1.PersistentLayer
         string password = "hackMePlease";
          */
         /// 
-        private List<User> users = new List<User>();
-        private static readonly string filesPath=
-            System.IO.Directory.GetCurrentDirectory() + "\\local_files\\users.bin";
-
-        //Initialize the the handler. Connects to the existing DB or 
-        //creates one in a static directory
-        public UserHandler()
+        public bool insert(User user)
         {
-            List<User> tmp;
-            bool createdSuccefully = false;
-            if (File.Exists(filesPath))
-            {
-                Stream myOtherFileStream = File.OpenRead(filesPath);
-                BinaryFormatter deserializer = new BinaryFormatter();
-                try
-                {
-                    users = (List<User>)deserializer.Deserialize(myOtherFileStream);
-                    myOtherFileStream.Close();
-                    createdSuccefully = true;
-                }
-                catch (SerializationException e)
-                {
-                    File.Delete(filesPath);
-                    createFile();
-                }
-                
-            }
-            else
-            {
-                createFile();
-            }
+            return false;
         }
-
-
-        public string getUserHashedPW(int g_ID,string nickname)
+        public List<User> retrieve(int number,string nickname, int g_ID)
         {
+            List<User> ans = new List<User>();
             SqlConnection connection;
             SqlCommand command;
-            string hashedPW = "";
-            //defualt
-            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
-
-            //local
-            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
-
-            connection = new SqlConnection(connetion_string);
-            SqlDataReader data_reader;
-            try
-            {
-                connection.Open();
-                sql_query = $"SELECT * FROM USERS WHERE Group_Id={g_ID} AND Nickname='{nickname}'";
-                command = new SqlCommand(sql_query, connection);
-                data_reader = command.ExecuteReader();
-                if (!data_reader.Read())
-                    throw new Exception("Couln't find user");
-                hashedPW = (data_reader.GetValue(3)).ToString(); //the 4th col is the pswrd
-                data_reader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error");
-                Console.WriteLine(ex.ToString());
-            }
-
-            return hashedPW;
-        }
-        
-
-        public void insertUser(int g_ID,string nickname)
-        {
-
-        }
-
-        public bool checkIfExists(int g_id, string nickname) {
-            SqlConnection connection;
-            SqlCommand command;
-            bool ans = false;
             //defualt
             //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
 
@@ -129,10 +53,25 @@ namespace ConsoleApp1.PersistentLayer
             {
                 connection.Open();
                 Console.WriteLine("connected to: " + server_address);
-                sql_query = $"SELECT * FROM USERS WHERE Group_Id={g_id} AND Nickname='{nickname}'" ;
+                sql_query = createQuery(number, nickname, g_ID);
                 command = new SqlCommand(sql_query, connection);
                 data_reader = command.ExecuteReader();
-                ans = data_reader.Read();
+                while (data_reader.Read())
+                {
+                    int curr_gid =-1;
+                    int curr_id=-1;
+                    if (!data_reader.IsDBNull(1))
+                    {
+                        int.TryParse(data_reader.GetValue(0).ToString(), out curr_id);
+                        int.TryParse(data_reader.GetValue(1).ToString(), out curr_gid);
+                    }
+                    ans.Add(new User(
+                        curr_id,
+                        curr_gid,
+                        data_reader.GetValue(2).ToString()
+                        ));
+
+                }
                 data_reader.Close();
                 command.Dispose();
                 connection.Close();
@@ -144,56 +83,26 @@ namespace ConsoleApp1.PersistentLayer
             }
             return ans;
         }
-        private void createFile()
+
+        private string createQuery(int number, string nickname, int g_ID)
         {
-            if (!Directory.Exists(System.IO.Directory.GetCurrentDirectory() + "\\local_files"))
+            string ans =
+                "SELECT U.Id, U.Group_Id, U.Nickname" +
+                " FROM USERS AS U";
+            ans += " WHERE 1=1";
+            
+            if (nickname != null)
             {
-                Directory.CreateDirectory(System.IO.Directory.GetCurrentDirectory() + "\\local_files");
+                ans += $" AND U.Nickname = {nickname}";
             }
-            Stream myFileStream = File.Create(filesPath);
-            BinaryFormatter serializer = new BinaryFormatter();
-            serializer.Serialize(myFileStream, users);
-            myFileStream.Close();
-        }
-        //For test purposes
-        public string getPath() { return filesPath; }
-
-
-        /*
-         * Saves data in the DB
-         * Throws exception if data is null
-         */
-        public void edit(User data)
-        {
-            List<User> tmp = retriveAll();
-            if (data == null)
-                throw new ArgumentNullException("Edit null data request");
-            if (!tmp.Contains(data)) return;
-            tmp.Remove(data);
-            save(data);
-        }
-        //Retrieves all the users from the DB
-        public List<User> retriveAll()
-        {
-            List<User> ans = new List<User>();
-            foreach (User u in users)
+            if (g_ID > 0)
             {
-                ans.Add(new User(u));
+                ans += $" AND U.Group_Id = {g_ID}";
+            }
+            if (number>0) {
+                ans += $" LIMIT {number}";
             }
             return ans;
-            
-        }
-        //Stores the user in the DB
-        public void save(User data)
-        {
-            if(data==null)
-                throw new ArgumentNullException("Save null data request");
-            if (users.Contains(data)) return;
-            users.Add(data);
-            Stream myFileStream = File.Create(filesPath);
-            BinaryFormatter serializes = new BinaryFormatter();
-            serializes.Serialize(myFileStream, users);
-            myFileStream.Close();
         }
     }
 }

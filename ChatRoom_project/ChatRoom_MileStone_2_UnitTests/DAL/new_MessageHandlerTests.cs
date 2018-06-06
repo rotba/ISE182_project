@@ -12,15 +12,23 @@ namespace ChatRoom_project.DAL.Tests
     [TestClass()]
     public class new_MessageHandlerTests
     {
-        private new_MessageHandler handler;
+        private Message exepected_shpuldBeInDB;
+        private MessageHandler handler;
         private MessageDateComp dateComp;
         private MessageUserComp userComp;
+        private MessageSQLComp sqlComp;
         [TestInitialize]
         public void Initialize()
         {
-            handler = new new_MessageHandler();
+            handler = new MessageHandler();
             dateComp = new MessageDateComp();
             userComp = new MessageUserComp();
+            sqlComp = new MessageSQLComp();
+            DateTime date = new DateTime(2012, 6, 6, 10, 34, 9);
+            string content = "heyyyy brother";
+            exepected_shpuldBeInDB = new Message(
+                new Guid(), "Ariel", date, content, "15"
+                );
             Cleanup();
         }
 
@@ -33,16 +41,11 @@ namespace ChatRoom_project.DAL.Tests
         [TestMethod()]
         public void retrieveTest_retrieve_without_parameters()
         {
-            DateTime date = new DateTime(2012,6,6,10,34,9);
-            string content = "heyyyy brother";
-            Message exepected_shpuldBeInDB = new Message(
-                new Guid(), "Ariel", date, content, "15" 
-                );
+            
             Message result = new Message(
-                handler.retrieve(DateTime.MinValue, 0, null, 0)[0]
+                handler.retrieve(1, handler.convertToDictionary(DateTime.MinValue, null, 0))[0]
                     );
-            Assert.IsTrue(dateComp.Compare(result, exepected_shpuldBeInDB)==0);
-            Assert.IsTrue(userComp.Compare(result, exepected_shpuldBeInDB) == 0);
+            Assert.IsTrue(sqlComp.Compare(result, exepected_shpuldBeInDB)==0);
         }
 
         [TestMethod()]
@@ -55,5 +58,6 @@ namespace ChatRoom_project.DAL.Tests
         {
             
         }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using ChatRoom_project.logics;
+﻿using ChatRoom_project.DAL;
+using ChatRoom_project.logics;
 using ConsoleApp1.PersistentLayer;
 using MileStoneClient.CommunicationLayer;
 using System;
@@ -26,8 +27,6 @@ namespace ConsoleApp1.BuissnessLayer
         private Request request;
         private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         //private static readonly string DEFAULT_URL = "http://localhost";
-        private readonly UserHandler userHandler;
-        private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
       
         public User LoggedInUser {
@@ -48,16 +47,16 @@ namespace ConsoleApp1.BuissnessLayer
 
         public ChatRoom()
         {
-            this.userHandler = new UserHandler();
-            this.messageHandler = new MessageHandler();
             this.url = DEFAULT_URL;
             this.users = request.retrieveUsers(200,0, null);
             this.messages = new SortedSet<Message>(new MessageDateComp());
-            messages.UnionWith(messageHandler.retriveAll());
             this.request = new Request(url);
             this.LoggedInUser = null;
-           
-            
+            foreach (IMessage msg in request.retrieveMessages(200)) {
+                messages.Add(new Message(msg));
+            }
+
+
         }
     
         /// <summary>
@@ -157,20 +156,20 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 Message addMsgToList = new Message(IMessage);
                 messages.Add(addMsgToList);
-                messageHandler.save(addMsgToList);
+                request.insertMessage(addMsgToList);
             }
             log.Info(imsg.Count + "Messages were retrieved");
         }
         /****************************************************/
         //retrieves number amount of messages from server.
-        public void new_retrieveMessages(int number, string nickname, int g_id)
+        public void retrieveMessages(DateTime date, int number, string nickname, int g_id)
         {
             if (loggedInUser == null)
             {
                 log.Info("Attempted to retireve " + number + " messages without initially logging in");
                 throw new ToUserException("Cannot retrieve " + number + " messages without initially logging in");
             }
-            List<IMessage> imsg = request.new_retrieveMessages(number, nickname, g_id);
+            List<IMessage> imsg = request.retrieveMessages(date, number, nickname, g_id);
             if (imsg.Count == 0)
             {
                 log.Info("Attempted to retrieve messages while there are no messages to retrieve");
@@ -202,7 +201,7 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 Message msg = new Message(request.send(message, LoggedInUser));
                 messages.Add(msg);
-                messageHandler.save(msg);
+                request.insertMessage(msg);
                 log.Info("Message" + msg + " was sent successfully");
             }
             else
@@ -297,7 +296,7 @@ namespace ConsoleApp1.BuissnessLayer
         public List<Message> getMessages()
         {
             List<Message> ans = new List<Message>();
-            foreach (Message m in messageHandler.retriveAll())
+            foreach (Message m in request.retrieveMessages(0))
             {
                 ans.Add(new Message(m));
             }

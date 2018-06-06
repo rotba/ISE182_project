@@ -8805,3 +8805,12 @@ GroupId:15
    ב-  ChatRoom_project.PresentationLayer.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 36
 2018-06-05 21:51:09,971 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
    ב-  ChatRoom_project.PresentationLayer.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 57
+2018-06-06 13:02:17,830 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.IO.IOException: אין אפשרות לתהליך לגשת לקובץ 'C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\bin\Debug\local_files\users.bin' כיוון שתהליך אחר משתמש בקובץ.
+   ב-  System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   ב-  System.IO.File.InternalDelete(String path, Boolean checkHost)
+   ב-  System.IO.File.Delete(String path)
+   ב-  ConsoleApp1.PersistentLayer.UserHandler..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\UserHandler.cs:שורה 62
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 51
+   ב-  ChatRoom_project.PresentationLayer.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 36
+2018-06-06 13:02:18,482 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.PresentationLayer.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 57

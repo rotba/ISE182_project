@@ -23,7 +23,7 @@ namespace ConsoleApp1.BuissnessLayer
         private readonly int N_ALLOWED = 20;
         private readonly int N_SECS = 10;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private new_MessageHandler messageHandler = new new_MessageHandler();
+        private MessageHandler messageHandler = new MessageHandler();
         private new_UserHandler userHandler = new new_UserHandler();
         private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
@@ -120,13 +120,16 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
-                    
-                    List<IMessage> msgList = messageHandler.retrieve(
-                        lastRetrievedMessageTime,
-                        num,
-                        nickname,
-                        g_id
-                        );
+
+
+                    List<IMessage> msgList = 
+                        messageHandler.retrieve(
+                            num,
+                            messageHandler.convertToDictionary(
+                                lastRetrievedMessageTime,
+                                nickname,
+                                g_id)
+                            );
                     log.Info("sent a GetTenMessages request to server");
                     return msgList;
                 }

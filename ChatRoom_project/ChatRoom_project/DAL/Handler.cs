@@ -1,6 +1,4 @@
-﻿using ChatRoom_project.logics;
-using ConsoleApp1.BuissnessLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.DAL
 {
-    class new_UserHandler
+    public abstract class Handler<T>
     {
         /// 
         /*
@@ -31,13 +29,13 @@ namespace ChatRoom_project.DAL
         string password = "hackMePlease";
          */
         /// 
-        public bool insert(User user)
+        public bool insert(T item)
         {
             return false;
         }
-        public List<User> retrieve(int number,string nickname, int g_ID)
+        public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {
-            List<User> ans = new List<User>();
+            List<T> ans = new List<T>();
             SqlConnection connection;
             SqlCommand command;
             //defualt
@@ -53,24 +51,12 @@ namespace ChatRoom_project.DAL
             {
                 connection.Open();
                 Console.WriteLine("connected to: " + server_address);
-                sql_query = createQuery(number, nickname, g_ID);
+                sql_query = createQuery(numOfRows, query);
                 command = new SqlCommand(sql_query, connection);
                 data_reader = command.ExecuteReader();
                 while (data_reader.Read())
                 {
-                    int curr_gid =-1;
-                    int curr_id=-1;
-                    if (!data_reader.IsDBNull(1))
-                    {
-                        int.TryParse(data_reader.GetValue(0).ToString(), out curr_id);
-                        int.TryParse(data_reader.GetValue(1).ToString(), out curr_gid);
-                    }
-                    ans.Add(new User(
-                        curr_id,
-                        curr_gid,
-                        data_reader.GetValue(2).ToString()
-                        ));
-
+                    ans.Add(addRow(data_reader));
                 }
                 data_reader.Close();
                 command.Dispose();
@@ -84,25 +70,8 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        private string createQuery(int number, string nickname, int g_ID)
-        {
-            string ans =
-                "SELECT U.Id, U.Group_Id, U.Nickname" +
-                " FROM USERS AS U";
-            ans += " WHERE 1=1";
-            
-            if (nickname != null)
-            {
-                ans += $" AND U.Nickname = {nickname}";
-            }
-            if (g_ID > 0)
-            {
-                ans += $" AND U.Group_Id = {g_ID}";
-            }
-            if (number>0) {
-                ans += $" LIMIT {number}";
-            }
-            return ans;
-        }
+        protected abstract T addRow(SqlDataReader data_reader);
+        protected abstract string createQuery(int numOfRows, Dictionary<string, string> query);
+        
     }
 }
