@@ -12,11 +12,11 @@ namespace ConsoleApp1.Tests
     [TestClass()]
     public class UserTests
     {
-        private User tempUser1 = new User(1, "Yossi","notAPW");
-        private User tempUser2 = new User(1, "Yossi","notAPW");
-        private User tempUser3 = new User(1, "Rotem", "notAPW");
-        private User tempUser4 = new User(2, "Yossi", "notAPW");
-        private User tempUser5 = new User(2, "Rotem", "notAPW");
+        private User tempUser1 = new User(1, "Yossi");
+        private User tempUser2 = new User(1, "Yossi");
+        private User tempUser3 = new User(1, "Rotem");
+        private User tempUser4 = new User(2, "Yossi");
+        private User tempUser5 = new User(2, "Rotem");
 
         //      [TestMethod()]
         //      public void UserTest()

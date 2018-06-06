@@ -95,7 +95,7 @@ namespace ConsoleApp1.PresintationLayer
                     Console.WriteLine("Type nickname");
                     nickname = Console.ReadLine();
                     verifyNickName(nickname);
-                    SortedSet<Message> messagesToDisplayByUser = chtrm.retrieveUserMessages(tDispG_ID, nickname,"1234");
+                    SortedSet<Message> messagesToDisplayByUser = chtrm.retrieveUserMessages(tDispG_ID, nickname);
                     displayMessageList(messagesToDisplayByUser);
                     break;
 

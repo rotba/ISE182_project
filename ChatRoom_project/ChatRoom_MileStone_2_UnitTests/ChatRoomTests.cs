@@ -20,8 +20,8 @@ namespace ConsoleApp1.Tests
         {
             cr = new ChatRoom();
             cr2 = new ChatRoom();
-            user = new User(15,"Rotem","notAPW");
-            user2 = new User(15, "Ariel","notAPW");
+            user = new User(15,"Rotem");
+            user2 = new User(15, "Ariel");
             dirPath=
                 System.IO.Directory.GetCurrentDirectory() + "\\local_files";
             Cleanup();
@@ -41,7 +41,7 @@ namespace ConsoleApp1.Tests
            
             try
             {
-                cr.login(user.G_id, user.Nickname, user.Pw);
+                cr.login(user.G_id, user.Nickname, "notAPW");
                 Assert.Fail(
                     "Should throw exception when try to login unregistered user");
             }
@@ -58,8 +58,8 @@ namespace ConsoleApp1.Tests
         public void loginTest_registered_user_login_succeeds()
         {
 
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
         }
@@ -67,16 +67,16 @@ namespace ConsoleApp1.Tests
         public void loginTest_Multiple_failed_logins_shouldnt_affect_current_user()
         {
 
-            cr.register(user.G_id, user.Nickname,user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname,cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             int i;
             i = 20;
             while (i-- != 0)
             {
-                User newUser = new User(i, "hi " + i,"1234");
+                User newUser = new User(i, "hi " + i);
                 try
                 {
-                    cr.login(user.G_id, user.Nickname, newUser.Pw);
+                    cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
                     Assert.Fail("Should throw ToUserException");
                 }
                 catch (ToUserException e)
@@ -108,8 +108,8 @@ namespace ConsoleApp1.Tests
             
             Assert.IsTrue(cr.LoggedInUser == null,
                 "User should not be initialized before logged in");
-            cr.register(user.G_id, user.Nickname,user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
             cr.logout();
@@ -139,15 +139,15 @@ namespace ConsoleApp1.Tests
         {
             try
             {
-                cr.login(user.G_id, user.Nickname, user.Pw);
+                cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
                 Assert.Fail("shoudlnt be allowed to login prior to register");
             }
             catch(ToUserException e)
             {
 
             }
-            cr.register(user.G_id, user.Nickname,user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             Assert.IsTrue(cr.LoggedInUser.Equals(user),
                 "User should be logged in successfully");
             
@@ -158,17 +158,17 @@ namespace ConsoleApp1.Tests
         {
             try
             {
-                cr.login(user.G_id, user.Nickname, user.Pw);
+                cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
                 Assert.Fail("shoudlnt be allowed to login prior to register");
             }
             catch (ToUserException e)
             {
 
             }
-            cr.register(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             try
             {
-                cr.register(user.G_id, user.Nickname, user.Pw);
+                cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW2"));
                 Assert.Fail("registering already registered user should throw an exception");
             }
             catch(ToUserException e_1)
@@ -178,21 +178,25 @@ namespace ConsoleApp1.Tests
 
         }
 
+        //no need?
+        
         [TestMethod()]
         public void registerTest_registeredUser_should_be_persistant()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             Assert.IsTrue(cr.getUsers().Contains(user), "User should be saved in DB");
         }
+        
 
+        
         [TestMethod()]
         public void registerTest_null_nickname_should_fail()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             int sizeOfUsersBeforeFaultRegister = cr.getUsers().Count;
             try
             {
-                cr.register(0, null,"1234");
+                cr.register(0, null, cr.getHashPWForTests("TestPW"));
                 Assert.Fail("Should not allow register with null group id");
             }
             catch (ArgumentNullException e)
@@ -202,6 +206,8 @@ namespace ConsoleApp1.Tests
             }
         }
 
+        //move to MessageHandlerTests
+        /*
         [TestMethod()]
         public void sendTest_sentMessage_should_be_persistant()
         {
@@ -224,6 +230,9 @@ namespace ConsoleApp1.Tests
                 "Message hello world GUID should not be null"
                 );
         }
+
+    */
+
         [TestMethod()]
         public void sendTest_send_without_loggingin_should_throw_exception()
         {
@@ -242,8 +251,8 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_send_null_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             try
             {
                 cr.send(null);
@@ -256,12 +265,12 @@ namespace ConsoleApp1.Tests
         }
 
         [TestMethod()]
-        public void sendTest_message_with_over_150_chars_should_throw_exception()
+        public void sendTest_message_with_over_100_chars_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             String msg = "";
-            for(int i = 0; i < 151; i++)
+            for(int i = 0; i < 101; i++)
             {
                 msg = msg + 1;
             }
@@ -279,8 +288,8 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_empty_msg_send_should_do_nothing()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             cr.send("");
             List<Message> tmp = cr.getMessages();
             Assert.IsTrue(tmp.Count == 0, "sending empty message should do nothing");
@@ -290,8 +299,8 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void sendTest_multypul_messages_should_all_be_persistant()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             int i = 19;
             while (i != 0)
             {
@@ -320,8 +329,8 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void displayNMessagesTest_with_invalid_input_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             try
             {
                 cr.displayNMessages(-1);
@@ -346,8 +355,8 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void displayNMessagesTest_should_throw_exception_if_there_are_no_messages()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname,cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             try
             {
                 cr.displayNMessages(20);
@@ -364,10 +373,10 @@ namespace ConsoleApp1.Tests
             int i = 0;
             int magicNum = 20;
             int halfMagicNum = 10;
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
-            cr2.register(user2.G_id, user2.Nickname,user2.Pw);
-            cr2.login(user2.G_id, user2.Nickname,user2.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr2.register(user2.G_id, user2.Nickname, cr.getHashPWForTests("TestPW2"));
+            cr2.login(user2.G_id, user2.Nickname, cr.getHashPWForTests("TestPW2"));
             
             while (i < magicNum)
             {
@@ -404,7 +413,7 @@ namespace ConsoleApp1.Tests
 
             try
             {
-                cr.retrieveUserMessages(user.G_id,user.Nickname,"notAPW");
+                cr.retrieveUserMessages(user.G_id,user.Nickname);
                 Assert.Fail("retrieveUserMessages shouldnt work before login");
             }
             catch (ToUserException e) { }
@@ -413,11 +422,11 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void retrieveUserMessagesTest_for_null_nickname_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             try
             {
-                cr.retrieveUserMessages(user.G_id, null,"notAPW");
+                cr.retrieveUserMessages(user.G_id, null);
                 Assert.Fail("retirive use messages should throw exception for null argument");
             }
             catch (ArgumentNullException e)
@@ -429,11 +438,11 @@ namespace ConsoleApp1.Tests
         [TestMethod()]
         public void retrieveUserMessagesTest_for_user_that_didnt_send_yet_should_throw_exception()
         {
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
             try
             {
-                cr.retrieveUserMessages(user.G_id, user.Nickname, user.Pw);
+                cr.retrieveUserMessages(user.G_id, user.Nickname);
                 Assert.Fail("retrieve user mesages for user that didnt yet send message should throw exception");
             }
             catch (ToUserException e) { }
@@ -447,10 +456,10 @@ namespace ConsoleApp1.Tests
             int i = 0;
             int magicNum = 20;
             int halfMagicNum = 10;
-            cr.register(user.G_id, user.Nickname, user.Pw);
-            cr.login(user.G_id, user.Nickname, user.Pw);
-            cr2.register(user2.G_id, user2.Nickname,user2.Pw);
-            cr2.login(user2.G_id, user2.Nickname,"notAPW");
+            cr.register(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr.login(user.G_id, user.Nickname, cr.getHashPWForTests("TestPW"));
+            cr2.register(user2.G_id, user2.Nickname, cr.getHashPWForTests("TestPW"));
+            cr2.login(user2.G_id, user2.Nickname, cr.getHashPWForTests("TestPW"));
            
             while (i < magicNum)
             {
@@ -465,8 +474,8 @@ namespace ConsoleApp1.Tests
                 System.Threading.Thread.Sleep(2000);
 
             }
-            SortedSet<Message> cr2List = cr2.retrieveUserMessages(user.G_id, user.Nickname, user.Pw);
-            SortedSet<Message> crList = cr.retrieveUserMessages(user.G_id, user.Nickname, user.Pw);
+            SortedSet<Message> cr2List = cr2.retrieveUserMessages(user.G_id, user.Nickname);
+            SortedSet<Message> crList = cr.retrieveUserMessages(user.G_id, user.Nickname);
             int crLenght = crList.Count;
             int cr2Lenght = cr2List.Count;
             Assert.IsTrue(cr2Lenght == crLenght, "both user lists should be the same lenght");

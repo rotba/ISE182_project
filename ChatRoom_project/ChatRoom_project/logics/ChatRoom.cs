@@ -246,7 +246,7 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
         
-        public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname, string pw)
+        public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
         {
             if(nickname == null)
             {
@@ -322,6 +322,12 @@ namespace ConsoleApp1.BuissnessLayer
             }
 
             return hex.ToString();
+        }
+
+        //for tests only
+        public string getHashPWForTests(string pw)
+        {
+            return generateSHA256Hash(pw);
         }
  //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
  //       {

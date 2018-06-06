@@ -22,13 +22,13 @@ namespace ConsoleApp1.PersistentLayer.Tests
         }
 
         //needs to change genrateHash256 and createSalt to public in ChatRoom
-        /*
+        
        [TestMethod()]
        public void getUserHashedPWTest()
        {
            string originalPw = "yami";
            ChatRoom cr = new ChatRoom();
-           string result = cr.generateSHA256Hash(originalPw, cr.createSalt(10));
+           string result = cr.getHashPWForTests(originalPw);
           // string expected = "ec837e92c6c9593684a14495a6297916b38249668dcb4d1e254259d0b05fdbf9";
            UserHandler uh = new UserHandler();
            string s = uh.getUserHashedPW(15,"Ariel");
@@ -40,6 +40,6 @@ namespace ConsoleApp1.PersistentLayer.Tests
            Assert.IsTrue(s.Equals(result));
        }
 
-   */
+   
     }
 }

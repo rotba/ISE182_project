@@ -35,7 +35,6 @@ namespace ChatRoom_project.PresentationLayer
             {
                 chtrm = new ChatRoom();
                 _main = new ObservableModelMainWindow(chtrm);
-
             }
             catch (Exception e)
             {
@@ -44,12 +43,12 @@ namespace ChatRoom_project.PresentationLayer
             InitializeComponent();
             this.DataContext = _main;
 
-
         }
         
 
         private void main_grid_loaded(object sender, RoutedEventArgs e)
         {
+            
             Grid g = sender as Grid;
             ImageBrush ib = null;
             try
