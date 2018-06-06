@@ -1,4 +1,10 @@
-﻿using ConsoleApp1.PersistentLayer;
+<<<<<<< HEAD
+﻿using ChatRoom_project.DAL;
+using ChatRoom_project.logics;
+=======
+﻿using ChatRoom_project.logics;
+using ConsoleApp1.PersistentLayer;
+>>>>>>> fd672be294a06871af4fa73f5ee143a38ced05f9
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
@@ -23,24 +29,8 @@ namespace ConsoleApp1.BuissnessLayer
         private SortedSet<Message> messages;
         private List<User> users;
         private Request request;
-<<<<<<< HEAD
-<<<<<<< HEAD
         private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         //private static readonly string DEFAULT_URL = "http://localhost";
-=======
-       // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        private static readonly string DEFAULT_URL = "http://localhost";
->>>>>>> origin/Ariel
-=======
-       // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        private static readonly string DEFAULT_URL = "http://localhost";
-=======
-        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        //private static readonly string DEFAULT_URL = "http://localhost";
->>>>>>> origin/rotem
->>>>>>> origin/tomer
-        private readonly UserHandler userHandler;
-        private readonly MessageHandler messageHandler;
         public string Url { get => url; private set => url = value; }
       
         public User LoggedInUser {
@@ -61,16 +51,16 @@ namespace ConsoleApp1.BuissnessLayer
 
         public ChatRoom()
         {
-            this.userHandler = new UserHandler();
-            this.messageHandler = new MessageHandler();
             this.url = DEFAULT_URL;
-            this.users = userHandler.retriveAll();
+            this.users = request.retrieveUsers(200,0, null);
             this.messages = new SortedSet<Message>(new MessageDateComp());
-            messages.UnionWith(messageHandler.retriveAll());
             this.request = new Request(url);
             this.LoggedInUser = null;
-           
-            
+            foreach (IMessage msg in request.retrieveMessages(200)) {
+                messages.Add(new Message(msg));
+            }
+
+
         }
     
         /// <summary>
@@ -80,7 +70,7 @@ namespace ConsoleApp1.BuissnessLayer
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
-            User userToLogin = new User(g_id, nickname);
+            User userToLogin = request.retrieveUsers(1, g_id, nickname)[0];
             foreach (User u in users)
             {
                 if (u.Equals(userToLogin))
@@ -91,8 +81,21 @@ namespace ConsoleApp1.BuissnessLayer
                 }
             }
             log.Info("Attempted login to invalid user" + userToLogin);
-            throw new ToUserException("cannot login to user: " + userToLogin + " invalid user");
+            throw new ToUserException("cannot login to " + userToLogin + " invalid user");
 
+        }
+        /*
+         * Returns the next available userId
+         */
+        private int getNextUserId()
+        {
+            int lastId = 0;
+            foreach (User user in users) {
+                if (user.Id>lastId) {
+                    lastId = user.Id;
+                }
+            }
+            return lastId;
         }
 
         public void logout()
@@ -126,7 +129,7 @@ namespace ConsoleApp1.BuissnessLayer
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
 
-            User newUser = new User(g_id, nickname);
+            User newUser = new User(getNextUserId(),g_id, nickname);
             //check if user already exists, if so throw error
             if (users.Contains(newUser))
             {
@@ -135,7 +138,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             //add user to the user list, and save data.
             users.Add(newUser);
-            userHandler.save(newUser);
+            request.insertUser(newUser);
             log.Info("Succeccfully registered" +newUser);
         }
         //retrieves number amount of messages from server.
@@ -157,27 +160,65 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 Message addMsgToList = new Message(IMessage);
                 messages.Add(addMsgToList);
-                messageHandler.save(addMsgToList);
+                request.insertMessage(addMsgToList);
             }
             log.Info(imsg.Count + "Messages were retrieved");
         }
+        /****************************************************/
+        //retrieves number amount of messages from server.
+        public void retrieveMessages(DateTime date, int number, string nickname, int g_id)
+        {
+            if (loggedInUser == null)
+            {
+                log.Info("Attempted to retireve " + number + " messages without initially logging in");
+                throw new ToUserException("Cannot retrieve " + number + " messages without initially logging in");
+            }
+            List<IMessage> imsg = request.retrieveMessages(date, number, nickname, g_id);
+            if (imsg.Count == 0)
+            {
+                log.Info("Attempted to retrieve messages while there are no messages to retrieve");
+                throw new ToUserException("No messages to retrieve");
+            }
+            //converts each element in imsg to Message and adds it to messages list
+            foreach (var IMessage in imsg)
+            {
+                Message addMsgToList = new Message(IMessage);
+                messages.Add(addMsgToList);
+            }
+            log.Info(imsg.Count + "Messages were retrieved");
+        }
+        /****************************************************/
 
         public void send(string message)
         {
+            if (message == null)
+            {
+                log.Debug("invalid attempt to send null message");
+                throw new ArgumentNullException("message cannot be null");
+            }
             if (LoggedInUser == null)
             {
                 log.Info("Attempted send without initially logging in");
                 throw new ToUserException("Cannot send a message without initially logging in");
             }
-             Message msg = new Message(request.send(message, LoggedInUser));
-             messages.Add(msg);
-             messageHandler.save(msg);
-             log.Info("Message"+msg +" was sent successfully");
+            if (message != "")
+            {
+                Message msg = new Message(request.send(message, LoggedInUser));
+                messages.Add(msg);
+                log.Info("Message" + msg + " was sent successfully");
+            }
+            else
+                log.Info("Attempted to send empty message");
             
         }
 
         public SortedSet<Message> displayNMessages(int num)
         {
+            if (num < 0)
+            {
+                log.Debug("invalid attempt to displayNMessages with negative input as num");
+                throw new ArgumentOutOfRangeException("display message must recieve non negative integer");
+            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to display " + num + " messages without initially logging in");
@@ -211,6 +252,11 @@ namespace ConsoleApp1.BuissnessLayer
         
         public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
         {
+            if(nickname == null)
+            {
+                log.Debug("invalid attempt to retrieveUserMessages with null nickname");
+                throw new ArgumentNullException("nickname cannot be null");
+            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to Display User: group id :" + g_ID +" Nickname: " +nickname + " messages without initially logging in");
@@ -233,17 +279,17 @@ namespace ConsoleApp1.BuissnessLayer
             //if the lists is empty, the requested user has not yet sent a message
             if (ans.Count == 0)
             {
-                log.Info("Attempted to display a user" +(new User(g_ID,nickname)) +" messages. The user hasn't yet sent a message");
+                log.Info("Attempted to display a user"+g_ID+" "+nickname +" messages. The user hasn't yet sent a message");
                 throw new ToUserException("There are no current messages by the requested user.");
             }
-            log.Info("Display a user" + (new User(g_ID, nickname)) + " messages.Total amount: " +ans.Count);
+            log.Info("Display a user" + g_ID + " " + nickname + " messages.Total amount: " +ans.Count);
             return ans;
         }
         //used only for test purposes.
         public List<User> getUsers()
         {
             List<User> ans = new List<User>();
-            foreach (User u in userHandler.retriveAll())
+            foreach (User u in request.retrieveUsers(-1,0, null ))
             {
                 ans.Add(new User(u));
             }
@@ -253,11 +299,13 @@ namespace ConsoleApp1.BuissnessLayer
         public List<Message> getMessages()
         {
             List<Message> ans = new List<Message>();
-            foreach (Message m in messageHandler.retriveAll())
+            foreach (Message m in request.retrieveMessages(0))
             {
                 ans.Add(new Message(m));
             }
             return ans;
         }
+
+
     }
 }
