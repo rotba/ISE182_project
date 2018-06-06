@@ -1,105 +1,86 @@
 ﻿using ConsoleApp1.BuissnessLayer;
+using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.PersistentLayer
+namespace ChatRoom_project.DAL
 {
-    public class MessageHandler: IHandler<Message>
+    public class MessageHandler:Handler<IMessage>
     {
-        
-        private List<Message> messages = new List<Message>();
-        private readonly string filesPath =
-            System.IO.Directory.GetCurrentDirectory() + "\\local_files\\messages.bin";
-
-        //Initialize the the handler. Connects to the existing DB or 
-        //creates one in a static directory
-        public MessageHandler()
+        enum Fields{ SendTime, User_Id, Nickname, Group_Id };
+        private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
-            List<User> tmp;
-            bool createdSuccefully = false;
-            if (File.Exists(filesPath))
-            {
-                Stream myOtherFileStream = File.OpenRead(filesPath);
-                BinaryFormatter deserializer = new BinaryFormatter();
-                try
-                {
-                    messages = (List<Message>)deserializer.Deserialize(myOtherFileStream);
-                    myOtherFileStream.Close();
-                    createdSuccefully = true;
-                }
-                catch (SerializationException e)
-                {
-                    File.Delete(filesPath);
-                    createFile();
-                    throw e;
-                }
-                
-            }
-            else
-            {
-                createFile();
-            }
+            {Fields.SendTime, "SendTime"},
+            {Fields.User_Id, "User_Id"},
+            {Fields.Nickname, "Nickname"},
+            {Fields.Group_Id, "Group_Id"}
+        };
+
+        protected override IMessage addRow(SqlDataReader data_reader)
+        {
+            DateTime dateFacturation = new DateTime();
+            if (!data_reader.IsDBNull(1))
+                dateFacturation = data_reader.GetDateTime(1);
+
+            return new Message(
+                        new Guid(),
+                        data_reader.GetValue(0).ToString(),
+                        dateFacturation,
+                        data_reader.GetValue(2).ToString(),
+                        data_reader.GetValue(3).ToString()
+                        );
         }
 
-        private void createFile()
+        protected override string createQuery(int numOfRows, Dictionary<string, string> query)
         {
-            if (!Directory.Exists(System.IO.Directory.GetCurrentDirectory() + "\\local_files"))
-            {
-                Directory.CreateDirectory(System.IO.Directory.GetCurrentDirectory() + "\\local_files");
+            string ans = "SELECT";
+            if (numOfRows>0) {
+                ans += $" TOP {numOfRows}";
             }
-            Stream myFileStream = File.Create(filesPath);
-            BinaryFormatter serializer = new BinaryFormatter();
-            serializer.Serialize(myFileStream, messages);
-            myFileStream.Close();
-        }
-        //For test purposes
-        public string getPath() {
-            return filesPath;
-        }
-
-
-        /*
-         * Saves data in the DB
-         * Throws exception if data is null
-         */
-        public void edit(Message data)
-        {
-            List<Message> tmp = retriveAll();
-            if (data == null)
-                throw new ArgumentNullException("Edit null data request");
-            if (!tmp.Contains(data)) return;
-            tmp.Remove(data);
-            save(data);
-        }
-        //Retrieves all the messages from the DB 
-        public List<Message> retriveAll()
-        {
-            List<Message> ans = new List<Message>();
-            foreach (Message m in messages)
+            ans+=" U.Nickname, M.SendTime, M.Body, U.Group_Id" +
+                " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
+            ans += " WHERE 1=1";
+            if (query.ContainsKey(fieldsDic[Fields.SendTime]))
             {
-                ans.Add(new Message(m));
+                ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
             }
+            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+            {
+                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
+            }
+            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+            {
+                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
+            }
+            ans += " ORDER BY SendTime";
+            
             return ans;
         }
-
-        //Stroes data in the DB
-        public void save(Message data)
+        public Dictionary<string, string> convertToDictionary(DateTime date, int userId, string nickname, int g_Id)
         {
-            if (data == null)
-                throw new ArgumentNullException("Save null data request");
-            if (messages.Contains(data)) return;
-            messages.Add(data);
-            Stream myFileStream = File.Create(filesPath);
-            BinaryFormatter serializes = new BinaryFormatter();
-            serializes.Serialize(myFileStream, messages);
-            myFileStream.Close();
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            if (date.CompareTo(DateTime.MinValue) < 0)
+            {
+                
+                dic[fieldsDic[Fields.SendTime]] = date.ToString();
+            }
+            if (userId != 0)
+            {
+                dic[fieldsDic[Fields.User_Id]] = userId.ToString();
+            }
+            if (nickname != null)
+            {
+                dic[fieldsDic[Fields.Nickname]] = nickname;
+            }
+            if (g_Id > 0)
+            {
+                dic[fieldsDic[Fields.Group_Id]] = g_Id.ToString();
+            }
+            return dic;
         }
     }
 }
-

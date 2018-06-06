@@ -60,23 +60,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAL\Handler.cs" />
+    <Compile Include="DAL\MessageHandler.cs" />
+    <Compile Include="DAL\UserHandler.cs" />
+    <Compile Include="logics\User.cs" />
     <Compile Include="PL\ChatRoomWindow.xaml.cs">
       <DependentUpon>ChatRoomWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="PL\ListBoxExtenders.cs" />
     <Compile Include="PL\ObservableModelMainWindow.cs" />
     <Compile Include="communication\Communication.cs" />
-    <Compile Include="DAL\IHandler.cs" />
     <Compile Include="communication\IMessage.cs" />
     <Compile Include="Not_USED_OLD_FILES\MainMenu.cs" />
     <Compile Include="logics\Message.cs" />
-    <Compile Include="DAL\MessageHandler.cs" />
     <Compile Include="PL\ObservableModelChatRoom.cs" />
     <Compile Include="Not_USED_OLD_FILES\Program.cs" />
     <Compile Include="logics\Request.cs" />
     <Compile Include="logics\ToUserException.cs" />
-    <Compile Include="logics\User.cs" />
-    <Compile Include="DAL\UserHandler.cs" />
     <Page Include="PL\ChatRoomWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -9,6 +9,8 @@ namespace ConsoleApp1.BuissnessLayer
     [Serializable]
     public class Message : IMessage
     {
+        private List<IMessage> list;
+
         public Guid Id { get; }
         public string UserName { get; }
         public DateTime Date { get; }
@@ -43,7 +45,6 @@ namespace ConsoleApp1.BuissnessLayer
             this.MessageContent = MessageContent;
             this.GroupID = GroupID;
         }
-
         public override string ToString()
         {
             return String.Format("Message ID:{0}\n" +
@@ -118,5 +119,28 @@ namespace ConsoleApp1.BuissnessLayer
             }
         }
     }
-    
+    public class MessageSQLComp : Comparer<Message>
+    {
+        /*
+         * Returns:
+         * 0 if the x=y
+         * 1 else 
+         */
+        public override int Compare(Message x, Message y)
+        {
+            if (!y.GroupID.Contains(y.GroupID))
+            {
+                return 1;
+            }
+            if (!y.UserName.Contains(y.UserName)) {
+                return 1;
+            }
+            if (!y.MessageContent.Contains(y.MessageContent))
+            {
+                return 1;
+            }
+            return 0;
+        }
+    }
+
 }

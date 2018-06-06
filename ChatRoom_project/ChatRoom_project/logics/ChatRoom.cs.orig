@@ -1,4 +1,10 @@
-﻿using ConsoleApp1.PersistentLayer;
+<<<<<<< HEAD
+﻿using ChatRoom_project.logics;
+using ConsoleApp1.PersistentLayer;
+=======
+﻿using ChatRoom_project.DAL;
+using ChatRoom_project.logics;
+>>>>>>> 49b8e6b9b2cf6adea14dcc47d4560ef0cf78aaaa
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
@@ -23,15 +29,11 @@ namespace ConsoleApp1.BuissnessLayer
         private SortedSet<Message> messages;
         private List<User> users;
         private Request request;
-<<<<<<< HEAD
-       // private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        private static readonly string DEFAULT_URL = "http://localhost";
-=======
         private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         //private static readonly string DEFAULT_URL = "http://localhost";
->>>>>>> origin/rotem
         private readonly UserHandler userHandler;
         private readonly MessageHandler messageHandler;
+        private readonly string saltValue = "1337";
         public string Url { get => url; private set => url = value; }
       
         public User LoggedInUser {
@@ -67,11 +69,38 @@ namespace ConsoleApp1.BuissnessLayer
         /// <summary>
         /// login
         /// </summary>
-        public bool login(int g_id, string nickname)
+        public bool login(int g_id, string nickname, string pw)
         {
+            //MS3
+            if (nickname == null)
+            {
+                log.Info("Nickname is null");
+                throw new ArgumentNullException("nickname cannot be null");
+            }
+            if(!userHandler.checkIfExists(g_id, nickname))
+            {
+                log.Info("Attempted to login with an user which does not exists");
+                throw new ArgumentNullException("Group Id or Nickname is incorrect");
+            }
+
+            string pwToCompare = generateSHA256Hash(pw);
+            string pwFromDB = userHandler.getUserHashedPW(g_id, nickname);
+
+            if (!pwFromDB.Equals(pwToCompare))
+            {
+                log.Info("Attempted to login with an incorrect password");
+                throw new ArgumentNullException("Password is incorrect");
+            }
+
+            User u = new User(g_id, nickname);
+            loggedInUser = u;
+            return true;
+            //MS2
+            /*
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
-            User userToLogin = new User(g_id, nickname);
+
+            User userToLogin = new User(g_id, nickname, pw);
             foreach (User u in users)
             {
                 if (u.Equals(userToLogin))
@@ -82,8 +111,8 @@ namespace ConsoleApp1.BuissnessLayer
                 }
             }
             log.Info("Attempted login to invalid user" + userToLogin);
-            throw new ToUserException("cannot login to user: " + userToLogin + " invalid user");
-
+            throw new ToUserException("cannot login to " + userToLogin + " invalid user");
+            */
         }
 
         public void logout()
@@ -106,17 +135,24 @@ namespace ConsoleApp1.BuissnessLayer
                 logout();
             Environment.Exit(0);
 
-
-
         }
 
-        public void register(int g_id, string nickname)
+        public void register(int g_id, string nickname, string pw)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
 
+            if(userHandler.checkIfExists(g_id,nickname))
+            {
+                log.Info("Attempted to register, user already exists ");
+                throw new ToUserException("Group Id and Nickname are already used, please change either one");
+            }
+
+            string hashedPw = generateSHA256Hash(pw);
+            userHandler.insertUser(g_id, nickname, hashedPw);            
+            /*
             User newUser = new User(g_id, nickname);
             //check if user already exists, if so throw error
             if (users.Contains(newUser))
@@ -126,9 +162,10 @@ namespace ConsoleApp1.BuissnessLayer
             }
             //add user to the user list, and save data.
             users.Add(newUser);
-            userHandler.save(newUser);
             log.Info("Succeccfully registered" +newUser);
+        */
         }
+        
         //retrieves number amount of messages from server.
         public void retrieveMessages(int number)
         {
@@ -155,20 +192,38 @@ namespace ConsoleApp1.BuissnessLayer
 
         public void send(string message)
         {
+            if (message == null)
+            {
+                log.Debug("invalid attempt to send null message");
+                throw new ArgumentNullException("message cannot be null");
+            }
             if (LoggedInUser == null)
             {
                 log.Info("Attempted send without initially logging in");
                 throw new ToUserException("Cannot send a message without initially logging in");
             }
-             Message msg = new Message(request.send(message, LoggedInUser));
-             messages.Add(msg);
-             messageHandler.save(msg);
-             log.Info("Message"+msg +" was sent successfully");
+            if (message != "")
+            {
+                Message msg = new Message(request.send(message, LoggedInUser));
+                messages.Add(msg);
+<<<<<<< HEAD
+                messageHandler.save(msg);
+=======
+>>>>>>> 49b8e6b9b2cf6adea14dcc47d4560ef0cf78aaaa
+                log.Info("Message" + msg + " was sent successfully");
+            }
+            else
+                log.Info("Attempted to send empty message");
             
         }
 
         public SortedSet<Message> displayNMessages(int num)
         {
+            if (num < 0)
+            {
+                log.Debug("invalid attempt to displayNMessages with negative input as num");
+                throw new ArgumentOutOfRangeException("display message must recieve non negative integer");
+            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to display " + num + " messages without initially logging in");
@@ -202,6 +257,11 @@ namespace ConsoleApp1.BuissnessLayer
         
         public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
         {
+            if(nickname == null)
+            {
+                log.Debug("invalid attempt to retrieveUserMessages with null nickname");
+                throw new ArgumentNullException("nickname cannot be null");
+            }
             if (loggedInUser == null)
             {
                 log.Info("Attempted to Display User: group id :" + g_ID +" Nickname: " +nickname + " messages without initially logging in");
@@ -250,5 +310,44 @@ namespace ConsoleApp1.BuissnessLayer
             }
             return ans;
         }
+
+<<<<<<< HEAD
+        //create salt added to hased pw
+
+        private string generateSHA256Hash(string input)
+        {
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
+            System.Security.Cryptography.SHA256Managed sha256HashString =
+                new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = sha256HashString.ComputeHash(bytes);
+            return byteArrayToHexString(hash);
+        }
+
+        private string byteArrayToHexString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach(byte b in ba)
+            {
+                hex.AppendFormat("{0:x2}", b);
+            }
+
+            return hex.ToString();
+        }
+
+        //for tests only
+        public string getHashPWForTests(string pw)
+        {
+            return generateSHA256Hash(pw);
+        }
+ //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
+ //       {
+ //           get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);
+ //           set
+ //           {
+ //           }
+ //       }
+=======
+
+>>>>>>> 49b8e6b9b2cf6adea14dcc47d4560ef0cf78aaaa
     }
 }

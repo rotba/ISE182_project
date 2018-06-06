@@ -1,4 +1,6 @@
-﻿using MileStoneClient.CommunicationLayer;
+﻿using ChatRoom_project.DAL;
+using ChatRoom_project.logics;
+using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +22,9 @@ namespace ConsoleApp1.BuissnessLayer
         private readonly int N_ALLOWED = 20;
         private readonly int N_SECS = 10;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private MessageHandler mHandler = new MessageHandler();
+        private UserHandler uHandler = new UserHandler();
+        private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
         public Request(string url)
         {
@@ -43,7 +48,11 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
-                    IMessage iMsg = Communication.Instance.Send(url, user.G_id.ToString(), user.Nickname, content);
+                    int userId =
+                        uHandler.retrieve(
+                            uHandler.convertToDictionary()
+                            );
+                    IMessage iMsg = mHandler.insert();
                     log.Info("sent send request for message" + content + "for user" + user);
                     return iMsg;
                 }
@@ -61,10 +70,29 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ToUserException("illegal attempt to send invalid message, must contain at most 150 characters");
             }
         }
+
+        public List<User> retrieveUsers(int n, int g_id, string nickname)
+        {
+            return uHandler.retrieve(n, nickname, g_id);
+        }
+
+        internal void insertUser(User newUser)
+        {
+            uHandler.insert(newUser);
+        }
+
         //check for server overloading, make sure num=10 as in server policy.
         public List<IMessage> retrieveMessages(int num)
         {
-            if (num == 10)
+            return handleMessageRetrive(lastRetrievedMessageTime, num, null, 0);
+        }
+        //check for server overloading, make sure num=10 as in server policy.
+        public List<IMessage> retrieveMessages(int num, DateTime date, string nickname, int g_id)
+        {
+            return handleMessageRetrive(date, num, nickname, g_id);
+        }
+        private List<IMessage> handleMessageRetrive(DateTime date, int num, string nickname, int g_id) {
+            if (num == 200)
             {
                 if (isNotOverloading())
                 {
@@ -73,7 +101,15 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
-                    List<IMessage> msgList = Communication.Instance.GetTenMessages(url);
+                    List<IMessage> msgList =
+                        mHandler.retrieve(
+                            num,
+                            mHandler.convertToDictionary(
+                                lastRetrievedMessageTime,
+                                0,
+                                nickname,
+                                g_id)
+                            );
                     log.Info("sent a GetTenMessages request to server");
                     return msgList;
                 }

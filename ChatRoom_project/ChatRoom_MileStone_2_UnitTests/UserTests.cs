@@ -6,17 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp1.BuissnessLayer;
+using ChatRoom_project.logics;
 
 namespace ConsoleApp1.Tests
 {
     [TestClass()]
     public class UserTests
     {
-        private User tempUser1 = new User(1, "Yossi");
-        private User tempUser2 = new User(1, "Yossi");
-        private User tempUser3 = new User(1, "Rotem");
-        private User tempUser4 = new User(2, "Yossi");
-        private User tempUser5 = new User(2, "Rotem");
+        private User tempUser1 = new User(1,1, "Yossi");
+        private User tempUser2 = new User(1,1, "Yossi");
+        private User tempUser3 = new User(1,1, "Rotem");
+        private User tempUser4 = new User(1,2, "Yossi");
+        private User tempUser5 = new User(1,2, "Rotem");
 
         //      [TestMethod()]
         //      public void UserTest()
