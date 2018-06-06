@@ -1,15 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.BuissnessLayer
+namespace ChatRoom_project.logics
 {
-    [Serializable]
-    public class User : IComparable
+    public class User: IComparable
     {
-
+        public int Id { get => Id; private set => Id = value; }
         private int g_id;
         
         private string nickname;
@@ -18,7 +17,7 @@ namespace ConsoleApp1.BuissnessLayer
         public int G_id { get => g_id; private set => g_id = value; }
         public string Nickname { get => nickname; private set => nickname = value; }
 
-        public User(int g_id,string nickname)
+        public User(int id, int g_id , string nickname)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
@@ -26,6 +25,7 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ArgumentException("nickname cannot be empty");
             G_id = g_id;
             Nickname = nickname;
+            Id = id;
         }
         //copy constructor
         public User(User user)
