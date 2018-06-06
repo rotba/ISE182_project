@@ -1,6 +1,5 @@
 ﻿using ChatRoom_project.DAL;
 using ChatRoom_project.logics;
-using ConsoleApp1.PersistentLayer;
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
@@ -23,8 +22,8 @@ namespace ConsoleApp1.BuissnessLayer
         private readonly int N_ALLOWED = 20;
         private readonly int N_SECS = 10;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private MessageHandler messageHandler = new MessageHandler();
-        private new_UserHandler userHandler = new new_UserHandler();
+        private MessageHandler mHandler = new MessageHandler();
+        private UserHandler uHandler = new UserHandler();
         private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
         public Request(string url)
@@ -49,7 +48,11 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
-                    IMessage iMsg = Communication.Instance.Send(url, user.G_id.ToString(), user.Nickname, content);
+                    int userId =
+                        uHandler.retrieve(
+                            uHandler.convertToDictionary()
+                            );
+                    IMessage iMsg = mHandler.insert();
                     log.Info("sent send request for message" + content + "for user" + user);
                     return iMsg;
                 }
@@ -70,47 +73,25 @@ namespace ConsoleApp1.BuissnessLayer
 
         public List<User> retrieveUsers(int n, int g_id, string nickname)
         {
-            return userHandler.retrieve(n, nickname, g_id);
+            return uHandler.retrieve(n, nickname, g_id);
+        }
+
+        internal void insertUser(User newUser)
+        {
+            uHandler.insert(newUser);
         }
 
         //check for server overloading, make sure num=10 as in server policy.
         public List<IMessage> retrieveMessages(int num)
         {
-            if (num == 200)
-            {
-                if (isNotOverloading())
-                {
-                    lastNRequests.Enqueue(DateTime.Now);
-                    if (lastNRequests.Count == N_ALLOWED + 1)
-                    {
-                        lastNRequests.Dequeue();
-                    }
-                    List<IMessage> msgList = Communication.Instance.GetTenMessages(url);
-                    log.Info("sent a GetTenMessages request to server");
-                    return msgList;
-                }
-                else
-                {
-                    log.Error("Attempted to send more than 20 requests to server in past 10 secs");
-                    throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
-                }
-            }
-            else
-            {
-                log.Error("Illegal attempt to retrieve different amount than 10 last messages");
-                throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
-            }
+            return handleMessageRetrive(lastRetrievedMessageTime, num, null, 0);
         }
-
-        internal void insertUser(User newUser)
-        {
-            userHandler.insert(newUser);
-        }
-
-        /***************************************************************/
         //check for server overloading, make sure num=10 as in server policy.
-        public List<IMessage> new_retrieveMessages(int num, string nickname, int g_id)
+        public List<IMessage> retrieveMessages(int num, DateTime date, string nickname, int g_id)
         {
+            return handleMessageRetrive(date, num, nickname, g_id);
+        }
+        private List<IMessage> handleMessageRetrive(DateTime date, int num, string nickname, int g_id) {
             if (num == 200)
             {
                 if (isNotOverloading())
@@ -120,13 +101,12 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
-
-
-                    List<IMessage> msgList = 
-                        messageHandler.retrieve(
+                    List<IMessage> msgList =
+                        mHandler.retrieve(
                             num,
-                            messageHandler.convertToDictionary(
+                            mHandler.convertToDictionary(
                                 lastRetrievedMessageTime,
+                                0,
                                 nickname,
                                 g_id)
                             );
@@ -145,7 +125,6 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
             }
         }
-        /***************************************************************/
         //return true if not overloading server
         private bool isNotOverloading()
         {

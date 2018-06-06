@@ -1,6 +1,5 @@
 ﻿using ChatRoom_project.DAL;
 using ChatRoom_project.logics;
-using ConsoleApp1.PersistentLayer;
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
@@ -201,7 +200,6 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 Message msg = new Message(request.send(message, LoggedInUser));
                 messages.Add(msg);
-                request.insertMessage(msg);
                 log.Info("Message" + msg + " was sent successfully");
             }
             else
@@ -303,12 +301,6 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
 
- //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
- //       {
- //           get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);
- //           set
- //           {
- //           }
- //       }
+
     }
 }

@@ -29,9 +29,9 @@ namespace ChatRoom_project.DAL
         string password = "hackMePlease";
          */
         /// 
-        public bool insert(T item)
+        public T insert(Dictionary<string, string> query)
         {
-            return false;
+            return null;
         }
         public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {

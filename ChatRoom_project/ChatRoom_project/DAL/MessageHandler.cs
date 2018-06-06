@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.DAL
 {
-    public class MessageHandler: Handler<IMessage>
+    public class MessageHandler:Handler<IMessage>
     {
-        enum Fields{ SendTime, Nickname, Group_Id };
+        enum Fields{ SendTime, User_Id, Nickname, Group_Id };
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
             {Fields.SendTime, "SendTime"},
+            {Fields.User_Id, "User_Id"},
             {Fields.Nickname, "Nickname"},
             {Fields.Group_Id, "Group_Id"}
         };
@@ -59,13 +60,17 @@ namespace ChatRoom_project.DAL
             
             return ans;
         }
-        public Dictionary<string, string> convertToDictionary(DateTime date, string nickname, int g_Id)
+        public Dictionary<string, string> convertToDictionary(DateTime date, int userId, string nickname, int g_Id)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             if (date.CompareTo(DateTime.MinValue) < 0)
             {
                 
                 dic[fieldsDic[Fields.SendTime]] = date.ToString();
+            }
+            if (userId != 0)
+            {
+                dic[fieldsDic[Fields.User_Id]] = userId.ToString();
             }
             if (nickname != null)
             {
