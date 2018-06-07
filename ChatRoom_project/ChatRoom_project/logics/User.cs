@@ -17,7 +17,7 @@ namespace ChatRoom_project.logics
         public int G_id { get => g_id; private set => g_id = value; }
         public string Nickname { get => nickname; private set => nickname = value; }
 
-        public User(int id, int g_id , string nickname)
+        public User(int Id, int g_id , string nickname)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
@@ -25,7 +25,7 @@ namespace ChatRoom_project.logics
                 throw new ArgumentException("nickname cannot be empty");
             G_id = g_id;
             Nickname = nickname;
-            Id = id;
+            this.Id = Id;
         }
         //copy constructor
         public User(User user)

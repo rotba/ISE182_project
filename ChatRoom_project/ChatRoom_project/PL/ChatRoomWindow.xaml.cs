@@ -102,7 +102,7 @@ namespace ChatRoom_project.PresentationLayer
         private void refreshMessages()
         {
             Message temp;
-            try { chtrm.retrieveMessages(200, ); }
+            try { chtrm.retrieveMessages(200); }
             catch(Exception e)
             {
                 log.Debug(e);

@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatRoomTests.cs" />
-    <Compile Include="DAL\new_MessageHandlerTests.cs" />
+    <Compile Include="DAL\MessageHandlerTests.cs" />
     <Compile Include="DAL\UserHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserTests.cs" />

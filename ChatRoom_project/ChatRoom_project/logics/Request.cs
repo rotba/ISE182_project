@@ -48,11 +48,15 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
-                    int userId =
-                        uHandler.retrieve(
-                            uHandler.convertToDictionary()
-                            );
-                    IMessage iMsg = mHandler.insert();
+                    IMessage iMsg = mHandler.insert(
+                        mHandler.convertToDictionary(
+                            new Guid(),
+                            DateTime.Now,
+                            user.Id,
+                            user.Nickname,
+                            user.G_id
+                            )
+                        );
                     log.Info("sent send request for message" + content + "for user" + user);
                     return iMsg;
                 }
@@ -73,25 +77,22 @@ namespace ConsoleApp1.BuissnessLayer
 
         public List<User> retrieveUsers(int n, int g_id, string nickname)
         {
-            return uHandler.retrieve(n, nickname, g_id);
+            return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id));
         }
 
-        internal void insertUser(User newUser)
-        {
-            uHandler.insert(newUser);
-        }
+       
 
         //check for server overloading, make sure num=10 as in server policy.
         public List<IMessage> retrieveMessages(int num)
         {
-            return handleMessageRetrive(lastRetrievedMessageTime, num, null, 0);
+            return handleMessageRetrive(default(Guid), lastRetrievedMessageTime, num, null, 0);
         }
         //check for server overloading, make sure num=10 as in server policy.
-        public List<IMessage> retrieveMessages(int num, DateTime date, string nickname, int g_id)
+        public List<IMessage> retrieveMessages(Guid guid, DateTime date, int num, string nickname, int g_id)
         {
-            return handleMessageRetrive(date, num, nickname, g_id);
+            return handleMessageRetrive(guid, date, num, nickname, g_id);
         }
-        private List<IMessage> handleMessageRetrive(DateTime date, int num, string nickname, int g_id) {
+        private List<IMessage> handleMessageRetrive(Guid guid, DateTime date, int num, string nickname, int g_id) {
             if (num == 200)
             {
                 if (isNotOverloading())
@@ -105,6 +106,7 @@ namespace ConsoleApp1.BuissnessLayer
                         mHandler.retrieve(
                             num,
                             mHandler.convertToDictionary(
+                                new Guid(),
                                 lastRetrievedMessageTime,
                                 0,
                                 nickname,
@@ -125,6 +127,12 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
             }
         }
+
+        public void insertUser(User newUser)
+        {
+            throw new NotImplementedException();
+        }
+
         //return true if not overloading server
         private bool isNotOverloading()
         {

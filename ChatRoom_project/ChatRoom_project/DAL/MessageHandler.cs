@@ -11,9 +11,10 @@ namespace ChatRoom_project.DAL
 {
     public class MessageHandler:Handler<IMessage>
     {
-        enum Fields{ SendTime, User_Id, Nickname, Group_Id };
+        enum Fields{ Guid, SendTime, User_Id, Nickname, Group_Id };
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
+            {Fields.Guid, "Guid"},
             {Fields.SendTime, "SendTime"},
             {Fields.User_Id, "User_Id"},
             {Fields.Nickname, "Nickname"},
@@ -35,7 +36,7 @@ namespace ChatRoom_project.DAL
                         );
         }
 
-        protected override string createQuery(int numOfRows, Dictionary<string, string> query)
+        protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
             string ans = "SELECT";
             if (numOfRows>0) {
@@ -44,6 +45,10 @@ namespace ChatRoom_project.DAL
             ans+=" U.Nickname, M.SendTime, M.Body, U.Group_Id" +
                 " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
             ans += " WHERE 1=1";
+            if (query.ContainsKey(fieldsDic[Fields.Guid]))
+            {
+                ans += $" AND Guid = {query[fieldsDic[Fields.SendTime]]}";
+            }
             if (query.ContainsKey(fieldsDic[Fields.SendTime]))
             {
                 ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
@@ -60,9 +65,39 @@ namespace ChatRoom_project.DAL
             
             return ans;
         }
-        public Dictionary<string, string> convertToDictionary(DateTime date, int userId, string nickname, int g_Id)
+        protected override string createInsertQuery(Dictionary<string, string> query)
+        {
+            string ans = "INSERT INTO Messages(";
+            int size = query.Count;
+            int i = 0;
+            foreach (string field in query.Keys) {
+                ans += field;
+                if (i != size-1) {
+                    ans += ", ";
+                    i++;
+                }
+            }
+            ans += ")";
+            ans += " VALUES(";
+            foreach (string field in query.Keys)
+            {
+                ans += query[field];
+                if (i != size - 1)
+                {
+                    ans += ", ";
+                    i++;
+                }
+            }
+            ans += ")";
+
+            return ans;
+        }
+        public Dictionary<string, string> convertToDictionary(Guid guid,DateTime date, int userId, string nickname, int g_Id)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
+            if (!guid.Equals(default(Guid))) {
+                dic[fieldsDic[Fields.Guid]] = guid.ToString();
+            }
             if (date.CompareTo(DateTime.MinValue) < 0)
             {
                 

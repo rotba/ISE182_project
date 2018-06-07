@@ -31,7 +31,41 @@ namespace ChatRoom_project.DAL
         /// 
         public T insert(Dictionary<string, string> query)
         {
-            return null;
+            T ans = default(T);
+            SqlConnection connection;
+            SqlCommand command;
+            //defualt
+            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
+
+            //local
+            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
+            connection = new SqlConnection(connetion_string);
+            SqlDataReader data_reader;
+
+            try
+            {
+                connection.Open();
+                Console.WriteLine("connected to: " + server_address);
+                sql_query = createInsertQuery(query);
+                command = new SqlCommand(sql_query, connection);
+                command.ExecuteReader();//Execute insert
+                sql_query = createSelectQuery(1, query);
+                command = new SqlCommand(sql_query, connection);
+                data_reader = command.ExecuteReader();//Retrive inserted item
+                while (data_reader.Read())
+                {
+                    ans = addRow(data_reader);
+                }
+                data_reader.Close();
+                command.Dispose();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error");
+                Console.WriteLine(ex.ToString());
+            };
+            return ans;
         }
         public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {
@@ -51,7 +85,7 @@ namespace ChatRoom_project.DAL
             {
                 connection.Open();
                 Console.WriteLine("connected to: " + server_address);
-                sql_query = createQuery(numOfRows, query);
+                sql_query = createSelectQuery(numOfRows, query);
                 command = new SqlCommand(sql_query, connection);
                 data_reader = command.ExecuteReader();
                 while (data_reader.Read())
@@ -69,9 +103,10 @@ namespace ChatRoom_project.DAL
             }
             return ans;
         }
-
         protected abstract T addRow(SqlDataReader data_reader);
-        protected abstract string createQuery(int numOfRows, Dictionary<string, string> query);
-        
+        protected abstract string createSelectQuery(int numOfRows, Dictionary<string, string> query);
+        protected abstract string createInsertQuery(Dictionary<string, string> query);
+
+
     }
 }

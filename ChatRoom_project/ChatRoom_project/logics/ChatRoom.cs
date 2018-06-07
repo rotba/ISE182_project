@@ -155,20 +155,21 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 Message addMsgToList = new Message(IMessage);
                 messages.Add(addMsgToList);
-                request.insertMessage(addMsgToList);
             }
             log.Info(imsg.Count + "Messages were retrieved");
         }
         /****************************************************/
         //retrieves number amount of messages from server.
-        public void retrieveMessages(DateTime date, int number, string nickname, int g_id)
+        public void retrieveMessages(Guid guid, DateTime date, int number, string nickname, int g_id)
         {
             if (loggedInUser == null)
             {
                 log.Info("Attempted to retireve " + number + " messages without initially logging in");
                 throw new ToUserException("Cannot retrieve " + number + " messages without initially logging in");
             }
-            List<IMessage> imsg = request.retrieveMessages(date, number, nickname, g_id);
+            List<IMessage> imsg = request.retrieveMessages(
+                guid, date, number, nickname, g_id
+                );
             if (imsg.Count == 0)
             {
                 log.Info("Attempted to retrieve messages while there are no messages to retrieve");

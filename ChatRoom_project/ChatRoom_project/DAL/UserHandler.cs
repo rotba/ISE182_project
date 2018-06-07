@@ -24,26 +24,33 @@ namespace ChatRoom_project.DAL
             throw new NotImplementedException();
         }
 
-        protected override string createQuery(int numOfRows, Dictionary<string, string> query)
+        protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
             string ans =
                 "SELECT U.Id, U.Group_Id, U.Nickname" +
                 " FROM USERS AS U";
             ans += " WHERE 1=1";
 
-            if (nickname != null)
+            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
             {
-                ans += $" AND U.Nickname = {nickname}";
+                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
             }
-            if (g_ID > 0)
+            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
             {
-                ans += $" AND U.Group_Id = {g_ID}";
+                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
             }
-            if (number > 0)
-            {
-                ans += $" LIMIT {number}";
-            }
+            ans += " ORDER BY SendTime";
             return ans;
+        }
+
+        protected override string createInsertQuery(Dictionary<string, string> query)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Dictionary<string, string> convertToDictionary(string nickname, int g_id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

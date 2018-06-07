@@ -10,7 +10,7 @@ using ConsoleApp1.BuissnessLayer;
 namespace ChatRoom_project.DAL.Tests
 {
     [TestClass()]
-    public class new_MessageHandlerTests
+    public class MessageHandlerTests
     {
         private Message exepected_shpuldBeInDB;
         private MessageHandler handler;
@@ -39,11 +39,13 @@ namespace ChatRoom_project.DAL.Tests
         }
 
         [TestMethod()]
-        public void retrieveTest_retrieve_without_parameters()
+        public void retrieve_without_parameters()
         {
             
             Message result = new Message(
-                handler.retrieve(1, handler.convertToDictionary(DateTime.MinValue, null, 0))[0]
+                handler.retrieve(1, handler.convertToDictionary(
+                    new Guid(), DateTime.MinValue, 0 , null, 0))
+                    [0]
                     );
             Assert.IsTrue(sqlComp.Compare(result, exepected_shpuldBeInDB)==0);
         }

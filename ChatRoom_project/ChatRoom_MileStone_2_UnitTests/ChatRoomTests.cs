@@ -491,7 +491,7 @@ namespace ConsoleApp1.Tests
             cr.register(user.G_id, user.Nickname);
             cr.login(user.G_id, user.Nickname);
             cr.retrieveMessages(10);
-            cr.new_retrieveMessages(10, null, 0);
+            //cr.retrieveMessages(10, null, 0);
             msgs = cr.displayNMessages(10);
             Assert.IsTrue(msgs.Min.MessageContent.Equals("heyyyy brother"));
         }
