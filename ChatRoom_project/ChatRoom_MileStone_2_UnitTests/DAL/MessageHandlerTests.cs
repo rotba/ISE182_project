@@ -15,13 +15,11 @@ namespace ChatRoom_project.DAL.Tests
     [TestClass()]
     public class MessageHandlerTests
     {
-        private Message should_be_in_db;
-        private User user_should_be_in_db;
+        private Message msg_in_db;
         private MessageHandler handler;
         private MessageDateComp dateComp;
         private MessageUserComp userComp;
         private MessageSQLComp sqlComp;
-        private int should_be_in_db_g_id;
         private User testUser;
         private int TEST_USER_ID;
         private readonly string TEST_USER_NICKNAME = "TESTUSER";
@@ -29,21 +27,20 @@ namespace ChatRoom_project.DAL.Tests
         public void Initialize()
         {
             TEST_USER_ID = getTestUserId();
-            user_should_be_in_db = new User(1, 15, "Ariel");
             testUser = new User(TEST_USER_ID, 15, TEST_USER_NICKNAME);
             handler = new MessageHandler();
             dateComp = new MessageDateComp();
             userComp = new MessageUserComp();
             sqlComp = new MessageSQLComp();
             DateTime date = new DateTime(2012, 6, 6, 10, 34, 9);
-            string content = "heyyyy brother";
-            should_be_in_db = new Message(
+            string content = "Initialize()";
+            msg_in_db = new Message(
                 Guid.NewGuid(),
-                user_should_be_in_db.Nickname,
+                testUser.Nickname,
                 date, content,
-                user_should_be_in_db.G_id.ToString()
+                testUser.G_id.ToString()
                 );
-            int.TryParse(should_be_in_db.GroupID, out should_be_in_db_g_id);
+            handler.insert(handler.convertToDictionary(msg_in_db, testUser.Id));
         }
 
         [TestMethod()]
@@ -54,7 +51,7 @@ namespace ChatRoom_project.DAL.Tests
                     new Guid(), DateTime.MinValue, 0 , null, 0, null))
                     [0]
                     );
-            Assert.IsTrue(sqlComp.Compare(result, should_be_in_db)==0);
+            Assert.IsTrue(sqlComp.Compare(result, msg_in_db)==0);
         }
         [TestMethod()]
         public void retrieveTest_with_parameters_valid_message()
@@ -64,12 +61,12 @@ namespace ChatRoom_project.DAL.Tests
                     default(Guid),
                     DateTime.MinValue,
                     0,
-                    should_be_in_db.UserName,
-                    should_be_in_db_g_id,
+                    msg_in_db.UserName,
+                    testUser.G_id,
                     null))
                     [0]
                     );
-            Assert.IsTrue(sqlComp.Compare(result, should_be_in_db) == 0);
+            Assert.IsTrue(sqlComp.Compare(result, msg_in_db) == 0);
         }
         [TestMethod()]
         public void retrieveTest_with_parameters_invalid_message()
@@ -96,7 +93,7 @@ namespace ChatRoom_project.DAL.Tests
         {
             try {
                 Message result = new Message(
-                handler.insert(handler.convertToDictionary(should_be_in_db, user_should_be_in_db.Id)));
+                handler.insert(handler.convertToDictionary(msg_in_db, testUser.Id)));
                 Assert.Fail();
             }
             catch (SqlException sqlException) {
@@ -108,7 +105,7 @@ namespace ChatRoom_project.DAL.Tests
             string id_of_user_not_in_db = "1000";
             Message user_not_be_in_db = new Message(
                 Guid.NewGuid(),
-                user_should_be_in_db.Nickname,
+                testUser.Nickname,
                 DateTime.Now,
                 "insertTest_massege_already_in_db()",
                 id_of_user_not_in_db
@@ -116,7 +113,7 @@ namespace ChatRoom_project.DAL.Tests
             try
             {
                 Message result = new Message(
-                handler.insert(handler.convertToDictionary(should_be_in_db, user_should_be_in_db.Id)));
+                handler.insert(handler.convertToDictionary(msg_in_db, testUser.Id)));
                 Assert.Fail();
             }
             catch (SqlException sqlException)
@@ -127,7 +124,7 @@ namespace ChatRoom_project.DAL.Tests
         public void deleteTest_message_in_db()
         {
             Message test_m = new Message(
-                Guid.NewGuid(), testUser.Nickname, DateTime.MinValue, "deleteTest_message_in_db", testUser.G_id.ToString()
+                Guid.NewGuid(), testUser.Nickname, DateTime.Now, "deleteTest_message_in_db", testUser.G_id.ToString()
                 );
             handler.insert(handler.convertToDictionary(test_m, TEST_USER_ID));
             handler.delete(handler.convertToDictionary(test_m, TEST_USER_ID));

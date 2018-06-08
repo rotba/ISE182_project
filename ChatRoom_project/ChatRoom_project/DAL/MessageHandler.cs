@@ -118,6 +118,14 @@ namespace ChatRoom_project.DAL
             }
             if (query.ContainsKey(fieldsDic[Fields.SendTime]))
             {
+                /*
+                 * deleteTest_message_in_db() fails becuse
+                 * it the query requests to delete messages sended after
+                 * the send time of the message we want to delete
+                 * 
+                 * it might not be that bad because the delete message is
+                 * not part of the functional requirments
+                 */
                 ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
             }
             if (query.ContainsKey(fieldsDic[Fields.Nickname]))
