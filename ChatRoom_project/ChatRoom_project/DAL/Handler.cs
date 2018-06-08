@@ -55,7 +55,7 @@ namespace ChatRoom_project.DAL
             }
             return ans;
         }
-        public bool delete(Dictionary<string, string> query)
+        public void delete(Dictionary<string, string> query)
         {
             using (SqlConnection connection = new SqlConnection(connetion_string))
             {
@@ -65,7 +65,6 @@ namespace ChatRoom_project.DAL
                 data_reader.Close();
                 command.Dispose();
             }
-            return true;
         }
         protected abstract T addRow(SqlDataReader data_reader);
         protected abstract string createSelectQuery(int numOfRows, Dictionary<string, string> query);
