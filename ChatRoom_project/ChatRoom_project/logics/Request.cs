@@ -78,7 +78,7 @@ namespace ConsoleApp1.BuissnessLayer
 
         public List<User> retrieveUsers(int n, int g_id, string nickname)
         {
-            return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id));
+            return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id,null,-1));
         }
 
        

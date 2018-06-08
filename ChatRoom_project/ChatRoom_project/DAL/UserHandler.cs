@@ -27,7 +27,7 @@ namespace ChatRoom_project.DAL
         protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
             string ans =
-                "SELECT U.Id, U.Group_Id, U.Nickname" +
+                "SELECT U.Id, U.Group_Id, U.Nickname, U.Password" +
                 " FROM USERS AS U";
             ans += " WHERE 1=1";
 
@@ -48,9 +48,27 @@ namespace ChatRoom_project.DAL
             throw new NotImplementedException();
         }
 
-        internal Dictionary<string, string> convertToDictionary(string nickname, int g_id)
+        internal Dictionary<string, string> convertToDictionary(string nickname, int g_id, string hashedPassword,int id)
         {
-            throw new NotImplementedException();
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            if (!string.IsNullOrEmpty(nickname))
+            {
+                dic[fieldsDic[Fields.Nickname]] = "'" + nickname + "'";
+            }
+            if (g_id>0)
+            {
+                dic[fieldsDic[Fields.Group_Id]] = g_id.ToString();
+            }
+            if (!string.IsNullOrEmpty(hashedPassword))
+            {
+                dic[fieldsDic[Fields.Password]] = "'" + hashedPassword + "'";
+            }
+            if (id > 0)
+            {
+                dic[fieldsDic[Fields.Id]] = id.ToString();
+            }
+            
+            return dic;
         }
 
         protected override string createDeleteQuery(Dictionary<string, string> query)
