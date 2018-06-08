@@ -103,6 +103,41 @@ namespace ChatRoom_project.DAL
             }
             return ans;
         }
+        public bool remove(int numOfRows, Dictionary<string, string> query)
+        {
+            SqlConnection connection;
+            SqlCommand command;
+            //defualt
+            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
+
+            //local
+            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
+
+            connection = new SqlConnection(connetion_string);
+            SqlDataReader data_reader;
+
+            try
+            {
+                connection.Open();
+                Console.WriteLine("connected to: " + server_address);
+                sql_query = createSelectQuery(numOfRows, query);
+                command = new SqlCommand(sql_query, connection);
+                data_reader = command.ExecuteReader();
+                while (data_reader.Read())
+                {
+                    ans.Add(addRow(data_reader));
+                }
+                data_reader.Close();
+                command.Dispose();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error");
+                Console.WriteLine(ex.ToString());
+            }
+            return ans;
+        }
         protected abstract T addRow(SqlDataReader data_reader);
         protected abstract string createSelectQuery(int numOfRows, Dictionary<string, string> query);
         protected abstract string createInsertQuery(Dictionary<string, string> query);
