@@ -8,12 +8,10 @@ namespace ChatRoom_project.logics
 {
     public class User: IComparable
     {
-        public int Id { get => Id; private set => Id = value; }
-        private int g_id;
-        
         private string nickname;
-   
-
+        private int id;
+        public int Id { get => id; private set { id = value; } }
+        private int g_id;
         public int G_id { get => g_id; private set => g_id = value; }
         public string Nickname { get => nickname; private set => nickname = value; }
 

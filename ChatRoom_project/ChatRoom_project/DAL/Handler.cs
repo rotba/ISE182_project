@@ -9,138 +9,68 @@ namespace ChatRoom_project.DAL
 {
     public abstract class Handler<T>
     {
-        /// 
-        /*
-         *local
-         */
-        string connetion_string = null;
-        string sql_query = null;
-        string server_address = "localhost\\sqlexpress";
-        string database_name = "MS3";
-        string user_name = "";
-        string password = "";
-        /*
-         *default
-        string connetion_string = null;
-        string sql_query = null;
-        string server_address = "ise172.ise.bgu.ac.il,1433\\DB_LAB";
-        string database_name = "db_lab";
-        string user_name = "db_lab_user";
-        string password = "hackMePlease";
-         */
-        /// 
+        
+        //local
+        private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
+        //defualt
+        //private static readonly string connetion_string = $"Data Source=ise172.ise.bgu.ac.il,1433\\DB_LAB;Initial Catalog=db_lab;User ID=db_lab_user;Password=hackMePlease";
+          
         public T insert(Dictionary<string, string> query)
         {
             T ans = default(T);
-            SqlConnection connection;
-            SqlCommand command;
-            //defualt
-            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
-
-            //local
-            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
-            connection = new SqlConnection(connetion_string);
-            SqlDataReader data_reader;
-
-            try
+            
+            using (SqlConnection connection = new SqlConnection(connetion_string))
             {
                 connection.Open();
-                Console.WriteLine("connected to: " + server_address);
-                sql_query = createInsertQuery(query);
-                command = new SqlCommand(sql_query, connection);
-                command.ExecuteReader();//Execute insert
-                sql_query = createSelectQuery(1, query);
-                command = new SqlCommand(sql_query, connection);
-                data_reader = command.ExecuteReader();//Retrive inserted item
-                while (data_reader.Read())
+                using (SqlCommand cmd1 = new SqlCommand(createInsertQuery(query), connection))
                 {
-                    ans = addRow(data_reader);
+                    cmd1.ExecuteNonQuery();//Execute insert
                 }
-                data_reader.Close();
-                command.Dispose();
-                connection.Close();
+                using (SqlCommand cmd2 = new SqlCommand(createSelectQuery(1, query), connection))
+                {
+                    SqlDataReader data_reader = cmd2.ExecuteReader();//Retrive inserted item
+                    while (data_reader.Read())
+                    {
+                        ans = addRow(data_reader);
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error");
-                Console.WriteLine(ex.ToString());
-            };
+            
             return ans;
         }
         public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {
             List<T> ans = new List<T>();
-            SqlConnection connection;
-            SqlCommand command;
-            //defualt
-            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
-
-            //local
-            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
-
-            connection = new SqlConnection(connetion_string);
-            SqlDataReader data_reader;
-
-            try
+            using (SqlConnection connection = new SqlConnection(connetion_string))
             {
                 connection.Open();
-                Console.WriteLine("connected to: " + server_address);
-                sql_query = createSelectQuery(numOfRows, query);
-                command = new SqlCommand(sql_query, connection);
-                data_reader = command.ExecuteReader();
+                SqlCommand command = new SqlCommand(createSelectQuery(numOfRows, query), connection);
+                SqlDataReader data_reader = command.ExecuteReader();
                 while (data_reader.Read())
                 {
                     ans.Add(addRow(data_reader));
                 }
                 data_reader.Close();
                 command.Dispose();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error");
-                Console.WriteLine(ex.ToString());
             }
             return ans;
         }
-        public bool remove(int numOfRows, Dictionary<string, string> query)
+        public bool delete(Dictionary<string, string> query)
         {
-            SqlConnection connection;
-            SqlCommand command;
-            //defualt
-            //connetion_string = $"Data Source={server_address};Initial Catalog={database_name };User ID={user_name};Password={password}";
-
-            //local
-            connetion_string = $"Server= {server_address}; Database= {database_name}; Integrated Security=True;";
-
-            connection = new SqlConnection(connetion_string);
-            SqlDataReader data_reader;
-
-            try
+            using (SqlConnection connection = new SqlConnection(connetion_string))
             {
                 connection.Open();
-                Console.WriteLine("connected to: " + server_address);
-                sql_query = createSelectQuery(numOfRows, query);
-                command = new SqlCommand(sql_query, connection);
-                data_reader = command.ExecuteReader();
-                while (data_reader.Read())
-                {
-                    ans.Add(addRow(data_reader));
-                }
+                SqlCommand command = new SqlCommand(createDeleteQuery(query), connection);
+                SqlDataReader data_reader = command.ExecuteReader();
                 data_reader.Close();
                 command.Dispose();
-                connection.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error");
-                Console.WriteLine(ex.ToString());
-            }
-            return ans;
+            return true;
         }
         protected abstract T addRow(SqlDataReader data_reader);
         protected abstract string createSelectQuery(int numOfRows, Dictionary<string, string> query);
         protected abstract string createInsertQuery(Dictionary<string, string> query);
+        protected abstract string createDeleteQuery(Dictionary<string, string> query);
 
 
     }

@@ -8814,3 +8814,8 @@ GroupId:15
    ב-  ChatRoom_project.PresentationLayer.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 36
 2018-06-06 13:02:18,482 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
    ב-  ChatRoom_project.PresentationLayer.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 57
+2018-06-08 15:47:56,530 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 50
+   ב-  ChatRoom_project.PresentationLayer.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 36
+2018-06-08 15:47:57,222 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ChatRoom_project.PresentationLayer.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 57

@@ -54,7 +54,8 @@ namespace ConsoleApp1.BuissnessLayer
                             DateTime.Now,
                             user.Id,
                             user.Nickname,
-                            user.G_id
+                            user.G_id,
+                            content
                             )
                         );
                     log.Info("sent send request for message" + content + "for user" + user);
@@ -110,7 +111,8 @@ namespace ConsoleApp1.BuissnessLayer
                                 lastRetrievedMessageTime,
                                 0,
                                 nickname,
-                                g_id)
+                                g_id,
+                                null)
                             );
                     log.Info("sent a GetTenMessages request to server");
                     return msgList;

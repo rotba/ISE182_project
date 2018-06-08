@@ -11,14 +11,22 @@ namespace ChatRoom_project.DAL
 {
     public class MessageHandler:Handler<IMessage>
     {
-        enum Fields{ Guid, SendTime, User_Id, Nickname, Group_Id };
+        enum Fields{ Guid, SendTime, User_Id, Nickname, Group_Id, Body};
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
             {Fields.Guid, "Guid"},
             {Fields.SendTime, "SendTime"},
             {Fields.User_Id, "User_Id"},
             {Fields.Nickname, "Nickname"},
-            {Fields.Group_Id, "Group_Id"}
+            {Fields.Group_Id, "Group_Id"},
+            {Fields.Body, "Body"}
+        };
+        private static readonly Fields[] tableColumns = 
+        {
+            Fields.Guid,
+            Fields.User_Id,
+            Fields.SendTime,
+            Fields.Body
         };
 
         protected override IMessage addRow(SqlDataReader data_reader)
@@ -47,11 +55,11 @@ namespace ChatRoom_project.DAL
             ans += " WHERE 1=1";
             if (query.ContainsKey(fieldsDic[Fields.Guid]))
             {
-                ans += $" AND Guid = {query[fieldsDic[Fields.SendTime]]}";
+                ans += $" AND Guid = {query[fieldsDic[Fields.Guid]]}";
             }
             if (query.ContainsKey(fieldsDic[Fields.SendTime]))
             {
-                ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
+                ans += $" AND SendTime >= {query[fieldsDic[Fields.SendTime]]}";
             }
             if (query.ContainsKey(fieldsDic[Fields.Nickname]))
             {
@@ -68,40 +76,70 @@ namespace ChatRoom_project.DAL
         protected override string createInsertQuery(Dictionary<string, string> query)
         {
             string ans = "INSERT INTO Messages(";
-            int size = query.Count;
+            int size = countRelevantFields(query);
             int i = 0;
-            foreach (string field in query.Keys) {
-                ans += field;
-                if (i != size-1) {
-                    ans += ", ";
-                    i++;
+            foreach (Fields field in tableColumns) {
+                if (query.ContainsKey(fieldsDic[field])) {
+                    ans += fieldsDic[field];
+                    if (i != size - 1)
+                    {
+                        ans += ", ";
+                        i++;
+                    }
                 }
             }
             ans += ")";
             ans += " VALUES(";
-            foreach (string field in query.Keys)
+            i = 0;
+            foreach (Fields field in tableColumns)
             {
-                ans += query[field];
-                if (i != size - 1)
+                if (query.ContainsKey(fieldsDic[field]))
                 {
-                    ans += ", ";
-                    i++;
+                    ans += query[fieldsDic[field]];
+                    if (i != size - 1)
+                    {
+                        ans += ", ";
+                        i++;
+                    }
                 }
             }
             ans += ")";
 
             return ans;
         }
-        public Dictionary<string, string> convertToDictionary(Guid guid,DateTime date, int userId, string nickname, int g_Id)
+        protected override string createDeleteQuery(Dictionary<string, string> query)
+        {
+            string ans = "DELETE M FROM" +
+                " Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
+            ans += " WHERE 1=1";
+            if (query.ContainsKey(fieldsDic[Fields.Guid]))
+            {
+                ans += $" AND Guid = {query[fieldsDic[Fields.Guid]]}";
+            }
+            if (query.ContainsKey(fieldsDic[Fields.SendTime]))
+            {
+                ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
+            }
+            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+            {
+                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
+            }
+            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+            {
+                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
+            }
+
+            return ans;
+        }
+        public Dictionary<string, string> convertToDictionary(Guid guid,DateTime date, int userId, string nickname, int g_Id, string body)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             if (!guid.Equals(default(Guid))) {
-                dic[fieldsDic[Fields.Guid]] = guid.ToString();
+                dic[fieldsDic[Fields.Guid]] = "'"+guid.ToString()+"'";
             }
-            if (date.CompareTo(DateTime.MinValue) < 0)
-            {
-                
-                dic[fieldsDic[Fields.SendTime]] = date.ToString();
+            if (date.CompareTo(DateTime.MinValue) > 0)
+            { 
+                dic[fieldsDic[Fields.SendTime]] = "'"+date.ToString()+ "'";
             }
             if (userId != 0)
             {
@@ -109,13 +147,45 @@ namespace ChatRoom_project.DAL
             }
             if (nickname != null)
             {
-                dic[fieldsDic[Fields.Nickname]] = nickname;
+                dic[fieldsDic[Fields.Nickname]] = "'"+nickname+"'";
             }
             if (g_Id > 0)
             {
                 dic[fieldsDic[Fields.Group_Id]] = g_Id.ToString();
             }
+            if (body != null)
+            {
+                dic[fieldsDic[Fields.Body]] = "'"+body+"'";
+            }
             return dic;
         }
+        public Dictionary<string, string> convertToDictionary(IMessage msg, int userId)
+        {
+            int g_id;
+            int.TryParse(msg.GroupID, out g_id);
+            return convertToDictionary(
+                msg.Id,
+                msg.Date, //problematic. better avoid
+                userId,
+                msg.UserName,
+                g_id,
+                msg.MessageContent
+                );
+        }
+        /*
+         * Counts the amount of fields in query that are in the handler table
+         */
+        private int countRelevantFields(Dictionary<string, string> query)
+        {
+            int ans = 0;
+            foreach (Fields field in tableColumns) {
+                if (query.ContainsKey(fieldsDic[field])) {
+                    ans++;
+                }
+            }
+            return ans;
+        }
+
+
     }
 }

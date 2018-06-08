@@ -52,5 +52,10 @@ namespace ChatRoom_project.DAL
         {
             throw new NotImplementedException();
         }
+
+        protected override string createDeleteQuery(Dictionary<string, string> query)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
