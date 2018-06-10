@@ -8,7 +8,7 @@
         Title="MainWindow" Height="600" Width="800"
         ResizeMode = "NoResize">
 
-    <Grid Margin="0,-3,-3.667,-0.667" Loaded="main_grid_loaded">
+    <Grid Margin="0,-3,-3.667,-0.667" Loaded="main_grid_loaded" RenderTransformOrigin="0.492,0.503">
         <Grid.Background>
             <ImageBrush ImageSource="{Binding BkImageLocation}" Stretch="UniformToFill"/>
         </Grid.Background>
@@ -26,15 +26,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="201,179,0,397" TextWrapping="Wrap" Text="Group ID:" Width="86" FontWeight="ExtraBold"/>
         <Button Content="Register" HorizontalAlignment="Left" Height="47" Margin="142,413,0,0" VerticalAlignment="Top" Width="145" Click="Register_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="201,263,0,313" TextWrapping="Wrap" Text="Password:" Width="86" FontWeight="ExtraBold"/>
-       
-            <!-- [Snip] -->
-            <PasswordBox x:Name="PasswordBox"
-      ff:PasswordBoxAssistant.BindPassword="true"  ff:PasswordBoxAssistant.BoundPassword="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="341,270,271,311"/>
-
-
-
-
-
+        <PasswordBox HorizontalAlignment="Left" Height="24" Margin="384,263,0,0" VerticalAlignment="Top" Width="137" PasswordChanged="PasswordBox_PasswordChanged"/>
     </Grid>
 
 </Window>

@@ -64,13 +64,23 @@ namespace ChatRoom_project.PresentationLayer
                 g.Background = new SolidColorBrush(Colors.White);
         }
 
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+
+        {
+
+            PasswordBox pb = sender as PasswordBox;
+
+            MessageBox.Show(pb.Password);
+
+        }
+
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 //MessageBox.Show(TestBox.Password);
-                
-                _main.login(_main.G_IDBox, _main.NicknameBox, _main.PwBox);     
+
+                _main.login(_main.G_IDBox, _main.NicknameBox, "1234");     
                 ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
                 this.Hide();
                 chtrmWindow.Show();
@@ -95,7 +105,7 @@ namespace ChatRoom_project.PresentationLayer
         {
             try
             {   
-                _main.register(_main.G_IDBox, _main.NicknameBox, _main.PwBox);
+                _main.register(_main.G_IDBox, _main.NicknameBox, "1234");
                 MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)

@@ -58,19 +58,7 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
-        private string pwBox = "";
-        public string PwBox
-        {
-            get
-            {
-                return pwBox;
-            }
-            set
-            {
-                pwBox = value;
-                OnPropertyChanged("PwBox");
-            }
-        }
+
 
         //Binding for the window's image background
         private ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
@@ -85,7 +73,7 @@ namespace ChatRoom_project.PresentationLayer
             chtrm.register(g_IDToIntAndVerify(g_ID), nickname, pw);
             this.G_IDBox = "";
             this.NicknameBox = "";
-            this.PwBox = "";
+
         }
 
         public void login(string g_ID, string nickname, string pw)
@@ -95,7 +83,6 @@ namespace ChatRoom_project.PresentationLayer
             chtrm.login(g_IDToIntAndVerify(g_ID), nickname, pw);
             this.G_IDBox = "";
             this.NicknameBox = "";
-            this.PwBox = "";
             
 
         }
