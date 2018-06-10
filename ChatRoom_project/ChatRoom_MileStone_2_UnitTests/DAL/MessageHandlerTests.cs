@@ -32,7 +32,7 @@ namespace ChatRoom_project.DAL.Tests
             dateComp = new MessageDateComp();
             userComp = new MessageUserComp();
             sqlComp = new MessageSQLComp();
-            DateTime date = new DateTime(2012, 6, 6, 10, 34, 9);
+            DateTime date = DateTime.Now;
             string content = "Initialize()";
             msg_in_db = new Message(
                 Guid.NewGuid(),
@@ -152,7 +152,7 @@ namespace ChatRoom_project.DAL.Tests
         }
         private int getTestUserId()
         {
-            return 6;
+            return 1;
         }
     }
 }

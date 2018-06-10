@@ -47,9 +47,10 @@ namespace ConsoleApp1.BuissnessLayer
         public ChatRoom()
         {
             this.url = DEFAULT_URL;
+            this.request = new Request(url);
             this.users = request.retrieveUsers(200,0, null);
             this.messages = new SortedSet<Message>(new MessageDateComp());
-            this.request = new Request(url);
+            
             this.LoggedInUser = null;
             foreach (IMessage msg in request.retrieveMessages(200)) {
                 messages.Add(new Message(msg));
@@ -132,8 +133,8 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ToUserException("Attempted to register already registered user");
             }
             //add user to the user list, and save data.
-            users.Add(newUser);
-            request.insertUser(newUser);
+            //users.Add(newUser);
+            users.Add(request.insertUser(newUser));
             log.Info("Succeccfully registered" +newUser);
         }
         //retrieves number amount of messages from server.
@@ -302,6 +303,9 @@ namespace ConsoleApp1.BuissnessLayer
             return ans;
         }
 
-
+        public void deleteUserAndHisMessagesForTestCleanup(User user)
+        {
+            request.deleteUserAndHisMessagesForTestCleanup(user);
+        }
     }
 }

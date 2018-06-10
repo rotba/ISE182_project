@@ -194,6 +194,9 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-
+        protected override SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query, bool test)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
