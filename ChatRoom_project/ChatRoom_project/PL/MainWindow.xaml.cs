@@ -27,12 +27,13 @@ namespace ChatRoom_project.PresentationLayer
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         private ObservableModelMainWindow _main;
+        private string toHashPW;
         
         public MainWindow()
         {
-            
             try
             {
+                toHashPW = "";
                 chtrm = new ChatRoom();
                 _main = new ObservableModelMainWindow(chtrm);
             }
@@ -69,7 +70,7 @@ namespace ChatRoom_project.PresentationLayer
         {
 
             PasswordBox pb = sender as PasswordBox;
-
+            toHashPW = pb.Password;
             MessageBox.Show(pb.Password);
 
         }
@@ -80,7 +81,7 @@ namespace ChatRoom_project.PresentationLayer
             {
                 //MessageBox.Show(TestBox.Password);
 
-                _main.login(_main.G_IDBox, _main.NicknameBox, "1234");     
+                _main.login(_main.G_IDBox, _main.NicknameBox, toHashPW);     
                 ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
                 this.Hide();
                 chtrmWindow.Show();
@@ -105,7 +106,7 @@ namespace ChatRoom_project.PresentationLayer
         {
             try
             {   
-                _main.register(_main.G_IDBox, _main.NicknameBox, "1234");
+                _main.register(_main.G_IDBox, _main.NicknameBox, toHashPW);
                 MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)

@@ -11,7 +11,7 @@ namespace ChatRoom_project.DAL
 {
     public class UserHandler: Handler<User>
     {
-     /*   enum Fields { Id, Group_Id, Nickname, Password};
+        enum Fields { Id, Group_Id, Nickname, Password};
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
             {Fields.Id, "Id"},
@@ -44,6 +44,6 @@ namespace ChatRoom_project.DAL
                 ans += $" LIMIT {number}";
             }
             return ans;
-        }*/
+        }
     }
 }
