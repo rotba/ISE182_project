@@ -70,7 +70,7 @@
     </Compile>
     <Compile Include="PL\ListBoxExtenders.cs" />
     <Compile Include="PL\ObservableModelMainWindow.cs" />
-    <Compile Include="communication\Communication.cs" />
+    <Compile Include="Not_USED_OLD_FILES\communication\Communication.cs" />
     <Compile Include="DAL\IMessage.cs" />
     <Compile Include="Not_USED_OLD_FILES\MainMenu.cs" />
     <Compile Include="logics\Message.cs" />

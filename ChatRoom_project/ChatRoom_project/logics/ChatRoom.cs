@@ -21,12 +21,10 @@ namespace ConsoleApp1.BuissnessLayer
         /// server url
         /// </summary>
         private string url;
-        private SortedSet<Message> messages;
-        private List<IUser> users;
         private Request request;
-        private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
+        //private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         //private static readonly string DEFAULT_URL = "http://localhost";
-        public string Url { get => url; private set => url = value; }
+        //public string Url { get => url; private set => url = value; }
       
         public User LoggedInUser {
             get
@@ -46,15 +44,15 @@ namespace ConsoleApp1.BuissnessLayer
 
         public ChatRoom()
         {
-            this.url = DEFAULT_URL;
+            //this.url = DEFAULT_URL;
             this.request = new Request(url);
-            this.users = request.retrieveUsers(200,0, null);
-            this.messages = new SortedSet<Message>(new MessageDateComp());
+            //this.users = request.retrieveUsers(200,0, null);
+            //this.messages = new SortedSet<Message>(new MessageDateComp());
             
             this.LoggedInUser = null;
-            foreach (IMessage msg in request.retrieveMessages(200)) {
-                messages.Add(new Message(msg));
-            }
+            //foreach (IMessage msg in request.retrieveMessages(200)) {
+            //    messages.Add(new Message(msg));
+            //}
 
 
         }
@@ -63,26 +61,46 @@ namespace ConsoleApp1.BuissnessLayer
         /// login
         /// </summary>
         public bool login(int g_id, string nickname)
-        {
+        {   
+
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
-            User userToLogin =new User(request.retrieveUsers(1, g_id, nickname)[0]);
-            foreach (User u in users)
+            if (!isValidNickname(nickname))
             {
-                if (u.Equals(userToLogin))
+                log.Info("Attempted login to invalid nickname" + nickname);
+                throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
+            }
+                User userToLogin = new User(1, g_id, nickname);
+            List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
+            if (retrievedUsers.Count == 0)
+            {
+                log.Info("Attempted login to invalid user" + userToLogin);
+                throw new ToUserException("cannot login to " + userToLogin + " invalid user");
+            }
+            else
+            {
+                User retrievedUser = new User(retrievedUsers[0]);
+                if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname))
                 {
-                    LoggedInUser = u;
-                    log.Info("Succeccfully logged in" + u);
+                    loggedInUser = retrievedUser;
                     return true;
                 }
+                else
+                {
+                    log.Debug("Unexpected error when login to  " + userToLogin);
+                    throw new ToUserException("unexpected error when trying to login to : " + userToLogin + " please try again");
+                }
             }
-            log.Info("Attempted login to invalid user" + userToLogin);
-            throw new ToUserException("cannot login to " + userToLogin + " invalid user");
+                        
 
         }
+
+        
+
         /*
-         * Returns the next available userId
-         */
+* Returns the next available userId
+*/
+/*
         private int getNextUserId()
         {
             int lastId = 0;
@@ -93,6 +111,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             return lastId;
         }
+*/
 
         public void logout()
         {
@@ -124,21 +143,47 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ArgumentNullException("nickname cannot be null");
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
-
-            User newUser = new User(getNextUserId(),g_id, nickname);
-            //check if user already exists, if so throw error
-            if (users.Contains(newUser))
+            if (!isValidNickname(nickname))
             {
-                log.Info("Attempted to register already registered user");
+                log.Info("Attempted register invalid nickname" + nickname);
+                throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
+            }
+            User userToRegister = new User(1, g_id, nickname);
+            List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
+            if (retrievedUsers.Count != 0)
+            {
+                log.Info("Attempted to register already registered user " + userToRegister);
                 throw new ToUserException("Attempted to register already registered user");
             }
-            //add user to the user list, and save data.
-            //users.Add(newUser);
-            users.Add(request.insertUser(newUser));
-            log.Info("Succeccfully registered" +newUser);
+            else
+            {
+                IUser registeredUser;
+                try
+                {
+                    registeredUser = request.insertUser(userToRegister);
+                }
+                catch (System.Data.SqlClient.SqlException sqlE)
+                {
+                    log.Debug("enexpected SQL execption" + sqlE +" while registering user "+userToRegister);
+                    throw new ToUserException("unexpected error found please try again");
+                }
+                catch(ToUserException e)
+                {
+                    log.Info("while registering user " + userToRegister + " user exception thrown " + e);
+                }
+                catch (Exception e_1)
+                {
+                    log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
+                }
+
+                log.Info("successfully registered user " + registeredUser);
+            }
+                
+            
         }
+        /* need to check releveance, maybe only display needed
         //retrieves number amount of messages from server.
-        public void retrieveMessages(int number)
+        public retrieveMessages(int number)
         {
             if (loggedInUser == null)
             {
@@ -159,7 +204,9 @@ namespace ConsoleApp1.BuissnessLayer
             }
             log.Info(imsg.Count + "Messages were retrieved");
         }
+        */
         /****************************************************/
+        /*
         //retrieves number amount of messages from server.
         public void retrieveMessages(Guid guid, DateTime date, int number, string nickname, int g_id)
         {
@@ -184,9 +231,10 @@ namespace ConsoleApp1.BuissnessLayer
             }
             log.Info(imsg.Count + "Messages were retrieved");
         }
+        */
         /****************************************************/
 
-        public void send(string message)
+        public Message send(string message)
         {
             if (message == null)
             {
@@ -201,14 +249,21 @@ namespace ConsoleApp1.BuissnessLayer
             if (message != "")
             {
                 Message msg = new Message(request.send(message, LoggedInUser));
-                messages.Add(msg);
+                // messages.Add(msg);
                 log.Info("Message" + msg + " was sent successfully");
+                return msg;
             }
             else
+            {
                 log.Info("Attempted to send empty message");
+                return null;
+            }
             
         }
-
+        /******************************************************/
+        /*
+        // main chatroom function - calls requset to get specific needed values from SQL server
+        //need to think together
         public SortedSet<Message> displayNMessages(int num)
         {
             if (num < 0)
@@ -246,7 +301,9 @@ namespace ConsoleApp1.BuissnessLayer
             }
             return ans;
         }
-        
+        */
+        //need to check relevance
+        /*
         public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
         {
             if(nickname == null)
@@ -282,6 +339,13 @@ namespace ConsoleApp1.BuissnessLayer
             log.Info("Display a user" + g_ID + " " + nickname + " messages.Total amount: " +ans.Count);
             return ans;
         }
+        */
+
+        private bool isValidNickname(string nickname)
+        {
+            return (nickname.Length <= 10 && nickname.Length>0);
+        }
+
         //used only for test purposes.
         public List<User> getUsers()
         {
@@ -302,7 +366,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             return ans;
         }
-
+        //for test use only
         public void deleteUserAndHisMessagesForTestCleanup(User user)
         {
             request.deleteUserAndHisMessagesForTestCleanup(user);
