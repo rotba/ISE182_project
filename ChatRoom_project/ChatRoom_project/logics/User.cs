@@ -9,6 +9,8 @@ namespace ChatRoom_project.logics
     public class User: IComparable
     {
         private string nickname;
+        private string hashedPassword;
+        public string HashedPassword { get => hashedPassword; private set => hashedPassword = value; }
         private int id;
         public int Id { get => id; private set { id = value; } }
         private int g_id;
@@ -34,6 +36,8 @@ namespace ChatRoom_project.logics
             }
             G_id = user.g_id;
             Nickname = user.nickname;
+            Id = user.Id;
+            
         }
         // 2 users are equal if both g_id and nickname are equal.
         public override bool Equals(Object obj)

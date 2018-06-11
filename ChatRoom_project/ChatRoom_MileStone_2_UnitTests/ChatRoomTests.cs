@@ -19,10 +19,12 @@ namespace ConsoleApp1.Tests
         [TestInitialize]
         public void Initialize()
         {
+            
             cr = new ChatRoom();
             cr2 = new ChatRoom();
-            user = new User(1,15,"Rotem");
-            user2 = new User(1,15, "Ariel");
+            user = new User(1,15,"TESTUSER");
+            //user = cr.register(15, "TESTUSER");
+            user2 = new User(2,15, "Ariel");
             dirPath=
                 System.IO.Directory.GetCurrentDirectory() + "\\local_files";
             Cleanup();
@@ -212,7 +214,8 @@ namespace ConsoleApp1.Tests
             Message hello = null;
             foreach (Message m in cr.getMessages())
             {
-                if (m.MessageContent.Equals("Hello world"))
+                
+                if (m.MessageContent.Contains("Hello world"))
                 {
                     hello = m;
                 }
@@ -257,7 +260,7 @@ namespace ConsoleApp1.Tests
         }
 
         [TestMethod()]
-        public void sendTest_message_with_over_150_chars_should_throw_exception()
+        public void sendTest_message_with_over_100_chars_should_throw_exception()
         {
             cr.register(user.G_id, user.Nickname);
             cr.login(user.G_id, user.Nickname);
@@ -269,11 +272,11 @@ namespace ConsoleApp1.Tests
             try
             {
                 cr.send(msg);
-                Assert.Fail("150 chars in msg should throw exception");
+                Assert.Fail("100 chars in msg should throw exception");
             }
             catch(ToUserException e)
             {
-                StringAssert.Contains(e.Message, "invalid message","sending message with over 150 chars should fail");
+                StringAssert.Contains(e.Message, "invalid message","sending message with over 100 chars should fail");
             }
         }
 
@@ -293,20 +296,21 @@ namespace ConsoleApp1.Tests
         {
             cr.register(user.G_id, user.Nickname);
             cr.login(user.G_id, user.Nickname);
-            int i = 19;
+            int i = 15;
             while (i != 0)
             {
                 cr.send("Message number: " + i);
                 i--;
             }
-            i = 19;
+            i = 15;
             bool exitst = false;
             List<Message> tmp = cr.getMessages();
+            
             while (i != 0)
             {
-                foreach (Message m in cr.getMessages())
+                foreach (Message m in tmp)
                 {
-                    if (m.MessageContent.Equals("Message number: " + i))
+                    if (m.MessageContent.Contains("Message number: " + i))
                     {
                         exitst = true;
                     }
@@ -500,8 +504,11 @@ namespace ConsoleApp1.Tests
         [TestCleanup]
         public void Cleanup()
         {
-            DirectoryInfo di = new DirectoryInfo(dirPath);
+            cr.deleteUserAndHisMessagesForTestCleanup(user);
+            cr.deleteUserAndHisMessagesForTestCleanup(user2);
 
+            DirectoryInfo di = new DirectoryInfo(dirPath);
+            
             foreach (FileInfo file in di.GetFiles())
             {
                 file.Delete();
@@ -510,6 +517,7 @@ namespace ConsoleApp1.Tests
             {
                 dir.Delete(true);
             }
+            
         }
     }
 }

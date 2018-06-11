@@ -50,7 +50,7 @@ namespace ConsoleApp1.BuissnessLayer
                     }
                     IMessage iMsg = mHandler.insert(
                         mHandler.convertToDictionary(
-                            new Guid(),
+                            Guid.NewGuid(),
                             DateTime.Now,
                             user.Id,
                             user.Nickname,
@@ -72,13 +72,13 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 //return IMessage iMsg=null;
                 log.Error("Attempted to send invalid message");
-                throw new ToUserException("illegal attempt to send invalid message, must contain at most 150 characters");
+                throw new ToUserException("illegal attempt to send invalid message, must contain at most 100 characters");
             }
         }
 
         public List<User> retrieveUsers(int n, int g_id, string nickname)
         {
-            return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id));
+            return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id,null,-1));
         }
 
        
@@ -94,8 +94,7 @@ namespace ConsoleApp1.BuissnessLayer
             return handleMessageRetrive(guid, date, num, nickname, g_id);
         }
         private List<IMessage> handleMessageRetrive(Guid guid, DateTime date, int num, string nickname, int g_id) {
-            if (num == 200)
-            {
+            
                 if (isNotOverloading())
                 {
                     lastNRequests.Enqueue(DateTime.Now);
@@ -122,17 +121,17 @@ namespace ConsoleApp1.BuissnessLayer
                     log.Error("Attempted to send more than 20 requests to server in past 10 secs");
                     throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
                 }
-            }
-            else
+            
+            /*else   need to check relevance
             {
                 log.Error("Illegal attempt to retrieve different amount than 10 last messages");
                 throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
-            }
+            }*/
         }
 
-        public void insertUser(User newUser)
+        public User insertUser(User newUser)
         {
-            throw new NotImplementedException();
+            return uHandler.insert(uHandler.convertToDictionary(newUser.Nickname, newUser.G_id, "496531", -1));
         }
 
         //return true if not overloading server
@@ -155,7 +154,20 @@ namespace ConsoleApp1.BuissnessLayer
 
         private bool validate(string msg)
         {
-            return (msg.Length <= 150 & msg!="");
+            return (msg.Length <= 100 & msg!="");
+        }
+        
+        internal void deleteUserAndHisMessagesForTestCleanup(User user)
+        {
+            User toDelete;
+            List<User> userList = uHandler.retrieve(1, uHandler.convertToDictionary(user.Nickname, user.G_id, null, -1));
+            if (userList.Count != 0)
+            {
+                toDelete = userList.ElementAt(0);
+                mHandler.delete(mHandler.convertToDictionary(new Guid(), DateTime.MinValue, toDelete.Id, null, -1, null));
+                uHandler.delete(uHandler.convertToDictionary(null, -1, "", toDelete.Id));
+            }
+
         }
     }
 }
