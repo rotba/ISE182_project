@@ -60,33 +60,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
+    <Compile Include="DAL\Handler.cs" />
+    <Compile Include="DAL\MessageHandler.cs" />
+    <Compile Include="DAL\UserHandler.cs" />
+=======
+    <Compile Include="DAL\new_Handler.cs" />
+    <Compile Include="DAL\new_MessageHandler.cs" />
+    <Compile Include="DAL\new_UserHandler.cs" />
+>>>>>>> fd672be294a06871af4fa73f5ee143a38ced05f9
+    <Compile Include="logics\User.cs" />
     <Compile Include="PL\ChatRoomWindow.xaml.cs">
       <DependentUpon>ChatRoomWindow.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="ListBoxExtenders.cs" />
-    <Compile Include="ObservableModelMainWindow.cs" />
-=======
     <Compile Include="PL\ListBoxExtenders.cs" />
     <Compile Include="PL\ObservableModelMainWindow.cs" />
->>>>>>> origin/tomer
     <Compile Include="communication\Communication.cs" />
-    <Compile Include="DAL\IHandler.cs" />
     <Compile Include="communication\IMessage.cs" />
     <Compile Include="Not_USED_OLD_FILES\MainMenu.cs" />
     <Compile Include="logics\Message.cs" />
-    <Compile Include="DAL\MessageHandler.cs" />
     <Compile Include="PL\ObservableModelChatRoom.cs" />
     <Compile Include="Not_USED_OLD_FILES\Program.cs" />
     <Compile Include="logics\Request.cs" />
     <Compile Include="logics\ToUserException.cs" />
-    <Compile Include="logics\User.cs" />
-    <Compile Include="DAL\UserHandler.cs" />
 <<<<<<< HEAD
-    <Page Include="ChatRoomWindow.xaml">
 =======
+    <Compile Include="DAL\UserHandler.cs" />
+>>>>>>> fd672be294a06871af4fa73f5ee143a38ced05f9
     <Page Include="PL\ChatRoomWindow.xaml">
->>>>>>> origin/tomer
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,6 +106,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PL\PasswordBoxAssitant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

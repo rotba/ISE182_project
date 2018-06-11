@@ -10,16 +10,21 @@ namespace ChatRoom_project.logics
     public class User: IComparable, IUser
     {
         private string nickname;
+<<<<<<< HEAD
         private string hashedPassword;
         public string HashedPassword { get => hashedPassword; private set => hashedPassword = value; }
         private int id;
         public int Id { get => id; private set { id = value; } }
         private int g_id;
+=======
+
+
+>>>>>>> origin/Ariel
         public int G_id { get => g_id; private set => g_id = value; }
 
         public string Nickname { get => nickname; } 
 
-        public User(int Id, int g_id , string nickname, string hashedPW)
+        public User(int Id, int g_id , string nickname)
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
@@ -28,9 +33,7 @@ namespace ChatRoom_project.logics
             G_id = g_id;
             this.nickname = nickname;
             this.Id = Id;
-            this.HashedPassword = hashedPW;
         }
-        /*
         //copy constructor
         public User(User user)
         {
@@ -41,10 +44,8 @@ namespace ChatRoom_project.logics
             G_id = user.g_id;
             this.nickname = user.nickname;
             Id = user.Id;
-            HashedPassword = user.hashedPassword;
             
         }
-        */
         //copy constructor
         public User(IUser user)
         {
@@ -55,7 +56,6 @@ namespace ChatRoom_project.logics
             G_id = user.G_id;
             this.nickname = user.Nickname;
             Id = user.Id;
-            HashedPassword = user.HashedPassword;
 
         }
         // 2 users are equal if both g_id and nickname are equal.

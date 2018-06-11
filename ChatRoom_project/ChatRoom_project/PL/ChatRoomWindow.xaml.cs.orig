@@ -102,7 +102,7 @@ namespace ChatRoom_project.PresentationLayer
         private void refreshMessages()
         {
             Message temp;
-            try { chtrm.retrieveMessages(200); }
+            try { chtrm.retrieveMessages(10); }
             catch(Exception e)
             {
                 log.Debug(e);
@@ -116,7 +116,11 @@ namespace ChatRoom_project.PresentationLayer
                 try
                 {
                     int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(1,tGroupID, msg.UserName); //needs to create a function: retrieveUser in chatroom
+<<<<<<< HEAD
+                    User tUser = new User(tGroupID, msg.UserName); //needs to create a function: retrieveUser in chatroom
+=======
+                    User tUser = new User(-123345,tGroupID, msg.UserName);
+>>>>>>> origin/rotem
                     if (!observer.Users.Contains(tUser))
                     {
                         observer.Users.Add(tUser);

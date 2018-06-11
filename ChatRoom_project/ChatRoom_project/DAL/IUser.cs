@@ -11,5 +11,6 @@ namespace ChatRoom_project.DAL
         int Id { get; }
         int G_id { get; }
         string Nickname { get; }
+        string HashedPassword { get; }
     }
 }

@@ -10,13 +10,16 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
+using System.Text.RegularExpressions;
 
 namespace ChatRoom_project.PresentationLayer
 {
     public class ObservableModelMainWindow : INotifyPropertyChanged
     {
+
         public event PropertyChangedEventHandler PropertyChanged;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public bool isTested;
 
         public ObservableModelMainWindow(ChatRoom chtrm)
         {
@@ -55,6 +58,8 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
+
+
         //Binding for the window's image background
         private ImageSource bkImageLocation = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\Beach.jpg"));
         public ImageSource BkImageLocation { get {
@@ -62,18 +67,20 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
-        public void register(String g_ID, String nickname) {
-             verifyNickName(nickname);
-             chtrm.register(g_IDToIntAndVerify(g_ID), nickname);
-             this.G_IDBox = "";
-             this.NicknameBox = "";
+        public void register(string g_ID, string nickname, string pw) {
+            verifyNickName(nickname);
+            verifyPW(pw);
+            chtrm.register(g_IDToIntAndVerify(g_ID), nickname, pw);
+            this.G_IDBox = "";
+            this.NicknameBox = "";
 
         }
 
-        public void login(String g_ID, String nickname)
+        public void login(string g_ID, string nickname, string pw)
         {
             verifyNickName(nickname);
-            chtrm.login(g_IDToIntAndVerify(g_ID), nickname);
+            verifyPW(pw);
+            chtrm.login(g_IDToIntAndVerify(g_ID), nickname, pw);
             this.G_IDBox = "";
             this.NicknameBox = "";
             
@@ -90,11 +97,32 @@ namespace ChatRoom_project.PresentationLayer
         {
             if (nickName == "")
             {
-                log.Error("Attempted to enter empty nickname");
+                log.Error("Attempted to enter an empty nickname");
                 throw new ToUserException("NickName cannot be empty");
             }
             else
                 return true;
+        }
+
+        private void verifyPW(string pw)
+        {
+            if(pw == null)
+            {
+                log.Error("password is null");
+                throw new ToUserException("unexpected error");
+            }
+            if (pw == "" | pw.Length < 4 | pw.Length>16)
+            {
+                log.Error("Attempted to enter an empty/short/long password");
+                throw new ToUserException("Password cannot be empty/must be between 4-16 chars");
+            }
+
+            if(!Regex.IsMatch(pw, @"^[a-zA-Z0-9]+$"))
+            {
+                log.Error("Attempted to enter a not valid password");
+                throw new ToUserException("Password is invalid");
+            }
+
         }
 
         ///<summary>

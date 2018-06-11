@@ -27,6 +27,7 @@ namespace ChatRoom_project.PresentationLayer
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         private ObservableModelMainWindow _main;
+        private string pw = "";
         
         public MainWindow()
         {
@@ -35,7 +36,6 @@ namespace ChatRoom_project.PresentationLayer
             {
                 chtrm = new ChatRoom();
                 _main = new ObservableModelMainWindow(chtrm);
-
             }
             catch (Exception e)
             {
@@ -44,12 +44,12 @@ namespace ChatRoom_project.PresentationLayer
             InitializeComponent();
             this.DataContext = _main;
 
-
         }
         
 
         private void main_grid_loaded(object sender, RoutedEventArgs e)
         {
+            
             Grid g = sender as Grid;
             ImageBrush ib = null;
             try
@@ -65,15 +65,27 @@ namespace ChatRoom_project.PresentationLayer
                 g.Background = new SolidColorBrush(Colors.White);
         }
 
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+
+        {
+
+            PasswordBox pb = sender as PasswordBox;
+            pw = pb.Password;
+            //MessageBox.Show(pb.Password);
+
+        }
+
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                _main.login(_main.G_IDBox, _main.NicknameBox);     
+                //MessageBox.Show(TestBox.Password);
+
+                _main.login(_main.G_IDBox, _main.NicknameBox, pw);     
                 ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
                 this.Hide();
                 chtrmWindow.Show();
-
+                
             }
             catch (ToUserException e_1)
             {
@@ -93,8 +105,8 @@ namespace ChatRoom_project.PresentationLayer
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
-                _main.register(_main.G_IDBox, _main.NicknameBox);
+            {   
+                _main.register(_main.G_IDBox, _main.NicknameBox, pw);
                 MessageBox.Show("Register Successful");
             }
             catch (ToUserException e_1)
@@ -110,7 +122,6 @@ namespace ChatRoom_project.PresentationLayer
                 log.Debug("unexpected error found: " + e_3);
             }
         }
-
 
 
     }

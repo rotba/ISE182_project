@@ -72,10 +72,8 @@
     <Compile Include="PL\ObservableModelMainWindow.cs" />
     <Compile Include="Not_USED_OLD_FILES\communication\Communication.cs" />
     <Compile Include="DAL\IMessage.cs" />
-    <Compile Include="Not_USED_OLD_FILES\MainMenu.cs" />
     <Compile Include="logics\Message.cs" />
     <Compile Include="PL\ObservableModelChatRoom.cs" />
-    <Compile Include="Not_USED_OLD_FILES\Program.cs" />
     <Compile Include="logics\Request.cs" />
     <Compile Include="logics\ToUserException.cs" />
     <Page Include="PL\ChatRoomWindow.xaml">

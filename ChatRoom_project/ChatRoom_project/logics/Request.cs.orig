@@ -26,12 +26,13 @@ namespace ConsoleApp1.BuissnessLayer
         private UserHandler uHandler = new UserHandler();
         private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
-        public Request()
+        public Request(string url)
         {
+            this.url = url;
             lastNRequests = new Queue<DateTime>();
         }
         //validates message, checks server overloading, and sends message to server.
-        public Message send(string content, User user)
+        public IMessage send(string content, User user)
         {
             if (user == null)
                 throw new ArgumentNullException("User cannot be null");
@@ -47,6 +48,7 @@ namespace ConsoleApp1.BuissnessLayer
                     {
                         lastNRequests.Dequeue();
                     }
+<<<<<<< HEAD
                     IMessage iMsg = mHandler.insert(
                         mHandler.convertToDictionary(
                             Guid.NewGuid(),
@@ -57,8 +59,15 @@ namespace ConsoleApp1.BuissnessLayer
                             content
                             )
                         );
+=======
+                    int userId =
+                        uHandler.retrieve(
+                            uHandler.convertToDictionary()
+                            );
+                    IMessage iMsg = mHandler.insert();
+>>>>>>> origin/Ariel
                     log.Info("sent send request for message" + content + "for user" + user);
-                    return new Message(iMsg);
+                    return iMsg;
                 }
                 else
                 {
@@ -77,11 +86,47 @@ namespace ConsoleApp1.BuissnessLayer
 
         public List<IUser> retrieveUsers(int n, int g_id, string nickname)
         {
+<<<<<<< HEAD
             return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id,null,-1));
         }
 
-        //check for server overloading, make sure num=10 as in server policy
-        public List<Message> retrieveMessages(Guid guid, DateTime date, int num, string nickname, int g_id) {
+       
+
+        //check for server overloading, make sure num=10 as in server policy.
+        public List<IMessage> retrieveMessages(int num)
+        {
+            return handleMessageRetrive(default(Guid), lastRetrievedMessageTime, num, null, 0);
+        }
+        //check for server overloading, make sure num=10 as in server policy.
+        public List<IMessage> retrieveMessages(Guid guid, DateTime date, int num, string nickname, int g_id)
+        {
+            return handleMessageRetrive(guid, date, num, nickname, g_id);
+        }
+        private List<IMessage> handleMessageRetrive(Guid guid, DateTime date, int num, string nickname, int g_id) {
+            
+=======
+            return uHandler.retrieve(n, nickname, g_id);
+        }
+
+        internal void insertUser(User newUser)
+        {
+            uHandler.insert(newUser);
+        }
+
+        //check for server overloading, make sure num=10 as in server policy.
+        public List<IMessage> retrieveMessages(int num)
+        {
+            return handleMessageRetrive(lastRetrievedMessageTime, num, null, 0);
+        }
+        //check for server overloading, make sure num=10 as in server policy.
+        public List<IMessage> retrieveMessages(int num, DateTime date, string nickname, int g_id)
+        {
+            return handleMessageRetrive(date, num, nickname, g_id);
+        }
+        private List<IMessage> handleMessageRetrive(DateTime date, int num, string nickname, int g_id) {
+            if (num == 200)
+            {
+>>>>>>> origin/Ariel
                 if (isNotOverloading())
                 {
                     lastNRequests.Enqueue(DateTime.Now);
@@ -93,7 +138,10 @@ namespace ConsoleApp1.BuissnessLayer
                         mHandler.retrieve(
                             num,
                             mHandler.convertToDictionary(
-                                guid,
+<<<<<<< HEAD
+                                new Guid(),
+=======
+>>>>>>> origin/Ariel
                                 lastRetrievedMessageTime,
                                 0,
                                 nickname,
@@ -101,7 +149,7 @@ namespace ConsoleApp1.BuissnessLayer
                                 null)
                             );
                     log.Info("sent a GetTenMessages request to server");
-                    return convertTomessageList(msgList);
+                    return msgList;
                 }
                 else
                 {
@@ -109,19 +157,21 @@ namespace ConsoleApp1.BuissnessLayer
                     throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
                 }
             
-            
+            /*else   need to check relevance
+            {
+                log.Error("Illegal attempt to retrieve different amount than 10 last messages");
+                throw new ArgumentException("Illegal attempt to retrieve differet amount than 10 last messages");
+            }*/
         }
+<<<<<<< HEAD
 
-        private List<Message> convertTomessageList(List<IMessage> msgList)
+        public IUser insertUser(User newUser)
         {
-            throw new NotImplementedException();
+            return uHandler.insert(uHandler.convertToDictionary(newUser.Nickname, newUser.G_id, "496531", -1));
         }
 
-        public User insertUser(User newUser)
-        {
-            return new User(uHandler.insert(uHandler.convertToDictionary(newUser.Nickname, newUser.G_id, newUser.HashedPassword, -1)));
-        }
-
+=======
+>>>>>>> origin/Ariel
         //return true if not overloading server
         private bool isNotOverloading()
         {
