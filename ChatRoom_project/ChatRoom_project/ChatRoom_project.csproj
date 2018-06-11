@@ -61,6 +61,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAL\Handler.cs" />
+    <Compile Include="DAL\IUser.cs" />
     <Compile Include="DAL\MessageHandler.cs" />
     <Compile Include="DAL\UserHandler.cs" />
     <Compile Include="logics\User.cs" />
@@ -70,7 +71,7 @@
     <Compile Include="PL\ListBoxExtenders.cs" />
     <Compile Include="PL\ObservableModelMainWindow.cs" />
     <Compile Include="communication\Communication.cs" />
-    <Compile Include="communication\IMessage.cs" />
+    <Compile Include="DAL\IMessage.cs" />
     <Compile Include="Not_USED_OLD_FILES\MainMenu.cs" />
     <Compile Include="logics\Message.cs" />
     <Compile Include="PL\ObservableModelChatRoom.cs" />

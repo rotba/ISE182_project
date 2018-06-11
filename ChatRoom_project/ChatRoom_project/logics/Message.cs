@@ -128,14 +128,17 @@ namespace ConsoleApp1.BuissnessLayer
          */
         public override int Compare(Message x, Message y)
         {
-            if (!y.GroupID.Contains(y.GroupID))
+            if (!x.Id.Equals(y.Id)) {
+                return 1;
+            }
+            if (!x.GroupID.Contains(y.GroupID))
             {
                 return 1;
             }
-            if (!y.UserName.Contains(y.UserName)) {
+            if (!x.UserName.Contains(y.UserName)) {
                 return 1;
             }
-            if (!y.MessageContent.Contains(y.MessageContent))
+            if (!x.MessageContent.Contains(y.MessageContent))
             {
                 return 1;
             }

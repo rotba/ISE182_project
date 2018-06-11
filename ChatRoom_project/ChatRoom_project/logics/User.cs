@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatRoom_project.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.logics
 {
-    public class User: IComparable
+    public class User: IComparable, IUser
     {
         private string nickname;
         private string hashedPassword;
@@ -15,7 +16,8 @@ namespace ChatRoom_project.logics
         public int Id { get => id; private set { id = value; } }
         private int g_id;
         public int G_id { get => g_id; private set => g_id = value; }
-        public string Nickname { get => nickname; private set => nickname = value; }
+
+        public string Nickname { get => nickname; } 
 
         public User(int Id, int g_id , string nickname)
         {
@@ -24,7 +26,7 @@ namespace ChatRoom_project.logics
             if (nickname == "")
                 throw new ArgumentException("nickname cannot be empty");
             G_id = g_id;
-            Nickname = nickname;
+            this.nickname = nickname;
             this.Id = Id;
         }
         //copy constructor
@@ -35,9 +37,21 @@ namespace ChatRoom_project.logics
                 return;
             }
             G_id = user.g_id;
-            Nickname = user.nickname;
+            this.nickname = user.nickname;
             Id = user.Id;
             
+        }
+        //copy constructor
+        public User(IUser user)
+        {
+            if (user == null)
+            {
+                return;
+            }
+            G_id = user.G_id;
+            this.nickname = user.Nickname;
+            Id = user.Id;
+
         }
         // 2 users are equal if both g_id and nickname are equal.
         public override bool Equals(Object obj)

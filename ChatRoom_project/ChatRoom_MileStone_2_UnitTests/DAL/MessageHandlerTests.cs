@@ -57,13 +57,8 @@ namespace ChatRoom_project.DAL.Tests
         public void retrieveTest_with_parameters_valid_message()
         {
             Message result = new Message(
-                handler.retrieve(1, handler.convertToDictionary(
-                    default(Guid),
-                    DateTime.MinValue,
-                    0,
-                    msg_in_db.UserName,
-                    testUser.G_id,
-                    null))
+                handler.retrieve(1,
+                handler.convertToDictionary(msg_in_db,-1))
                     [0]
                     );
             Assert.IsTrue(sqlComp.Compare(result, msg_in_db) == 0);
@@ -152,7 +147,7 @@ namespace ChatRoom_project.DAL.Tests
         }
         private int getTestUserId()
         {
-            return 1;
+            return 6;
         }
     }
 }

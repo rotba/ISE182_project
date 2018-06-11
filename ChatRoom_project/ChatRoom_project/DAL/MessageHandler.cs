@@ -32,15 +32,15 @@ namespace ChatRoom_project.DAL
         protected override IMessage addRow(SqlDataReader data_reader)
         {
             DateTime dateFacturation = new DateTime();
-            if (!data_reader.IsDBNull(1))
-                dateFacturation = data_reader.GetDateTime(1);
+            if (!data_reader.IsDBNull(2))
+                dateFacturation = data_reader.GetDateTime(2);
 
             return new Message(
-                        new Guid(),
-                        data_reader.GetValue(0).ToString(),
+                        Guid.Parse(data_reader.GetValue(0).ToString()),
+                        data_reader.GetValue(1).ToString(),
                         dateFacturation,
-                        data_reader.GetValue(2).ToString(),
-                        data_reader.GetValue(3).ToString()
+                        data_reader.GetValue(3).ToString(),
+                        data_reader.GetValue(4).ToString()
                         );
         }
 
@@ -50,7 +50,7 @@ namespace ChatRoom_project.DAL
             if (numOfRows>0) {
                 ans += $" TOP {numOfRows}";
             }
-            ans+=" U.Nickname, M.SendTime, M.Body, U.Group_Id" +
+            ans+=" M.Guid, U.Nickname, M.SendTime, M.Body, U.Group_Id" +
                 " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
             ans += " WHERE 1=1";
             if (query.ContainsKey(fieldsDic[Fields.Guid]))
@@ -199,4 +199,6 @@ namespace ChatRoom_project.DAL
             throw new NotImplementedException();
         }
     }
+    
 }
+

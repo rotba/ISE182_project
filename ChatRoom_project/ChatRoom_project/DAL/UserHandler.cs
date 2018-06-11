@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.DAL
 {
-    public class UserHandler: Handler<User>
+    public class UserHandler: Handler<IUser>
     {
         enum Fields { Id, Group_Id, Nickname, Password};
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
@@ -27,7 +27,7 @@ namespace ChatRoom_project.DAL
             Fields.Nickname,
             Fields.Password
         };
-        protected override User addRow(SqlDataReader data_reader)
+        protected override IUser addRow(SqlDataReader data_reader)
         {
 
 

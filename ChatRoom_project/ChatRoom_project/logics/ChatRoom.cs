@@ -22,7 +22,7 @@ namespace ConsoleApp1.BuissnessLayer
         /// </summary>
         private string url;
         private SortedSet<Message> messages;
-        private List<User> users;
+        private List<IUser> users;
         private Request request;
         private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
         //private static readonly string DEFAULT_URL = "http://localhost";
@@ -66,7 +66,7 @@ namespace ConsoleApp1.BuissnessLayer
         {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
-            User userToLogin = request.retrieveUsers(1, g_id, nickname)[0];
+            User userToLogin =new User(request.retrieveUsers(1, g_id, nickname)[0]);
             foreach (User u in users)
             {
                 if (u.Equals(userToLogin))

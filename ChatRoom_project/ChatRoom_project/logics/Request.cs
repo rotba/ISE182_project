@@ -76,7 +76,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
         }
 
-        public List<User> retrieveUsers(int n, int g_id, string nickname)
+        public List<IUser> retrieveUsers(int n, int g_id, string nickname)
         {
             return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id,null,-1));
         }
@@ -129,7 +129,7 @@ namespace ConsoleApp1.BuissnessLayer
             }*/
         }
 
-        public User insertUser(User newUser)
+        public IUser insertUser(User newUser)
         {
             return uHandler.insert(uHandler.convertToDictionary(newUser.Nickname, newUser.G_id, "496531", -1));
         }
@@ -159,8 +159,9 @@ namespace ConsoleApp1.BuissnessLayer
         
         internal void deleteUserAndHisMessagesForTestCleanup(User user)
         {
-            User toDelete;
-            List<User> userList = uHandler.retrieve(1, uHandler.convertToDictionary(user.Nickname, user.G_id, null, -1));
+            IUser toDelete;
+            List<IUser> userList = uHandler.retrieve(1, uHandler.convertToDictionary(user.Nickname, user.G_id, null, -1));
+             
             if (userList.Count != 0)
             {
                 toDelete = userList.ElementAt(0);
