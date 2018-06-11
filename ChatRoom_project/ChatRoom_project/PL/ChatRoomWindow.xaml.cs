@@ -101,17 +101,12 @@ namespace ChatRoom_project.PresentationLayer
          */
         private void refreshMessages()
         {
-            Message temp;
-            try { chtrm.retrieveMessages(200); }
-            catch(Exception e)
-            {
-                log.Debug(e);
-            }
-           
-            SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
-            temp = toDisplay.Max;
-            toDisplay.RemoveWhere(timeFilter);
-            foreach (Message msg in toDisplay)
+            
+                  
+            List<Message> toDisplay = chtrm.displayNMessages();
+            //temp = toDisplay.Max;
+            //toDisplay.RemoveWhere(timeFilter);
+            /*foreach (Message msg in toDisplay)
             {
                 try
                 {
@@ -131,9 +126,9 @@ namespace ChatRoom_project.PresentationLayer
                     log.Error("unexpected error while adding users and GroupIDs to chatroom viewModel error= "
                         +e);
                 }
-            }
+            }*/
             toDisplay.ToList().ForEach(observer.Messages.Add);
-            lastMessage = temp;// updates the last message to be the current newest message
+            
         }
         
         /*
