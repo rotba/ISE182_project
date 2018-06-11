@@ -81,7 +81,7 @@ namespace ConsoleApp1.BuissnessLayer
         }
 
         //check for server overloading, make sure num=10 as in server policy
-        public List<Message> retrieveMessages(Guid guid, DateTime date, int num, string nickname, int g_id) {
+        public SortedSet<Message> retrieveMessages(Guid guid, DateTime date, int num, string nickname, int g_id) {
                 if (isNotOverloading())
                 {
                     lastNRequests.Enqueue(DateTime.Now);
@@ -101,7 +101,7 @@ namespace ConsoleApp1.BuissnessLayer
                                 null)
                             );
                     log.Info("sent a GetTenMessages request to server");
-                    return convertTomessageList(msgList);
+                    return convertToSortedSetOfMessage(msgList);
                 }
                 else
                 {
@@ -112,9 +112,14 @@ namespace ConsoleApp1.BuissnessLayer
             
         }
 
-        private List<Message> convertTomessageList(List<IMessage> msgList)
+        private SortedSet<Message> convertToSortedSetOfMessage(List<IMessage> msgList)
         {
-            throw new NotImplementedException();
+            SortedSet<Message> ans = new SortedSet<Message>(new MessageDateComp());
+            foreach (IMessage msg in msgList)
+            {
+                ans.Add(new Message(msg));
+            }
+            return ans;
         }
 
         public User insertUser(User newUser)

@@ -103,9 +103,9 @@ namespace ChatRoom_project.PresentationLayer
         {
             
                   
-            List<Message> toDisplay = chtrm.displayNMessages();
-            //temp = toDisplay.Max;
-            //toDisplay.RemoveWhere(timeFilter);
+            SortedSet<Message> toDisplay = chtrm.displayNMessages();
+            Message temp = toDisplay.Max;
+            toDisplay.RemoveWhere(timeFilter);
             /*foreach (Message msg in toDisplay)
             {
                 try

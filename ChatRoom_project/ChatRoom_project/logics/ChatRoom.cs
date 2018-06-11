@@ -73,13 +73,15 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 User retrievedUser = new User(retrievedUsers[0]);
                 if (!userToLogin.HashedPassword.Equals(retrievedUser.HashedPassword))
-                {
-                    log.Info("atempted to login will bad password user = " + userToLogin);
+                {   
+                    
+                    log.Info("atempted to login with bad password user = " + userToLogin);
+                    log.Info(" user hashedpw = " + userToLogin.HashedPassword + "server Hashed Pw = " + retrievedUser.HashedPassword);
                     throw new ToUserException("Wrong Password");
                 }
                 else
                 {
-                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname))
+                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname.TrimEnd(' ')))
                     {
                         loggedInUser = retrievedUser;
                         return true;
@@ -201,7 +203,7 @@ namespace ConsoleApp1.BuissnessLayer
         }
 
 
-        public List<Message> displayNMessages()
+        public SortedSet<Message> displayNMessages()
         {
             int num = 200;
        
@@ -210,7 +212,7 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted to display " + num + " messages without initially logging in");
                 throw new ToUserException("Cannot Display messages without initially logging in");
             }
-            List<Message> ans = new List<Message>();
+            SortedSet<Message> ans ;
             ans = request.retrieveMessages(default(Guid), lastRetrivedMessageTime, num, nicknameFilterParam, g_IDFilterParam);
             
             return ans;
