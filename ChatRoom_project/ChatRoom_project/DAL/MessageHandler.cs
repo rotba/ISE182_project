@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.DAL
 {
-    public class MessageHandler:Handler<IMessage>
+    public class MessageHandler : Handler<IMessage>
     {
-        enum Fields{ Guid, SendTime, User_Id, Nickname, Group_Id, Body};
+        enum Fields { Guid, SendTime, User_Id, Nickname, Group_Id, Body };
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
             {Fields.Guid, "Guid"},
@@ -21,7 +21,7 @@ namespace ChatRoom_project.DAL
             {Fields.Group_Id, "Group_Id"},
             {Fields.Body, "Body"}
         };
-        private static readonly Fields[] tableColumns = 
+        private static readonly Fields[] tableColumns =
         {
             Fields.Guid,
             Fields.User_Id,
@@ -35,7 +35,7 @@ namespace ChatRoom_project.DAL
             if (!data_reader.IsDBNull(2))
                 dateFacturation = data_reader.GetDateTime(2);
 
-            return new Message(
+            return new HandlerMessage(
                         Guid.Parse(data_reader.GetValue(0).ToString()),
                         data_reader.GetValue(1).ToString(),
                         dateFacturation,
@@ -47,10 +47,11 @@ namespace ChatRoom_project.DAL
         protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
             string ans = "SELECT";
-            if (numOfRows>0) {
+            if (numOfRows > 0)
+            {
                 ans += $" TOP {numOfRows}";
             }
-            ans+=" M.Guid, U.Nickname, M.SendTime, M.Body, U.Group_Id" +
+            ans += " M.Guid, U.Nickname, M.SendTime, M.Body, U.Group_Id" +
                 " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
             ans += " WHERE 1=1";
             if (query.ContainsKey(fieldsDic[Fields.Guid]))
@@ -70,7 +71,7 @@ namespace ChatRoom_project.DAL
                 ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
             }
             ans += " ORDER BY SendTime";
-            
+
             return ans;
         }
         protected override string createInsertQuery(Dictionary<string, string> query)
@@ -78,8 +79,10 @@ namespace ChatRoom_project.DAL
             string ans = "INSERT INTO Messages(";
             int size = countRelevantFields(query);
             int i = 0;
-            foreach (Fields field in tableColumns) {
-                if (query.ContainsKey(fieldsDic[field])) {
+            foreach (Fields field in tableColumns)
+            {
+                if (query.ContainsKey(fieldsDic[field]))
+                {
                     ans += fieldsDic[field];
                     if (i != size - 1)
                     {
@@ -139,15 +142,16 @@ namespace ChatRoom_project.DAL
 
             return ans;
         }
-        public Dictionary<string, string> convertToDictionary(Guid guid,DateTime date, int userId, string nickname, int g_Id, string body)
+        public Dictionary<string, string> convertToDictionary(Guid guid, DateTime date, int userId, string nickname, int g_Id, string body)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
-            if (!guid.Equals(default(Guid))) {
-                dic[fieldsDic[Fields.Guid]] = "'"+guid.ToString()+"'";
+            if (!guid.Equals(default(Guid)))
+            {
+                dic[fieldsDic[Fields.Guid]] = "'" + guid.ToString() + "'";
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
-            { 
-                dic[fieldsDic[Fields.SendTime]] = "'"+date.ToString()+ "'";
+            {
+                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToString() + "'";
             }
             if (userId != 0)
             {
@@ -155,7 +159,7 @@ namespace ChatRoom_project.DAL
             }
             if (nickname != null)
             {
-                dic[fieldsDic[Fields.Nickname]] = "'"+nickname+"'";
+                dic[fieldsDic[Fields.Nickname]] = "'" + nickname + "'";
             }
             if (g_Id > 0)
             {
@@ -163,7 +167,7 @@ namespace ChatRoom_project.DAL
             }
             if (body != null)
             {
-                dic[fieldsDic[Fields.Body]] = "'"+body+"'";
+                dic[fieldsDic[Fields.Body]] = "'" + body + "'";
             }
             return dic;
         }
@@ -186,8 +190,10 @@ namespace ChatRoom_project.DAL
         private int countRelevantFields(Dictionary<string, string> query)
         {
             int ans = 0;
-            foreach (Fields field in tableColumns) {
-                if (query.ContainsKey(fieldsDic[field])) {
+            foreach (Fields field in tableColumns)
+            {
+                if (query.ContainsKey(fieldsDic[field]))
+                {
                     ans++;
                 }
             }
@@ -198,7 +204,42 @@ namespace ChatRoom_project.DAL
         {
             throw new NotImplementedException();
         }
+
+        #region Private Class 
+
+        /// <summary>
+        /// class that represent the handler Message object
+        /// </summary>
+        private sealed class HandlerMessage : IMessage
+        {
+            public Guid Id { get; }
+            public string UserName { get; }
+            public DateTime Date { get; }
+            public string MessageContent { get; }
+            public string GroupID { get; }
+            public HandlerMessage(Guid guid, string userName, DateTime date, string messageContent , string groupId )
+            {
+                this.Id = guid;
+                this.UserName = userName;
+                this.Date = date;
+                this.MessageContent = messageContent;
+                this.GroupID = groupId;
+            }
+
+            public override string ToString()
+            {
+                return String.Format("Message ID:{0}\n" +
+                    "UserName:{1}\n" +
+                    "DateTime:{2}\n" +
+                    "MessageContect:{3}\n" +
+                    "GroupId:{4}\n"
+                    , Id, UserName, Date.ToString(), MessageContent, GroupID);
+            }
+
+            
+        }
+        #endregion
     }
-    
+
 }
 

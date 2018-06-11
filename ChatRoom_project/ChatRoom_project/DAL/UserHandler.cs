@@ -31,7 +31,7 @@ namespace ChatRoom_project.DAL
         {
 
 
-            return new User(
+            return new HandlerUser(
                         (int)data_reader.GetValue(0),
                         (int)data_reader.GetValue(1),
                         data_reader.GetValue(2).ToString()
@@ -139,21 +139,7 @@ namespace ChatRoom_project.DAL
 
         protected override SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query, bool test)
         {
-            string ans =
-                "SELECT U.Id, U.Group_Id, U.Nickname, U.Password" +
-                " FROM USERS AS U";
-            ans += " WHERE 1=1";
-
-            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
-            {
-                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
-            }
-            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
-            {
-                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
-            }
-            ans += " ORDER BY SendTime";
-            return null;
+            throw new NotImplementedException();
         }
         private int countRelevantFields(Dictionary<string, string> query)
         {
@@ -167,5 +153,43 @@ namespace ChatRoom_project.DAL
             }
             return ans;
         }
+
+        #region Private Class 
+
+        /// <summary>
+        /// class that represent the handler user object
+        /// </summary>
+
+        private sealed class HandlerUser : IUser
+        {
+            private string nickname;
+            public string Nickname { get => nickname; }
+            private string hashedPassword;
+            public string HashedPassword { get => hashedPassword; }
+            private int id;
+            public int Id { get => id; }
+            private int g_id;
+            public int G_id { get => g_id; }
+
+            public HandlerUser(string nickname, string hashedPassword, int id, int g_id)
+            {
+                this.nickname = nickname;
+                this.hashedPassword = hashedPassword;
+                this.id = id;
+                this.g_id = g_id;
+            }
+
+            public HandlerUser(int id, int g_id, string nickname)
+            {
+                this.nickname = nickname;
+                this.id = id;
+                this.g_id = g_id;
+            }
+
+
+        }
+
+        #endregion
     }
+
 }
