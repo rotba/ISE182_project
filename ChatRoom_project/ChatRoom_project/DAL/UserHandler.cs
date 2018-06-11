@@ -96,7 +96,7 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        internal Dictionary<string, string> convertToDictionary(string nickname, int g_id, string hashedPassword,int id)
+        public Dictionary<string, string> convertToDictionary(string nickname, int g_id, string hashedPassword,int id)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             if (!string.IsNullOrEmpty(nickname))
