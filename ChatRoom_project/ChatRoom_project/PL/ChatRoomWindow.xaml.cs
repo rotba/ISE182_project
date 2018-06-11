@@ -104,30 +104,8 @@ namespace ChatRoom_project.PresentationLayer
             
                   
             SortedSet<Message> toDisplay = chtrm.displayNMessages();
-            Message temp = toDisplay.Max;
-            toDisplay.RemoveWhere(timeFilter);
-            /*foreach (Message msg in toDisplay)
-            {
-                try
-                {
-                    int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(1,tGroupID, msg.UserName); //needs to create a function: retrieveUser in chatroom
-                    if (!observer.Users.Contains(tUser))
-                    {
-                        observer.Users.Add(tUser);
-                    }
-                    if (!observer.GroupIDs.Contains(tGroupID))
-                    {
-                        observer.GroupIDs.Add(tGroupID);
-                    }
-                }
-                catch (Exception e)
-                {
-                    log.Error("unexpected error while adding users and GroupIDs to chatroom viewModel error= "
-                        +e);
-                }
-            }*/
             toDisplay.ToList().ForEach(observer.Messages.Add);
+           
             
         }
         

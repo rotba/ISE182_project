@@ -24,7 +24,7 @@ namespace ConsoleApp1.BuissnessLayer
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private MessageHandler mHandler = new MessageHandler();
         private UserHandler uHandler = new UserHandler();
-        private DateTime lastRetrievedMessageTime = DateTime.MinValue;
+        //private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
         public Request()
         {
@@ -94,7 +94,7 @@ namespace ConsoleApp1.BuissnessLayer
                             num,
                             mHandler.convertToDictionary(
                                 guid,
-                                lastRetrievedMessageTime,
+                                date,
                                 0,
                                 nickname,
                                 g_id,
