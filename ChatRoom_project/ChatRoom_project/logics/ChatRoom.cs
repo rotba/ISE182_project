@@ -3,6 +3,7 @@ using ChatRoom_project.logics;
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -55,7 +56,6 @@ namespace ConsoleApp1.BuissnessLayer
         /// </summary>
         public bool login(int g_id, string nickname, string pw)
         {
-
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
             if (!isValidNickname(nickname))
@@ -137,6 +137,30 @@ namespace ConsoleApp1.BuissnessLayer
 
             string hashedPw = generateSHA256Hash(pw);
             User userToRegister = new User(-1, g_id, nickname,hashedPw);
+            IUser registeredUser = null;
+            try
+            {
+                registeredUser = request.insertUser(userToRegister);
+            }catch (SqlException e)
+            {
+                switch (e.Number)
+                {
+                    case 2601:
+                        log.Debug("SQL execption" + 2601 + " while registering user " + userToRegister);
+                        throw new ToUserException("Attempted to register already registered user");
+                    case 2627:
+                        log.Debug("SQL execption" + 2627 + " while registering user " + userToRegister);
+                        throw new ToUserException("Attempted to register already registered user");
+                    default:
+                        log.Debug("Unexpected SQL execption " + e + " while registering user " + userToRegister);
+                        throw new ToUserException("Registration failed because of system issues, Please try again");
+                }
+            }catch (Exception e_1)
+            {
+                log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
+            }
+
+            /*
             List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
             if (retrievedUsers.Count != 0)
             {
@@ -163,11 +187,8 @@ namespace ConsoleApp1.BuissnessLayer
                 {
                     log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
                 }
-
-                log.Info("successfully registered user " + registeredUser);
-            }
-
-
+                */
+            log.Info("successfully registered user " + registeredUser);
         }
       
 
