@@ -23,21 +23,22 @@ namespace ChatRoom_project.DAL.Tests
         private User testUser;
         private int TEST_USER_ID;
         private readonly string TEST_USER_NICKNAME = "TESTUSER";
+        private DateTime localDate;
         [TestInitialize]
         public void Initialize()
         {
             TEST_USER_ID = getTestUserId();
-            testUser = new User(TEST_USER_ID, 15, TEST_USER_NICKNAME);
+            testUser = new User(TEST_USER_ID, 15, TEST_USER_NICKNAME, "496351");
             handler = new MessageHandler();
             dateComp = new MessageDateComp();
             userComp = new MessageUserComp();
             sqlComp = new MessageSQLComp();
-            DateTime date = DateTime.Now;
+            DateTime localDate = DateTime.Now.ToLocalTime();
             string content = "Initialize()";
             msg_in_db = new Message(
                 Guid.NewGuid(),
                 testUser.Nickname,
-                date, content,
+                localDate, content,
                 testUser.G_id.ToString()
                 );
             handler.insert(handler.convertToDictionary(msg_in_db, testUser.Id));
@@ -74,6 +75,16 @@ namespace ChatRoom_project.DAL.Tests
             Assert.IsTrue(result.Count == 0);
         }
         [TestMethod()]
+        public void retrieveTest_check_message_retriived_in_local_time()
+        {
+            Message result = new Message(
+                handler.retrieve(1,
+                handler.convertToDictionary(msg_in_db, -1))
+                    [0]
+                    );
+            Assert.IsTrue(result.Date.Equals(localDate));
+        }
+        [TestMethod()]
         public void insertTest_valid_message()
         {
             Message test_m = new Message(
@@ -94,6 +105,27 @@ namespace ChatRoom_project.DAL.Tests
             catch (SqlException sqlException) {
             }
         }
+        
+        /*
+        [TestMethod()]
+        public void TinsertTest_check_message_stored_in_UTC()
+        {
+            Message result;
+            using (SqlConnection connection = new SqlConnection(connetion_string))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(createSelectQuery(numOfRows, query), connection);
+                SqlDataReader data_reader = command.ExecuteReader();
+                if (data_reader.Read())
+                {
+                    result = new Message(handler.TESTaddRowTEST(data_reader));
+                }
+                data_reader.Close();
+                command.Dispose();
+            }
+            return ans;
+        }
+        */
         [TestMethod()]
         public void insertTest_user_not_in_db()
         {
@@ -141,9 +173,10 @@ namespace ChatRoom_project.DAL.Tests
                 null,
                 null
                 );
-            handler.delete(
+            /*handler.delete(
                 handler.convertToDictionary(tester_msg, -1)
                 );
+                */
         }
         private int getTestUserId()
         {

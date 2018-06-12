@@ -33,7 +33,10 @@ namespace ChatRoom_project.DAL
         {
             DateTime dateFacturation = new DateTime();
             if (!data_reader.IsDBNull(2))
+            {
                 dateFacturation = data_reader.GetDateTime(2);
+                //dateFacturation = dateFacturation.ToLocalTime();
+            }
 
             return new HandlerMessage(
                         Guid.Parse(data_reader.GetValue(0).ToString()),
@@ -43,6 +46,13 @@ namespace ChatRoom_project.DAL
                         data_reader.GetValue(4).ToString()
                         );
         }
+        /*
+         * inly for tests. delete before release
+        public IMessage TESTaddRowTEST(SqlDataReader data_reader)
+        {
+            return addRow(data_reader);
+        }
+        */
 
         protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
@@ -151,7 +161,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToString() + "'";
+                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToUniversalTime() + "'";
             }
             if (userId != 0)
             {
