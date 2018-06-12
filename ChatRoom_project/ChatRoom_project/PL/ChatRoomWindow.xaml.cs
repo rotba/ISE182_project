@@ -104,7 +104,8 @@ namespace ChatRoom_project.PresentationLayer
             
                   
             SortedSet<Message> toDisplay = chtrm.displayNMessages();
-            toDisplay.ToList().ForEach(observer.Messages.Add);
+            if(toDisplay!=null)
+                toDisplay.ToList().ForEach(observer.Messages.Add);
            
             
         }
