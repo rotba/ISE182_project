@@ -9722,3 +9722,22 @@ GroupId:15
 2018-06-12 12:00:26,169 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-06-12 12:00:28,165 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-06-12 12:00:29,643 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 12:33:59,475 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:34:01,439 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:34:03,469 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:34:05,482 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:34:06,659 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to send empty message
+2018-06-12 12:34:06,662 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:34:07,510 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:34:09,047 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 12:47:10,239 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:47:12,240 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:47:14,323 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:47:16,388 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:48:04,301 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:48:06,281 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:49:02,597 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:49:04,285 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:49:04,587 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:49:06,664 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 12:49:08,287 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   

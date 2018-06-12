@@ -36,7 +36,7 @@ namespace ChatRoom_project.PresentationLayer
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
         private MainWindow mainWindow;
-        private Predicate<Message> timeFilter = isOlder;
+        //private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;
         private bool indexChangedByCode = false;
 
@@ -298,6 +298,7 @@ namespace ChatRoom_project.PresentationLayer
         /*
          * Returns true when is older than lastMessage
          */
+         /*
         private static bool isOlder(Message message)
         {
             bool isEqual=false;
@@ -321,6 +322,7 @@ namespace ChatRoom_project.PresentationLayer
             }
             return isEqual;
         }
+        */
         /*
          * Sends message
          */
@@ -349,7 +351,7 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-        
+        /*
         private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (!indexChangedByCode)
@@ -414,7 +416,7 @@ namespace ChatRoom_project.PresentationLayer
 
             }
         }
-
+        */
         private int g_IDToIntAndVerify(String g_ID)
         {
             int result;
@@ -434,6 +436,30 @@ namespace ChatRoom_project.PresentationLayer
                 throw new ToUserException("The group id " + g_ID + " is not a valid group ID, must contain only numbers");
 
             }
+        }
+
+        private void Button_Click_Filter(object sender, RoutedEventArgs e)
+        {
+            int g_idFilter = -1;
+            try
+            {
+                g_IDToIntAndVerify(observer.G_IDFilterParam);
+            }
+            catch(ToUserException e_2)
+            {
+                MessageBox.Show(e_2.Message);
+            }
+            //returns 0 if null
+            if (g_idFilter == 0)
+                g_idFilter = -1;
+            string nicknameFilter = observer.NicknameFilterParam;
+            if (nicknameFilter!=null&&(nicknameFilter.Equals("") | nicknameFilter.Equals(" ")))
+                nicknameFilter = null;
+            chtrm.setFilterParameter(nicknameFilter, g_idFilter);
+            observer.Messages.Clear();
+            refreshMessages();
+
+
         }
     }
 
