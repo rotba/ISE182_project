@@ -77,19 +77,22 @@ namespace ChatRoom_project.DAL
             {
                 ans += $" AND Guid = {query[fieldsDic[Fields.Guid]]}";
             }
-            if (query.ContainsKey(fieldsDic[Fields.SendTime]))
-            {
-                ans += $" AND SendTime >= {query[fieldsDic[Fields.SendTime]]}";
+            else {
+                if (query.ContainsKey(fieldsDic[Fields.SendTime]))
+                {
+                    ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
+                }
+                if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+                {
+                    ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
+                }
+                if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+                {
+                    ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
+                }
+                ans += " ORDER BY SendTime";
             }
-            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
-            {
-                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
-            }
-            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
-            {
-                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
-            }
-            ans += " ORDER BY SendTime";
+            
 
             return ans;
         }
