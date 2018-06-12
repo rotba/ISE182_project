@@ -8824,3 +8824,231 @@ GroupId:15
    ב-  ChatRoom_project.PresentationLayer.MainWindow..ctor() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 36
 2018-06-08 17:44:01,824 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - Unexpected error while loading background image: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
    ב-  ChatRoom_project.PresentationLayer.MainWindow.main_grid_loaded(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 57
+2018-06-11 23:40:57,702 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Tomer   
+2018-06-11 23:41:10,013 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login will bad password user = User: G_id = 15 Nickname: Tomer
+2018-06-11 23:41:18,285 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login will bad password user = User: G_id = 15 Nickname: Tomer
+2018-06-11 23:41:21,180 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to register already registered user User: G_id = 15 Nickname: Tomer
+2018-06-11 23:43:53,408 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login will bad password user = User: G_id = 15 Nickname: Tomer
+2018-06-11 23:46:09,785 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login with bad password user = User: G_id = 15 Nickname: Tomer
+2018-06-11 23:46:09,792 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom -  user hashedpw = 2904d447f9b694f30d71c930470134460e51eb3af2b5a2a4f423c221360c8e26server Hashed Pw = 
+2018-06-11 23:54:38,649 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected error when login to  User: G_id = 15 Nickname: Tomer
+2018-06-11 23:54:43,155 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected error when login to  User: G_id = 15 Nickname: Tomer
+2018-06-12 00:01:52,747 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:01:52,784 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow..ctor(ChatRoom chtrm, MainWindow mainWindow) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 55
+   at ChatRoom_project.PresentationLayer.MainWindow.Login_Click(Object sender, RoutedEventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 85
+2018-06-12 00:01:54,612 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:01:54,624 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:01:56,773 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:01:56,786 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:01:58,814 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:01:58,826 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:00,833 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:00,844 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:02,846 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:02,858 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:05,020 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:05,032 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:07,067 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:07,078 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:09,082 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:09,093 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:11,096 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:11,107 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:13,115 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:13,126 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:15,132 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:15,144 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:16,875 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:16,899 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow..ctor(ChatRoom chtrm, MainWindow mainWindow) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 55
+   at ChatRoom_project.PresentationLayer.MainWindow.Login_Click(Object sender, RoutedEventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 85
+2018-06-12 00:02:17,141 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:17,153 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:17,514 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty nickname
+2018-06-12 00:02:18,875 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:18,887 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:19,174 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:19,186 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:20,878 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:20,888 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:02:21,172 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:02:21,186 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NotImplementedException: The method or operation is not implemented.
+   at ConsoleApp1.BuissnessLayer.Request.convertTomessageList(List`1 msgList) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 117
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 104
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 216
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:10:31,835 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:33,833 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:36,032 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:38,031 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:40,047 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:42,049 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:44,048 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:46,063 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:48,079 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:50,255 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:52,316 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:54,317 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:56,331 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:10:58,330 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:00,408 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:02,643 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:03,946 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdasdfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-12 00:11:03,947 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:d3f2920d-c452-45ea-99ac-22e3fb67fb14
+UserName:Tomer   
+DateTime:06/12/2018 02:11:03
+MessageContect:asdasd                                                                                              
+GroupId:15
+ was sent successfully
+2018-06-12 00:11:03,949 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:04,767 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:06,804 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:08,892 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:10,925 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:13,159 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:15,173 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:17,172 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:11:17,685 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 00:15:49,855 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:15:51,931 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:15:54,036 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:15:54,812 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 00:30:56,389 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:30:58,441 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:00,440 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:02,470 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:04,470 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:06,487 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:08,564 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:09,744 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesvsdgfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-12 00:31:09,744 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:7b46a059-adfb-4a88-a954-052bd602aafd
+UserName:Tomer   
+DateTime:06/12/2018 02:31:09
+MessageContect:svsdg                                                                                               
+GroupId:15
+ was sent successfully
+2018-06-12 00:31:09,745 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:10,580 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:12,710 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:14,745 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:31:15,043 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 00:33:05,260 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:07,239 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:09,299 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:11,330 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:13,332 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:15,335 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:17,331 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:19,346 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:33:21,072 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 00:35:58,828 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:36:00,802 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:36:02,832 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:36:03,346 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-12 00:36:49,519 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:36:53,115 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:42,212 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:42,417 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:44,428 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:46,534 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:48,543 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:50,660 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:52,660 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:54,694 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:41:56,725 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:42:37,287 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:42:39,271 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-12 00:42:41,284 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:42:43,308 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 106
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\לימודים\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 81
+2018-06-12 00:42:43,530 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   

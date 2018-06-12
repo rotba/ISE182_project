@@ -32,9 +32,12 @@ namespace ChatRoom_project.DAL
 
 
             return new HandlerUser(
+                        
+                        data_reader.GetValue(2).ToString(),
+                        data_reader.GetValue(3).ToString(),
                         (int)data_reader.GetValue(0),
-                        (int)data_reader.GetValue(1),
-                        data_reader.GetValue(2).ToString()
+                        (int)data_reader.GetValue(1)
+
                         );
                         
         }
@@ -179,12 +182,7 @@ namespace ChatRoom_project.DAL
                 this.g_id = g_id;
             }
 
-            public HandlerUser(int id, int g_id, string nickname)
-            {
-                this.nickname = nickname;
-                this.id = id;
-                this.g_id = g_id;
-            }
+            
 
 
         }

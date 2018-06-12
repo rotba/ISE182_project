@@ -101,39 +101,12 @@ namespace ChatRoom_project.PresentationLayer
          */
         private void refreshMessages()
         {
-            Message temp;
-            try { chtrm.retrieveMessages(200); }
-            catch(Exception e)
-            {
-                log.Debug(e);
-            }
-           
-            SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
-            temp = toDisplay.Max;
-            toDisplay.RemoveWhere(timeFilter);
-            foreach (Message msg in toDisplay)
-            {
-                try
-                {
-                    int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(1,tGroupID, msg.UserName); //needs to create a function: retrieveUser in chatroom
-                    if (!observer.Users.Contains(tUser))
-                    {
-                        observer.Users.Add(tUser);
-                    }
-                    if (!observer.GroupIDs.Contains(tGroupID))
-                    {
-                        observer.GroupIDs.Add(tGroupID);
-                    }
-                }
-                catch (Exception e)
-                {
-                    log.Error("unexpected error while adding users and GroupIDs to chatroom viewModel error= "
-                        +e);
-                }
-            }
+            
+                  
+            SortedSet<Message> toDisplay = chtrm.displayNMessages();
             toDisplay.ToList().ForEach(observer.Messages.Add);
-            lastMessage = temp;// updates the last message to be the current newest message
+           
+            
         }
         
         /*
