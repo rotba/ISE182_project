@@ -169,7 +169,7 @@ namespace ChatRoom_project.PresentationLayer
             }
             set
             {
-                messageContent = value;
+                nicknameFilterParam = value;
                 OnPropertyChanged("NicknameFilterParam");
             }
         }

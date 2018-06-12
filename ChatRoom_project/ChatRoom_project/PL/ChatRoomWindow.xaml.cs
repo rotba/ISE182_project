@@ -38,7 +38,9 @@ namespace ChatRoom_project.PresentationLayer
         private MainWindow mainWindow;
         //private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;
-        private bool indexChangedByCode = false;
+        //private bool indexChangedByCode = false;
+        private int lastFilterClickG_IDFilterParam = -1;
+        private string lastFilterClickNicknameFilterParam = null;
 
         public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
@@ -417,6 +419,37 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
         */
+        private void Button_Click_Filter(object sender, RoutedEventArgs e)
+        {
+            int g_idFilter = -1;
+            try
+            {
+                g_IDToIntAndVerify(observer.G_IDFilterParam);
+            }
+            catch (ToUserException e_2)
+            {
+                MessageBox.Show(e_2.Message);
+            }
+            //returns 0 if null
+            if (g_idFilter == 0)
+                g_idFilter = -1;
+            string nicknameFilter = observer.NicknameFilterParam;
+            if (string.IsNullOrWhiteSpace(nicknameFilter))
+                nicknameFilter = null;
+            if (nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam) ||
+                !g_idFilter.Equals(lastFilterClickG_IDFilterParam))
+            {
+                chtrm.setFilterParameter(nicknameFilter, g_idFilter);
+                observer.Messages.Clear();
+                lastFilterClickG_IDFilterParam = g_idFilter;
+                lastFilterClickNicknameFilterParam = nicknameFilter;
+            }
+            
+            refreshMessages();
+
+
+        }
+
         private int g_IDToIntAndVerify(String g_ID)
         {
             int result;
@@ -438,29 +471,7 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
-        private void Button_Click_Filter(object sender, RoutedEventArgs e)
-        {
-            int g_idFilter = -1;
-            try
-            {
-                g_IDToIntAndVerify(observer.G_IDFilterParam);
-            }
-            catch(ToUserException e_2)
-            {
-                MessageBox.Show(e_2.Message);
-            }
-            //returns 0 if null
-            if (g_idFilter == 0)
-                g_idFilter = -1;
-            string nicknameFilter = observer.NicknameFilterParam;
-            if (nicknameFilter!=null&&(nicknameFilter.Equals("") | nicknameFilter.Equals(" ")))
-                nicknameFilter = null;
-            chtrm.setFilterParameter(nicknameFilter, g_idFilter);
-            observer.Messages.Clear();
-            refreshMessages();
-
-
-        }
+        
     }
 
 }
