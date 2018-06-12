@@ -51,36 +51,13 @@
             </Grid>
         </ListBox>
 
-        <ListBox  HorizontalAlignment="Left" Height="90" Margin="482,148,0,0" VerticalAlignment="Top" Width="158">
-            <Label Content="Filter by:"/>
-            <ComboBox  SelectedItem="{Binding ComboNickNameSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbNickName_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="{Binding CmbNickNameSelectedIndex, Mode=TwoWay}">
-                <ComboBox.ItemsSource>
-                    <CompositeCollection>
-                        <ComboBoxItem>Choose Nickname</ComboBoxItem>
-                        <ComboBoxItem>No Filter</ComboBoxItem>
-                        <CollectionContainer Collection="{Binding Source={StaticResource usersViewSource}}" />
-                    </CompositeCollection>
-                </ComboBox.ItemsSource>
-                <ComboBox.ItemTemplate >
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding G_id}"/>
-                            <TextBlock Text=" : " />
-                            <TextBlock Text="{Binding Nickname}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
-
-            </ComboBox>
-            <ComboBox SelectedItem="{Binding ComboGroupIDSelectedItem, Mode=OneWayToSource}" SelectionChanged="cmbGroupID_SelectionChanged" Width="144" IsReadOnly="False" IsEditable="False" SelectedIndex="{Binding CmbGroupIDSelectedIndex, Mode=TwoWay}">
-                <ComboBox.ItemsSource>
-                    <CompositeCollection>
-                        <ComboBoxItem>Choose Group ID</ComboBoxItem>
-                        <ComboBoxItem>No Filter</ComboBoxItem>
-                        <CollectionContainer Collection="{Binding Source={StaticResource groupIDViewSource}}" />
-                    </CompositeCollection>
-                </ComboBox.ItemsSource>
-            </ComboBox>
+        <ListBox  HorizontalAlignment="Left" Height="139" Margin="482,148,0,0" VerticalAlignment="Top" Width="158" Padding="0">
+            <Label Content="Filter by:" Height="16" VerticalContentAlignment="Top" Padding="-2" Width="54"/>
+            <Label Content="Nickname :" Height="16" VerticalContentAlignment="Top" Padding="-2" />
+            <TextBox Text="{Binding NicknameFilterParam}" Height="19" TextWrapping="Wrap" VerticalContentAlignment="Center" Padding="0" Width="120"/>
+            <Label Content="Group Id" Height="16" VerticalContentAlignment="Top" Padding="-2"/>
+            <TextBox Text="{Binding G_IDFilterParam}" Height="19" TextWrapping="Wrap" VerticalContentAlignment="Center" Padding="0"  Width="120"/>
+            <Button Content="Filter" Width="121" Click="Button_Click_Filter"/>
 
         </ListBox>
     </Grid>
