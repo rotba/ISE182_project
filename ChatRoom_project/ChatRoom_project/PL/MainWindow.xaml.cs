@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,7 +28,9 @@ namespace ChatRoom_project.PresentationLayer
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ChatRoom chtrm;
         private ObservableModelMainWindow _main;
-        private string pw = "";
+        private string toHashPW = "";
+        private readonly string saltValue = "1337";
+        private bool toHashPWFlag = false;
         
         
         public MainWindow()
@@ -71,8 +74,17 @@ namespace ChatRoom_project.PresentationLayer
         {
 
             PasswordBox pb = sender as PasswordBox;
-            pw = pb.Password;
-            //MessageBox.Show(pb.Password);
+            if (verifyPW(pb.Password))
+            {
+                toHashPWFlag = true;
+                toHashPW = generateSHA256Hash(pb.Password);
+
+            }
+            else
+            {
+                toHashPWFlag = false;
+            }
+
 
         }
 
@@ -80,13 +92,13 @@ namespace ChatRoom_project.PresentationLayer
         {
             try
             {
-                //MessageBox.Show(TestBox.Password);
-
-                _main.login(_main.G_IDBox, _main.NicknameBox, pw);     
-                ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
-                this.Hide();
-                chtrmWindow.Show();
-                
+                if (toHashPWFlag)
+                {
+                    _main.login(_main.G_IDBox, _main.NicknameBox, toHashPW);
+                    ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
+                    this.Hide();
+                    chtrmWindow.Show();
+                }
             }
             catch (ToUserException e_1)
             {
@@ -106,9 +118,11 @@ namespace ChatRoom_project.PresentationLayer
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             try
-            {   
-                _main.register(_main.G_IDBox, _main.NicknameBox, pw);
-                MessageBox.Show("Register Successful");
+            {   if (toHashPWFlag)
+                {
+                    _main.register(_main.G_IDBox, _main.NicknameBox, toHashPW);
+                    MessageBox.Show("Register Successful");
+                }
             }
             catch (ToUserException e_1)
             {
@@ -124,6 +138,48 @@ namespace ChatRoom_project.PresentationLayer
             }
         }
 
+        private bool verifyPW(string pw)
+        {
+            if (pw == null)
+            {
+                log.Error("password is null");
+                return false;
+            }
+            if (pw == "" | pw.Length < 4 | pw.Length > 16)
+            {
+                log.Error("Attempted to enter an empty/short/long password");
+                return false;
+            }
+
+            if (!Regex.IsMatch(pw, @"^[a-zA-Z0-9]+$"))
+            {
+                log.Error("Attempted to enter a not valid password");
+                return false;
+            }
+            return true;
+
+        }
+
+
+        private string generateSHA256Hash(string input)
+        {
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
+            System.Security.Cryptography.SHA256Managed sha256HashString =
+                new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = sha256HashString.ComputeHash(bytes);
+            return byteArrayToHexString(hash);
+        }
+
+        private string byteArrayToHexString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+            {
+                hex.AppendFormat("{0:x2}", b);
+            }
+
+            return hex.ToString();
+        }
 
     }
 }
