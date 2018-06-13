@@ -28,6 +28,7 @@ namespace ChatRoom_project.PresentationLayer
         private static ChatRoom chtrm;
         private ObservableModelMainWindow _main;
         private string pw = "";
+        //Shalom
         
         public MainWindow()
         {
