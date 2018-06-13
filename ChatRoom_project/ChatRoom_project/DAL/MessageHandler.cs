@@ -3,8 +3,10 @@ using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ChatRoom_project.DAL
@@ -31,18 +33,35 @@ namespace ChatRoom_project.DAL
 
         protected override IMessage addRow(SqlDataReader data_reader)
         {
-            DateTime dateFacturation = new DateTime();
+            DateTime UtcTime = new DateTime();
+            DateTime LocalTime= new DateTime();
             if (!data_reader.IsDBNull(2))
-                dateFacturation = data_reader.GetDateTime(2);
+            {
+                UtcTime = data_reader.GetDateTime(2);
+                var outputCulture = CultureInfo.CreateSpecificCulture("es-es");
+                var inputCulture = CultureInfo.CreateSpecificCulture("en-us");
+                Thread.CurrentThread.CurrentCulture = outputCulture;
+                Thread.CurrentThread.CurrentUICulture = outputCulture;
+                LocalTime = DateTime.Parse(
+                    UtcTime.ToString(), inputCulture
+                    ).ToLocalTime();
+            }
 
             return new HandlerMessage(
                         Guid.Parse(data_reader.GetValue(0).ToString()),
                         data_reader.GetValue(1).ToString(),
-                        dateFacturation,
+                        LocalTime,
                         data_reader.GetValue(3).ToString(),
                         data_reader.GetValue(4).ToString()
                         );
         }
+        /*
+         * inly for tests. delete before release
+        public IMessage TESTaddRowTEST(SqlDataReader data_reader)
+        {
+            return addRow(data_reader);
+        }
+        */
 
         protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
@@ -151,7 +170,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToString() + "'";
+                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToUniversalTime() + "'";
             }
             if (userId != 0)
             {

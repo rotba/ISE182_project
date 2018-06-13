@@ -36,6 +36,7 @@ namespace ChatRoom_project.PresentationLayer
         /*
          *Filter properties 
          */
+         /*
         private int cmbNickNameSelectedIndex = 0;
         public int CmbNickNameSelectedIndex
         {
@@ -95,7 +96,7 @@ namespace ChatRoom_project.PresentationLayer
                 OnPropertyChanged("ComboGroupIDSelectedItem");
             }
         }
-        
+        */
         /*
          *Sort properties 
          */
@@ -155,6 +156,41 @@ namespace ChatRoom_project.PresentationLayer
                 OnPropertyChanged("MessageContent");
             }
         }
+
+        /*
+         *Filter properties 
+         */
+        private string nicknameFilterParam;
+        public string NicknameFilterParam
+        {
+            get
+            {
+                return nicknameFilterParam;
+            }
+            set
+            {
+                nicknameFilterParam = value;
+                OnPropertyChanged("NicknameFilterParam");
+            }
+        }
+
+        private string g_IDFilterParam = null;
+        public string G_IDFilterParam
+        {
+            get
+            {
+                return g_IDFilterParam;
+            }
+            set
+            {
+                if (value.Equals(" ") | value.Equals(""))
+                    g_IDFilterParam = null;
+                else
+                    g_IDFilterParam = value;
+                OnPropertyChanged("G_IDFilterParam");
+            }
+        }
+
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

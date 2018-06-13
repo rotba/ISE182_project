@@ -36,9 +36,11 @@ namespace ChatRoom_project.PresentationLayer
         private ChatRoom chtrm;
         DispatcherTimer dispatcherTimer;
         private MainWindow mainWindow;
-        private Predicate<Message> timeFilter = isOlder;
+        //private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;
-        private bool indexChangedByCode = false;
+        //private bool indexChangedByCode = false;
+        private int lastFilterClickG_IDFilterParam = -1;
+        private string lastFilterClickNicknameFilterParam = null;
 
         public ChatRoomWindow(ChatRoom chtrm, MainWindow mainWindow)
         {
@@ -101,39 +103,13 @@ namespace ChatRoom_project.PresentationLayer
          */
         private void refreshMessages()
         {
-            Message temp;
-            try { chtrm.retrieveMessages(200); }
-            catch(Exception e)
-            {
-                log.Debug(e);
-            }
+            
+                  
+            SortedSet<Message> toDisplay = chtrm.displayNMessages();
+            if(toDisplay!=null)
+                toDisplay.ToList().ForEach(observer.Messages.Add);
            
-            SortedSet<Message> toDisplay = chtrm.displayNMessages(20);
-            temp = toDisplay.Max;
-            toDisplay.RemoveWhere(timeFilter);
-            foreach (Message msg in toDisplay)
-            {
-                try
-                {
-                    int tGroupID = g_IDToIntAndVerify(msg.GroupID);
-                    User tUser = new User(1,tGroupID, msg.UserName); //needs to create a function: retrieveUser in chatroom
-                    if (!observer.Users.Contains(tUser))
-                    {
-                        observer.Users.Add(tUser);
-                    }
-                    if (!observer.GroupIDs.Contains(tGroupID))
-                    {
-                        observer.GroupIDs.Add(tGroupID);
-                    }
-                }
-                catch (Exception e)
-                {
-                    log.Error("unexpected error while adding users and GroupIDs to chatroom viewModel error= "
-                        +e);
-                }
-            }
-            toDisplay.ToList().ForEach(observer.Messages.Add);
-            lastMessage = temp;// updates the last message to be the current newest message
+            
         }
         
         /*
@@ -324,6 +300,7 @@ namespace ChatRoom_project.PresentationLayer
         /*
          * Returns true when is older than lastMessage
          */
+         /*
         private static bool isOlder(Message message)
         {
             bool isEqual=false;
@@ -347,6 +324,7 @@ namespace ChatRoom_project.PresentationLayer
             }
             return isEqual;
         }
+        */
         /*
          * Sends message
          */
@@ -375,7 +353,7 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-        
+        /*
         private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (!indexChangedByCode)
@@ -440,6 +418,37 @@ namespace ChatRoom_project.PresentationLayer
 
             }
         }
+        */
+        private void Button_Click_Filter(object sender, RoutedEventArgs e)
+        {
+            int g_idFilter = -1;
+            try
+            {
+                g_IDToIntAndVerify(observer.G_IDFilterParam);
+            }
+            catch (ToUserException e_2)
+            {
+                MessageBox.Show(e_2.Message);
+            }
+            //returns 0 if null
+            if (g_idFilter == 0)
+                g_idFilter = -1;
+            string nicknameFilter = observer.NicknameFilterParam;
+            if (string.IsNullOrWhiteSpace(nicknameFilter))
+                nicknameFilter = null;
+            if (nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam) ||
+                !g_idFilter.Equals(lastFilterClickG_IDFilterParam))
+            {
+                chtrm.setFilterParameter(nicknameFilter, g_idFilter);
+                observer.Messages.Clear();
+                lastFilterClickG_IDFilterParam = g_idFilter;
+                lastFilterClickNicknameFilterParam = nicknameFilter;
+            }
+            
+            refreshMessages();
+
+
+        }
 
         private int g_IDToIntAndVerify(String g_ID)
         {
@@ -461,6 +470,8 @@ namespace ChatRoom_project.PresentationLayer
 
             }
         }
+
+        
     }
 
 }

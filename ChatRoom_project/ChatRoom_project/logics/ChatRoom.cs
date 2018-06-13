@@ -26,6 +26,7 @@ namespace ConsoleApp1.BuissnessLayer
         private string nicknameFilterParam = null; //null if no param
         private int g_IDFilterParam = -1;//-1 if no param
         private DateTime lastRetrivedMessageTime;
+        private Message lastRetrivedMessage;
 
         public User LoggedInUser {
             get
@@ -47,6 +48,7 @@ namespace ConsoleApp1.BuissnessLayer
         {
             this.request = new Request();
             this.LoggedInUser = null;
+            lastRetrivedMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
         }
         /// <summary>
         /// login
@@ -73,13 +75,15 @@ namespace ConsoleApp1.BuissnessLayer
             {
                 User retrievedUser = new User(retrievedUsers[0]);
                 if (!userToLogin.HashedPassword.Equals(retrievedUser.HashedPassword))
-                {
-                    log.Info("atempted to login will bad password user = " + userToLogin);
+                {   
+                    
+                    log.Info("atempted to login with bad password user = " + userToLogin);
+                    log.Info(" user hashedpw = " + userToLogin.HashedPassword + "server Hashed Pw = " + retrievedUser.HashedPassword);
                     throw new ToUserException("Wrong Password");
                 }
                 else
                 {
-                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname))
+                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname.TrimEnd(' ')))
                     {
                         loggedInUser = retrievedUser;
                         return true;
@@ -194,14 +198,24 @@ namespace ConsoleApp1.BuissnessLayer
         }
 
 
-        // check if diff filter if so changes lastDate
-        public void setFilterParameter(string nickname, int g_id)
+        // check if diff filter if so changes lastMessage, and update filters
+        public void setFilterParameter(string nicknameFilterParam, int g_IDFilterParam)
         {
-            throw new NotImplementedException();
+            if (nicknameFilterParam!= null && 
+                ((this.nicknameFilterParam != null && 
+                this.nicknameFilterParam.Equals(nicknameFilterParam)) ||
+                this.nicknameFilterParam==nicknameFilterParam) &&
+                this.g_IDFilterParam!=g_IDFilterParam)
+            {
+                lastRetrivedMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
+            }
+            this.nicknameFilterParam = nicknameFilterParam;
+            this.g_IDFilterParam = g_IDFilterParam;
+           
         }
 
 
-        public List<Message> displayNMessages()
+        public SortedSet<Message> displayNMessages()
         {
             int num = 200;
        
@@ -210,9 +224,9 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted to display " + num + " messages without initially logging in");
                 throw new ToUserException("Cannot Display messages without initially logging in");
             }
-            List<Message> ans = new List<Message>();
-            ans = request.retrieveMessages(default(Guid), lastRetrivedMessageTime, num, nicknameFilterParam, g_IDFilterParam);
-            
+            SortedSet<Message> ans ;
+            ans = request.retrieveMessages(default(Guid), lastRetrivedMessage.Date, num, nicknameFilterParam, g_IDFilterParam);
+            lastRetrivedMessage = ans.Max;
             return ans;
         }
        

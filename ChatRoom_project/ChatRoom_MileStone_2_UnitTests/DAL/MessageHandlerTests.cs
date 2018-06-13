@@ -21,23 +21,28 @@ namespace ChatRoom_project.DAL.Tests
         private MessageUserComp userComp;
         private MessageSQLComp sqlComp;
         private User testUser;
+        private User testWatchUser;
         private int TEST_USER_ID;
         private readonly string TEST_USER_NICKNAME = "TESTUSER";
+        private readonly string TEST_WATCH_USER_NICKNAME = "WATCH";
+        private DateTime localDate;
         [TestInitialize]
         public void Initialize()
         {
             TEST_USER_ID = getTestUserId();
-            testUser = new User(TEST_USER_ID, 15, TEST_USER_NICKNAME);
+            testUser = new User(TEST_USER_ID, 15, TEST_USER_NICKNAME, "496351");
+            testWatchUser = new User(10, 15, TEST_WATCH_USER_NICKNAME, "496351");
             handler = new MessageHandler();
             dateComp = new MessageDateComp();
             userComp = new MessageUserComp();
             sqlComp = new MessageSQLComp();
-            DateTime date = DateTime.Now;
+            localDate = DateTime.Now.ToLocalTime();
             string content = "Initialize()";
             msg_in_db = new Message(
                 Guid.NewGuid(),
                 testUser.Nickname,
-                date, content,
+                localDate,
+                content,
                 testUser.G_id.ToString()
                 );
             handler.insert(handler.convertToDictionary(msg_in_db, testUser.Id));
@@ -45,29 +50,39 @@ namespace ChatRoom_project.DAL.Tests
 
         [TestMethod()]
         public void retrieveTest_without_parameters()
-        {  
+        {
             Message result = new Message(
                 handler.retrieve(1, handler.convertToDictionary(
-                    new Guid(), DateTime.MinValue, 0 , null, 0, null))
+                    new Guid(), DateTime.MinValue, 0, null, 0, null))
                     [0]
                     );
-            Assert.IsTrue(sqlComp.Compare(result, msg_in_db)==0);
+            Assert.IsTrue(sqlComp.Compare(result, msg_in_db) == 0);
         }
         [TestMethod()]
         public void retrieveTest_with_parameters_valid_message()
         {
             Message result = new Message(
                 handler.retrieve(1,
-                handler.convertToDictionary(msg_in_db,-1))
+                handler.convertToDictionary(msg_in_db, -1))
                     [0]
                     );
             Assert.IsTrue(sqlComp.Compare(result, msg_in_db) == 0);
         }
         [TestMethod()]
+        public void retrieveTest_message_should_be_retrieved_with_local_time_zone()
+        {
+            Message result = new Message(
+                handler.retrieve(1,
+                handler.convertToDictionary(msg_in_db, -1))
+                    [0]
+                    );
+            Assert.IsTrue(result.Date.ToString().Equals(localDate.ToString()));
+        }
+        [TestMethod()]
         public void retrieveTest_with_parameters_invalid_message()
         {
 
-            List<IMessage> result =handler.retrieve(
+            List<IMessage> result = handler.retrieve(
                 1, handler.convertToDictionary(
                     new Guid(), DateTime.MinValue, 0, "NotInDB", 0, null)
                     );
@@ -80,18 +95,20 @@ namespace ChatRoom_project.DAL.Tests
                 Guid.NewGuid(), testUser.Nickname, DateTime.Now, "insertTest_valid_message()", testUser.G_id.ToString()
                 );
             Message result = new Message(
-                handler.insert(handler.convertToDictionary(test_m,testUser.Id)));
+                handler.insert(handler.convertToDictionary(test_m, testUser.Id)));
             Assert.IsTrue(sqlComp.Compare(result, test_m) == 0);
         }
         [TestMethod()]
         public void insertTest_massege_already_in_db()
         {
-            try {
+            try
+            {
                 Message result = new Message(
                 handler.insert(handler.convertToDictionary(msg_in_db, testUser.Id)));
                 Assert.Fail();
             }
-            catch (SqlException sqlException) {
+            catch (SqlException sqlException)
+            {
             }
         }
         [TestMethod()]
@@ -126,11 +143,27 @@ namespace ChatRoom_project.DAL.Tests
             Assert.IsTrue(
                 handler.retrieve(
                     -1, handler.convertToDictionary(test_m, TEST_USER_ID)
-                    ).Count==0
+                    ).Count == 0
                 );
         }
-
-        
+        /*
+         * This test correctness should be examined in the db
+         */
+         /*
+        [TestMethod()]
+        public void insertDBTest_valid_message()
+        {
+            DateTime localNow = DateTime.Now.ToLocalTime();
+            Message test_m = new Message(
+                Guid.NewGuid(), testWatchUser.Nickname, localNow,
+                "insertDBTest_valid_message" +
+                $"The expected time is: {localNow.ToUniversalTime()}",
+                testWatchUser.G_id.ToString()
+                );
+            Message result = new Message(
+                handler.insert(handler.convertToDictionary(test_m, testWatchUser.Id)));
+        }
+        */
         [TestCleanup]
         public void Cleanup()
         {
@@ -143,6 +176,16 @@ namespace ChatRoom_project.DAL.Tests
                 );
             handler.delete(
                 handler.convertToDictionary(tester_msg, -1)
+                );
+            Message watch_msg = new Message(
+                new Guid(),
+                TEST_WATCH_USER_NICKNAME,
+                DateTime.MinValue,
+                null,
+                null
+                );
+            handler.delete(
+                handler.convertToDictionary(watch_msg, -1)
                 );
         }
         private int getTestUserId()
