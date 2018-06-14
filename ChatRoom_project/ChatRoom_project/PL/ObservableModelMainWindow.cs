@@ -19,7 +19,6 @@ namespace ChatRoom_project.PresentationLayer
 
         public event PropertyChangedEventHandler PropertyChanged;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        public bool isTested;
 
         public ObservableModelMainWindow(ChatRoom chtrm)
         {
@@ -111,6 +110,11 @@ namespace ChatRoom_project.PresentationLayer
             try
             {
                 result = Convert.ToInt32(g_ID);
+                if (result <= 0)
+                {
+                    throw new ToUserException("Group Id must be positive integer");
+                    
+                }
                 return result;
             }
             catch (OverflowException)

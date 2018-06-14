@@ -73,9 +73,7 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ToUserException("illegal attempt to send invalid message, must contain at most 100 characters");
             }
         }
-        /*
-         * Retrieves users from the DB according to the given parameters
-         */ 
+
         public List<IUser> retrieveUsers(int n, int g_id, string nickname)
         {
             return uHandler.retrieve(n, uHandler.convertToDictionary(nickname, g_id,null,-1));
@@ -110,7 +108,9 @@ namespace ConsoleApp1.BuissnessLayer
                 {
                     log.Error("Attempted to send more than 20 requests to server in past 10 secs");
                     throw new ToUserException("Illegal attempt to send too many requests to server in past 10 secs");
-                }    
+                }
+            
+            
         }
 
         private SortedSet<Message> convertToSortedSetOfMessage(List<IMessage> msgList)
@@ -122,9 +122,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             return ans;
         }
-        /*
-         * Inerts user to the DB
-         */
+
         public User insertUser(User newUser)
         {
             return new User(uHandler.insert(uHandler.convertToDictionary(newUser.Nickname, newUser.G_id, newUser.HashedPassword, -1)));
@@ -152,7 +150,8 @@ namespace ConsoleApp1.BuissnessLayer
         {
             return (msg.Length <= 100 & msg!="");
         }
-        //**FOR TEST PURPOSES**//
+        
+        //for test only
         internal void deleteUserAndHisMessagesForTestCleanup(User user)
         {
             IUser toDelete;

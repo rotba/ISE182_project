@@ -19,7 +19,10 @@ namespace ChatRoom_project.PresentationLayer
 
         public event PropertyChangedEventHandler PropertyChanged;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        public bool isTested;
+<<<<<<< Updated upstream
+=======
+       
+>>>>>>> Stashed changes
 
         public ObservableModelMainWindow(ChatRoom chtrm)
         {
@@ -102,11 +105,6 @@ namespace ChatRoom_project.PresentationLayer
                 return true;
         }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/Ariel2
         ///<summary>
         ///checks if a string contains only the charcters '0'-'9' and converts it from string to int
         ///<summary>
@@ -116,7 +114,16 @@ namespace ChatRoom_project.PresentationLayer
             try
             {
                 result = Convert.ToInt32(g_ID);
+<<<<<<< Updated upstream
+                if (result > 0)
+                    return result;
+                else
+                    throw new ToUserException("Group Id must be higher then 0");
+=======
+                if (result <= 0)
+                    throw new ToUserException("Group Id must be positive integer");
                 return result;
+>>>>>>> Stashed changes
             }
             catch (OverflowException)
             {

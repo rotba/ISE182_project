@@ -30,7 +30,7 @@ namespace ChatRoom_project.PresentationLayer
     public partial class ChatRoomWindow : Window
     {
         private bool logoutClose = false;
-        int i = 0;
+        //int i = 0;
         ObservableModelChatRoom observer= new ObservableModelChatRoom();
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
@@ -195,8 +195,12 @@ namespace ChatRoom_project.PresentationLayer
             try
             {
                 chtrm.logout();
-                mainWindow.Show();
+                MainWindow newMain = new MainWindow();
+                newMain.Show();
+                mainWindow.Close();
                 logoutClose = true;
+                dispatcherTimer.Stop();
+                dispatcherTimer = null;
                 this.Close();
             }
             catch (ToUserException e_1)
@@ -335,9 +339,10 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-        
+
         private void Button_Click_Filter(object sender, RoutedEventArgs e)
         {
+            bool noGroupFilter = false;
             int g_idFilter = -1;
             try
             {
@@ -348,12 +353,20 @@ namespace ChatRoom_project.PresentationLayer
                 MessageBox.Show(e_2.Message);
             }
             //returns 0 if null
-            if (g_idFilter == 0)
-                g_idFilter = -1;
             string nicknameFilter = observer.NicknameFilterParam;
             if (string.IsNullOrWhiteSpace(nicknameFilter))
                 nicknameFilter = null;
-            if ((nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
+            if (g_idFilter <= 0)
+            {
+                if (nicknameFilter != null && g_idFilter ==0)
+                    MessageBox.Show("Group Id must be positive Integer for Filter ");
+                g_idFilter = -1;
+                noGroupFilter = true;
+                
+            }
+            
+
+            if (!noGroupFilter&&(nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
                 !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
                 (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
             {

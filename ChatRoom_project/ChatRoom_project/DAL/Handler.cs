@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.Public_Interfaces
 {
-    /*
-     * Represensts auxliery to a table in a certain DB
-     */ 
     public abstract class Handler<T>
     {
         protected static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -82,6 +79,8 @@ namespace ChatRoom_project.Public_Interfaces
             }
             return ans;
         }
+
+        //for tests only
         public void delete(Dictionary<string, string> query)
         {
             using (SqlConnection connection = new SqlConnection(connetion_string))
@@ -93,19 +92,12 @@ namespace ChatRoom_project.Public_Interfaces
                 command.Dispose();
             }
         }
-        /*
-         *Converts the current row pointed by data reader to T 
-         */
         protected abstract T addRow(SqlDataReader data_reader);
-        /*
-         *Returns select query with respect to the constraints in query  
-         */
-        protected abstract SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query);
-        /*
-         *Returns select query with respect to the constraints in query  
-         */
-        protected abstract SqlCommand createInsertCommand(Dictionary<string, string> query);
-        //**FOR TESTS ONLY**//
+       
+        //for tests only
         protected abstract string createDeleteQuery(Dictionary<string, string> query);
+        
+        protected abstract SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query);
+        protected abstract SqlCommand createInsertCommand(Dictionary<string, string> query);
     }
 }

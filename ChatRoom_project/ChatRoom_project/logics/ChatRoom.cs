@@ -27,6 +27,7 @@ namespace ConsoleApp1.BuissnessLayer
         private int g_IDFilterParam = -1;//-1 if no param
         private DateTime lastRetrivedMessageTime;
         private Message lastRetrivedMessage;
+        private readonly string saltValue = "1337";
 
         /*
          * Represents the user using the ChatRoom app
@@ -252,6 +253,27 @@ namespace ConsoleApp1.BuissnessLayer
         public void deleteUserAndHisMessagesForTestCleanup(User user)
         {
             request.deleteUserAndHisMessagesForTestCleanup(user);
+        }
+
+
+        public string generateSHA256Hash(string input)
+        {
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
+            System.Security.Cryptography.SHA256Managed sha256HashString =
+                new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = sha256HashString.ComputeHash(bytes);
+            return byteArrayToHexString(hash);
+        }
+
+        private string byteArrayToHexString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+            {
+                hex.AppendFormat("{0:x2}", b);
+            }
+
+            return hex.ToString();
         }
     }
 }

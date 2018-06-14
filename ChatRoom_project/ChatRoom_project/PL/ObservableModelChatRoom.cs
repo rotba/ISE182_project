@@ -19,9 +19,7 @@ namespace ChatRoom_project.PresentationLayer
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<IMessage> Messages { get; } = new ObservableCollection<IMessage>();
         public ListCollectionView view_msg;
-        public ObservableCollection<User> Users { get; } = new ObservableCollection<User>();
-        public ObservableCollection<int> GroupIDs { get; } = new ObservableCollection<int>();
-
+     
         public ObservableModelChatRoom()
         {
             Messages.CollectionChanged += Messages_CollectionChanged;
@@ -34,9 +32,10 @@ namespace ChatRoom_project.PresentationLayer
             OnPropertyChanged("Messages");
         }
        
-        /*
-         *Sort properties 
-         */
+     
+       /*
+        * Sort properties 
+        */
         private bool sortName = false;
         public bool SortName
         {
