@@ -111,6 +111,7 @@ namespace ChatRoom_project.PresentationLayer
             {
                 result = Convert.ToInt32(g_ID);
                 if (result > 0)
+                    throw new ToUserException("Group Id must be positive integer");
                     return result;
                 else
                     throw new ToUserException("Group Id must be higher then 0");
