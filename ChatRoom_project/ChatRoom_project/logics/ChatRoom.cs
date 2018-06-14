@@ -80,7 +80,7 @@ namespace ConsoleApp1.BuissnessLayer
                 }
                 else
                 {
-                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname.TrimEnd(' ')))
+                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname))
                     {
                         loggedInUser = retrievedUser;
                         return true;
