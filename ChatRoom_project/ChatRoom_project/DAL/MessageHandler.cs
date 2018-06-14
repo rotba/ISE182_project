@@ -89,7 +89,7 @@ namespace ChatRoom_project.DAL
                 {
                     commandString += " AND U.Id = @UID";
                 }
-                commandString += " ORDER BY SendTime";
+                commandString += " ORDER BY SendTime DESC";
             }
             ans.CommandText = commandString;
                 
@@ -120,79 +120,11 @@ namespace ChatRoom_project.DAL
                     ans.Parameters.Add("@UID", SqlDbType.Int);
                     ans.Parameters["@UID"].Value = Convert.ToInt32(query[fieldsDic[Fields.User_Id]]);
                 }
-                commandString += " ORDER BY SendTime";
+                
             }
             return ans;
         }
-        protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
-        {
-            string ans = "SELECT";
-            if (numOfRows > 0)
-            {
-                ans += $" TOP {numOfRows}";
-            }
-            ans += " M.Guid, U.Nickname, M.SendTime, M.Body, U.Group_Id" +
-                " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
-            ans += " WHERE 1=1";
-            if (query.ContainsKey(fieldsDic[Fields.Guid]))
-            {
-                ans += $" AND Guid = {query[fieldsDic[Fields.Guid]]}";
-            }
-            else {
-                if (query.ContainsKey(fieldsDic[Fields.SendTime]))
-                {
-                    ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
-                }
-                if (query.ContainsKey(fieldsDic[Fields.Nickname]))
-                {
-                    ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
-                }
-                if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
-                {
-                    ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
-                }
-                ans += " ORDER BY SendTime";
-            }
-            
-
-            return ans;
-        }
-        protected override string createInsertQuery(Dictionary<string, string> query)
-        {
-            string ans = "INSERT INTO Messages(";
-            int size = countRelevantFields(query);
-            int i = 0;
-            foreach (Fields field in tableColumns)
-            {
-                if (query.ContainsKey(fieldsDic[field]))
-                {
-                    ans += fieldsDic[field];
-                    if (i != size - 1)
-                    {
-                        ans += ", ";
-                        i++;
-                    }
-                }
-            }
-            ans += ")";
-            ans += " VALUES(";
-            i = 0;
-            foreach (Fields field in tableColumns)
-            {
-                if (query.ContainsKey(fieldsDic[field]))
-                {
-                    ans += query[fieldsDic[field]];
-                    if (i != size - 1)
-                    {
-                        ans += ", ";
-                        i++;
-                    }
-                }
-            }
-            ans += ")";
-
-            return ans;
-        }
+        
 
         protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
         {
@@ -257,7 +189,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString();
+                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString()+"."+date.Millisecond;
             }
             if (userId != 0)
             {

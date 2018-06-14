@@ -297,34 +297,8 @@ namespace ChatRoom_project.PresentationLayer
         }
 
         
-        /*
-         * Returns true when is older than lastMessage
-         */
-         /*
-        private static bool isOlder(Message message)
-        {
-            bool isEqual=false;
-            try
-            {
-                MessageDateComp comp = new MessageDateComp();
-                isEqual = comp.Compare(message, lastMessage) <= 0;
-            }
-            catch (ToUserException e_1)
-            {
-                MessageBox.Show(e_1.Message);
-            }
-            catch (ArgumentException e_2)
-            {
-                log.Debug("Argument Exception found: " + e_2);
-            }
-
-            catch (Exception e_3)
-            {
-                log.Debug("unexpected error found: " + e_3);
-            }
-            return isEqual;
-        }
-        */
+        
+       
         /*
          * Sends message
          */
@@ -353,78 +327,13 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-        /*
-        private void cmbNickName_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if (!indexChangedByCode)
-            {
-                indexChangedByCode = true;
-                observer.CmbGroupIDSelectedIndex = 0;
-                indexChangedByCode = false;
-                var selectedUser = observer.ComboNickNameSelectedItem;
-                if (selectedUser is User)
-                {
-                    observer.view_msg.Filter = delegate (object item)
-                    {
-                        if (item is Message)
-                        {
-                            if (((Message)item).UserName.Equals(((User)selectedUser).Nickname) && ((Message)item).GroupID.Equals(((User)selectedUser).G_id.ToString()))
-                            {
-                                return true;
-                            }
-                        }
-                        return false;
-                    };
-                   
-                }
-                else
-                    observer.view_msg.Filter = null;
-            }
-            else
-            {
-
-            }
-
-        }
-        private void cmbGroupID_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if (!indexChangedByCode)
-            {
-                indexChangedByCode = true;
-                observer.CmbNickNameSelectedIndex = 0;
-                indexChangedByCode = false;
-            
-            var selectedID = observer.ComboGroupIDSelectedItem;
-                if (selectedID is int)
-                {
-                    observer.view_msg.Filter = delegate (object item)
-                    {
-                        if (item is Message)
-                        {
-                            if (((Message)item).GroupID.Equals(((int)selectedID).ToString()))
-                            {
-                                return true;
-                            }
-                        }
-                        return false;
-                    };
-                }
-
-                else
-                    observer.view_msg.Filter = null;
-            }
-            else
-            {
-
-            }
-        }
-        */
+        
         private void Button_Click_Filter(object sender, RoutedEventArgs e)
         {
             int g_idFilter = -1;
             try
             {
-                g_IDToIntAndVerify(observer.G_IDFilterParam);
+                g_idFilter = g_IDToIntAndVerify(observer.G_IDFilterParam);
             }
             catch (ToUserException e_2)
             {
@@ -436,8 +345,9 @@ namespace ChatRoom_project.PresentationLayer
             string nicknameFilter = observer.NicknameFilterParam;
             if (string.IsNullOrWhiteSpace(nicknameFilter))
                 nicknameFilter = null;
-            if (nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam) ||
-                !g_idFilter.Equals(lastFilterClickG_IDFilterParam))
+            if ((nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
+                !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
+                (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
             {
                 chtrm.setFilterParameter(nicknameFilter, g_idFilter);
                 observer.Messages.Clear();
