@@ -85,6 +85,10 @@ namespace ChatRoom_project.DAL
                 {
                     commandString += " AND U.Group_Id = @GID";
                 }
+                if (query.ContainsKey(fieldsDic[Fields.User_Id]))
+                {
+                    commandString += " AND U.Id = @UID";
+                }
                 commandString += " ORDER BY SendTime";
             }
             ans.CommandText = commandString;
@@ -113,11 +117,13 @@ namespace ChatRoom_project.DAL
                     ans.Parameters.Add("@GID", SqlDbType.Int);
                     ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
                 }
+                if (query.ContainsKey(fieldsDic[Fields.User_Id]))
+                {
+                    ans.Parameters.Add("@UID", SqlDbType.Int);
+                    ans.Parameters["@UID"].Value = Convert.ToInt32(query[fieldsDic[Fields.User_Id]]);
+                }
                 commandString += " ORDER BY SendTime";
             }
-
-
-
             return ans;
         }
         protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
@@ -253,7 +259,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = "'" + createDBDateString(date)+ "'";
+                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString();
             }
             if (userId != 0)
             {
@@ -261,7 +267,7 @@ namespace ChatRoom_project.DAL
             }
             if (nickname != null)
             {
-                dic[fieldsDic[Fields.Nickname]] =   nickname  ;
+                dic[fieldsDic[Fields.Nickname]] =   "'"+nickname+"'"  ;
             }
             if (g_Id > 0)
             {
@@ -310,6 +316,7 @@ namespace ChatRoom_project.DAL
         /*
          * Gets date and returns representation compatible with SQL DB
          */
+         /*
         private string createDBDateString(DateTime date)
         {
             string ans = null;
@@ -325,6 +332,7 @@ namespace ChatRoom_project.DAL
             Thread.CurrentThread.CurrentUICulture = currentCulture;
             return ans;
         }
+        */
         /*
          * Gets date and returns representation compatible with the user needs
          */
@@ -333,7 +341,7 @@ namespace ChatRoom_project.DAL
             return DateTime.Parse(
                 date.ToString(), CultureInfo.CurrentCulture
                 ).ToLocalTime();
-        
+        }
         #region Private Class 
 
         /// <summary>

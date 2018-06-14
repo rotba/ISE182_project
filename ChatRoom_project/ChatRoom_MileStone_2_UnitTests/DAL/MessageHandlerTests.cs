@@ -58,7 +58,7 @@ namespace ChatRoom_project.DAL.Tests
         {
             Message result = new Message(
                 handler.retrieve(1, handler.convertToDictionary(
-                    new Guid(), DateTime.MinValue, 0, null, 0, null))
+                    msg_in_db.Id, DateTime.MinValue, 0, null, 0, null))
                     [0]
                     );
             Assert.IsTrue(sqlComp.Compare(result, msg_in_db) == 0);
