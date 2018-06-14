@@ -1,4 +1,5 @@
-﻿using ConsoleApp1.BuissnessLayer;
+﻿using ChatRoom_project.DAL;
+using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -120,6 +121,7 @@ namespace ChatRoom_project.PresentationLayer
             try
             {   if (toHashPWFlag)
                 {
+                    
                     _main.register(_main.G_IDBox, _main.NicknameBox, toHashPW);
                     MessageBox.Show("Register Successful");
                 }
@@ -142,18 +144,15 @@ namespace ChatRoom_project.PresentationLayer
         {
             if (pw == null)
             {
-                log.Error("password is null");
                 return false;
             }
             if (pw == "" | pw.Length < 4 | pw.Length > 16)
             {
-                log.Error("Attempted to enter an empty/short/long password");
                 return false;
             }
 
             if (!Regex.IsMatch(pw, @"^[a-zA-Z0-9]+$"))
             {
-                log.Error("Attempted to enter a not valid password");
                 return false;
             }
             return true;

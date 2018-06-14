@@ -107,13 +107,11 @@ namespace ChatRoom_project.DAL
                 }
                 if (query.ContainsKey(fieldsDic[Fields.Nickname]))
                 {
-                    
                     ans.Parameters.Add("@NICKNAME", SqlDbType.Char, 8);
                     ans.Parameters["@NICKNAME"].Value = query[fieldsDic[Fields.Nickname]];
                 }
                 if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
                 {
-                    
                     ans.Parameters.Add("@GID", SqlDbType.Int);
                     ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
                 }
@@ -225,7 +223,7 @@ namespace ChatRoom_project.DAL
             ans += " WHERE 1=1";
             if (query.ContainsKey(fieldsDic[Fields.Guid]))
             {
-                ans += $" AND Guid = {query[fieldsDic[Fields.Guid]]}";
+                ans += $" AND Guid = '{query[fieldsDic[Fields.Guid]]}'";
             }
             if (query.ContainsKey(fieldsDic[Fields.SendTime]))
             {
@@ -237,15 +235,15 @@ namespace ChatRoom_project.DAL
                  * it might not be that bad because the delete message is
                  * not part of the functional requirments
                  */
-                ans += $" AND SendTime > {query[fieldsDic[Fields.SendTime]]}";
+                ans += $" AND SendTime > '{query[fieldsDic[Fields.SendTime]]}'";
             }
             if (query.ContainsKey(fieldsDic[Fields.Nickname]))
             {
-                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
+                ans += $" AND U.Nickname = '{query[fieldsDic[Fields.Nickname]]}'";
             }
             if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
             {
-                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
+                ans += $" AND U.Group_Id = '{query[fieldsDic[Fields.Group_Id]]}'";
             }
 
             return ans;
@@ -267,7 +265,7 @@ namespace ChatRoom_project.DAL
             }
             if (nickname != null)
             {
-                dic[fieldsDic[Fields.Nickname]] =   "'"+nickname+"'"  ;
+                dic[fieldsDic[Fields.Nickname]] =   nickname;
             }
             if (g_Id > 0)
             {
