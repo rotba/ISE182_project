@@ -14,7 +14,7 @@ namespace ChatRoom_project.DAL
         private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
         //defualt
         //private static readonly string connetion_string = $"Data Source=ise172.ise.bgu.ac.il,1433\\DB_LAB;Initial Catalog=db_lab;User ID=db_lab_user;Password=hackMePlease";
-          
+        /* 
         public T insert(Dictionary<string, string> query)
         {
             T ans = default(T);
@@ -38,6 +38,36 @@ namespace ChatRoom_project.DAL
             
             return ans;
         }
+        */
+        public T insert(Dictionary<string, string> query)
+        {
+            T ans = default(T);
+
+            using (SqlConnection connection = new SqlConnection(connetion_string))
+            {
+                connection.Open();
+                SqlCommand cmd1 = createInsertCommand(query);
+                cmd1.Connection = connection;
+                using ( cmd1 )
+                {
+                    cmd1.ExecuteNonQuery();//Execute insert
+                }
+                SqlCommand cmd2 = createSelectCommand(1, query);
+                cmd2.Connection = connection;
+                using (cmd2)
+                {
+                    SqlDataReader data_reader = cmd2.ExecuteReader();//Retrive inserted item
+                    while (data_reader.Read())
+                    {
+                        ans = addRow(data_reader);
+                    }
+                }
+            }
+
+            return ans;
+        }
+
+
         /*
         public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {
@@ -91,8 +121,8 @@ namespace ChatRoom_project.DAL
         protected abstract string createSelectQuery(int numOfRows, Dictionary<string, string> query);
         protected abstract string createInsertQuery(Dictionary<string, string> query);
         protected abstract string createDeleteQuery(Dictionary<string, string> query);
-        protected abstract SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query,Boolean test);
+        
         protected abstract SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query);
-
+        protected abstract SqlCommand createInsertCommand(Dictionary<string, string> query);
     }
 }

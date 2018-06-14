@@ -101,6 +101,8 @@ namespace ConsoleApp1.BuissnessLayer
                                 null)
                             );
                     log.Info("sent a GetTenMessages request to server");
+                    if (msgList == null | msgList.Count == 0)
+                        return null;
                     return convertToSortedSetOfMessage(msgList);
                 }
                 else

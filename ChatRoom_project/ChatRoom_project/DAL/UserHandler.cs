@@ -124,27 +124,27 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        protected SqlCommand createInsertCommand(Dictionary<string, string> query)
+        protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
         {
-            string commandString = "INSERT INTO Users(Group_Id, Nickname,Password) VALUES(";
-            int size = countRelevantFields(query);
-            int i = 0;
-            foreach (Fields field in tableColumns)
-            {
-                if (query.ContainsKey(fieldsDic[field]))
-                {
-                    commandString += query[fieldsDic[field]];
-                    if (i != size - 1)
-                    {
-                        commandString += ", ";
-                        i++;
-                    }
-                }
+            SqlCommand ans = new SqlCommand(null, null);
+            string commandString = "INSERT INTO Users(Group_Id, Nickname,Password) " +
+                "VALUES(@GID , @NICKNAME , @PASSWORD)";
+            ans.CommandText = commandString;
+            if (!query.ContainsKey(fieldsDic[Fields.Group_Id]) | !query.ContainsKey(fieldsDic[Fields.Nickname]) | !query.ContainsKey(fieldsDic[Fields.Group_Id])) {
+                
+                throw new ArgumentException("insert user query Dictionary must contain GID,NICKNAME,PASSWORD query = "+query);
             }
-            commandString += ")";
+            ans.Parameters.Add("@GID", SqlDbType.Int);
+            ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
+            ans.Parameters.Add("@NICKNAME", SqlDbType.Char,8);
+            ans.Parameters["@NICKNAME"].Value = query[fieldsDic[Fields.Nickname]];
+            ans.Parameters.Add("@PASSWORD", SqlDbType.Char,64);
+            ans.Parameters["@PASSWORD"].Value = query[fieldsDic[Fields.Password]];
 
 
-            return commandString;
+
+
+            return ans;
         }
 
 
@@ -190,10 +190,7 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        protected override SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query, bool test)
-        {
-            throw new NotImplementedException();
-        }
+        
         private int countRelevantFields(Dictionary<string, string> query)
         {
             int ans = 0;

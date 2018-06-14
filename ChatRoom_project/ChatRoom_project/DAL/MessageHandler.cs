@@ -2,6 +2,7 @@
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
@@ -62,7 +63,70 @@ namespace ChatRoom_project.DAL
             return addRow(data_reader);
         }
         */
+        protected override SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query)
+        {
+            SqlCommand ans = new SqlCommand(null, null);
+            string commandString = "SELECT ";
+            if (numOfRows > 0)
+            {
+                commandString +=  $" TOP { numOfRows}";
+            }
+            commandString += " M.Guid, U.Nickname, M.SendTime, M.Body, U.Group_Id" +
+                " FROM Messages AS M JOIN USERS AS U ON M.User_Id =U.Id";
+            commandString += " WHERE 1=1";
+            if (query.ContainsKey(fieldsDic[Fields.Guid]))
+            {
+                commandString += " AND Guid = @GUID";
+            }
+            else
+            {
+                if (query.ContainsKey(fieldsDic[Fields.SendTime]))
+                {
+                    commandString += " AND SendTime > @SENDTIME";
+                }
+                if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+                {
+                    commandString += " AND U.Nickname = @NICKNAME";
+                }
+                if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+                {
+                    commandString += " AND U.Group_Id = @GID";
+                }
+                commandString += " ORDER BY SendTime";
+            }
+            ans.CommandText = commandString;
+                
+            if (query.ContainsKey(fieldsDic[Fields.Guid]))
+            {
+                ans.Parameters.Add("@GUID", SqlDbType.Char,68);
+                ans.Parameters["@GUID"].Value = query[fieldsDic[Fields.Guid]];
+            }
+            else
+            {
+                if (query.ContainsKey(fieldsDic[Fields.SendTime]))
+                {
+                    ans.Parameters.Add("@SENDTIME", SqlDbType.DateTime);
+                    ans.Parameters["@SENDTIME"].Value = DateTime.Parse(query[fieldsDic[Fields.SendTime]]);
+                }
+                if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+                {
+                    commandString += " AND U.Nickname = @NICKNAME";
+                    ans.Parameters.Add("@NICKNAME", SqlDbType.Char, 8);
+                    ans.Parameters["@NICKNAME"].Value = query[fieldsDic[Fields.Nickname]];
+                }
+                if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+                {
+                    commandString += " AND U.Group_Id = @GID";
+                    ans.Parameters.Add("@GID", SqlDbType.Int);
+                    ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
+                }
+                commandString += " ORDER BY SendTime";
+            }
 
+
+
+            return ans;
+        }
         protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
         {
             string ans = "SELECT";
@@ -132,6 +196,29 @@ namespace ChatRoom_project.DAL
 
             return ans;
         }
+
+        protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
+        {
+            SqlCommand ans = new SqlCommand(null, null);
+            string commandString = "INSERT INTO Messages(Guid ,  User_ID , SendTime , Body)" +
+                "VALUES(@GUID, @USERID , @SENDTIME , @BODY)";
+            if (!query.ContainsKey(fieldsDic[Fields.User_Id]) | !query.ContainsKey(fieldsDic[Fields.Guid])
+                | !query.ContainsKey(fieldsDic[Fields.Body]) | !query.ContainsKey(fieldsDic[Fields.SendTime]))
+            {
+                throw new ArgumentException("insert messgae query Dictionary must contain GUID,USERID,SENDTIME,BODY query = " + query);
+            }
+            ans.CommandText = commandString;
+            ans.Parameters.Add("@GUID", SqlDbType.Char, 68);
+            ans.Parameters["@GUID"].Value =query[fieldsDic[Fields.Guid]];
+            ans.Parameters.Add("@USERID", SqlDbType.Int);
+            ans.Parameters["@USERID"].Value = Convert.ToInt32(query[fieldsDic[Fields.User_Id]]);
+            ans.Parameters.Add("@SENDTIME", SqlDbType.DateTime);
+            ans.Parameters["@SENDTIME"].Value = DateTime.Parse(query[fieldsDic[Fields.SendTime]]);
+            ans.Parameters.Add("@BODY", SqlDbType.Char, 100);
+            ans.Parameters["@BODY"].Value = query[fieldsDic[Fields.Body]];           
+            return ans;
+        }
+
         protected override string createDeleteQuery(Dictionary<string, string> query)
         {
             string ans = "DELETE M FROM" +
@@ -169,11 +256,11 @@ namespace ChatRoom_project.DAL
             Dictionary<string, string> dic = new Dictionary<string, string>();
             if (!guid.Equals(default(Guid)))
             {
-                dic[fieldsDic[Fields.Guid]] = "'" + guid.ToString() + "'";
+                dic[fieldsDic[Fields.Guid]] =  guid.ToString() ;
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToUniversalTime() + "'";
+                dic[fieldsDic[Fields.SendTime]] =  date.ToUniversalTime().ToString() ;
             }
             if (userId != 0)
             {
@@ -181,7 +268,7 @@ namespace ChatRoom_project.DAL
             }
             if (nickname != null)
             {
-                dic[fieldsDic[Fields.Nickname]] = "'" + nickname + "'";
+                dic[fieldsDic[Fields.Nickname]] =   nickname  ;
             }
             if (g_Id > 0)
             {
@@ -189,7 +276,7 @@ namespace ChatRoom_project.DAL
             }
             if (body != null)
             {
-                dic[fieldsDic[Fields.Body]] = "'" + body + "'";
+                dic[fieldsDic[Fields.Body]] =  body ;
             }
             return dic;
         }
@@ -222,15 +309,11 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        protected override SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query, bool test)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        protected override SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query)
-        {
-            throw new NotImplementedException();
-        }
+        
+
+        
 
         #region Private Class 
 
