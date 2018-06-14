@@ -29,8 +29,6 @@
                         <StackPanel Orientation="Horizontal">
                             <WrapPanel>
                                 <TextBlock Text="{Binding Date}" FontSize="9" FontWeight="Light"/>
-                                <TextBlock Text=", "  FontSize="9" FontWeight="Light"/>
-                                <TextBlock Text="{Binding Id}"  FontSize="9" FontWeight="Light" />
                             </WrapPanel>
                         </StackPanel>
                     </StackPanel>

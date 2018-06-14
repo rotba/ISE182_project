@@ -1,4 +1,5 @@
 ﻿using ChatRoom_project.logics;
+using ChatRoom_project.Public_Interfaces;
 using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace ChatRoom_project.PresentationLayer
     public class ObservableModelChatRoom: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public ObservableCollection<Message> Messages { get; } = new ObservableCollection<Message>();
+        public ObservableCollection<IMessage> Messages { get; } = new ObservableCollection<IMessage>();
         public ListCollectionView view_msg;
         public ObservableCollection<User> Users { get; } = new ObservableCollection<User>();
         public ObservableCollection<int> GroupIDs { get; } = new ObservableCollection<int>();
@@ -33,70 +34,6 @@ namespace ChatRoom_project.PresentationLayer
             OnPropertyChanged("Messages");
         }
        
-        /*
-         *Filter properties 
-         */
-         /*
-        private int cmbNickNameSelectedIndex = 0;
-        public int CmbNickNameSelectedIndex
-        {
-            get
-            {
-                return cmbNickNameSelectedIndex;
-            }
-            set
-            {
-                cmbNickNameSelectedIndex = value;
-                OnPropertyChanged("CmbNickNameSelectedIndex");
-            }
-        }
-
-        private Object comboNickNameSelectedItem;
-        public Object ComboNickNameSelectedItem
-        {
-            get
-            {
-                return comboNickNameSelectedItem;
-            }
-            set
-            {
-
-                comboNickNameSelectedItem = value;
-                
-                OnPropertyChanged("ComboNickNameSelectedItem");
-            }
-        }
-
-        private int cmbGroupIDSelectedIndex = 0;
-        public int CmbGroupIDSelectedIndex
-        {
-            get
-            {
-                return cmbGroupIDSelectedIndex;
-            }
-            set
-            {
-                cmbGroupIDSelectedIndex = value;
-                OnPropertyChanged("CmbGroupIDSelectedIndex");
-            }
-        }
-
-        private Object comboGroupIDSelectedItem;
-        public Object ComboGroupIDSelectedItem
-        {
-            get
-            {
-                return comboGroupIDSelectedItem;
-            }
-            set
-            {
-
-                comboGroupIDSelectedItem = value;
-
-                OnPropertyChanged("ComboGroupIDSelectedItem");
-            }
-        }
-        */
         /*
          *Sort properties 
          */

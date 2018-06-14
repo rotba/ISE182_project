@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MileStoneClient.CommunicationLayer
+namespace ChatRoom_project.Public_Interfaces
 {
     public interface IMessage
     {

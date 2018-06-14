@@ -1,5 +1,5 @@
 ﻿using ConsoleApp1.BuissnessLayer;
-using MileStoneClient.CommunicationLayer;
+using ChatRoom_project.Public_Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ChatRoom_project.DAL
+namespace ChatRoom_project.Public_Interfaces
 {
     public class MessageHandler : Handler<IMessage>
     {

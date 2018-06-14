@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChatRoom_project.DAL
+namespace ChatRoom_project.Public_Interfaces
 {
     public interface IUser
     {
