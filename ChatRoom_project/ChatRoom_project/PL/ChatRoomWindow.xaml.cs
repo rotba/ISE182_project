@@ -338,9 +338,10 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-        
+
         private void Button_Click_Filter(object sender, RoutedEventArgs e)
         {
+            bool noGroupFilter = false;
             int g_idFilter = -1;
             try
             {
@@ -351,12 +352,17 @@ namespace ChatRoom_project.PresentationLayer
                 MessageBox.Show(e_2.Message);
             }
             //returns 0 if null
-            if (g_idFilter == 0)
+            if (g_idFilter <= 0)
+            {
                 g_idFilter = -1;
+                noGroupFilter = true;
+                MessageBox.Show("Group Id cannot be empty or negative integer for Filter ");
+            }
+                
             string nicknameFilter = observer.NicknameFilterParam;
             if (string.IsNullOrWhiteSpace(nicknameFilter))
                 nicknameFilter = null;
-            if ((nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
+            if (!noGroupFilter&&(nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
                 !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
                 (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
             {
