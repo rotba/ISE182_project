@@ -10038,3 +10038,11 @@ GroupId:15
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
 2018-06-14 12:13:45,340 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 123 Nickname: Ariel22 
+2018-06-14 12:45:52,495 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:45:52,701 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:45:52,886 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:45:55,493 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: ArielRR 
+2018-06-14 12:57:40,120 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:57:41,739 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:57:42,506 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:57:53,723 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 11 Nickname: ArielT  

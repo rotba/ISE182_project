@@ -120,6 +120,7 @@ namespace ChatRoom_project.PresentationLayer
             try
             {   if (toHashPWFlag)
                 {
+                    
                     _main.register(_main.G_IDBox, _main.NicknameBox, toHashPW);
                     MessageBox.Show("Register Successful");
                 }
