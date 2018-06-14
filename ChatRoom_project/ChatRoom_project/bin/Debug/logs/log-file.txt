@@ -9892,3 +9892,149 @@ GroupId:15
 2018-06-12 14:33:09,664 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-06-12 14:33:11,669 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
 2018-06-12 14:33:13,822 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 12:11:49,172 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:49,295 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:49,481 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:51,341 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:51,369 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:51,399 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:51,431 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:51,807 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:51,909 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:52,108 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:11:55,257 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 33 Nickname: GGGGG   
+2018-06-14 12:12:08,046 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 12345 Nickname: GGGG
+2018-06-14 12:12:32,058 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:12:32,292 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:12:32,482 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:12:34,808 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 123 Nickname: Ariel22 
+2018-06-14 12:12:43,888 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 12:12:45,933 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:12:47,964 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:12:49,993 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:12:52,100 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:12:54,146 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:12:54,834 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 45
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 34
+   at ConsoleApp1.BuissnessLayer.Request.send(String content, User user) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 50
+   at ConsoleApp1.BuissnessLayer.ChatRoom.send(String message) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 184
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 338
+2018-06-14 12:12:56,181 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:12:58,214 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:00,232 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:02,281 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:04,308 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:06,336 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:08,371 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:10,396 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:12,416 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:14,439 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:16,478 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:18,524 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:20,617 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:22,679 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:24,715 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:26,734 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:28,778 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:30,810 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:32,874 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:34,898 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:36,965 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:39,101 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:41,118 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:43,161 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:45,218 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 224
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 12:13:45,340 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 123 Nickname: Ariel22 

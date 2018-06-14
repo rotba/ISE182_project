@@ -69,7 +69,6 @@ namespace ChatRoom_project.PresentationLayer
 
         public void register(string g_ID, string nickname, string pw) {
             verifyNickName(nickname);
-            verifyPW(pw);
             chtrm.register(g_IDToIntAndVerify(g_ID), nickname, pw);
             this.G_IDBox = "";
             this.NicknameBox = "";
@@ -79,7 +78,6 @@ namespace ChatRoom_project.PresentationLayer
         public void login(string g_ID, string nickname, string pw)
         {
             verifyNickName(nickname);
-            verifyPW(pw);
             chtrm.login(g_IDToIntAndVerify(g_ID), nickname, pw);
             this.G_IDBox = "";
             this.NicknameBox = "";
@@ -104,26 +102,7 @@ namespace ChatRoom_project.PresentationLayer
                 return true;
         }
 
-        private void verifyPW(string pw)
-        {
-            if(pw == null)
-            {
-                log.Error("password is null");
-                throw new ToUserException("unexpected error");
-            }
-            if (pw == "" | pw.Length < 4 | pw.Length>16)
-            {
-                log.Error("Attempted to enter an empty/short/long password");
-                throw new ToUserException("Password cannot be empty/must be between 4-16 chars");
-            }
 
-            if(!Regex.IsMatch(pw, @"^[a-zA-Z0-9]+$"))
-            {
-                log.Error("Attempted to enter a not valid password");
-                throw new ToUserException("Password is invalid");
-            }
-
-        }
 
         ///<summary>
         ///checks if a string contains only the charcters '0'-'9' and converts it from string to int
