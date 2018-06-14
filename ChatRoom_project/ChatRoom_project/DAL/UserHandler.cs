@@ -2,6 +2,7 @@
 using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -62,26 +63,49 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
+        protected override SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query)
+        {
+            SqlCommand ans = new SqlCommand(null, null);
+            string commandString =
+                "SELECT U.Id, U.Group_Id, U.Nickname, U.Password" +
+                " FROM USERS AS U";
+            commandString += " WHERE 1=1";
+            if (query.ContainsKey(fieldsDic[Fields.Id]))
+                commandString += $"AND U.Id = @USERID";
+            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+            {
+                commandString += $" AND U.Nickname = @NICKNAME";
+            }
+            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+            {
+                commandString += $" AND U.Group_Id = @GID";
+            }
+            ans.CommandText = commandString;
+
+            if (query.ContainsKey(fieldsDic[Fields.Id]))
+            {
+                ans.Parameters.Add("@USERID", SqlDbType.Int);
+                ans.Parameters["@USERID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Id]]);
+            }
+            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
+            {
+                ans.Parameters.Add("@NICKNAME", SqlDbType.Char,10);
+                ans.Parameters["@NICKNAME"].Value = query[fieldsDic[Fields.Nickname]];
+            }
+            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
+            {
+                ans.Parameters.Add("@GID", SqlDbType.Int);
+                ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
+            }
+
+            return ans;
+        }
+
         protected override string createInsertQuery(Dictionary<string, string> query)
         {
-            string ans = "INSERT INTO Users(";
+            string ans = "INSERT INTO Users(Group_Id, Nickname,Password) VALUES(";
             int size = countRelevantFields(query);
             int i = 0;
-            foreach (Fields field in tableColumns)
-            {
-                if (query.ContainsKey(fieldsDic[field]))
-                {
-                    ans += fieldsDic[field];
-                    if (i != size - 1)
-                    {
-                        ans += ", ";
-                        i++;
-                    }
-                }
-            }
-            ans += ")";
-            ans += " VALUES(";
-            i = 0;
             foreach (Fields field in tableColumns)
             {
                 if (query.ContainsKey(fieldsDic[field]))
@@ -95,16 +119,42 @@ namespace ChatRoom_project.DAL
                 }
             }
             ans += ")";
+            
 
             return ans;
         }
+
+        protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
+        {
+            SqlCommand ans = new SqlCommand(null, null);
+            string commandString = "INSERT INTO Users(Group_Id, Nickname,Password) " +
+                "VALUES(@GID , @NICKNAME , @PASSWORD)";
+            ans.CommandText = commandString;
+            if (!query.ContainsKey(fieldsDic[Fields.Group_Id]) | !query.ContainsKey(fieldsDic[Fields.Nickname]) | !query.ContainsKey(fieldsDic[Fields.Group_Id])) {
+                
+                throw new ArgumentException("insert user query Dictionary must contain GID,NICKNAME,PASSWORD query = "+query);
+            }
+            ans.Parameters.Add("@GID", SqlDbType.Int);
+            ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
+            ans.Parameters.Add("@NICKNAME", SqlDbType.Char,8);
+            ans.Parameters["@NICKNAME"].Value = query[fieldsDic[Fields.Nickname]];
+            ans.Parameters.Add("@PASSWORD", SqlDbType.Char,64);
+            ans.Parameters["@PASSWORD"].Value = query[fieldsDic[Fields.Password]];
+
+
+
+
+            return ans;
+        }
+
+
 
         public Dictionary<string, string> convertToDictionary(string nickname, int g_id, string hashedPassword,int id)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             if (!string.IsNullOrEmpty(nickname))
             {
-                dic[fieldsDic[Fields.Nickname]] = "'" + nickname + "'";
+                dic[fieldsDic[Fields.Nickname]] =   nickname ;
             }
             if (g_id>0)
             {
@@ -112,7 +162,7 @@ namespace ChatRoom_project.DAL
             }
             if (!string.IsNullOrEmpty(hashedPassword))
             {
-                dic[fieldsDic[Fields.Password]] = "'" + hashedPassword + "'";
+                dic[fieldsDic[Fields.Password]] =  hashedPassword ;
             }
             if (id > 0)
             {
@@ -140,10 +190,7 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        protected override SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query, bool test)
-        {
-            throw new NotImplementedException();
-        }
+        
         private int countRelevantFields(Dictionary<string, string> query)
         {
             int ans = 0;

@@ -21,9 +21,7 @@ namespace ConsoleApp1.BuissnessLayer
         /// <summary>
         /// server url
         /// </summary>
-        private Request request;
-        private readonly string saltValue = "1337";
-        
+        private Request request;        
         private string nicknameFilterParam = null; //null if no param
         private int g_IDFilterParam = -1;//-1 if no param
         private DateTime lastRetrivedMessageTime;
@@ -63,8 +61,7 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted login to invalid nickname" + nickname);
                 throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
             }
-            string hashedPw = generateSHA256Hash(pw);
-            User userToLogin = new User(-1, g_id, nickname,hashedPw);
+            User userToLogin = new User(-1, g_id, nickname,pw);
             List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
             if (retrievedUsers.Count == 0)
             {
@@ -130,13 +127,12 @@ namespace ConsoleApp1.BuissnessLayer
             if (!isValidNickname(nickname))
             {
                 log.Info("Attempted register invalid nickname" + nickname);
-                throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
+                throw new ToUserException("nickname cant be empty and must hold at most 8 chars");
             }
             if (pw == null)
                 throw new ArgumentNullException("pw cant be null");
 
-            string hashedPw = generateSHA256Hash(pw);
-            User userToRegister = new User(-1, g_id, nickname,hashedPw);
+            User userToRegister = new User(-1, g_id, nickname,pw);
             IUser registeredUser = null;
             try
             {
@@ -155,9 +151,12 @@ namespace ConsoleApp1.BuissnessLayer
                         log.Debug("Unexpected SQL execption " + e + " while registering user " + userToRegister);
                         throw new ToUserException("Registration failed because of system issues, Please try again");
                 }
-            }catch (Exception e_1)
+            }
+            
+            catch (Exception e_1)
             {
                 log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
+                throw e_1;
             }
 
             /*
@@ -247,6 +246,8 @@ namespace ConsoleApp1.BuissnessLayer
             }
             SortedSet<Message> ans ;
             ans = request.retrieveMessages(default(Guid), lastRetrivedMessage.Date, num, nicknameFilterParam, g_IDFilterParam);
+            if (ans == null)
+                return new SortedSet<Message>(new MessageDateComp());
             lastRetrivedMessage = ans.Max;
             return ans;
         }
@@ -254,29 +255,7 @@ namespace ConsoleApp1.BuissnessLayer
 
         private bool isValidNickname(string nickname)
         {
-            return (nickname.Length <= 10 && nickname.Length>0);
-        }
-
-        //create salt added to hased pw
-
-        private string generateSHA256Hash(string input)
-        {
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
-            System.Security.Cryptography.SHA256Managed sha256HashString =
-                new System.Security.Cryptography.SHA256Managed();
-            byte[] hash = sha256HashString.ComputeHash(bytes);
-            return byteArrayToHexString(hash);
-        }
-
-        private string byteArrayToHexString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            foreach (byte b in ba)
-            {
-                hex.AppendFormat("{0:x2}", b);
-            }
-
-            return hex.ToString();
+            return (nickname.Length <= 8 && nickname.Length>0);
         }
 
 
