@@ -166,9 +166,8 @@ namespace ConsoleApp1.Tests
             }
             cr.register(user.G_id, user.Nickname, user.HashedPassword);
             cr.login(user.G_id, user.Nickname, user.HashedPassword);
-            Assert.IsTrue(cr.LoggedInUser.G_id == user.G_id & cr.LoggedInUser.Nickname.Equals(user.Nickname), "Black");
-            //   Assert.IsTrue(cr.LoggedInUser.CompareTo(user)==0,
-         //       "User should be logged in successfully");
+               Assert.IsTrue(cr.LoggedInUser.Equals(user),
+               "User should be logged in successfully");
     
         }
 
@@ -339,7 +338,7 @@ namespace ConsoleApp1.Tests
             cr.login(user.G_id, user.Nickname, user.HashedPassword);
             cr.send("");
             SortedSet<Message> tmp = request.retrieveMessages(default(Guid), DateTime.MinValue, 1, user.Nickname, user.G_id);
-            Assert.IsTrue(tmp.Count == 0, "sending empty message should do nothing");
+            Assert.IsTrue(tmp == null, "sending empty message should do nothing");
 
             }
 
@@ -385,19 +384,7 @@ namespace ConsoleApp1.Tests
             }
             catch(ToUserException e) {  }
         }
-        [TestMethod()]
-        public void displayNMessagesTest_should_throw_exception_if_there_are_no_messages()
-        {
-            cr.register(user.G_id, user.Nickname, user.HashedPassword);
-            cr.login(user.G_id, user.Nickname, user.HashedPassword);
-            try
-            {
-                cr.displayNMessages();
-                Assert.Fail("display message with no messages should throw exception");
-            }
-            catch (ToUserException e) { }
-
-        }
+    
 
         [TestMethod()]
         public void displayNMessagesTest_success_test()
@@ -415,7 +402,7 @@ namespace ConsoleApp1.Tests
 
                 cr.send("" + i + "");
                 cr2.send("" + i + "a");
-                System.Threading.Thread.Sleep(2000);
+           //     System.Threading.Thread.Sleep(2000);
                 i = i + 1;
             }
             SortedSet<Message> tmp = cr.displayNMessages();

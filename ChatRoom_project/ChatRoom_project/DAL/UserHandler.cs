@@ -34,7 +34,7 @@ namespace ChatRoom_project.DAL
 
             return new HandlerUser(
                         
-                        data_reader.GetValue(2).ToString(),
+                        data_reader.GetValue(2).ToString().TrimEnd(' '),
                         data_reader.GetValue(3).ToString(),
                         (int)data_reader.GetValue(0),
                         (int)data_reader.GetValue(1)
