@@ -166,9 +166,8 @@ namespace ConsoleApp1.Tests
             }
             cr.register(user.G_id, user.Nickname, user.HashedPassword);
             cr.login(user.G_id, user.Nickname, user.HashedPassword);
-            Assert.IsTrue(cr.LoggedInUser.G_id == user.G_id & cr.LoggedInUser.Nickname.Equals(user.Nickname), "Black");
-            //   Assert.IsTrue(cr.LoggedInUser.CompareTo(user)==0,
-         //       "User should be logged in successfully");
+               Assert.IsTrue(cr.LoggedInUser.Equals(user),
+               "User should be logged in successfully");
     
         }
 
@@ -385,19 +384,7 @@ namespace ConsoleApp1.Tests
             }
             catch(ToUserException e) {  }
         }
-        [TestMethod()]
-        public void displayNMessagesTest_should_throw_exception_if_there_are_no_messages()
-        {
-            cr.register(user.G_id, user.Nickname, user.HashedPassword);
-            cr.login(user.G_id, user.Nickname, user.HashedPassword);
-            try
-            {
-                cr.displayNMessages();
-                Assert.Fail("display message with no messages should throw exception");
-            }
-            catch (ToUserException e) { }
-
-        }
+    
 
         [TestMethod()]
         public void displayNMessagesTest_success_test()

@@ -51,7 +51,7 @@ namespace ChatRoom_project.DAL
                         Guid.Parse(data_reader.GetValue(0).ToString()),
                         data_reader.GetValue(1).ToString(),
                         LocalTime,
-                        data_reader.GetValue(3).ToString(),
+                        data_reader.GetValue(3).ToString().TrimEnd(' '),
                         data_reader.GetValue(4).ToString()
                         );
         }
