@@ -11016,3 +11016,141 @@ Error Number:242,State:3,Class:16
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
 2018-06-14 11:11:42,681 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   
+2018-06-14 14:33:55,053 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 14:33:57,021 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 14:33:57,116 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdasfor userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 14:33:57,116 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:d1e281ae-b722-49ce-96a3-0a28af10fac2
+UserName:Rotem   
+DateTime:14/06/2018 14:33:57
+MessageContect:asdas                                                                                               
+GroupId:15
+ was sent successfully
+2018-06-14 14:33:57,171 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:33:59,134 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:00,208 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageasdasdfor userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 14:34:00,208 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:cbdba4d2-26d5-4250-bc99-2e23b566d91f
+UserName:Rotem   
+DateTime:14/06/2018 14:34:00
+MessageContect:asdasd                                                                                              
+GroupId:15
+ was sent successfully
+2018-06-14 14:34:00,234 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:34:01,137 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to send empty message
+2018-06-14 14:34:01,158 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:34:01,178 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:03,192 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:03,337 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for message12for userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 14:34:03,337 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:fc2aad85-ec4d-4917-8b25-1699091f2874
+UserName:Rotem   
+DateTime:14/06/2018 14:34:03
+MessageContect:12                                                                                                  
+GroupId:15
+ was sent successfully
+2018-06-14 14:34:03,359 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:34:05,333 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:07,355 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:09,600 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:11,257 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagesdfsfdfor userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 14:34:11,257 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:f30fffdd-9273-4220-a159-fba1c38a45db
+UserName:Rotem   
+DateTime:14/06/2018 14:34:11
+MessageContect:sdfsfd                                                                                              
+GroupId:15
+ was sent successfully
+2018-06-14 14:34:11,280 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:34:11,664 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:13,684 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:15,693 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:16,384 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for message123345for userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 14:34:16,384 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:3cdc5557-fecb-447a-9ad7-07a7e667c258
+UserName:Rotem   
+DateTime:14/06/2018 14:34:16
+MessageContect:123345                                                                                              
+GroupId:15
+ was sent successfully
+2018-06-14 14:34:16,404 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:34:17,730 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:19,819 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:21,865 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:23,309 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageffffffffffffffffffor userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 14:34:23,310 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:5719463d-7189-4648-81f8-b17c1a5c52d7
+UserName:Rotem   
+DateTime:14/06/2018 14:34:23
+MessageContect:fffffffffffffffff                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 14:34:23,339 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 339
+2018-06-14 14:34:23,912 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:26,060 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:28,097 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:30,120 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: ההפניה לאובייקט לא הוגדרה למופע של אובייקט.
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 249
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
+   ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
+2018-06-14 14:34:31,043 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   
