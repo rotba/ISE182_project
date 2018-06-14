@@ -32,10 +32,16 @@ namespace ChatRoom_project.PresentationLayer
             OnPropertyChanged("Messages");
         }
        
+<<<<<<< HEAD
      
        /*
         * Sort properties 
         */
+=======
+        /*
+         *Sort properties 
+         */
+>>>>>>> origin/master
         private bool sortName = false;
         public bool SortName
         {

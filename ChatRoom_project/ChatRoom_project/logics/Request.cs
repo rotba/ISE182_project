@@ -1,6 +1,6 @@
-﻿using ChatRoom_project.DAL;
+﻿using ChatRoom_project.Public_Interfaces;
 using ChatRoom_project.logics;
-using MileStoneClient.CommunicationLayer;
+using ChatRoom_project.Public_Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,6 +1,6 @@
-﻿using ChatRoom_project.DAL;
+﻿using ChatRoom_project.Public_Interfaces;
 using ChatRoom_project.logics;
-using MileStoneClient.CommunicationLayer;
+using ChatRoom_project.Public_Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -159,35 +159,7 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
                 throw e_1;
             }
-
-            /*
-            List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
-            if (retrievedUsers.Count != 0)
-            {
-                log.Info("Attempted to register already registered user " + userToRegister);
-                throw new ToUserException("Attempted to register already registered user");
-            }
-            else
-            {
-                IUser registeredUser = null;
-                try
-                {
-                    registeredUser = request.insertUser(userToRegister);
-                }
-                catch (System.Data.SqlClient.SqlException sqlE)
-                {
-                    log.Debug("enexpected SQL execption" + sqlE + " while registering user " + userToRegister);
-                    throw new ToUserException("unexpected error found please try again");
-                }
-                catch (ToUserException e)
-                {
-                    log.Info("while registering user " + userToRegister + " user exception thrown " + e);
-                }
-                catch (Exception e_1)
-                {
-                    log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
-                }
-                */
+            
             log.Info("successfully registered user " + registeredUser);
         }
       
@@ -237,7 +209,7 @@ namespace ConsoleApp1.BuissnessLayer
         }
 
 
-        public SortedSet<Message> displayNMessages()
+        public List<IMessage> displayNMessages()
         {
             int num = 200;
        
@@ -246,12 +218,17 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted to display " + num + " messages without initially logging in");
                 throw new ToUserException("Cannot Display messages without initially logging in");
             }
-            SortedSet<Message> ans ;
-            ans = request.retrieveMessages(default(Guid), lastRetrivedMessage.Date, num, nicknameFilterParam, g_IDFilterParam);
-            if (ans == null)
-                return new SortedSet<Message>(new MessageDateComp());
-            lastRetrivedMessage = ans.Max;
-            return ans;
+            SortedSet<Message> aux ;
+            List<IMessage> ans = new List<IMessage>();
+            aux = request.retrieveMessages(default(Guid), lastRetrivedMessage.Date, num, nicknameFilterParam, g_IDFilterParam);
+            if (aux != null) {
+                lastRetrivedMessage = aux.Max;
+                foreach (Message m in aux) {
+                    ans.Add(m);
+                }
+                return ans;
+            }
+            return null;
         }
        
 

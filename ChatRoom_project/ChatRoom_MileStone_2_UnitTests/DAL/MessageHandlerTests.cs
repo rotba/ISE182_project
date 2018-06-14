@@ -1,16 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ChatRoom_project.DAL;
+using ChatRoom_project.Public_Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp1.BuissnessLayer;
-using MileStoneClient.CommunicationLayer;
+using ChatRoom_project.Public_Interfaces;
 using ChatRoom_project.logics;
 using System.Data.SqlClient;
 
-namespace ChatRoom_project.DAL.Tests
+namespace ChatRoom_project.Public_Interfaces.Tests
 {
     [TestClass()]
     public class MessageHandlerTests

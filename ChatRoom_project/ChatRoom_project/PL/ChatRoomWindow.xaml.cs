@@ -1,5 +1,6 @@
 ﻿using ChatRoom_project.logics;
 using ChatRoom_project.PresentationLayer;
+using ChatRoom_project.Public_Interfaces;
 using ConsoleApp1.BuissnessLayer;
 using System;
 using System.Collections.Generic;
@@ -31,14 +32,11 @@ namespace ChatRoom_project.PresentationLayer
         private bool logoutClose = false;
         //int i = 0;
         ObservableModelChatRoom observer= new ObservableModelChatRoom();
-        private static Message lastMessage;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
-        //DispatcherTimer dispatcherTimer;
+        private DispatcherTimer dispatcherTimer;
         private MainWindow mainWindow;
-        //private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;
-        //private bool indexChangedByCode = false;
         private int lastFilterClickG_IDFilterParam = -1;
         private string lastFilterClickNicknameFilterParam = null;
 
@@ -46,8 +44,7 @@ namespace ChatRoom_project.PresentationLayer
         {
             this.chtrm = chtrm;
             this.mainWindow = mainWindow;
-            lastMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
@@ -106,7 +103,7 @@ namespace ChatRoom_project.PresentationLayer
 
             try
             {
-                SortedSet<Message> toDisplay = chtrm.displayNMessages();
+                List<IMessage> toDisplay = chtrm.displayNMessages();
                 if (toDisplay != null)
                     toDisplay.ToList().ForEach(observer.Messages.Add);
             }
@@ -338,9 +335,10 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-        
+
         private void Button_Click_Filter(object sender, RoutedEventArgs e)
         {
+            bool noGroupFilter = false;
             int g_idFilter = -1;
             try
             {
@@ -351,12 +349,17 @@ namespace ChatRoom_project.PresentationLayer
                 MessageBox.Show(e_2.Message);
             }
             //returns 0 if null
-            if (g_idFilter == 0)
+            if (g_idFilter <= 0)
+            {
                 g_idFilter = -1;
+                noGroupFilter = true;
+                MessageBox.Show("Group Id cannot be empty or negative integer for Filter ");
+            }
+                
             string nicknameFilter = observer.NicknameFilterParam;
             if (string.IsNullOrWhiteSpace(nicknameFilter))
                 nicknameFilter = null;
-            if ((nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
+            if (!noGroupFilter&&(nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
                 !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
                 (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
             {

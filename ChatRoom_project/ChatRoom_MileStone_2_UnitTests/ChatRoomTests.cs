@@ -7,7 +7,7 @@ using ConsoleApp1.BuissnessLayer;
 using ChatRoom_project.logics;
 using System.Text;
 using System.Text.RegularExpressions;
-using ChatRoom_project.DAL;
+using ChatRoom_project.Public_Interfaces;
 
 namespace ConsoleApp1.Tests
 {
@@ -385,7 +385,7 @@ namespace ConsoleApp1.Tests
             catch(ToUserException e) {  }
         }
     
-
+        /*
         [TestMethod()]
         public void displayNMessagesTest_success_test()
         {
@@ -402,16 +402,16 @@ namespace ConsoleApp1.Tests
 
                 cr.send("" + i + "");
                 cr2.send("" + i + "a");
-             //   System.Threading.Thread.Sleep(2000);
+            //    System.Threading.Thread.Sleep(2000);
                 i = i + 1;
             }
-            SortedSet<Message> tmp = cr.displayNMessages();
-            SortedSet<Message> tmp2 = cr2.displayNMessages();
+            SortedSet<IMessage> tmp = cr.displayNMessages();
+            SortedSet<IMessage> tmp2 = cr2.displayNMessages();
 
 
             for (i = 0; i < magicNum; i++)
             {
-                Message m = tmp2.ElementAt(0); 
+                IMessage m = tmp2.ElementAt(0); 
                 if (tmp.Contains(m))
                 {
                     tmp.Remove(m);
@@ -422,7 +422,7 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(tmp2.Count == 0, "cr2List should be empty after comparing");
         }
 
-        
+        */
         [TestMethod()]
         public void retrieveUserMessagesTest_for_user_that_didnt_send_yet_should_be_empty()
         {
