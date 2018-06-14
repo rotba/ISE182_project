@@ -108,7 +108,7 @@ namespace ChatRoom_project.Public_Interfaces
         }
 
 
-
+        
         public Dictionary<string, string> convertToDictionary(string nickname, int g_id, string hashedPassword,int id)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();

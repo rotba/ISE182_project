@@ -113,6 +113,7 @@ namespace ConsoleApp1.BuissnessLayer
             
         }
 
+        //converts list of messages to time compared sortedset of messages
         private SortedSet<Message> convertToSortedSetOfMessage(List<IMessage> msgList)
         {
             SortedSet<Message> ans = new SortedSet<Message>(new MessageDateComp());

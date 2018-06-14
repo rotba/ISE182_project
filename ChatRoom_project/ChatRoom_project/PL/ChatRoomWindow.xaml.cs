@@ -339,7 +339,9 @@ namespace ChatRoom_project.PresentationLayer
             FocusManager.SetFocusedElement(this, ii);
         }
 
-
+        /*
+         * sends filter parameters to chatroom, performs leagal value tests
+         */
         private void Button_Click_Filter(object sender, RoutedEventArgs e)
         {
             bool noGroupFilter = false;
@@ -365,7 +367,7 @@ namespace ChatRoom_project.PresentationLayer
                 
             }
             
-
+            //check if parameters changed from last click
             if (!noGroupFilter&&(nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
                 !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
                 (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
