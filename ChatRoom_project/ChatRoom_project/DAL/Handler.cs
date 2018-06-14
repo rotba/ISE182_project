@@ -9,7 +9,8 @@ namespace ChatRoom_project.DAL
 {
     public abstract class Handler<T>
     {
-        
+        protected static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         //local
         //private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
         //defualt
@@ -35,7 +36,14 @@ namespace ChatRoom_project.DAL
                     SqlDataReader data_reader = cmd2.ExecuteReader();//Retrive inserted item
                     while (data_reader.Read())
                     {
-                        ans = addRow(data_reader);
+                        try
+                        {
+                            ans = addRow(data_reader);
+                        }
+                        catch (ArgumentException e)
+                        {
+                            log.Debug("DB INVALID ROW" + e);
+                        }
                     }
                 }
             }
@@ -57,7 +65,14 @@ namespace ChatRoom_project.DAL
                 SqlDataReader data_reader = command.ExecuteReader();
                 while (data_reader.Read())
                 {
-                    ans.Add(addRow(data_reader));
+                    try
+                    {
+                        ans.Add(addRow(data_reader));
+                    }
+                    catch (ArgumentException e)
+                    {
+                        log.Debug("DB INVALID ROW" + e);
+                    }
                 }
                 data_reader.Close();
                 command.Dispose();

@@ -14,6 +14,7 @@ namespace ChatRoom_project.DAL
 {
     public class MessageHandler : Handler<IMessage>
     {
+        
         enum Fields { Guid, SendTime, User_Id, Nickname, Group_Id, Body };
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
@@ -34,20 +35,40 @@ namespace ChatRoom_project.DAL
 
         protected override IMessage addRow(SqlDataReader data_reader)
         {
-            
+            bool isLegal = true;
+            Guid tempGuid = default(Guid);
             DateTime LocalTime= new DateTime();
-            if (!data_reader.IsDBNull(2))
-            {
+             
+            try
+            {  
+                tempGuid = Guid.Parse(data_reader.GetValue(0).ToString());
                 LocalTime = createUserDate(data_reader.GetDateTime(2));
             }
-
-            return new HandlerMessage(
-                        Guid.Parse(data_reader.GetValue(0).ToString()),
+            catch (FormatException e_1)
+            {
+                isLegal = false;
+                log.Debug("error while parsing new message +" + e_1 +" server guid = " + data_reader.GetValue(0).ToString() + " server date = " + data_reader.GetDateTime(2));
+            }
+            catch (ArgumentNullException e_2)
+            {
+                isLegal = false;
+                log.Debug("error while parsing new message +" + e_2 + " server guid = " + data_reader.GetValue(0).ToString() + " server date = " + data_reader.GetDateTime(2));
+            }
+            catch (ArgumentException e_3)
+            {
+                isLegal = false;
+                log.Debug("error while parsing new message +" + e_3 + " server guid = " + data_reader.GetValue(0).ToString() + " server date = " + data_reader.GetDateTime(2));
+            }
+            if(isLegal)
+                return new HandlerMessage(
+                        tempGuid,
                         data_reader.GetValue(1).ToString(),
                         LocalTime,
                         data_reader.GetValue(3).ToString().TrimEnd(' '),
                         data_reader.GetValue(4).ToString()
                         );
+            else
+                throw new ArgumentException("Invalid Row From DB - check Log for details");
         }
         /*
          * inly for tests. delete before release
