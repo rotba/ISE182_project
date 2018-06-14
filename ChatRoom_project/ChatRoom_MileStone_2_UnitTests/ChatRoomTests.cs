@@ -402,7 +402,7 @@ namespace ConsoleApp1.Tests
 
                 cr.send("" + i + "");
                 cr2.send("" + i + "a");
-           //     System.Threading.Thread.Sleep(2000);
+             //   System.Threading.Thread.Sleep(2000);
                 i = i + 1;
             }
             SortedSet<Message> tmp = cr.displayNMessages();
@@ -422,19 +422,7 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(tmp2.Count == 0, "cr2List should be empty after comparing");
         }
 
-        [TestMethod()]
-        public void retrieveUserMessagesTest_witout_initailly_login_should_throw_exception()
-        {
-
-            try
-            {
-                SortedSet<Message> tmp = request.retrieveMessages(default(Guid), DateTime.MinValue, 100000, user.Nickname, user.G_id);
-                Assert.Fail("retrieveUserMessages shouldnt work before login");
-            }
-            catch (ToUserException e) { }
-        }
-
-
+        
         [TestMethod()]
         public void retrieveUserMessagesTest_for_user_that_didnt_send_yet_should_be_empty()
         {
@@ -443,7 +431,7 @@ namespace ConsoleApp1.Tests
             try
             {
                 SortedSet<Message> tmp = request.retrieveMessages(default(Guid), DateTime.MinValue, 1, user.Nickname, user.G_id);
-                Assert.IsTrue(tmp.Count==0,"retrieve user mesages for user that didnt yet send message should be empty");
+                Assert.IsTrue(tmp==null,"retrieve user mesages for user that didnt yet send message should be empty");
             }
             catch (ToUserException e) { }
         }
