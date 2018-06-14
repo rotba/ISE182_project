@@ -11,34 +11,10 @@ namespace ChatRoom_project.DAL
     {
         
         //local
-        private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
+        //private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
         //defualt
-        //private static readonly string connetion_string = $"Data Source=ise172.ise.bgu.ac.il,1433\\DB_LAB;Initial Catalog=MS3;User ID=publicUser;Password=isANerd";
-        /* 
-        public T insert(Dictionary<string, string> query)
-        {
-            T ans = default(T);
-            
-            using (SqlConnection connection = new SqlConnection(connetion_string))
-            {
-                connection.Open();
-                using (SqlCommand cmd1 = new SqlCommand(createInsertQuery(query), connection))
-                {
-                    cmd1.ExecuteNonQuery();//Execute insert
-                }
-                using (SqlCommand cmd2 = new SqlCommand(createSelectQuery(1, query), connection))
-                {
-                    SqlDataReader data_reader = cmd2.ExecuteReader();//Retrive inserted item
-                    while (data_reader.Read())
-                    {
-                        ans = addRow(data_reader);
-                    }
-                }
-            }
-            
-            return ans;
-        }
-        */
+        private static readonly string connetion_string = $"Data Source=ise172.ise.bgu.ac.il,1433\\DB_LAB;Initial Catalog=MS3;User ID=publicUser;Password=isANerd";
+        
         public T insert(Dictionary<string, string> query)
         {
             T ans = default(T);
@@ -68,25 +44,7 @@ namespace ChatRoom_project.DAL
         }
 
 
-        /*
-        public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
-        {
-            List<T> ans = new List<T>();
-            using (SqlConnection connection = new SqlConnection(connetion_string))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(createSelectQuery(numOfRows, query), connection);
-                SqlDataReader data_reader = command.ExecuteReader();
-                while (data_reader.Read())
-                {
-                    ans.Add(addRow(data_reader));
-                }
-                data_reader.Close();
-                command.Dispose();
-            }
-            return ans;
-        }
-        */
+        
 
         public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {
