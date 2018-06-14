@@ -200,21 +200,21 @@ namespace ChatRoom_project.DAL.Tests
         /*
          * This test correctness should be examined in the db
          */
-         /*
-        [TestMethod()]
-        public void insertDBTest_valid_message()
-        {
-            DateTime localNow = DateTime.Now.ToLocalTime();
-            Message test_m = new Message(
-                Guid.NewGuid(), testWatchUser.Nickname, localNow,
-                "insertDBTest_valid_message" +
-                $"The expected time is: {localNow.ToUniversalTime()}",
-                testWatchUser.G_id.ToString()
-                );
-            Message result = new Message(
-                handler.insert(handler.convertToDictionary(test_m, testWatchUser.Id)));
-        }
-        */
+        /*
+       [TestMethod()]
+       public void insertDBTest_valid_message()
+       {
+           DateTime localNow = DateTime.Now.ToLocalTime();
+           Message test_m = new Message(
+               Guid.NewGuid(), testWatchUser.Nickname, localNow,
+               "insertDBTest_valid_message" +
+               $"The expected time is: {localNow.ToUniversalTime()}",
+               testWatchUser.G_id.ToString()
+               );
+           Message result = new Message(
+               handler.insert(handler.convertToDictionary(test_m, testWatchUser.Id)));
+       }
+       */
         [TestCleanup]
         public void Cleanup()
         {
