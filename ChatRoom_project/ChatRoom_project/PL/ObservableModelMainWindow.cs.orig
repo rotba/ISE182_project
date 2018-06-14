@@ -102,6 +102,11 @@ namespace ChatRoom_project.PresentationLayer
                 return true;
         }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/Ariel2
         ///<summary>
         ///checks if a string contains only the charcters '0'-'9' and converts it from string to int
         ///<summary>

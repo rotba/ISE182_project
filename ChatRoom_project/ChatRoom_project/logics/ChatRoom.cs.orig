@@ -3,6 +3,7 @@ using ChatRoom_project.logics;
 using MileStoneClient.CommunicationLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -20,19 +21,12 @@ namespace ConsoleApp1.BuissnessLayer
         /// <summary>
         /// server url
         /// </summary>
-        private string url;
-        private Request request;
-        //private static readonly string DEFAULT_URL = "http://ise172.ise.bgu.ac.il"; // project server url.
-        //private static readonly string DEFAULT_URL = "http://localhost";
-<<<<<<< HEAD
-        //public string Url { get => url; private set => url = value; }
-=======
-        private readonly UserHandler userHandler;
-        private readonly MessageHandler messageHandler;
-        private readonly string saltValue = "1337";
-        public string Url { get => url; private set => url = value; }
->>>>>>> origin/Ariel
-      
+        private Request request;        
+        private string nicknameFilterParam = null; //null if no param
+        private int g_IDFilterParam = -1;//-1 if no param
+        private DateTime lastRetrivedMessageTime;
+        private Message lastRetrivedMessage;
+
         public User LoggedInUser {
             get
             {
@@ -51,40 +45,15 @@ namespace ConsoleApp1.BuissnessLayer
 
         public ChatRoom()
         {
-<<<<<<< HEAD
-            //this.url = DEFAULT_URL;
-=======
-            this.userHandler = new UserHandler();
-            this.messageHandler = new MessageHandler();
-            this.url = DEFAULT_URL;
-            this.users = userHandler.retriveAll();
-            this.messages = new SortedSet<Message>(new MessageDateComp());
-            messages.UnionWith(messageHandler.retriveAll());
->>>>>>> origin/Ariel
-            this.request = new Request(url);
-            //this.users = request.retrieveUsers(200,0, null);
-            //this.messages = new SortedSet<Message>(new MessageDateComp());
-            
+            this.request = new Request();
             this.LoggedInUser = null;
-<<<<<<< HEAD
-            //foreach (IMessage msg in request.retrieveMessages(200)) {
-            //    messages.Add(new Message(msg));
-            //}
-
-
-=======
-           
-            
->>>>>>> origin/Ariel
+            lastRetrivedMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
         }
-    
         /// <summary>
         /// login
         /// </summary>
-<<<<<<< HEAD
-        public bool login(int g_id, string nickname)
-        {   
-
+        public bool login(int g_id, string nickname, string pw)
+        {
             if (nickname == null)
                 throw new ArgumentNullException("nickname cannot be null");
             if (!isValidNickname(nickname))
@@ -92,44 +61,9 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted login to invalid nickname" + nickname);
                 throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
             }
-                User userToLogin = new User(1, g_id, nickname);
+            User userToLogin = new User(-1, g_id, nickname,pw);
             List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
             if (retrievedUsers.Count == 0)
-=======
-        public bool login(int g_id, string nickname, string pw)
-        {
-            //MS3
-            if (nickname == null)
-            {
-                log.Info("Nickname is null");
-                throw new ArgumentNullException("nickname cannot be null");
-            }
-            if(!userHandler.checkIfExists(g_id, nickname))
-            {
-                log.Info("Attempted to login with an user which does not exists");
-                throw new ArgumentNullException("Group Id or Nickname is incorrect");
-            }
-
-            string pwToCompare = generateSHA256Hash(pw);
-            string pwFromDB = userHandler.getUserHashedPW(g_id, nickname);
-
-            if (!pwFromDB.Equals(pwToCompare))
-            {
-                log.Info("Attempted to login with an incorrect password");
-                throw new ArgumentNullException("Password is incorrect");
-            }
-
-            User u = new User(g_id, nickname);
-            loggedInUser = u;
-            return true;
-            //MS2
-            /*
-            if (nickname == null)
-                throw new ArgumentNullException("nickname cannot be null");
-
-            User userToLogin = new User(g_id, nickname, pw);
-            foreach (User u in users)
->>>>>>> origin/Ariel
             {
                 log.Info("Attempted login to invalid user" + userToLogin);
                 throw new ToUserException("cannot login to " + userToLogin + " invalid user");
@@ -137,45 +71,31 @@ namespace ConsoleApp1.BuissnessLayer
             else
             {
                 User retrievedUser = new User(retrievedUsers[0]);
-                if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname))
-                {
-                    loggedInUser = retrievedUser;
-                    return true;
+                if (!userToLogin.HashedPassword.Equals(retrievedUser.HashedPassword))
+                {   
+                    
+                    log.Info("atempted to login with bad password user = " + userToLogin);
+                    log.Info(" user hashedpw = " + userToLogin.HashedPassword + "server Hashed Pw = " + retrievedUser.HashedPassword);
+                    throw new ToUserException("Wrong Password");
                 }
                 else
                 {
-                    log.Debug("Unexpected error when login to  " + userToLogin);
-                    throw new ToUserException("unexpected error when trying to login to : " + userToLogin + " please try again");
+                    if (userToLogin.G_id == retrievedUser.G_id && userToLogin.Nickname.Equals(retrievedUser.Nickname.TrimEnd(' ')))
+                    {
+                        loggedInUser = retrievedUser;
+                        return true;
+                    }
+                    else
+                    {
+                        log.Debug("Unexpected error when login to  " + userToLogin);
+                        throw new ToUserException("unexpected error when trying to login to : " + userToLogin + " please try again");
+                    }
                 }
             }
-<<<<<<< HEAD
-                        
+
 
         }
-
         
-
-        /*
-* Returns the next available userId
-*/
-/*
-        private int getNextUserId()
-        {
-            int lastId = 0;
-            foreach (User user in users) {
-                if (user.Id>lastId) {
-                    lastId = user.Id;
-                }
-            }
-            return lastId;
-=======
-            log.Info("Attempted login to invalid user" + userToLogin);
-            throw new ToUserException("cannot login to " + userToLogin + " invalid user");
-            */
->>>>>>> origin/Ariel
-        }
-*/
-
         public void logout()
         {
             if (LoggedInUser == null)
@@ -204,48 +124,63 @@ namespace ConsoleApp1.BuissnessLayer
                 throw new ArgumentNullException("nickname cannot be null");
             if (nickname == "")
                 throw new ArgumentOutOfRangeException("nickname cannot be empty");
-<<<<<<< HEAD
             if (!isValidNickname(nickname))
             {
                 log.Info("Attempted register invalid nickname" + nickname);
                 throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
             }
-            User userToRegister = new User(1, g_id, nickname);
-            List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
-            if (retrievedUsers.Count != 0)
-=======
+            if (pw == null)
+                throw new ArgumentNullException("pw cant be null");
 
-            if(userHandler.checkIfExists(g_id,nickname))
+<<<<<<< HEAD
+            string hashedPw = generateSHA256Hash(pw);
+            User userToRegister = new User(-1, g_id, nickname,hashedPw);
+            IUser registeredUser = null;
+            try
             {
-                log.Info("Attempted to register, user already exists ");
-                throw new ToUserException("Group Id and Nickname are already used, please change either one");
+                registeredUser = request.insertUser(userToRegister);
+            }catch (SqlException e)
+            {
+                switch (e.Number)
+                {
+                    case 2601:
+                        log.Debug("SQL execption" + 2601 + " while registering user " + userToRegister);
+                        throw new ToUserException("Attempted to register already registered user");
+                    case 2627:
+                        log.Debug("SQL execption" + 2627 + " while registering user " + userToRegister);
+                        throw new ToUserException("Attempted to register already registered user");
+                    default:
+                        log.Debug("Unexpected SQL execption " + e + " while registering user " + userToRegister);
+                        throw new ToUserException("Registration failed because of system issues, Please try again");
+                }
+            }catch (Exception e_1)
+            {
+                log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
             }
 
-            string hashedPw = generateSHA256Hash(pw);
-            userHandler.insertUser(g_id, nickname, hashedPw);            
             /*
-            User newUser = new User(g_id, nickname);
-            //check if user already exists, if so throw error
-            if (users.Contains(newUser))
->>>>>>> origin/Ariel
+=======
+            User userToRegister = new User(-1, g_id, nickname,pw);
+>>>>>>> origin/Ariel2
+            List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
+            if (retrievedUsers.Count != 0)
             {
                 log.Info("Attempted to register already registered user " + userToRegister);
                 throw new ToUserException("Attempted to register already registered user");
             }
-<<<<<<< HEAD
             else
             {
-                IUser registeredUser;
+                IUser registeredUser = null;
                 try
                 {
                     registeredUser = request.insertUser(userToRegister);
                 }
                 catch (System.Data.SqlClient.SqlException sqlE)
                 {
-                    log.Debug("enexpected SQL execption" + sqlE +" while registering user "+userToRegister);
+                    log.Debug("enexpected SQL execption" + sqlE + " while registering user " + userToRegister);
                     throw new ToUserException("unexpected error found please try again");
                 }
-                catch(ToUserException e)
+                catch (ToUserException e)
                 {
                     log.Info("while registering user " + userToRegister + " user exception thrown " + e);
                 }
@@ -253,79 +188,10 @@ namespace ConsoleApp1.BuissnessLayer
                 {
                     log.Debug("while registering user " + userToRegister + " unexpected exception thrown " + e_1);
                 }
-
-                log.Info("successfully registered user " + registeredUser);
-            }
-                
-            
+                */
+            log.Info("successfully registered user " + registeredUser);
         }
-        /* need to check releveance, maybe only display needed
-=======
-            //add user to the user list, and save data.
-            users.Add(newUser);
-            log.Info("Succeccfully registered" +newUser);
-        */
-        }
-        
->>>>>>> origin/Ariel
-        //retrieves number amount of messages from server.
-        public retrieveMessages(int number)
-        {
-            if (loggedInUser == null)
-            {
-                log.Info("Attempted to retireve " + number +" messages without initially logging in");
-                throw new ToUserException("Cannot retrieve " + number + " messages without initially logging in");
-            }
-            List<IMessage> imsg = request.retrieveMessages(number);
-            if (imsg.Count == 0)
-            {
-                log.Info("Attempted to retrieve messages while there are no messages to retrieve");
-                throw new ToUserException("No messages to retrieve");
-            }
-            //converts each element in imsg to Message and adds it to messages list
-            foreach (var IMessage in imsg)
-            {
-                Message addMsgToList = new Message(IMessage);
-                messages.Add(addMsgToList);
-<<<<<<< HEAD
-            }
-            log.Info(imsg.Count + "Messages were retrieved");
-        }
-        */
-        /****************************************************/
-        /*
-        //retrieves number amount of messages from server.
-        public void retrieveMessages(Guid guid, DateTime date, int number, string nickname, int g_id)
-        {
-            if (loggedInUser == null)
-            {
-                log.Info("Attempted to retireve " + number + " messages without initially logging in");
-                throw new ToUserException("Cannot retrieve " + number + " messages without initially logging in");
-            }
-            List<IMessage> imsg = request.retrieveMessages(
-                guid, date, number, nickname, g_id
-                );
-            if (imsg.Count == 0)
-            {
-                log.Info("Attempted to retrieve messages while there are no messages to retrieve");
-                throw new ToUserException("No messages to retrieve");
-            }
-            //converts each element in imsg to Message and adds it to messages list
-            foreach (var IMessage in imsg)
-            {
-                Message addMsgToList = new Message(IMessage);
-                messages.Add(addMsgToList);
-            }
-            log.Info(imsg.Count + "Messages were retrieved");
-        }
-        */
-        /****************************************************/
-=======
-                messageHandler.save(addMsgToList);
-            }
-            log.Info(imsg.Count + "Messages were retrieved");
-        }
->>>>>>> origin/Ariel
+      
 
         public Message send(string message)
         {
@@ -341,13 +207,7 @@ namespace ConsoleApp1.BuissnessLayer
             }
             if (message != "")
             {
-                Message msg = new Message(request.send(message, LoggedInUser));
-<<<<<<< HEAD
-                // messages.Add(msg);
-=======
-                messages.Add(msg);
-                messageHandler.save(msg);
->>>>>>> origin/Ariel
+                Message msg = request.send(message, LoggedInUser);
                 log.Info("Message" + msg + " was sent successfully");
                 return msg;
             }
@@ -358,154 +218,51 @@ namespace ConsoleApp1.BuissnessLayer
             }
             
         }
-        /******************************************************/
-        /*
-        // main chatroom function - calls requset to get specific needed values from SQL server
-        //need to think together
-        public SortedSet<Message> displayNMessages(int num)
+
+
+        // check if diff filter if so changes lastMessage, and update filters
+        public void setFilterParameter(string nicknameFilterParam, int g_IDFilterParam)
         {
-            if (num < 0)
+            if (nicknameFilterParam!= null && 
+                ((this.nicknameFilterParam != null && 
+                this.nicknameFilterParam.Equals(nicknameFilterParam)) ||
+                this.nicknameFilterParam==nicknameFilterParam) &&
+                this.g_IDFilterParam!=g_IDFilterParam)
             {
-                log.Debug("invalid attempt to displayNMessages with negative input as num");
-                throw new ArgumentOutOfRangeException("display message must recieve non negative integer");
+                lastRetrivedMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
             }
+            this.nicknameFilterParam = nicknameFilterParam;
+            this.g_IDFilterParam = g_IDFilterParam;
+           
+        }
+
+
+        public SortedSet<Message> displayNMessages()
+        {
+            int num = 200;
+       
             if (loggedInUser == null)
             {
                 log.Info("Attempted to display " + num + " messages without initially logging in");
-                throw new ToUserException("Cannot Display " + num + " messages without initially logging in");
+                throw new ToUserException("Cannot Display messages without initially logging in");
             }
-            SortedSet<Message> ans = new SortedSet<Message>(new MessageDateComp());
-            
-            //if the list 'messages' is empty, no messages were retrieved yet
-            if (messages.Count == 0)
-            {
-                log.Info("Attempted to display messages while there are no messages to display");
-                throw new ToUserException("No messages to display.");
-            }
-
-            //in case the amount of the retrieved messages is less/exactly as the requested amonut to display
-            if (messages.Count <= num)
-            {
-                ans.UnionWith(messages);
-                log.Info("Display last " + messages.Count + " messages");
-            }
-            else
-            {
-                for (int i = (messages.Count) - num; i < messages.Count; i = i + 1)
-                {
-                    ans.Add(messages.ElementAt(i));
-                }
-                log.Info("Display last " + ans.Count + " messages");  
-            }
+            SortedSet<Message> ans ;
+            ans = request.retrieveMessages(default(Guid), lastRetrivedMessage.Date, num, nicknameFilterParam, g_IDFilterParam);
+            lastRetrivedMessage = ans.Max;
             return ans;
         }
-        */
-        //need to check relevance
-        /*
-        public SortedSet<Message> retrieveUserMessages(int g_ID, string nickname)
-        {
-            if(nickname == null)
-            {
-                log.Debug("invalid attempt to retrieveUserMessages with null nickname");
-                throw new ArgumentNullException("nickname cannot be null");
-            }
-            if (loggedInUser == null)
-            {
-                log.Info("Attempted to Display User: group id :" + g_ID +" Nickname: " +nickname + " messages without initially logging in");
-                throw new ToUserException("Cannot Display Users messages without initially logging in");
-            }
-            SortedSet<Message> ans = new SortedSet<Message>(new MessageDateComp());
-            MessageUserComp msgCompByUser = new MessageUserComp();
-            String sG_ID = g_ID.ToString();
-            Message tFakeMessageToCompareWith = new Message(new Guid(), nickname, new DateTime(), "a", sG_ID);
-            
-            //adds all the messages that were retrieved of the requested user 
-            foreach (Message m in messages)
-            {
-                if (msgCompByUser.Compare(m, tFakeMessageToCompareWith)==0)
-                {
-                    ans.Add(m);
-                }
-            }
-
-            //if the lists is empty, the requested user has not yet sent a message
-            if (ans.Count == 0)
-            {
-                log.Info("Attempted to display a user" +(new User(g_ID,nickname)) +" messages. The user hasn't yet sent a message");
-                throw new ToUserException("There are no current messages by the requested user.");
-            }
-            log.Info("Display a user" + (new User(g_ID, nickname)) + " messages.Total amount: " +ans.Count);
-            return ans;
-        }
-        */
+       
 
         private bool isValidNickname(string nickname)
         {
             return (nickname.Length <= 10 && nickname.Length>0);
         }
 
-        //used only for test purposes.
-        public List<User> getUsers()
-        {
-            List<User> ans = new List<User>();
-            foreach (User u in userHandler.retriveAll())
-            {
-                ans.Add(new User(u));
-            }
-            return ans;
-        }
-        //for tests only
-        public List<Message> getMessages()
-        {
-            List<Message> ans = new List<Message>();
-            foreach (Message m in messageHandler.retriveAll())
-            {
-                ans.Add(new Message(m));
-            }
-            return ans;
-        }
-<<<<<<< HEAD
+
         //for test use only
         public void deleteUserAndHisMessagesForTestCleanup(User user)
         {
             request.deleteUserAndHisMessagesForTestCleanup(user);
         }
-=======
-
-        //create salt added to hased pw
-
-        private string generateSHA256Hash(string input)
-        {
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
-            System.Security.Cryptography.SHA256Managed sha256HashString =
-                new System.Security.Cryptography.SHA256Managed();
-            byte[] hash = sha256HashString.ComputeHash(bytes);
-            return byteArrayToHexString(hash);
-        }
-
-        private string byteArrayToHexString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            foreach(byte b in ba)
-            {
-                hex.AppendFormat("{0:x2}", b);
-            }
-
-            return hex.ToString();
-        }
-
-        //for tests only
-        public string getHashPWForTests(string pw)
-        {
-            return generateSHA256Hash(pw);
-        }
- //       public ChatRoom_project.PresentationLayer.ChatRoomWindow ChatRoomWindow
- //       {
- //           get => default(ChatRoom_project.PresentationLayer.ChatRoomWindow);
- //           set
- //           {
- //           }
- //       }
->>>>>>> origin/Ariel
     }
 }
