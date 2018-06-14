@@ -19962,3 +19962,168 @@ GroupId:15
 2018-06-14 20:48:23,292 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to display 200 messages without initially logging in
 2018-06-14 20:48:23,298 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
 2018-06-14 20:48:23,300 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 22:36:16,864 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,884 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,892 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,892 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser19
+2018-06-14 22:36:16,892 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser18
+2018-06-14 22:36:16,892 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser17
+2018-06-14 22:36:16,892 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser16
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser15
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser14
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser13
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser12
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser11
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser10
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser9
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser8
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser7
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser6
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser5
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser4
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser3
+2018-06-14 22:36:16,893 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser2
+2018-06-14 22:36:16,894 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser1
+2018-06-14 22:36:16,894 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid nicknameTestUser0
+2018-06-14 22:36:16,894 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,901 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,901 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,905 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted logout without initially logging in
+2018-06-14 22:36:16,908 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,909 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,913 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,914 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,915 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Rotem
+2018-06-14 22:36:16,922 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,923 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,924 [16] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - SQL execption2627 while registering user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,925 [16] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - SQL execption2627 while registering user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,929 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,934 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,941 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,944 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageHello worldfor userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,944 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:bf1a9df3-bebe-43dd-8763-6ac3ad545c65
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Hello world
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,946 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 22:36:16,955 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted send without initially logging in
+2018-06-14 22:36:16,958 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,959 [16] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - invalid attempt to send null message
+2018-06-14 22:36:16,965 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,965 [16] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send invalid message
+2018-06-14 22:36:16,970 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,970 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to send empty message
+2018-06-14 22:36:16,971 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 22:36:16,975 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,976 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 15for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,976 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:5474239c-fb1a-4957-b0f8-0e9010c8bd8e
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 15
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,977 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 14for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,977 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:e7a704cb-d57e-46f2-bbe0-91b39267b262
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 14
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,978 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 13for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,978 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:3a699f08-5cb7-4274-adc2-a24ba2d617d2
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 13
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,979 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 12for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,979 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:e82baffb-102d-424a-b724-1f3b570fc862
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 12
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,980 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 11for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,980 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:328ff321-881c-46c1-a432-067cc49f7035
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 11
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,981 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 10for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,981 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:95aeb8f5-704b-43ee-8095-e9491728d1d0
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 10
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,982 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 9for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,982 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:c80ff0ea-ef75-4820-91c5-616ce4687809
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 9
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,983 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 8for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,983 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:0a456150-e366-40ad-a2b9-59b12a573bc0
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 8
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,984 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 7for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,984 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:a8674573-fbf1-49e5-ba0d-435eaa77f4dc
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 7
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,985 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 6for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,985 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:4e837f60-9339-4ed3-9bc4-7842e3dc6483
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 6
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,985 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 5for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,985 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:f6fde26d-f6f9-41fc-94ba-b154a95dd084
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 5
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,986 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 4for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,986 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:f6311a11-3e11-471b-a06b-1be06c9cce72
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 4
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,987 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 3for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,987 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:a8e28112-0b98-45b0-b144-8993ec3e97c6
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 3
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,988 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 2for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,988 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:ddc2c375-15d5-4aab-ab08-f111abb0b5e0
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 2
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,989 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageMessage number: 1for userUser: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:16,989 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:df7ad889-955a-4f80-83d3-a23359cfed8c
+UserName:Ariel   
+DateTime:14/06/2018 22:36:16
+MessageContect:Message number: 1
+GroupId:15
+ was sent successfully
+2018-06-14 22:36:16,991 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 22:36:16,999 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted to display 200 messages without initially logging in
+2018-06-14 22:36:17,004 [16] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Ariel
+2018-06-14 22:36:17,004 [16] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
