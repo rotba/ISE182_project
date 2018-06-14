@@ -12,9 +12,14 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.Public_Interfaces
 {
+    /*
+     * Handles Messages table 
+     */ 
     public class MessageHandler : Handler<IMessage>
     {
-        
+        /*
+         * Enables to safely map the enum values to the string representation of the field in the table
+         */
         enum Fields { Guid, SendTime, User_Id, Nickname, Group_Id, Body };
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
@@ -70,13 +75,7 @@ namespace ChatRoom_project.Public_Interfaces
             else
                 throw new ArgumentException("Invalid Row From DB - check Log for details");
         }
-        /*
-         * inly for tests. delete before release
-        public IMessage TESTaddRowTEST(SqlDataReader data_reader)
-        {
-            return addRow(data_reader);
-        }
-        */
+      
         protected override SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query)
         {
             SqlCommand ans = new SqlCommand(null, null);
@@ -145,8 +144,8 @@ namespace ChatRoom_project.Public_Interfaces
             }
             return ans;
         }
-        
 
+        
         protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
         {
             SqlCommand ans = new SqlCommand(null, null);
@@ -203,7 +202,9 @@ namespace ChatRoom_project.Public_Interfaces
             return ans;
         }
 
-
+        /*
+         * Convert the desired parameters to a dictionary element compatible with the handler 
+         */
         public Dictionary<string, string> convertToDictionary(Guid guid, DateTime date, int userId, string nickname, int g_Id, string body)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();

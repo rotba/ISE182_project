@@ -10,8 +10,14 @@ using System.Threading.Tasks;
 
 namespace ChatRoom_project.Public_Interfaces
 {
+    /*
+     * Handles user table
+     */ 
     public class UserHandler: Handler<IUser>
     {
+        /*
+         * Enables to safely map the enum values to the string representation of the field in the table
+         */ 
         enum Fields { Id, Group_Id, Nickname, Password};
         private static readonly Dictionary<Fields, string> fieldsDic = new Dictionary<Fields, string>()
         {
@@ -81,9 +87,7 @@ namespace ChatRoom_project.Public_Interfaces
 
             return ans;
         }
-
-       
-
+        
         protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
         {
             SqlCommand ans = new SqlCommand(null, null);
@@ -106,9 +110,9 @@ namespace ChatRoom_project.Public_Interfaces
 
             return ans;
         }
-
-
-        
+        /*
+         * Convert the desired parameters to a dictionary element compatible with the handler 
+         */ 
         public Dictionary<string, string> convertToDictionary(string nickname, int g_id, string hashedPassword,int id)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
@@ -132,7 +136,7 @@ namespace ChatRoom_project.Public_Interfaces
             return dic;
         }
 
-        //for tests only
+        
         protected override string createDeleteQuery(Dictionary<string, string> query)
         {
             string ans =
@@ -189,10 +193,6 @@ namespace ChatRoom_project.Public_Interfaces
                 this.id = id;
                 this.g_id = g_id;
             }
-
-            
-
-
         }
 
         #endregion
