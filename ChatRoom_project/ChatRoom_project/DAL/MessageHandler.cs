@@ -260,30 +260,7 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        
-
-        
-        
-        /*
-         * Gets date and returns representation compatible with SQL DB
-         */
-         /*
-        private string createDBDateString(DateTime date)
-        {
-            string ans = null;
-            var currentCulture = CultureInfo.CurrentCulture;
-            var inputCulture = CultureInfo.CreateSpecificCulture("en-es");
-            var outputCulture = CultureInfo.CreateSpecificCulture("es-us");
-            Thread.CurrentThread.CurrentCulture = outputCulture;
-            Thread.CurrentThread.CurrentUICulture = outputCulture;
-            ans = DateTime.Parse(
-                date.ToString(), inputCulture
-                ).ToUniversalTime().ToString();
-            Thread.CurrentThread.CurrentCulture = currentCulture;
-            Thread.CurrentThread.CurrentUICulture = currentCulture;
-            return ans;
-        }
-        */
+       
         /*
          * Gets date and returns representation compatible with the user needs
          */

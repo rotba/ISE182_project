@@ -23,7 +23,6 @@ namespace ChatRoom_project.DAL.Tests
         private User testUser;
         private User testUserA;
         private User testWatchUser;
-        private int TEST_USER_ID;
         private readonly string TEST_USER_NICKNAME = "TESTUSER";
         private readonly string TEST_USERA_NICKNAME = "TESTUSEA";
         private readonly string TEST_WATCH_USER_NICKNAME = "WATCH";
@@ -33,10 +32,14 @@ namespace ChatRoom_project.DAL.Tests
         public void Initialize()
         {
             iWantToWatch = false;
-            TEST_USER_ID = getTestUserId();
+            /*
             testUser = new User(TEST_USER_ID, 15, TEST_USER_NICKNAME, "496351");
             testWatchUser = new User(10, 15, TEST_WATCH_USER_NICKNAME, "496351");
             testUserA = new User(13, 15, TEST_USERA_NICKNAME, "496351");
+            */
+            testUser = insertToDBUser(TEST_USER_NICKNAME);
+            testWatchUser = insertToDBUser(TEST_WATCH_USER_NICKNAME);
+            testUserA = insertToDBUser(TEST_USERA_NICKNAME);
             handler = new MessageHandler();
             dateComp = new MessageDateComp();
             userComp = new MessageUserComp();
@@ -189,11 +192,11 @@ namespace ChatRoom_project.DAL.Tests
             Message test_m = new Message(
                 Guid.NewGuid(), testUser.Nickname, DateTime.Now, "deleteTest_message_in_db", testUser.G_id.ToString()
                 );
-            handler.insert(handler.convertToDictionary(test_m, TEST_USER_ID));
-            handler.delete(handler.convertToDictionary(test_m, TEST_USER_ID));
+            handler.insert(handler.convertToDictionary(test_m, testUser.Id));
+            handler.delete(handler.convertToDictionary(test_m, testUser.Id));
             Assert.IsTrue(
                 handler.retrieve(
-                    -1, handler.convertToDictionary(test_m, TEST_USER_ID)
+                    -1, handler.convertToDictionary(test_m, testUser.Id)
                     ).Count == 0
                 );
         }
@@ -253,9 +256,19 @@ namespace ChatRoom_project.DAL.Tests
             }
             
         }
-        private int getTestUserId()
-        {
-            return 6;
+        
+        private User insertToDBUser(string userName) {
+            UserHandler uHandler = new UserHandler();
+            List<IUser> littleList = uHandler.retrieve(1, uHandler.convertToDictionary(userName, -1, null, -1));
+            if (littleList.Count!=0) {
+                return new User(littleList[0]);
+            }
+            return new User(uHandler.insert(uHandler.convertToDictionary(
+                userName,
+                15,
+                "496351",
+                -1
+                )));
         }
     }
 }
