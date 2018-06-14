@@ -11154,3 +11154,127 @@ GroupId:15
    ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
    ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
 2018-06-14 14:34:31,043 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   
+2018-06-14 16:42:28,244 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login with bad password user = User: G_id = 15 Nickname: Rotem
+2018-06-14 16:42:28,262 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom -  user hashedpw = 0cda493b4a0390f0df132d077c0e8b4af15d40ce8ace5afedfabc221972260cfserver Hashed Pw = be608ac42fa76d2fb2130335d5cab16237f7f5e621231ca7ae910a18e6965f89
+2018-06-14 16:42:34,960 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login with bad password user = User: G_id = 15 Nickname: Rotem
+2018-06-14 16:42:34,960 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom -  user hashedpw = 0cda493b4a0390f0df132d077c0e8b4af15d40ce8ace5afedfabc221972260cfserver Hashed Pw = be608ac42fa76d2fb2130335d5cab16237f7f5e621231ca7ae910a18e6965f89
+2018-06-14 16:42:40,306 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - SQL execption2627 while registering user User: G_id = 15 Nickname: Rotem
+2018-06-14 16:43:13,885 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login with bad password user = User: G_id = 15 Nickname: Rotem
+2018-06-14 16:43:13,885 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom -  user hashedpw = 0cda493b4a0390f0df132d077c0e8b4af15d40ce8ace5afedfabc221972260cfserver Hashed Pw = be608ac42fa76d2fb2130335d5cab16237f7f5e621231ca7ae910a18e6965f89
+2018-06-14 16:43:33,281 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - atempted to login with bad password user = User: G_id = 15 Nickname: Rotem
+2018-06-14 16:43:33,281 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom -  user hashedpw = 0cda493b4a0390f0df132d077c0e8b4af15d40ce8ace5afedfabc221972260cfserver Hashed Pw = be608ac42fa76d2fb2130335d5cab16237f7f5e621231ca7ae910a18e6965f89
+2018-06-14 16:45:03,137 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 15 Nickname: Rotem   
+2018-06-14 16:45:11,891 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:13,900 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:15,896 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:17,396 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageheyyy brothherrrfor userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 16:45:17,399 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:d2ff2bf5-8309-452d-8bb7-99520c01db16
+UserName:Rotem   
+DateTime:14/06/2018 16:45:17
+MessageContect:heyyy brothherrr                                                                                    
+GroupId:15
+ was sent successfully
+2018-06-14 16:45:17,402 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:17,931 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:19,944 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:21,960 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:23,960 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:26,011 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:28,053 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:30,054 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:32,069 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:32,426 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagehello hellofor userUser: G_id = 15 Nickname: Rotem   
+2018-06-14 16:45:32,426 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:e73faeee-40a7-43af-9c82-9aa19c641809
+UserName:Rotem   
+DateTime:14/06/2018 16:45:32
+MessageContect:hello hello                                                                                         
+GroupId:15
+ was sent successfully
+2018-06-14 16:45:32,427 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:34,178 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:36,215 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:38,214 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:40,229 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:42,262 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:44,297 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:45:45,402 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   
+2018-06-14 16:47:49,369 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'USERS'.
+   ב-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ב-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ב-  System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ב-  System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ב-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ב-  System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ב-  System.Data.SqlClient.SqlCommand.ExecuteReader()
+   ב-  ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:שורה 99
+   ב-  ConsoleApp1.BuissnessLayer.Request.retrieveUsers(Int32 n, Int32 g_id, String nickname) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:שורה 80
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.login(Int32 g_id, String nickname, String pw) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 65
+   ב-  ChatRoom_project.PresentationLayer.ObservableModelMainWindow.login(String g_ID, String nickname, String pw) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ObservableModelMainWindow.cs:שורה 81
+   ב-  ChatRoom_project.PresentationLayer.MainWindow.Login_Click(Object sender, RoutedEventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:שורה 98
+ClientConnectionId:9a049cb5-3d66-4481-a9f7-3fd7d679635b
+Error Number:208,State:1,Class:16
+2018-06-14 16:47:51,810 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Users'.
+   ב-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ב-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ב-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ב-  ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:שורה 53
+   ב-  ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:שורה 129
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 139
+ClientConnectionId:9a049cb5-3d66-4481-a9f7-3fd7d679635b
+Error Number:208,State:1,Class:16 while registering user User: G_id = 15 Nickname: Rotem
+2018-06-14 16:48:15,017 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Users'.
+   ב-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ב-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ב-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ב-  ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:שורה 53
+   ב-  ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:שורה 129
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 139
+ClientConnectionId:9a049cb5-3d66-4481-a9f7-3fd7d679635b
+Error Number:208,State:1,Class:16 while registering user User: G_id = 15 Nickname: Rotem
+2018-06-14 16:55:38,826 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Users'.
+   ב-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ב-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ב-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ב-  ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:שורה 53
+   ב-  ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:שורה 129
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 139
+ClientConnectionId:5fc652b7-70da-42f3-ae53-0f52e1845a7a
+Error Number:208,State:1,Class:16 while registering user User: G_id = 15 Nickname: Rotem
+2018-06-14 16:55:43,254 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Users'.
+   ב-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ב-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ב-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ב-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ב-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ב-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ב-  ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:שורה 53
+   ב-  ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:שורה 129
+   ב-  ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:שורה 139
+ClientConnectionId:5fc652b7-70da-42f3-ae53-0f52e1845a7a
+Error Number:208,State:1,Class:16 while registering user User: G_id = 15 Nickname: Rotem
