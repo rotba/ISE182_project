@@ -402,7 +402,7 @@ namespace ConsoleApp1.Tests
 
                 cr.send("" + i + "");
                 cr2.send("" + i + "a");
-             //   System.Threading.Thread.Sleep(2000);
+            //    System.Threading.Thread.Sleep(2000);
                 i = i + 1;
             }
             SortedSet<IMessage> tmp = cr.displayNMessages();
