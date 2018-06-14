@@ -11154,3 +11154,346 @@ GroupId:15
    ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 108
    ב-  ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) ב- C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:שורה 83
 2018-06-14 14:34:31,043 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   
+2018-06-14 16:17:37,055 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 16:17:37,272 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 16:17:37,824 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 16:17:40,704 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:42,646 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:44,639 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:46,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:48,745 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:50,762 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:52,854 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:54,855 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:56,854 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:17:58,855 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:00,854 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:02,863 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:04,902 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:06,933 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:08,934 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:11,014 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:13,137 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:15,154 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:17,203 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:19,232 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:21,236 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:23,392 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:25,407 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:27,435 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:29,450 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:31,449 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:33,448 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:35,449 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:37,669 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:39,685 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:41,684 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:43,700 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:45,731 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:47,871 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:49,902 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:51,902 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:53,903 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:55,903 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:57,932 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:18:59,932 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:02,168 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:04,236 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:06,232 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:08,249 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:10,389 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:12,416 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:14,433 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:16,670 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:18,671 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:20,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:22,671 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:24,668 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:26,780 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:28,822 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:30,899 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:32,902 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:34,919 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:36,922 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:38,968 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:41,153 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:43,169 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:45,229 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:47,369 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:49,387 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:51,387 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:53,402 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:55,406 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:57,437 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:19:59,449 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:01,449 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:03,464 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:05,468 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:07,652 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:09,651 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:11,651 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:13,652 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:15,685 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:17,718 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:19,735 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:21,784 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:21,816 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagefdfgdffor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:21,816 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:a314f7be-6cee-405e-bb61-a91656b75034
+UserName:Tomer   
+DateTime:14/06/2018 16:20:21
+MessageContect:fdfgdf                                                                                              
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:21,816 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:23,793 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:25,826 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:27,857 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:27,947 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagedfgryrtytyutyjfdfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:27,947 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:8d24b0ee-7b1f-4c9e-8c72-1c45def55aae
+UserName:Tomer   
+DateTime:14/06/2018 16:20:27
+MessageContect:dfgryrtytyutyjfd                                                                                    
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:27,947 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:29,809 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagedfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:29,809 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:6f79f253-7564-4383-8c7e-782953b5dcb0
+UserName:Tomer   
+DateTime:14/06/2018 16:20:29
+MessageContect:d                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:29,809 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:29,858 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:30,627 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagebfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:30,627 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:b1bedb1a-4227-4949-9586-e04750e2230a
+UserName:Tomer   
+DateTime:14/06/2018 16:20:30
+MessageContect:b                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:30,627 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:30,906 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagerfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:30,906 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:cd7571a4-5178-41b6-863a-9ed2c249a6b0
+UserName:Tomer   
+DateTime:14/06/2018 16:20:30
+MessageContect:r                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:30,906 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:31,229 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagetfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:31,229 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:9edf5f06-efe1-431f-8b92-80478edeffb4
+UserName:Tomer   
+DateTime:14/06/2018 16:20:31
+MessageContect:t                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:31,230 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:31,564 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messageyfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:31,564 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:3da58c9f-a1c5-4906-b820-d1dabaadd930
+UserName:Tomer   
+DateTime:14/06/2018 16:20:31
+MessageContect:y                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:31,564 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:31,890 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagedfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:31,890 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:65ae6fba-3f61-430b-82f8-485d9486e6cf
+UserName:Tomer   
+DateTime:14/06/2018 16:20:31
+MessageContect:d                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:31,890 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:31,901 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:32,835 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent send request for messagegfor userUser: G_id = 15 Nickname: Tomer   
+2018-06-14 16:20:32,835 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - MessageMessage ID:0e0b9a65-88d2-46ba-aba3-3fe27841bdc7
+UserName:Tomer   
+DateTime:14/06/2018 16:20:32
+MessageContect:g                                                                                                   
+GroupId:15
+ was sent successfully
+2018-06-14 16:20:32,835 [1] ERROR ConsoleApp1.BuissnessLayer.Request - Attempted to send more than 20 requests to server in past 10 secs
+2018-06-14 16:20:34,058 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:36,088 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:38,122 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:40,139 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:42,137 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:44,187 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:46,315 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:48,372 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:50,370 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:52,401 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:54,401 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:56,418 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:20:58,450 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:00,453 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:02,462 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:04,590 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:06,594 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:08,604 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:10,623 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:12,666 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:14,839 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:16,855 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:18,856 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:20,888 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:22,893 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:24,901 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:26,917 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:28,920 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:30,917 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:32,917 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:34,920 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:36,920 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:38,918 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:40,920 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:43,088 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:45,120 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:47,153 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:49,297 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:51,355 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:53,403 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:55,623 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:57,637 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:21:59,653 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:01,856 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:03,856 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:05,874 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:07,967 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:10,060 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:12,090 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:14,088 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:16,087 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:18,138 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:20,138 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:22,167 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:24,168 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:26,201 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:28,370 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:30,386 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:32,386 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:34,403 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:36,401 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:38,402 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:40,433 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:42,437 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:44,448 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:46,520 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:48,623 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:50,619 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:52,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:54,639 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:56,640 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:22:58,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:00,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:02,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:04,639 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:06,638 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:08,637 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:10,637 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:12,639 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:14,657 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:16,670 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:18,666 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:20,676 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:22,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:24,683 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:26,702 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:28,705 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:30,701 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:32,698 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:34,901 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:36,938 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:38,933 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:41,104 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:43,106 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:45,139 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:47,151 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:49,152 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:51,355 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:53,356 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:55,355 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:57,388 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:23:59,385 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:01,389 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:03,387 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:05,389 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:07,401 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:09,401 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:11,418 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:13,483 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:15,589 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:17,590 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:19,621 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:21,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:23,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:25,761 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:27,793 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:29,808 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:31,839 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:33,839 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:35,840 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:37,871 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:39,872 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:41,874 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:43,871 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:45,872 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:47,890 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:49,895 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:51,902 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:53,951 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:56,042 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:24:58,042 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:00,095 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:02,087 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:04,152 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:06,152 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:08,153 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:10,169 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:12,183 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:14,187 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:16,202 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:18,223 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:20,296 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:22,451 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:24,628 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:26,668 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:28,668 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:30,674 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:32,668 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:34,666 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:36,701 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:38,699 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:40,703 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:42,746 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:44,843 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:46,901 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:48,901 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:50,901 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:52,917 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:54,935 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:56,932 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:25:58,948 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:00,951 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:02,949 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:04,950 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:06,996 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:09,166 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:11,201 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:13,231 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:15,230 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:17,245 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:19,248 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:21,403 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:23,435 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:25,472 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:27,465 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:29,465 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:26:31,488 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:37:20,306 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 16:37:20,516 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 16:37:21,028 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 16:37:23,251 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:37:25,233 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 16:37:25,890 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer

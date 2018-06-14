@@ -107,13 +107,13 @@ namespace ChatRoom_project.DAL
                 }
                 if (query.ContainsKey(fieldsDic[Fields.Nickname]))
                 {
-                    commandString += " AND U.Nickname = @NICKNAME";
+                    
                     ans.Parameters.Add("@NICKNAME", SqlDbType.Char, 8);
                     ans.Parameters["@NICKNAME"].Value = query[fieldsDic[Fields.Nickname]];
                 }
                 if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
                 {
-                    commandString += " AND U.Group_Id = @GID";
+                    
                     ans.Parameters.Add("@GID", SqlDbType.Int);
                     ans.Parameters["@GID"].Value = Convert.ToInt32(query[fieldsDic[Fields.Group_Id]]);
                 }

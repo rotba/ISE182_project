@@ -13,7 +13,7 @@ namespace ConsoleApp1.BuissnessLayer
     //and to validate server policy on each request.
     public class Request
     {   
-        private readonly int MAX_MESSAGE_LENGTH = 150;
+        private readonly int MAX_MESSAGE_LENGTH = 100;
         private string url;
         /// <summary>
         /// used to make sure not to overload the server with requests
