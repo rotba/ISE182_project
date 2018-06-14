@@ -103,11 +103,22 @@ namespace ChatRoom_project.PresentationLayer
          */
         private void refreshMessages()
         {
-            
-                  
-            SortedSet<Message> toDisplay = chtrm.displayNMessages();
-            if(toDisplay!=null)
-                toDisplay.ToList().ForEach(observer.Messages.Add);
+
+            try
+            {
+                SortedSet<Message> toDisplay = chtrm.displayNMessages();
+                if (toDisplay != null)
+                    toDisplay.ToList().ForEach(observer.Messages.Add);
+            }
+            catch(ToUserException e_1)
+            {
+                log.Info("excption caught on refresh " + e_1);
+                MessageBox.Show(e_1.Message);
+            }
+            catch(Exception e_2)
+            {
+                log.Debug("unexpected exception on refresh " + e_2);
+            }
            
             
         }
