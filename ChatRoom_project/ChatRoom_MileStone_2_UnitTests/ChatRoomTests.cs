@@ -443,7 +443,7 @@ namespace ConsoleApp1.Tests
             try
             {
                 SortedSet<Message> tmp = request.retrieveMessages(default(Guid), DateTime.MinValue, 1, user.Nickname, user.G_id);
-                Assert.IsTrue(tmp.Count==0,"retrieve user mesages for user that didnt yet send message should be empty");
+                Assert.IsTrue(tmp==null,"retrieve user mesages for user that didnt yet send message should be empty");
             }
             catch (ToUserException e) { }
         }
