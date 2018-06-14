@@ -338,7 +338,7 @@ namespace ConsoleApp1.Tests
             cr.login(user.G_id, user.Nickname, user.HashedPassword);
             cr.send("");
             SortedSet<Message> tmp = request.retrieveMessages(default(Guid), DateTime.MinValue, 1, user.Nickname, user.G_id);
-            Assert.IsTrue(tmp.Count == 0, "sending empty message should do nothing");
+            Assert.IsTrue(tmp == null, "sending empty message should do nothing");
 
             }
 
@@ -402,7 +402,7 @@ namespace ConsoleApp1.Tests
 
                 cr.send("" + i + "");
                 cr2.send("" + i + "a");
-                System.Threading.Thread.Sleep(2000);
+           //     System.Threading.Thread.Sleep(2000);
                 i = i + 1;
             }
             SortedSet<Message> tmp = cr.displayNMessages();
