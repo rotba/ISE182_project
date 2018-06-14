@@ -227,6 +227,11 @@ namespace ChatRoom_project.DAL
             throw new NotImplementedException();
         }
 
+        protected override SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query)
+        {
+            throw new NotImplementedException();
+        }
+
         #region Private Class 
 
         /// <summary>
