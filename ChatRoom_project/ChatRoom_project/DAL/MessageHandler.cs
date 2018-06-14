@@ -268,9 +268,7 @@ namespace ChatRoom_project.DAL
          */
         private DateTime createUserDate(DateTime date)
         {
-            return DateTime.Parse(
-                date.ToString(), CultureInfo.CurrentCulture
-                ).ToLocalTime();
+            return DateTime.Parse(date.ToString("dd/MM/yyyy HH:mm:ss.fff"));
         }
         #region Private Class 
 
