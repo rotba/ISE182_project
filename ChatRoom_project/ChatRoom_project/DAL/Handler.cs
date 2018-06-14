@@ -118,8 +118,7 @@ namespace ChatRoom_project.DAL
             }
         }
         protected abstract T addRow(SqlDataReader data_reader);
-        protected abstract string createSelectQuery(int numOfRows, Dictionary<string, string> query);
-        protected abstract string createInsertQuery(Dictionary<string, string> query);
+       
         protected abstract string createDeleteQuery(Dictionary<string, string> query);
         
         protected abstract SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query);

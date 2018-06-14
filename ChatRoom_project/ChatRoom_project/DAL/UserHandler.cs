@@ -43,26 +43,7 @@ namespace ChatRoom_project.DAL
                         
         }
 
-        protected override string createSelectQuery(int numOfRows, Dictionary<string, string> query)
-        {
-            string ans =
-                "SELECT U.Id, U.Group_Id, U.Nickname, U.Password" +
-                " FROM USERS AS U";
-            ans += " WHERE 1=1";
-            if (query.ContainsKey(fieldsDic[Fields.Id]))
-                ans += $"AND U.Id = {query[fieldsDic[Fields.Id]]}";
-            if (query.ContainsKey(fieldsDic[Fields.Nickname]))
-            {
-                ans += $" AND U.Nickname = {query[fieldsDic[Fields.Nickname]]}";
-            }
-            if (query.ContainsKey(fieldsDic[Fields.Group_Id]))
-            {
-                ans += $" AND U.Group_Id = {query[fieldsDic[Fields.Group_Id]]}";
-            }
-            
-            return ans;
-        }
-
+       
         protected override SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query)
         {
             SqlCommand ans = new SqlCommand(null, null);
@@ -101,28 +82,7 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
-        protected override string createInsertQuery(Dictionary<string, string> query)
-        {
-            string ans = "INSERT INTO Users(Group_Id, Nickname,Password) VALUES(";
-            int size = countRelevantFields(query);
-            int i = 0;
-            foreach (Fields field in tableColumns)
-            {
-                if (query.ContainsKey(fieldsDic[field]))
-                {
-                    ans += query[fieldsDic[field]];
-                    if (i != size - 1)
-                    {
-                        ans += ", ";
-                        i++;
-                    }
-                }
-            }
-            ans += ")";
-            
-
-            return ans;
-        }
+       
 
         protected override SqlCommand createInsertCommand(Dictionary<string, string> query)
         {
