@@ -11,9 +11,9 @@ namespace ChatRoom_project.DAL
     {
         
         //local
-        //private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
+        private static readonly string connetion_string = $"Server= localhost\\sqlexpress; Database= MS3; Integrated Security=True;";
         //defualt
-        private static readonly string connetion_string = $"Data Source=ise172.ise.bgu.ac.il,1433\\DB_LAB;Initial Catalog=MS3;User ID=publicUser;Password=isANerd";
+        //private static readonly string connetion_string = $"Data Source=ise172.ise.bgu.ac.il,1433\\DB_LAB;Initial Catalog=MS3;User ID=publicUser;Password=isANerd";
         /* 
         public T insert(Dictionary<string, string> query)
         {

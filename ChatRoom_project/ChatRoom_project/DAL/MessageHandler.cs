@@ -189,7 +189,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString();
+                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString()+"."+date.Millisecond;
             }
             if (userId != 0)
             {
@@ -268,9 +268,7 @@ namespace ChatRoom_project.DAL
          */
         private DateTime createUserDate(DateTime date)
         {
-            return DateTime.Parse(
-                date.ToString(), CultureInfo.CurrentCulture
-                ).ToLocalTime();
+            return DateTime.Parse(date.ToString("dd/MM/yyyy HH:mm:ss.fff"));
         }
         #region Private Class 
 
