@@ -21,9 +21,7 @@ namespace ConsoleApp1.BuissnessLayer
         /// <summary>
         /// server url
         /// </summary>
-        private Request request;
-        private readonly string saltValue = "1337";
-        
+        private Request request;        
         private string nicknameFilterParam = null; //null if no param
         private int g_IDFilterParam = -1;//-1 if no param
         private DateTime lastRetrivedMessageTime;
@@ -63,8 +61,7 @@ namespace ConsoleApp1.BuissnessLayer
                 log.Info("Attempted login to invalid nickname" + nickname);
                 throw new ToUserException("nickname cant be empty and must hold at most 10 chars");
             }
-            string hashedPw = generateSHA256Hash(pw);
-            User userToLogin = new User(-1, g_id, nickname,hashedPw);
+            User userToLogin = new User(-1, g_id, nickname,pw);
             List<IUser> retrievedUsers = request.retrieveUsers(1, g_id, nickname);
             if (retrievedUsers.Count == 0)
             {
@@ -135,8 +132,7 @@ namespace ConsoleApp1.BuissnessLayer
             if (pw == null)
                 throw new ArgumentNullException("pw cant be null");
 
-            string hashedPw = generateSHA256Hash(pw);
-            User userToRegister = new User(-1, g_id, nickname,hashedPw);
+            User userToRegister = new User(-1, g_id, nickname,pw);
             IUser registeredUser = null;
             try
             {
@@ -255,28 +251,6 @@ namespace ConsoleApp1.BuissnessLayer
         private bool isValidNickname(string nickname)
         {
             return (nickname.Length <= 10 && nickname.Length>0);
-        }
-
-        //create salt added to hased pw
-
-        private string generateSHA256Hash(string input)
-        {
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
-            System.Security.Cryptography.SHA256Managed sha256HashString =
-                new System.Security.Cryptography.SHA256Managed();
-            byte[] hash = sha256HashString.ComputeHash(bytes);
-            return byteArrayToHexString(hash);
-        }
-
-        private string byteArrayToHexString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            foreach (byte b in ba)
-            {
-                hex.AppendFormat("{0:x2}", b);
-            }
-
-            return hex.ToString();
         }
 
 

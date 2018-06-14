@@ -38,6 +38,7 @@ namespace ChatRoom_project.DAL
             
             return ans;
         }
+        /*
         public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
         {
             List<T> ans = new List<T>();
@@ -45,6 +46,26 @@ namespace ChatRoom_project.DAL
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(createSelectQuery(numOfRows, query), connection);
+                SqlDataReader data_reader = command.ExecuteReader();
+                while (data_reader.Read())
+                {
+                    ans.Add(addRow(data_reader));
+                }
+                data_reader.Close();
+                command.Dispose();
+            }
+            return ans;
+        }
+        */
+
+        public List<T> retrieve(int numOfRows, Dictionary<string, string> query)
+        {
+            List<T> ans = new List<T>();
+            using (SqlConnection connection = new SqlConnection(connetion_string))
+            {
+                connection.Open();
+                SqlCommand command = createSelectCommand(numOfRows, query);
+                command.Connection = connection;
                 SqlDataReader data_reader = command.ExecuteReader();
                 while (data_reader.Read())
                 {
@@ -71,7 +92,7 @@ namespace ChatRoom_project.DAL
         protected abstract string createInsertQuery(Dictionary<string, string> query);
         protected abstract string createDeleteQuery(Dictionary<string, string> query);
         protected abstract SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query,Boolean test);
-
+        protected abstract SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query);
 
     }
 }
