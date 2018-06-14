@@ -16325,3 +16325,7 @@ Error Number:2627,State:1,Class:14
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
    at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
 2018-06-14 12:53:50,170 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-14 12:59:08,600 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:59:08,788 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:59:09,210 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:59:11,393 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty/short/long password
