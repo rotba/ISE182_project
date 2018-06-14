@@ -221,16 +221,23 @@ namespace ConsoleApp1.BuissnessLayer
         // check if diff filter if so changes lastMessage, and update filters
         public void setFilterParameter(string nicknameFilterParam, int g_IDFilterParam)
         {
+            /*
             if (nicknameFilterParam!= null && 
                 ((this.nicknameFilterParam != null && 
                 this.nicknameFilterParam.Equals(nicknameFilterParam)) ||
                 this.nicknameFilterParam==nicknameFilterParam) &&
                 this.g_IDFilterParam!=g_IDFilterParam)
+                */
+            if((nicknameFilterParam!=null && !nicknameFilterParam.Equals(this.nicknameFilterParam))||
+                !g_IDFilterParam.Equals(this.g_IDFilterParam) ||
+                nicknameFilterParam==null && this.nicknameFilterParam!=null
+                )
             {
                 lastRetrivedMessage = new Message(new Guid(), null, DateTime.MinValue, null, null);
+                this.nicknameFilterParam = nicknameFilterParam;
+                this.g_IDFilterParam = g_IDFilterParam;
             }
-            this.nicknameFilterParam = nicknameFilterParam;
-            this.g_IDFilterParam = g_IDFilterParam;
+            
            
         }
 

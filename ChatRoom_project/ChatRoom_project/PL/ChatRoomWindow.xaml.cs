@@ -333,7 +333,7 @@ namespace ChatRoom_project.PresentationLayer
             int g_idFilter = -1;
             try
             {
-                g_IDToIntAndVerify(observer.G_IDFilterParam);
+                g_idFilter = g_IDToIntAndVerify(observer.G_IDFilterParam);
             }
             catch (ToUserException e_2)
             {
@@ -345,8 +345,9 @@ namespace ChatRoom_project.PresentationLayer
             string nicknameFilter = observer.NicknameFilterParam;
             if (string.IsNullOrWhiteSpace(nicknameFilter))
                 nicknameFilter = null;
-            if (nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam) ||
-                !g_idFilter.Equals(lastFilterClickG_IDFilterParam))
+            if ((nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
+                !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
+                (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
             {
                 chtrm.setFilterParameter(nicknameFilter, g_idFilter);
                 observer.Messages.Clear();

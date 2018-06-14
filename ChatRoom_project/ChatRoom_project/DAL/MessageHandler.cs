@@ -189,7 +189,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString();
+                dic[fieldsDic[Fields.SendTime]] = date.ToUniversalTime().ToString()+"."+date.Millisecond;
             }
             if (userId != 0)
             {
