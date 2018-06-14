@@ -144,18 +144,15 @@ namespace ChatRoom_project.PresentationLayer
         {
             if (pw == null)
             {
-                log.Error("password is null");
                 return false;
             }
             if (pw == "" | pw.Length < 4 | pw.Length > 16)
             {
-                log.Error("Attempted to enter an empty/short/long password");
                 return false;
             }
 
             if (!Regex.IsMatch(pw, @"^[a-zA-Z0-9]+$"))
             {
-                log.Error("Attempted to enter a not valid password");
                 return false;
             }
             return true;
