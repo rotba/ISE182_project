@@ -29,12 +29,12 @@ namespace ChatRoom_project.PresentationLayer
     public partial class ChatRoomWindow : Window
     {
         private bool logoutClose = false;
-        int i = 0;
+        //int i = 0;
         ObservableModelChatRoom observer= new ObservableModelChatRoom();
         private static Message lastMessage;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private ChatRoom chtrm;
-        DispatcherTimer dispatcherTimer;
+        //DispatcherTimer dispatcherTimer;
         private MainWindow mainWindow;
         //private Predicate<Message> timeFilter = isOlder;
         private ListSortDirection direction = ListSortDirection.Ascending;

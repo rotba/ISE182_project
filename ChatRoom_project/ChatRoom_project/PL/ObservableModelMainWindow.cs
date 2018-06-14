@@ -19,7 +19,6 @@ namespace ChatRoom_project.PresentationLayer
 
         public event PropertyChangedEventHandler PropertyChanged;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        public bool isTested;
 
         public ObservableModelMainWindow(ChatRoom chtrm)
         {
@@ -111,7 +110,10 @@ namespace ChatRoom_project.PresentationLayer
             try
             {
                 result = Convert.ToInt32(g_ID);
-                return result;
+                if (result > 0)
+                    return result;
+                else
+                    throw new ToUserException("Group Id must be higher then 0");
             }
             catch (OverflowException)
             {

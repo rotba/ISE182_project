@@ -30,7 +30,6 @@ namespace ChatRoom_project.PresentationLayer
         private static ChatRoom chtrm;
         private ObservableModelMainWindow _main;
         private string toHashPW = "";
-        private readonly string saltValue = "1337";
         private bool toHashPWFlag = false;
         
         
@@ -78,7 +77,7 @@ namespace ChatRoom_project.PresentationLayer
             if (verifyPW(pb.Password))
             {
                 toHashPWFlag = true;
-                toHashPW = generateSHA256Hash(pb.Password);
+                toHashPW = chtrm.generateSHA256Hash(pb.Password);
 
             }
             else
@@ -92,14 +91,11 @@ namespace ChatRoom_project.PresentationLayer
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
-                if (toHashPWFlag)
-                {
-                    _main.login(_main.G_IDBox, _main.NicknameBox, toHashPW);
-                    ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
-                    this.Hide();
-                    chtrmWindow.Show();
-                }
+            {              
+                _main.login(_main.G_IDBox, _main.NicknameBox, toHashPW);
+                ChatRoomWindow chtrmWindow = new ChatRoomWindow(chtrm, this);
+                this.Hide();
+                chtrmWindow.Show();
             }
             catch (ToUserException e_1)
             {
@@ -124,6 +120,10 @@ namespace ChatRoom_project.PresentationLayer
                     
                     _main.register(_main.G_IDBox, _main.NicknameBox, toHashPW);
                     MessageBox.Show("Register Successful");
+                }
+                else
+                {
+                    throw new ToUserException("Invalid Password. Password must contain charcters and digits only \n and must be 4-16 charcters long");
                 }
             }
             catch (ToUserException e_1)
@@ -160,25 +160,6 @@ namespace ChatRoom_project.PresentationLayer
         }
 
 
-        private string generateSHA256Hash(string input)
-        {
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input + saltValue);
-            System.Security.Cryptography.SHA256Managed sha256HashString =
-                new System.Security.Cryptography.SHA256Managed();
-            byte[] hash = sha256HashString.ComputeHash(bytes);
-            return byteArrayToHexString(hash);
-        }
-
-        private string byteArrayToHexString(byte[] ba)
-        {
-            StringBuilder hex = new StringBuilder(ba.Length * 2);
-            foreach (byte b in ba)
-            {
-                hex.AppendFormat("{0:x2}", b);
-            }
-
-            return hex.ToString();
-        }
 
     }
 }

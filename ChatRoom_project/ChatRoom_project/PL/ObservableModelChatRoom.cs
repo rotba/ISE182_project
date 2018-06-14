@@ -18,9 +18,7 @@ namespace ChatRoom_project.PresentationLayer
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Message> Messages { get; } = new ObservableCollection<Message>();
         public ListCollectionView view_msg;
-        public ObservableCollection<User> Users { get; } = new ObservableCollection<User>();
-        public ObservableCollection<int> GroupIDs { get; } = new ObservableCollection<int>();
-
+     
         public ObservableModelChatRoom()
         {
             Messages.CollectionChanged += Messages_CollectionChanged;
@@ -33,73 +31,10 @@ namespace ChatRoom_project.PresentationLayer
             OnPropertyChanged("Messages");
         }
        
-        /*
-         *Filter properties 
-         */
-         /*
-        private int cmbNickNameSelectedIndex = 0;
-        public int CmbNickNameSelectedIndex
-        {
-            get
-            {
-                return cmbNickNameSelectedIndex;
-            }
-            set
-            {
-                cmbNickNameSelectedIndex = value;
-                OnPropertyChanged("CmbNickNameSelectedIndex");
-            }
-        }
-
-        private Object comboNickNameSelectedItem;
-        public Object ComboNickNameSelectedItem
-        {
-            get
-            {
-                return comboNickNameSelectedItem;
-            }
-            set
-            {
-
-                comboNickNameSelectedItem = value;
-                
-                OnPropertyChanged("ComboNickNameSelectedItem");
-            }
-        }
-
-        private int cmbGroupIDSelectedIndex = 0;
-        public int CmbGroupIDSelectedIndex
-        {
-            get
-            {
-                return cmbGroupIDSelectedIndex;
-            }
-            set
-            {
-                cmbGroupIDSelectedIndex = value;
-                OnPropertyChanged("CmbGroupIDSelectedIndex");
-            }
-        }
-
-        private Object comboGroupIDSelectedItem;
-        public Object ComboGroupIDSelectedItem
-        {
-            get
-            {
-                return comboGroupIDSelectedItem;
-            }
-            set
-            {
-
-                comboGroupIDSelectedItem = value;
-
-                OnPropertyChanged("ComboGroupIDSelectedItem");
-            }
-        }
+     
+       /*
+        * Sort properties 
         */
-        /*
-         *Sort properties 
-         */
         private bool sortName = false;
         public bool SortName
         {

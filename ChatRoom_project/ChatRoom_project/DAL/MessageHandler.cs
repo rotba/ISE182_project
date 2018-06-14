@@ -169,6 +169,7 @@ namespace ChatRoom_project.DAL
             return ans;
         }
 
+        //for tests only
         protected override string createDeleteQuery(Dictionary<string, string> query)
         {
             string ans = "DELETE M FROM" +
@@ -201,6 +202,8 @@ namespace ChatRoom_project.DAL
 
             return ans;
         }
+
+
         public Dictionary<string, string> convertToDictionary(Guid guid, DateTime date, int userId, string nickname, int g_Id, string body)
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();

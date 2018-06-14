@@ -24,7 +24,6 @@ namespace ConsoleApp1.BuissnessLayer
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private MessageHandler mHandler = new MessageHandler();
         private UserHandler uHandler = new UserHandler();
-        //private DateTime lastRetrievedMessageTime = DateTime.MinValue;
 
         public Request()
         {
@@ -152,6 +151,7 @@ namespace ConsoleApp1.BuissnessLayer
             return (msg.Length <= 100 & msg!="");
         }
         
+        //for test only
         internal void deleteUserAndHisMessagesForTestCleanup(User user)
         {
             IUser toDelete;

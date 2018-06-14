@@ -132,6 +132,7 @@ namespace ChatRoom_project.DAL
             return dic;
         }
 
+        //for tests only
         protected override string createDeleteQuery(Dictionary<string, string> query)
         {
             string ans =

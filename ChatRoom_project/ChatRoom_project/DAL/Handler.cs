@@ -79,6 +79,8 @@ namespace ChatRoom_project.DAL
             }
             return ans;
         }
+
+        //for tests only
         public void delete(Dictionary<string, string> query)
         {
             using (SqlConnection connection = new SqlConnection(connetion_string))
@@ -92,6 +94,7 @@ namespace ChatRoom_project.DAL
         }
         protected abstract T addRow(SqlDataReader data_reader);
        
+        //for tests only
         protected abstract string createDeleteQuery(Dictionary<string, string> query);
         
         protected abstract SqlCommand createSelectCommand(int numOfRows, Dictionary<string, string> query);
