@@ -10932,3 +10932,87 @@ GroupId:15
 2018-06-12 15:31:02,230 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   
 2018-06-12 15:32:23,222 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty/short/long password
 2018-06-12 15:32:27,769 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - SQL execption2627 while registering user User: G_id = 15 Nickname: Rotem
+2018-06-14 11:11:19,979 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 11:11:21,916 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 11:11:23,971 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:26,082 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:26,705 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.Data.SqlClient.SqlException (0x80131904): The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.send(String content, User user) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 50
+   at ConsoleApp1.BuissnessLayer.ChatRoom.send(String message) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 209
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 338
+ClientConnectionId:cd6b0fe9-95e7-4458-9809-8516f655c18b
+Error Number:242,State:3,Class:16
+2018-06-14 11:11:28,108 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:29,147 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.Data.SqlClient.SqlException (0x80131904): The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.send(String content, User user) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 50
+   at ConsoleApp1.BuissnessLayer.ChatRoom.send(String message) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 209
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 338
+ClientConnectionId:cd6b0fe9-95e7-4458-9809-8516f655c18b
+Error Number:242,State:3,Class:16
+2018-06-14 11:11:30,133 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:32,319 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:32,728 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.Data.SqlClient.SqlException (0x80131904): The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.send(String content, User user) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 50
+   at ConsoleApp1.BuissnessLayer.ChatRoom.send(String message) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 209
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 338
+ClientConnectionId:cd6b0fe9-95e7-4458-9809-8516f655c18b
+Error Number:242,State:3,Class:16
+2018-06-14 11:11:34,362 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:36,460 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:38,502 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:40,603 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.NullReferenceException: Object reference not set to an instance of an object.
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 249
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in C:\Users\rotem barak\Code\C#\school\Intro To SE\ISE_182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 11:11:42,681 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Rotem   

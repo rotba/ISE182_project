@@ -33,18 +33,11 @@ namespace ChatRoom_project.DAL
 
         protected override IMessage addRow(SqlDataReader data_reader)
         {
-            DateTime UtcTime = new DateTime();
+            
             DateTime LocalTime= new DateTime();
             if (!data_reader.IsDBNull(2))
             {
-                UtcTime = data_reader.GetDateTime(2);
-                var outputCulture = CultureInfo.CreateSpecificCulture("es-es");
-                var inputCulture = CultureInfo.CreateSpecificCulture("en-us");
-                Thread.CurrentThread.CurrentCulture = outputCulture;
-                Thread.CurrentThread.CurrentUICulture = outputCulture;
-                LocalTime = DateTime.Parse(
-                    UtcTime.ToString(), inputCulture
-                    ).ToLocalTime();
+                LocalTime = createUserDate(data_reader.GetDateTime(2));
             }
 
             return new HandlerMessage(
@@ -173,7 +166,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = "'" + date.ToUniversalTime() + "'";
+                dic[fieldsDic[Fields.SendTime]] = "'" + createDBDate(date)+ "'";
             }
             if (userId != 0)
             {
@@ -193,6 +186,7 @@ namespace ChatRoom_project.DAL
             }
             return dic;
         }
+
         public Dictionary<string, string> convertToDictionary(IMessage msg, int userId)
         {
             int g_id;
@@ -225,6 +219,36 @@ namespace ChatRoom_project.DAL
         protected override SqlCommand createSelectQuery(int numOfRows, Dictionary<string, string> query, bool test)
         {
             throw new NotImplementedException();
+        }
+        /*
+         * Gets date and returns representation compatible with SQL DB
+         */
+        private DateTime createDBDate(DateTime date)
+        {
+            DateTime ans = new DateTime();
+            var inputCulture = CultureInfo.CreateSpecificCulture("en-es");
+            var outputCulture = CultureInfo.CreateSpecificCulture("es-us");
+            Thread.CurrentThread.CurrentCulture = outputCulture;
+            Thread.CurrentThread.CurrentUICulture = outputCulture;
+            ans = DateTime.Parse(
+                date.ToString(), inputCulture
+                ).ToLocalTime();
+            return ans;
+        }
+        /*
+         * Gets date and returns representation compatible with the user needs
+         */
+        private DateTime createUserDate(DateTime date)
+        {
+            DateTime ans = new DateTime();
+            var outputCulture = CultureInfo.CreateSpecificCulture("es-es");
+            var inputCulture = CultureInfo.CreateSpecificCulture("en-us");
+            Thread.CurrentThread.CurrentCulture = inputCulture;
+            Thread.CurrentThread.CurrentUICulture = inputCulture;
+            ans = DateTime.Parse(
+                date.ToString(), inputCulture
+                ).ToLocalTime();
+            return ans;
         }
 
         #region Private Class 
