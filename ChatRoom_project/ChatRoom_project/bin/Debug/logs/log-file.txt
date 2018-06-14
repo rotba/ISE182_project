@@ -12887,3 +12887,65 @@ Error Number:137,State:2,Class:15 while registering user User: G_id = 15 Nicknam
    at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 143
 ClientConnectionId:dc5b0ca9-9997-483e-a6c8-d54e73fb5e3c
 Error Number:137,State:2,Class:15 while registering user User: G_id = 15 Nickname: Tomer
+2018-06-14 12:20:39,825 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:20:39,913 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:20:40,129 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:20:41,991 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Attempted login to invalid userUser: G_id = 123 Nickname: Ariel22
+2018-06-14 12:20:49,205 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@ID123".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 127
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+ClientConnectionId:29a87f78-0dd5-4724-8940-bd705c86cc5c
+Error Number:137,State:2,Class:15 while registering user User: G_id = 123 Nickname: Ariel22
+2018-06-14 12:21:01,494 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@ID123".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 127
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+ClientConnectionId:29a87f78-0dd5-4724-8940-bd705c86cc5c
+Error Number:137,State:2,Class:15 while registering user User: G_id = 123 Nickname: Ariel22
+2018-06-14 12:23:52,559 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:23:52,785 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:23:52,926 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:23:54,709 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@ID22".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 127
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+ClientConnectionId:563bffb5-de97-4e27-80af-5732448e7e63
+Error Number:137,State:2,Class:15 while registering user User: G_id = 22 Nickname: ArielR
+2018-06-14 12:43:01,935 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:43:02,024 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:43:02,231 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 12:43:04,189 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - Unexpected SQL execption System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@ID15".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 27
+   at ConsoleApp1.BuissnessLayer.Request.insertUser(User newUser) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 127
+   at ConsoleApp1.BuissnessLayer.ChatRoom.register(Int32 g_id, String nickname, String pw) in C:\Users\ariel\Desktop\Intro Software Engineering\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 139
+ClientConnectionId:9569bc0f-a57b-4761-b17b-c24ba5441426
+Error Number:137,State:2,Class:15 while registering user User: G_id = 15 Nickname: Tomer
