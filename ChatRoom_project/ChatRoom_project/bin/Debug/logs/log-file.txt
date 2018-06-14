@@ -16329,3 +16329,154 @@ Error Number:2627,State:1,Class:14
 2018-06-14 12:59:08,788 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
 2018-06-14 12:59:09,210 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
 2018-06-14 12:59:11,393 [1] ERROR ChatRoom_project.PresentationLayer.ObservableModelMainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:00:59,481 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:00:59,664 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:01:00,154 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:01:02,291 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow..ctor(ChatRoom chtrm, MainWindow mainWindow) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 57
+   at ChatRoom_project.PresentationLayer.MainWindow.Login_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 98
+2018-06-14 13:01:04,302 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:06,354 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:08,432 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:10,448 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:12,499 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:14,511 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:16,683 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:01:18,685 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:20,682 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:22,714 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:23,683 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:24,746 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:25,667 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:26,763 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:27,475 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 15 Nickname: Tomer   
+2018-06-14 13:01:37,347 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:01:37,506 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:01:37,947 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:01:40,235 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - successfully registered user User: G_id = 199 Nickname: Tomer   
+2018-06-14 13:01:47,498 [1] DEBUG ConsoleApp1.BuissnessLayer.ChatRoom - SQL execption2627 while registering user User: G_id = 199 Nickname: Tomer
+2018-06-14 13:01:55,084 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:57,064 [1] INFO ConsoleApp1.BuissnessLayer.Request - sent a GetTenMessages request to server
+2018-06-14 13:01:58,755 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.insert(Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 62
+   at ConsoleApp1.BuissnessLayer.Request.send(String content, User user) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 50
+   at ConsoleApp1.BuissnessLayer.ChatRoom.send(String message) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 208
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.Send_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 338
+2018-06-14 13:01:59,094 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:02:00,130 [1] INFO ConsoleApp1.BuissnessLayer.ChatRoom - Succefully logged out of user: User: G_id = 199 Nickname: Tomer   
+2018-06-14 13:03:46,688 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:03:46,860 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:03:47,320 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:03:49,020 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:03:49,180 [1] ERROR ChatRoom_project.PresentationLayer.MainWindow - Attempted to enter an empty/short/long password
+2018-06-14 13:03:51,455 [1] DEBUG ChatRoom_project.PresentationLayer.MainWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow..ctor(ChatRoom chtrm, MainWindow mainWindow) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 57
+   at ChatRoom_project.PresentationLayer.MainWindow.Login_Click(Object sender, RoutedEventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\MainWindow.xaml.cs:line 98
+2018-06-14 13:03:53,435 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:03:55,464 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
+2018-06-14 13:03:57,480 [1] DEBUG ChatRoom_project.PresentationLayer.ChatRoomWindow - unexpected error found: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s, IFormatProvider provider)
+   at ChatRoom_project.DAL.MessageHandler.addRow(SqlDataReader data_reader) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\MessageHandler.cs:line 46
+   at ChatRoom_project.DAL.Handler`1.retrieve(Int32 numOfRows, Dictionary`2 query) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\DAL\Handler.cs:line 102
+   at ConsoleApp1.BuissnessLayer.Request.retrieveMessages(Guid guid, DateTime date, Int32 num, String nickname, Int32 g_id) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\Request.cs:line 92
+   at ConsoleApp1.BuissnessLayer.ChatRoom.displayNMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\logics\ChatRoom.cs:line 248
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.refreshMessages() in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 108
+   at ChatRoom_project.PresentationLayer.ChatRoomWindow.dispatcherTimer_Tick(Object sender, EventArgs e) in D:\tomer\μιξεγιν\year a\semester b\intro to software engeiring\ISE182_project\repo\ISE182_project\ChatRoom_project\ChatRoom_project\PL\ChatRoomWindow.xaml.cs:line 83
