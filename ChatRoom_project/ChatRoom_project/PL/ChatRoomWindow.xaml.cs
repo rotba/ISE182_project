@@ -44,7 +44,7 @@ namespace ChatRoom_project.PresentationLayer
         {
             this.chtrm = chtrm;
             this.mainWindow = mainWindow;
-            dispatcherTimer = new DispatcherTimer();
+            DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
@@ -356,11 +356,10 @@ namespace ChatRoom_project.PresentationLayer
             {
                 g_idFilter = -1;
                 noGroupFilter = true;
-                if(nicknameFilter!=null)
-                    MessageBox.Show("Group Id must be positive Integer for Filter ");
+                MessageBox.Show("Group Id must be positive Integer for Filter ");
             }
-                
-           
+            
+
             if (!noGroupFilter&&(nicknameFilter != null && !nicknameFilter.Equals(lastFilterClickNicknameFilterParam)) ||
                 !g_idFilter.Equals(lastFilterClickG_IDFilterParam) ||
                 (nicknameFilter==null && lastFilterClickNicknameFilterParam!=null))
