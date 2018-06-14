@@ -44,7 +44,7 @@ namespace ChatRoom_project.PresentationLayer
         {
             this.chtrm = chtrm;
             this.mainWindow = mainWindow;
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 2);
             dispatcherTimer.Start();
@@ -195,8 +195,12 @@ namespace ChatRoom_project.PresentationLayer
             try
             {
                 chtrm.logout();
-                mainWindow.Show();
+                MainWindow newMain = new MainWindow();
+                newMain.Show();
+                mainWindow.Close();
                 logoutClose = true;
+                dispatcherTimer.Stop();
+                dispatcherTimer = null;
                 this.Close();
             }
             catch (ToUserException e_1)
@@ -354,9 +358,11 @@ namespace ChatRoom_project.PresentationLayer
                 nicknameFilter = null;
             if (g_idFilter <= 0)
             {
+                if (nicknameFilter != null && g_idFilter ==0)
+                    MessageBox.Show("Group Id must be positive Integer for Filter ");
                 g_idFilter = -1;
                 noGroupFilter = true;
-                MessageBox.Show("Group Id must be positive Integer for Filter ");
+                
             }
             
 
