@@ -166,7 +166,7 @@ namespace ChatRoom_project.DAL
             }
             if (date.CompareTo(DateTime.MinValue) > 0)
             {
-                dic[fieldsDic[Fields.SendTime]] = "'" + createDBDate(date)+ "'";
+                dic[fieldsDic[Fields.SendTime]] = "'" + createDBDateString(date)+ "'";
             }
             if (userId != 0)
             {
@@ -223,16 +223,19 @@ namespace ChatRoom_project.DAL
         /*
          * Gets date and returns representation compatible with SQL DB
          */
-        private DateTime createDBDate(DateTime date)
+        private string createDBDateString(DateTime date)
         {
-            DateTime ans = new DateTime();
+            string ans = null;
+            var currentCulture = CultureInfo.CurrentCulture;
             var inputCulture = CultureInfo.CreateSpecificCulture("en-es");
             var outputCulture = CultureInfo.CreateSpecificCulture("es-us");
             Thread.CurrentThread.CurrentCulture = outputCulture;
             Thread.CurrentThread.CurrentUICulture = outputCulture;
             ans = DateTime.Parse(
                 date.ToString(), inputCulture
-                ).ToLocalTime();
+                ).ToUniversalTime().ToString();
+            Thread.CurrentThread.CurrentCulture = currentCulture;
+            Thread.CurrentThread.CurrentUICulture = currentCulture;
             return ans;
         }
         /*
@@ -240,15 +243,9 @@ namespace ChatRoom_project.DAL
          */
         private DateTime createUserDate(DateTime date)
         {
-            DateTime ans = new DateTime();
-            var outputCulture = CultureInfo.CreateSpecificCulture("es-es");
-            var inputCulture = CultureInfo.CreateSpecificCulture("en-us");
-            Thread.CurrentThread.CurrentCulture = inputCulture;
-            Thread.CurrentThread.CurrentUICulture = inputCulture;
-            ans = DateTime.Parse(
-                date.ToString(), inputCulture
+            return DateTime.Parse(
+                date.ToString(), CultureInfo.CurrentCulture
                 ).ToLocalTime();
-            return ans;
         }
 
         #region Private Class 
