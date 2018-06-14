@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 
 
-
 namespace ConsoleApp1.BuissnessLayer
 {
+    /*
+     * This class represents the main logic element conrolling the ChatRoom app
+     */ 
     public class ChatRoom
     {
-
         /// <summary>
         /// current logged in User
         /// </summary>
@@ -27,6 +28,9 @@ namespace ConsoleApp1.BuissnessLayer
         private DateTime lastRetrivedMessageTime;
         private Message lastRetrivedMessage;
 
+        /*
+         * Represents the user using the ChatRoom app
+         */ 
         public User LoggedInUser {
             get
             {
@@ -95,7 +99,9 @@ namespace ConsoleApp1.BuissnessLayer
 
 
         }
-        
+        /*
+         * Logs out the current user from the ChatRoom app
+         */ 
         public void logout()
         {
             if (LoggedInUser == null)
@@ -109,7 +115,9 @@ namespace ConsoleApp1.BuissnessLayer
                 LoggedInUser = null;
             }
         }
-
+        /*
+         * Closes chatroom
+         */ 
         public void exit()
         {
             if (LoggedInUser != null)
@@ -117,7 +125,9 @@ namespace ConsoleApp1.BuissnessLayer
             Environment.Exit(0);
 
         }
-
+        /*
+         * Registers new user to the DB according to the given prameters
+         */ 
         public void register(int g_id, string nickname, string pw)
         {
             if (nickname == null)
@@ -162,7 +172,10 @@ namespace ConsoleApp1.BuissnessLayer
             log.Info("successfully registered user " + registeredUser);
         }
       
-
+        /*
+         * Sends the given message. Inserts to the DB and returns element representing
+         * the sent message
+         */ 
         public Message send(string message)
         {
             if (message == null)
@@ -188,12 +201,10 @@ namespace ConsoleApp1.BuissnessLayer
             }
             
         }
-
-
+        
         // check if diff filter if so changes lastMessage, and update filters
         public void setFilterParameter(string nicknameFilterParam, int g_IDFilterParam)
         {
-            
             if((nicknameFilterParam!=null && !nicknameFilterParam.Equals(this.nicknameFilterParam))||
                 !g_IDFilterParam.Equals(this.g_IDFilterParam) ||
                 nicknameFilterParam==null && this.nicknameFilterParam!=null
