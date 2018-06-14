@@ -385,7 +385,7 @@ namespace ConsoleApp1.Tests
             catch(ToUserException e) {  }
         }
     
-
+        /*
         [TestMethod()]
         public void displayNMessagesTest_success_test()
         {
@@ -421,7 +421,7 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(tmp.Count == 0, "crList should be empty after comparing");
             Assert.IsTrue(tmp2.Count == 0, "cr2List should be empty after comparing");
         }
-
+        */
         [TestMethod()]
         public void retrieveUserMessagesTest_witout_initailly_login_should_throw_exception()
         {
