@@ -42,12 +42,18 @@ namespace ChatRoom_project.Public_Interfaces
         {
             bool isLegal = true;
             Guid tempGuid = default(Guid);
-            DateTime LocalTime= new DateTime();
-             
+            DateTime localTime= new DateTime();
+            DateTime nowTime = DateTime.Now;
+            nowTime = nowTime.AddMinutes(1);
+            nowTime = nowTime.ToUniversalTime();
             try
             {  
                 tempGuid = Guid.Parse(data_reader.GetValue(0).ToString());
-                LocalTime = createUserDate(data_reader.GetDateTime(2));
+                localTime = createUserDate(data_reader.GetDateTime(2));
+                if (localTime.CompareTo(nowTime) > 0)
+                {
+                    isLegal = false;
+                }
             }
             catch (FormatException e_1)
             {
@@ -68,7 +74,7 @@ namespace ChatRoom_project.Public_Interfaces
                 return new HandlerMessage(
                         tempGuid,
                         data_reader.GetValue(1).ToString(),
-                        LocalTime,
+                        localTime,
                         data_reader.GetValue(3).ToString().TrimEnd(' '),
                         data_reader.GetValue(4).ToString()
                         );

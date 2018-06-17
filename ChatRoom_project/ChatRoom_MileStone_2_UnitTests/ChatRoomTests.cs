@@ -385,7 +385,7 @@ namespace ConsoleApp1.Tests
             catch(ToUserException e) {  }
         }
     
-        /*
+        
         [TestMethod()]
         public void displayNMessagesTest_success_test()
         {
@@ -402,11 +402,11 @@ namespace ConsoleApp1.Tests
 
                 cr.send("" + i + "");
                 cr2.send("" + i + "a");
-            //    System.Threading.Thread.Sleep(2000);
+                System.Threading.Thread.Sleep(2000);
                 i = i + 1;
             }
-            SortedSet<IMessage> tmp = cr.displayNMessages();
-            SortedSet<IMessage> tmp2 = cr2.displayNMessages();
+            List<IMessage> tmp = cr.displayNMessages();
+            List<IMessage> tmp2 = cr2.displayNMessages();
 
 
             for (i = 0; i < magicNum; i++)
@@ -422,7 +422,7 @@ namespace ConsoleApp1.Tests
             Assert.IsTrue(tmp2.Count == 0, "cr2List should be empty after comparing");
         }
 
-        */
+        
         [TestMethod()]
         public void retrieveUserMessagesTest_for_user_that_didnt_send_yet_should_be_empty()
         {

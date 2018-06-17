@@ -105,7 +105,17 @@ namespace ChatRoom_project.PresentationLayer
             {
                 List<IMessage> toDisplay = chtrm.displayNMessages();
                 if (toDisplay != null)
+                {
+                    if (observer.Messages.Count + toDisplay.Count > 200)
+                    {
+
+                        int toDelete = observer.Messages.Count + toDisplay.Count - 200;
+                        deleteMin(observer.Messages, toDelete);
+                    }
+
+                    
                     toDisplay.ToList().ForEach(observer.Messages.Add);
+                }
             }
             catch(ToUserException e_1)
             {
@@ -119,7 +129,19 @@ namespace ChatRoom_project.PresentationLayer
            
             
         }
-        
+
+        private void deleteMin(ObservableCollection<IMessage> messages, int toDelete)
+        {
+            
+            for(int i = 0; i < toDelete; i++)
+            {
+                IMessage toRemove = messages.FirstOrDefault();
+                if(toRemove!=null)
+                    messages.Remove(toRemove);
+            }
+
+        }
+
         /*
          * Sets the direction of the sorting to be ascending
          */

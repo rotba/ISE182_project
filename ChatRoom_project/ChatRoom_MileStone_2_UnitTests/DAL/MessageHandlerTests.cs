@@ -186,6 +186,7 @@ namespace ChatRoom_project.Public_Interfaces.Tests
             {
             }
         }
+        /*
         [TestMethod()]
         public void deleteTest_message_in_db()
         {
@@ -200,6 +201,7 @@ namespace ChatRoom_project.Public_Interfaces.Tests
                     ).Count == 0
                 );
         }
+        */
         /*
          * This test correctness should be examined in the db
          */

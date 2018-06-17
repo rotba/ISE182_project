@@ -53,6 +53,7 @@
     <Compile Include="DAL\MessageHandlerTests.cs" />
     <Compile Include="DAL\UserHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FloodServer200Msgs.cs" />
     <Compile Include="UserTests.cs" />
   </ItemGroup>
   <ItemGroup>
